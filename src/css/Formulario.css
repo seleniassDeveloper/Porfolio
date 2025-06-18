@@ -1,0 +1,76 @@
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.contacto-container {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-contenido {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contacto-contenido h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f75f9c;
+
+    font-family: "Exile", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.contacto-contenido p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    outline: 2px solid #f75f9c;
+}
+
+.contacto-formulario button {
+    padding: 12px;
+    background-color: #f75f9c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-formulario button:hover {
+    background-color: #ff88b2;
+}

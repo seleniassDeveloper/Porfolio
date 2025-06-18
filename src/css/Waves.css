@@ -1,0 +1,25 @@
+.waves-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: clamp(1.6rem, 8vw, 10rem);
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.char {
+  display: inline-block;
+}

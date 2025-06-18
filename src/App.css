@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.card-misionvision p {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-misionvision:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
+
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Sección principal */
+.cajaFocus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 60px;
+  height: auto;
+  position: relative;
+}
+
+/* Columna izquierda */
+.columna-izquierda {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orb-fondo {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orb-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orb-imagen {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.orb-imagen img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Columna derecha */
+.columna-derecha {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fondo-particulas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contenido-derecho {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.titulo-bienvenida {
+  font-size: 40px;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+}
+
+/* Texto animado (DecryptedText) */
+.all-letters {
+  font-size: 15px !important; /* <- cambio principal */
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  line-height: 1.6;
+  transition: all 0.6s ease-in-out;
+}
+
+.encrypted {
+  color: #888;
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+
+.revealed {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.cajaencryted {
+  height: 100%;
+  max-height: 500px;
+}
+
+/* Transiciones generales */
+.scroll-transition {
+  transition: all 0.8s ease-out;
+}
+
+
+.cajapadre{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.cajapadre h1 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 36px;
+}
+
+.cajamisionvision {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+
+.card-misionvision {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05); /* translúcido */
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+
+
+.glitch-background canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+
+
+
+.cajaVisionMision{
+  padding: 100px 20px;
+}
+
+.contenedorVisionMision {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Manrope", sans-serif;
+}
+
+/* ---------------------- */
+/* Misión y Visión Styles */
+/* ---------------------- */
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.card-misionvision {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px) scale(0.98);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.card-misionvision.visible {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+.card-misionvision:hover {
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 30px 80px rgba(73, 32, 32, 0.486);
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card-misionvision::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.06), rgba(255, 0, 255, 0.06));
+  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+
+/**/ 
+
+.tecnologias-container {
+  padding: 120px 40px;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.titulo-tecnologias {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
+  }
+  100% {
+    text-shadow: 0 0 15px #61dafb, 0 0 25px #61dafb;
+  }
+}
+
+.grid-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.carta-tecnologia {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px;
+  width: 130px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.carta-tecnologia::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.carta-tecnologia:hover::before {
+  opacity: 1;
+}
+
+.carta-tecnologia:hover {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.icono-tecnologia {
+  font-size: 42px;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, color 0.4s ease;
+  z-index: 1;
+}
+
+.carta-tecnologia p {
+  font-size: 14px;
+  margin: 0;
+  color: white;
+  z-index: 1;
+}
+
+/* Hover dinámico de iconos */
+.carta-tecnologia:hover .icono-tecnologia {
+  transform: rotate(5deg) scale(1.15);
+}
+
+/* Colores por tecnología al hacer hover */
+.carta-tecnologia.html:hover .icono-tecnologia { color: #e44d26; }
+.carta-tecnologia.css:hover .icono-tecnologia { color: #264de4; }
+.carta-tecnologia.javascript:hover .icono-tecnologia { color: #f0db4f; }
+.carta-tecnologia.react:hover .icono-tecnologia { color: #61dafb; }
+.carta-tecnologia.github:hover .icono-tecnologia { color: #ffffff; }
+.carta-tecnologia.python:hover .icono-tecnologia { color: #3776ab; }
+.carta-tecnologia.typescript:hover .icono-tecnologia { color: #3178c6; }
+
+/* ExperienciaEstudios.css */
+.experiencia-container {
+  color: white;
+  z-index: 1;
+  position: relative;
+  margin-top: 75px;
+}
+
+
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff72b6;
+}
+
+
+
+.tarjeta {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  margin: 60px;
+  padding: 30px;
+  width:50%;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255, 114, 182, 0.3);
+}
+
+.icono {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ff72b6;
+}
+
+.item h4 {
+  margin: 10px 0 5px;
+  color: #ffffff;
+}
+
+.fecha {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.item ul li {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  margin-top: 20px;
+  color: #ffccff;
+  font-size: 1.2rem;
+}
+
+/*REDES SOCIALES*/
+.redes-sociales {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.redes-sociales ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.redes-sociales li {
+  margin: 10px 0;
+}
+
+.redes-sociales a {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.2);
+  color: #ff4081;
+}
+
+.seccion-experiencia {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.seccion-experiencia > div:first-child {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+
+.exile-regular {
+  font-family: "Exile", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

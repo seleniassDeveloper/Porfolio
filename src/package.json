@@ -1,0 +1,26 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sendEmail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeleniaDeveloper/Porfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeleniaDeveloper/Porfolio/issues"
+  },
+  "homepage": "https://github.com/SeleniaDeveloper/Porfolio#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}
