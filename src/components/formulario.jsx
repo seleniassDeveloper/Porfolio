@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import "./../css/Formulario.css";
 
 export const Formulario = () => {
-  const [state, handleSubmit] = useForm("mqabdaae"); // <-- Tu ID de Formspree
+  const [state, handleSubmit] = useForm("mqabdaae"); 
 
   return (
     <section className="contacto-container py-5">
@@ -41,7 +41,7 @@ export const Formulario = () => {
               name="message"
               placeholder="Tu mensaje..."
               required
-            ></textarea>
+            />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
 
             <button type="submit" disabled={state.submitting}>
