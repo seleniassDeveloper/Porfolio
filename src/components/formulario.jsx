@@ -1,40 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import "./../css/Formulario.css";
 
 export const Formulario = () => {
-  const [nombre, setNombre] = useState("");
-  const [correo, setCorreo] = useState("");
-  const [mensaje, setMensaje] = useState("");
-
-  const enviarDatos = async (e) => {
-    e.preventDefault();
-
-    try {
-      const res = await fetch("http://localhost:3001/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: nombre,
-          email: correo,
-          message: mensaje,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        alert("¡Mensaje enviado con éxito!");
-        setNombre("");
-        setCorreo("");
-        setMensaje("");
-      } else {
-        alert("Error al enviar el mensaje.");
-      }
-    } catch (error) {
-      alert("Ocurrió un error al enviar.");
-      console.error(error);
-    }
-  };
+  const [state, handleSubmit] = useForm("mqabdaae"); // <-- Tu ID de Formspree
 
   return (
     <section className="contacto-container py-5">
@@ -45,29 +14,41 @@ export const Formulario = () => {
           para crear algo increíble juntos.
         </p>
 
-        <form className="contacto-formulario" onSubmit={enviarDatos}>
-          <input
-            type="text"
-            placeholder="Nombre"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Correo electrónico"
-            value={correo}
-            onChange={(e) => setCorreo(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="Tu mensaje..."
-            value={mensaje}
-            onChange={(e) => setMensaje(e.target.value)}
-            required
-          ></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+        {state.succeeded ? (
+          <p className="mensaje-exito">¡Mensaje enviado con éxito!</p>
+        ) : (
+          <form className="contacto-formulario" onSubmit={handleSubmit}>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Nombre"
+              required
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tu mensaje..."
+              required
+            ></textarea>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+            <button type="submit" disabled={state.submitting}>
+              Enviar
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );
