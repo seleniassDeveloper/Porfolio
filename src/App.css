@@ -735,3 +735,32 @@ body,
     padding: 8px;
   }
 }
+
+
+.animated-side {
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.animated-side.left {
+  transform: translateX(-100px);
+}
+
+.animated-side.right {
+  transform: translateX(100px);
+}
+
+.animated-side.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animated-side.slide-out.left {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.animated-side.slide-out.right {
+  transform: translateX(100px);
+  opacity: 0;
+}

@@ -114,13 +114,7 @@ function App() {
 
         <div className="seccion-experiencia">
           <div className="fondo-cuadrados">
-            <Squares
-              speed={0.5}
-              squareSize={40}
-              direction="diagonal"
-              borderColor="#fff"
-              hoverFillColor="#222"
-            />
+              
           </div>
 
           <div className="contenido-experiencia mt-5 pt-5">
