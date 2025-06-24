@@ -1,14 +1,14 @@
 /*para fondo desdes aca para abajo*/
 .squares-canvas {
     width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
+    height: 100%; 
+    display: flex!important;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 668px) {
   .squares-canvas {
     height: auto;
+    display: block;
     min-height: 300px; /* o el valor que se vea bien visualmente */
   }
 }

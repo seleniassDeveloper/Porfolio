@@ -133,7 +133,7 @@ const Squares = ({
     };
   }, [direction, speed, borderColor, hoverFillColor, squareSize]);
 
-  return <canvas ref={canvasRef} className={`squares-canvas ${className}`}></canvas>;
+  return <canvas ref={canvasRef} className={`squares-canvas `}></canvas>;
 };
 
 export default Squares;

@@ -1,55 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export const MisionAndVision = () => {
-  const cardsRef = useRef([]);
-  const [visibleCards, setVisibleCards] = useState([false, false]);
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, idx) => {
-          if (entry.isIntersecting) {
-            setVisibleCards((prev) => {
-              const updated = [...prev];
-              updated[idx] = true;
-              return updated;
-            });
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
       },
       { threshold: 0.2 }
     );
 
-    cardsRef.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
 
     return () => {
-      cardsRef.current.forEach((card) => {
-        if (card) observer.unobserve(card);
-      });
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
     };
   }, []);
 
   return (
     <div className="cajaVisionMision">
-      <div className="contenedorVisionMision d-flex flex-column flex-md-row justify-content-around align-items-center">
-        {["Visión", "Misión"].map((titulo, index) => (
-          <div
-            key={titulo}
-            ref={(el) => (cardsRef.current[index] = el)}
-            className={`card-misionvision ${
-              index === 0 ? "left-hidden" : ""
-            } ${visibleCards[index] ? "visible" : ""}`}
-          >
-            <h1 className="titulo-seccion">{titulo}</h1>
-            <p>
-              {index === 0
-                ? "Quiero seguir creciendo como desarrolladora, trabajando en proyectos frontend y fullstack que me reten, me enseñen y me permitan seguir creando experiencias digitales que realmente funcionen y se vean bien. Mi meta es mejorar cada día, aportar valor y seguir aprendiendo en cada línea de código."
-                : "Desarrollar aplicaciones web modernas, funcionales y accesibles con enfoque en la experiencia del usuario. Mi misión es aplicar buenas prácticas de desarrollo, aprender constantemente nuevas tecnologías y colaborar con equipos que valoren la calidad, la creatividad y el crecimiento continuo."}
-            </p>
-          </div>
-        ))}
+      <div className="contenedorVisionMision justify-content-center align-items-center">
+        <div
+          ref={cardRef}
+          className={`card-misionvision ${isVisible ? "visible" : ""}`}
+        >
+          <h1 className="titulo-seccion">Mi Visión</h1>
+          <p>
+            Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo.
+          </p>
+        </div>
       </div>
     </div>
   );
