@@ -764,3 +764,21 @@ body,
   transform: translateX(100px);
   opacity: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .animated-side.left,
+  .animated-side.right {
+    transform: translateY(50px); /* cambia la animación a vertical */
+  }
+
+  .animated-side.slide-in {
+    transform: translateY(0);
+  }
+
+  .animated-side.slide-out.left,
+  .animated-side.slide-out.right {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
