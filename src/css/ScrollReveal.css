@@ -10,3 +10,8 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .scroll-fade-up {
+    transform: translateY(30px); /* en lugar de 50px */
+  }
+}

@@ -35,3 +35,17 @@
     opacity: 1;
   }
   
+
+  @media screen and (max-width: 768px) {
+  .pixel-canvas {
+    height: auto;
+  }
+
+  .pixel-card {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

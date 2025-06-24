@@ -23,3 +23,21 @@
 .char {
   display: inline-block;
 }
+
+@media screen and (max-width: 768px) {
+  .waves-canvas {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .scroll-float-text {
+    font-size: clamp(1.8rem, 10vw, 4rem);
+    padding: 0 10px;
+    line-height: 1.3;
+  }
+
+  .scroll-float {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

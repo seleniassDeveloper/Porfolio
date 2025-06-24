@@ -3,3 +3,11 @@
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: 768px) {
+  .particles-container {
+    width: 100%;
+    height: auto;
+    min-height: 300px; /* o lo que consideres apropiado */
+  }
+}

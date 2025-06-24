@@ -74,3 +74,40 @@
 .contacto-formulario button:hover {
     background-color: #ff88b2;
 }
+
+@media screen and (max-width: 768px) {
+  .contacto-container {
+    padding: 60px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacto-contenido {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .contacto-contenido p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contacto-formulario {
+    gap: 12px;
+  }
+
+  .contacto-formulario input,
+  .contacto-formulario textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .contacto-formulario button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}

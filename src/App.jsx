@@ -24,7 +24,7 @@ function App() {
         baseRotation={5}
         blurStrength={10}
       >
-        <div style={{ position: "relative", width: "100vw", height: "950px" }}>
+        <div className="seccion-truefocus">
           <Waves
             lineColor="#fff"
             backgroundColor="rgb(0, 0, 0)"
@@ -39,16 +39,7 @@ function App() {
             yGap={36}
           />
 
-          <div
-            style={{
-              color: "white",
-              position: "absolute",
-              top: "40%",
-              width: "100%",
-              textAlign: "center",
-              zIndex: 1,
-            }}
-          >
+          <div className="titulo-portafolio">
             <TrueFocus
               manualMode={false}
               blurAmount={2}

@@ -17,6 +17,11 @@
       color 0.3s ease;
   }
   
+  @media screen and (max-width: 768px) {
+  .focus-word {
+    font-size: 25px;
+  }
+}
   .focus-word.active {
     filter: blur(0);
   }

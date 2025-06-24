@@ -4,6 +4,41 @@
   box-sizing: border-box;
 }
 
+
+.titulo-portafolio {
+  color: white;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .titulo-portafolio {
+    top: 32%; 
+   
+  }
+}
+
+.seccion-truefocus {
+  position: relative;
+  width: 100vw;
+  height: 990px;
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-truefocus {
+    height: auto; /* O podés usar algo como 600px si querés altura fija */
+    min-height: 500px;
+  }
+}
+
+.titulo-portafolio {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
 @keyframes borderGlow {
   0% {
     background-position: 0% 50%;
@@ -410,13 +445,26 @@ html, body, #root {
 .carta-tecnologia.typescript:hover .icono-tecnologia { color: #3178c6; }
 
 /* ExperienciaEstudios.css */
-.experiencia-container {
-  color: white;
-  z-index: 1;
-  position: relative;
-  margin-top: 75px;
+.experiencia-flex {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
+@media screen and (max-width: 768px) {
+  .experiencia-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px 0;
+  }
+}
 
 
 .titulo {
@@ -520,10 +568,143 @@ html, body, #root {
   z-index: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .seccion-experiencia {
+    height: auto;
+    overflow: visible;
+    background-color: none ;
+  }
+
+  .seccion-experiencia > div:first-child {
+    position: relative;
+    height: auto;
+  }
+}
+
 
 
 .exile-regular {
   font-family: "Exile", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .cajaFocus {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .columna-izquierda, .columna-derecha {
+    width: 100%;
+    height: auto;
+  }
+
+  .orb-fondo {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .contenido-derecho {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .titulo-bienvenida {
+    font-size: 28px;
+  }
+
+  .all-letters {
+    font-size: 14px !important;
+  }
+
+  .cajapadre h1 {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .card-misionvision {
+    max-width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contenedorVisionMision {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cajaVisionMision {
+    padding: 60px 20px;
+  }
+
+  .tecnologias-container {
+    padding: 60px 20px;
+  }
+
+  .titulo-tecnologias {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .carta-tecnologia {
+    width: 100px;
+    height: 110px;
+    padding: 15px;
+  }
+
+  .icono-tecnologia {
+    font-size: 30px;
+  }
+
+  .carta-tecnologia p {
+    font-size: 12px;
+  }
+
+  .experiencia-container {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .icono {
+    font-size: 30px;
+  }
+
+  .redes-sociales {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .redes-sociales ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  .redes-sociales li {
+    margin: 0;
+  }
+
+  .redes-sociales a {
+    font-size: 20px;
+    padding: 8px;
+  }
 }

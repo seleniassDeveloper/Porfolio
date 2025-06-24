@@ -6,3 +6,9 @@
     display: block;
   }
   
+  @media screen and (max-width: 768px) {
+  .squares-canvas {
+    height: auto;
+    min-height: 300px; /* o el valor que se vea bien visualmente */
+  }
+}
