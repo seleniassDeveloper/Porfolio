@@ -117,7 +117,7 @@ function App() {
               
           </div>
 
-          <div className="contenido-experiencia mt-5 pt-5">
+          <div className="contenido-experiencia pt-5">
             <Experiencia />
           </div>
 

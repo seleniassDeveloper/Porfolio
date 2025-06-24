@@ -31,6 +31,36 @@ export const Experiencia = () => {
     };
   }, []);
 
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const index = tarjetasRef.current.indexOf(entry.target);
+        if (index !== -1) {
+          setVisibles((prev) => {
+            const updated = [...prev];
+            updated[index] = entry.isIntersecting;
+            return updated;
+          });
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  tarjetasRef.current.forEach((el) => {
+    if (el) observer.observe(el);
+  });
+
+  return () => {
+    tarjetasRef.current.forEach((el) => {
+      if (el) observer.unobserve(el);
+    });
+  };
+}, []);
+
+
+
   return (
     <div className="experiencia-container">
       <div className="experiencia-flex">
