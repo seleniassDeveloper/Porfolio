@@ -1,28 +1,27 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useTranslation } from "react-i18next";
 import "./../css/Formulario.css";
 
 export const Formulario = () => {
-  const [state, handleSubmit] = useForm("mqabdaae"); 
+  const [state, handleSubmit] = useForm("mqabdaae");
+  const { t } = useTranslation();
 
   return (
     <section className="contacto-container py-5">
       <div className="contacto-contenido">
-        <h2>¿Querés trabajar conmigo?</h2>
-        <p>
-          Completá el formulario o escribime por redes sociales. Estoy lista
-          para crear algo increíble juntos.
-        </p>
+        <h2>{t("formulario.title")}</h2>
+        <p>{t("formulario.paragraph")}</p>
 
         {state.succeeded ? (
-          <p className="mensaje-exito">¡Mensaje enviado con éxito!</p>
+          <p className="mensaje-exito">{t("formulario.success_message")}</p>
         ) : (
           <form className="contacto-formulario" onSubmit={handleSubmit}>
             <input
               id="name"
               type="text"
               name="name"
-              placeholder="Nombre"
+              placeholder={t("formulario.name_placeholder")}
               required
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
@@ -31,7 +30,7 @@ export const Formulario = () => {
               id="email"
               type="email"
               name="email"
-              placeholder="Correo electrónico"
+              placeholder={t("formulario.email_placeholder")}
               required
             />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -39,13 +38,13 @@ export const Formulario = () => {
             <textarea
               id="message"
               name="message"
-              placeholder="Tu mensaje..."
+              placeholder={t("formulario.message_placeholder")}
               required
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
 
             <button type="submit" disabled={state.submitting}>
-              Enviar
+              {t("formulario.submit_button")}
             </button>
           </form>
         )}

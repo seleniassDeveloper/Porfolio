@@ -782,3 +782,32 @@ background-color: #000;
     opacity: 0;
   }
 }
+
+button.idioma-activo {
+  border: 2px solid #00ffff; /* Borde de color neón */
+  background-color: #001f2f; /* Fondo oscuro */
+  color: #00ffff;            /* Texto brillante */
+  box-shadow: 0 0 10px #00ffff; /* Luz/glow */
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.language-selector {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 9999;
+}

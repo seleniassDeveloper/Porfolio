@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const MisionAndVision = () => {
+  const { t } = useTranslation();
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,10 +34,8 @@ export const MisionAndVision = () => {
           ref={cardRef}
           className={`card-misionvision ${isVisible ? "visible" : ""}`}
         >
-          <h1 className="titulo-seccion">Mi Visión</h1>
-          <p>
-            Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo.
-          </p>
+          <h1 className="titulo-seccion">{t("mision_and_vision.title")}</h1>
+          <p>{t("mision_and_vision.paragraph")}</p>
         </div>
       </div>
     </div>

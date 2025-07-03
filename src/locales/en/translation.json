@@ -1,0 +1,63 @@
+{
+    "formulario": {
+        "title": "Do you want to work with me?",
+        "paragraph": "Fill out the form or contact me on social media. I'm ready to create something amazing together.",
+        "success_message": "Message sent successfully!",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email",
+        "message_placeholder": "Your message...",
+        "submit_button": "Send"
+    },
+
+    "hello_welcome": "Hello, welcome to my portfolio",
+    "portfolio_description": "Front-end developer with over three years of professional experience (plus two years of internship) developing modern, scalable, and user-centric web solutions. Specializing in React, she has solid knowledge of UI/UX design, REST APIs, state management, and responsive layout. She's progressively incorporating TypeScript to improve code quality and scalability. Proactive, collaborative, and passionate about creating functional and visually compelling products.",
+    "experience_section": {
+        "professional_experience": "Professional Experience",
+        "sistran_title": "Sistran – Frontend Developer",
+        "sistran_date": "2022 – Present",
+        "sistran_stack": "Stack: React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
+        "sistran_desc": "Lead frontend developer for Sistask, an internal tool used by more than 150 real users in development, QA, support, and management teams in Argentina, Colombia, and Ecuador.",
+        "sistran_bullets": [
+            "Led the frontend from scratch alongside the backend team.",
+            "Dynamic interface for configuration by project and issue type.",
+            "Conditional logic according to workflow states.",
+            "Workflow visualization with ReactFlow and Cytoscape.",
+            "Permission system by role and project.",
+            "Key work for system’s success and regional scalability."
+        ],
+        "scalabl_title": "Scalabl – Frontend Developer",
+        "scalabl_date": "Jan 2022 – Jul 2022",
+        "scalabl_desc": "Global educational platform present in more than 50 countries.",
+        "scalabl_bullets": [
+            "Interfaces in React, jQuery, and Python.",
+            "Worked with UX/UI team for accessibility and navigation.",
+            "Frontend integration with Python backend.",
+            "Refactoring to improve performance and maintainability.",
+            "Direct impact on thousands of users worldwide."
+        ],
+        "academic_training": "Academic Education",
+        "teclab_title": "Teclab University",
+        "teclab_degree": "Technical Degree in Web Development",
+        "davinci_title": "Universidad Da Vinci",
+        "davinci_degree": "Web Design and Development",
+        "additional_courses": "Complementary Courses",
+        "additional_courses_list": [
+            "JavaScript / React – CoderHouse",
+            "Advanced JavaScript – EducaciónIT",
+            "React – EdTeam",
+            "UX/UI Design – Digital House"
+        ],
+        "certifications_in_progress": "Certifications in Progress",
+        "certifications_list": [
+            "HarvardX – Intro to Computer Science"
+        ],
+        "languages": "Languages",
+        "languages_list": [
+            "English – Intermediate"
+        ]
+    },
+    "mision_and_vision": {
+        "title": "My Vision",
+        "paragraph": "I want to continue growing as a developer, participating in frontend and fullstack projects that challenge me technically and personally. I aim to create digital experiences that are functional, accessible, and visually appealing. My vision is to bring real value to each team, apply best practices, learn emerging technologies, and be part of environments that value quality, design, and collaborative work."
+    }
+}

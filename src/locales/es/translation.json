@@ -1,0 +1,62 @@
+{
+  "formulario": {
+    "title": "¿Querés trabajar conmigo?",
+    "paragraph": "Completá el formulario o escribime por redes sociales. Estoy lista para crear algo increíble juntos.",
+    "success_message": "¡Mensaje enviado con éxito!",
+    "name_placeholder": "Nombre",
+    "email_placeholder": "Correo electrónico",
+    "message_placeholder": "Tu mensaje...",
+    "submit_button": "Enviar"
+  },
+  "hello_welcome": "Hola, bienvenido a mi portafolio",
+  "portfolio_description": "Desarrolladora Front-end con más de tres años de experiencia profesional (más dos años de pasantía) desarrollando soluciones web modernas, escalables y centradas en el usuario. Especializada en React, tiene sólidos conocimientos en diseño UI/UX, APIs REST, manejo de estado y diseño responsive. Incorpora TypeScript de forma progresiva para mejorar la calidad y escalabilidad del código. Es proactiva, colaborativa y está apasionada por crear productos funcionales y visualmente atractivos.",
+  "experience_section": {
+    "professional_experience": "Experiencia Profesional",
+    "sistran_title": "Sistran – Desarrolladora Frontend",
+    "sistran_date": "2022 – Actualidad",
+    "sistran_stack": "Stack: React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
+    "sistran_desc": "Desarrolladora frontend principal del proyecto Sistask, una herramienta interna tipo Jira utilizada por más de 150 usuarios reales en equipos de desarrollo, QA, soporte y gestión en Argentina, Colombia y Ecuador.",
+    "sistran_bullets": [
+      "Lideré el frontend desde cero junto al equipo backend.",
+      "Interfaz dinámica para configuración por proyecto e issue type.",
+      "Lógica condicional según estados del workflow.",
+      "Visualización de flujos con ReactFlow y Cytoscape.",
+      "Sistema de permisos por rol y proyecto.",
+      "Mi trabajo fue clave para el éxito y escalabilidad regional del sistema."
+    ],
+    "scalabl_title": "Scalabl – Desarrolladora Frontend",
+    "scalabl_date": "Ene 2022 – Jul 2022",
+    "scalabl_desc": "Plataforma educativa global de Scalabl, con presencia en más de 50 países.",
+    "scalabl_bullets": [
+      "Interfaces en React, jQuery y Python.",
+      "Trabajo con equipo UX/UI para accesibilidad y navegación fluida.",
+      "Integración de frontend con backend en Python.",
+      "Refactorización para mejorar performance y mantenibilidad.",
+      "Impacto directo en miles de usuarios en América, Europa y África."
+    ],
+    "academic_training": "Formación Académica",
+    "teclab_title": "Teclab University",
+    "teclab_degree": "Tecnicatura en Desarrollo Web",
+    "davinci_title": "Universidad Da Vinci",
+    "davinci_degree": "Diseño y Desarrollo Web",
+    "additional_courses": "Cursos Complementarios",
+    "additional_courses_list": [
+      "JavaScript / React – CoderHouse",
+      "JavaScript Avanzado – EducaciónIT",
+      "React – EdTeam",
+      "Diseño UX/UI – Digital House"
+    ],
+    "certifications_in_progress": "Certificaciones en curso",
+    "certifications_list": [
+      "HarvardX – Introducción a Ciencias de la Computación"
+    ],
+    "languages": "Idiomas",
+    "languages_list": [
+      "Inglés – Intermedio"
+    ]
+  },
+  "mision_and_vision": {
+    "title": "Mi Visión",
+    "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
+  }
+}

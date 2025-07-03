@@ -13,11 +13,21 @@ import { Experiencia } from "./components/experiencia";
 import Squares from "./components/Squares";
 import { RedesSociales } from "./components/redesSociales";
 import { Formulario } from "./components/formulario";
+import './i18n';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  // Función para cambiar idioma manualmente (opcional)
+  const cambiarIdioma = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <>
       <RedesSociales />
+      
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
@@ -25,6 +35,7 @@ function App() {
         blurStrength={10}
       >
         <div className="seccion-truefocus">
+        
           <Waves
             lineColor="#fff"
             backgroundColor="rgb(0, 0, 0)"
@@ -86,12 +97,28 @@ function App() {
 
             {/* Contenido encima */}
             <div className="contenido-derecho">
-              <p className="titulo-bienvenida">
-                Hello, welcome to my portfolio
+            {/* Botones de ejemplo para cambiar idioma */}
+     <div className="language-selector">
+  <button
+    onClick={() => cambiarIdioma('en')}
+    className={i18n.language === 'en' ? 'idioma-activo' : ''}
+  >
+    EN
+  </button>
+  <button
+    onClick={() => cambiarIdioma('es')}
+    className={i18n.language === 'es' ? 'idioma-activo' : ''}
+  >
+    ES
+  </button>
+</div>
+
+<p className="titulo-bienvenida">
+                {t('hello_welcome')}
               </p>
               <div className="cajaencryted">
                 <DecryptedText
-                  text="Front-end developer with over three years of professional experience (plus two years of internship) developing modern, scalable, and user-centric web solutions. Specializing in React, she has solid knowledge of UI/UX design, REST APIs, state management, and responsive layout. She's progressively incorporating TypeScript to improve code quality and scalability. Proactive, collaborative, and passionate about creating functional and visually compelling products."
+                  text={t('portfolio_description')}
                   speed={100}
                   maxIterations={20}
                   characters="ABCD1234!?"
@@ -113,19 +140,16 @@ function App() {
         </div>
 
         <div className="seccion-experiencia">
-          <div className="fondo-cuadrados">
-              
-          </div>
+          
 
           <div className="contenido-experiencia pt-5">
             <Experiencia />
           </div>
-
-        
         </div>
-          <div>
-            <Formulario />
-          </div>
+
+        <div>
+          <Formulario />
+        </div>
       </ScrollReveal>
     </>
   );
