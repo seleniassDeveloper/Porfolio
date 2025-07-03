@@ -19,7 +19,7 @@ import { useTranslation } from 'react-i18next';
 function App() {
   const { t, i18n } = useTranslation();
 
-  // Función para cambiar idioma manualmente (opcional)
+  // Función para cambiar idioma manualmente
   const cambiarIdioma = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -27,7 +27,23 @@ function App() {
   return (
     <>
       <RedesSociales />
-      
+
+      {/* ✅ Botones de idioma FIJOS afuera del contenido scrollable */}
+      <div className="language-selector">
+        <button
+          onClick={() => cambiarIdioma('en')}
+          className={i18n.language === 'en' ? 'idioma-activo' : ''}
+        >
+          EN
+        </button>
+        <button
+          onClick={() => cambiarIdioma('es')}
+          className={i18n.language === 'es' ? 'idioma-activo' : ''}
+        >
+          ES
+        </button>
+      </div>
+
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
@@ -35,7 +51,6 @@ function App() {
         blurStrength={10}
       >
         <div className="seccion-truefocus">
-        
           <Waves
             lineColor="#fff"
             backgroundColor="rgb(0, 0, 0)"
@@ -81,7 +96,6 @@ function App() {
 
           {/* Columna derecha con partículas y contenido */}
           <div className="columna-derecha scroll-transition">
-            {/* Partículas como fondo */}
             <div className="fondo-particulas">
               <Particles
                 particleColors={["#ffffff", "#ffffff"]}
@@ -95,25 +109,8 @@ function App() {
               />
             </div>
 
-            {/* Contenido encima */}
             <div className="contenido-derecho">
-            {/* Botones de ejemplo para cambiar idioma */}
-     <div className="language-selector">
-  <button
-    onClick={() => cambiarIdioma('en')}
-    className={i18n.language === 'en' ? 'idioma-activo' : ''}
-  >
-    EN
-  </button>
-  <button
-    onClick={() => cambiarIdioma('es')}
-    className={i18n.language === 'es' ? 'idioma-activo' : ''}
-  >
-    ES
-  </button>
-</div>
-
-<p className="titulo-bienvenida">
+              <p className="titulo-bienvenida">
                 {t('hello_welcome')}
               </p>
               <div className="cajaencryted">
@@ -140,8 +137,6 @@ function App() {
         </div>
 
         <div className="seccion-experiencia">
-          
-
           <div className="contenido-experiencia pt-5">
             <Experiencia />
           </div>

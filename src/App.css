@@ -516,7 +516,7 @@ body,
 
 .tarjeta:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(255, 114, 182, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 255, 255, 0.25); /* Antes: rgba(255, 114, 182, 0.25) */
 }
 
 
@@ -586,9 +586,8 @@ body,
 
 .redes-sociales a:hover {
   transform: scale(1.2);
-  color: #ff4081;
+  color: #00ffff; /* Antes: #ff4081 */
 }
-
 .seccion-experiencia {
   position: relative;
   width: 100%;
@@ -782,15 +781,16 @@ background-color: #000;
     opacity: 0;
   }
 }
-
-button.idioma-activo {
-  border: 2px solid #00ffff; /* Borde de color neón */
-  background-color: #001f2f; /* Fondo oscuro */
-  color: #00ffff;            /* Texto brillante */
-  box-shadow: 0 0 10px #00ffff; /* Luz/glow */
+.language-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 9999;
 }
 
-button {
+.language-selector button {
   padding: 6px 12px;
   border: none;
   cursor: pointer;
@@ -800,14 +800,13 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.language-selector button:hover {
   opacity: 0.8;
 }
-.language-selector {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 8px;
-  z-index: 9999;
+
+.language-selector .idioma-activo {
+  border: 2px solid #00ffff;
+  background-color: #001f2f;
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { useTranslation } from "react-i18next";
+import { FaPaperPlane, FaCheckCircle } from "react-icons/fa";
 import "./../css/Formulario.css";
 
 export const Formulario = () => {
@@ -10,11 +11,14 @@ export const Formulario = () => {
   return (
     <section className="contacto-container py-5">
       <div className="contacto-contenido">
-        <h2>{t("formulario.title")}</h2>
+        <h2 className="manrope">{t("formulario.title")}</h2>
         <p>{t("formulario.paragraph")}</p>
 
         {state.succeeded ? (
-          <p className="mensaje-exito">{t("formulario.success_message")}</p>
+          <div className="mensaje-exito">
+            <FaCheckCircle className="icono-exito" />
+            <p>{t("formulario.success_message")}</p>
+          </div>
         ) : (
           <form className="contacto-formulario" onSubmit={handleSubmit}>
             <input
@@ -43,7 +47,12 @@ export const Formulario = () => {
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-            <button type="submit" disabled={state.submitting}>
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="btn-futurista"
+            >
+              <FaPaperPlane className="icono-enviar" />
               {t("formulario.submit_button")}
             </button>
           </form>

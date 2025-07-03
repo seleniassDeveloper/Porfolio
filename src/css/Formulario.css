@@ -1,43 +1,48 @@
-.manrope {
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-.asap{
-  font-family: "Asap", sans-serif;
-  font-optical-sizing: auto; 
-  font-variation-settings:
-    "wdth" 100;
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-text-soft: #e0e0e0;
+  --color-accent: #00ffff;     /* Cian neón */
+  --color-shadow: rgba(0, 255, 255, 0.25);
+  --font-primary: 'Manrope', sans-serif;
 }
 
+.manrope {
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.asap {
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+
+/* === CONTACTO CONTAINER === */
 .contacto-container {
-    background-color: #111;
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  background-color: #111;
+  color: var(--color-text);
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .contacto-contenido {
-    max-width: 600px;
-    width: 100%;
+  max-width: 600px;
+  width: 100%;
 }
 
 .contacto-contenido h2 {
   font-size: 2.8rem;
   font-weight: 500;
-  font-style: normal;
   margin-bottom: 20px;
-  color: #f75f9c;
+  color: var(--color-accent);
   position: relative;
   display: inline-block;
   animation: fadeInUp 1s ease-out forwards;
-
-  /* Efecto glow sutil */
-  text-shadow: 0 0 10px rgba(247, 95, 156, 0.4),
-               0 0 20px rgba(247, 95, 156, 0.2);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+               0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 @keyframes fadeInUp {
@@ -51,7 +56,7 @@
   }
 }
 
-/* Línea animada debajo del título */
+/* Línea glow debajo del título */
 .contacto-contenido h2::after {
   content: '';
   position: absolute;
@@ -59,7 +64,7 @@
   bottom: -8px;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #f75f9c, #ffb6d2);
+  background: linear-gradient(90deg, var(--color-accent), #66ffff);
   border-radius: 4px;
   transform: scaleX(0);
   transform-origin: left;
@@ -70,50 +75,50 @@
   transform: scaleX(1);
 }
 
-
 .contacto-contenido p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--color-text-soft);
 }
 
 .contacto-formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contacto-formulario input,
 .contacto-formulario textarea {
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    background-color: #222;
-    color: #fff;
-    font-size: 1rem;
-    resize: none;
-    transition: all 0.3s ease;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: var(--color-text);
+  font-size: 1rem;
+  resize: none;
+  transition: all 0.3s ease;
 }
 
 .contacto-formulario input:focus,
 .contacto-formulario textarea:focus {
-    outline: 2px solid #f75f9c;
+  outline: 2px solid var(--color-accent);
 }
 
 .contacto-formulario button {
-    padding: 12px;
-    background-color: #f75f9c;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  padding: 12px;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contacto-formulario button:hover {
-    background-color: #ff88b2;
+  background-color: #33ffff;
+  box-shadow: 0 0 10px var(--color-accent);
 }
 
 @media screen and (max-width: 768px) {
@@ -121,11 +126,6 @@
     padding: 60px 15px;
     flex-direction: column;
     align-items: center;
-  }
-
-  .contacto-contenido {
-    width: 100%;
-    max-width: 100%;
   }
 
   .contacto-contenido h2 {
