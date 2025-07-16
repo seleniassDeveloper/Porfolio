@@ -15,6 +15,7 @@ import { RedesSociales } from "./components/redesSociales";
 import { Formulario } from "./components/formulario";
 import './i18n';
 import { useTranslation } from 'react-i18next';
+import { ProyectosReales } from "./components/proyectosReales";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -43,6 +44,8 @@ function App() {
           ES
         </button>
       </div>
+
+      
 
       <ScrollReveal
         baseOpacity={0}
@@ -78,38 +81,12 @@ function App() {
 
         <div className="cajaFocus scroll-transition">
           {/* Columna izquierda */}
-          <div className="columna-izquierda scroll-transition">
-            <div className="orb-fondo">
-              <div className="orb-wrapper">
-                <Orb
-                  hoverIntensity={0.5}
-                  rotateOnHover={true}
-                  hue={0}
-                  forceHoverState={false}
-                />
-              </div>
-              <div className="orb-imagen">
-                <img src={YosiendoFeliz} alt="YosiendoFeliz" />
-              </div>
-            </div>
-          </div>
+        
 
           {/* Columna derecha con partículas y contenido */}
           <div className="columna-derecha scroll-transition">
-            <div className="fondo-particulas">
-              <Particles
-                particleColors={["#ffffff", "#ffffff"]}
-                particleCount={200}
-                particleSpread={10}
-                speed={0.1}
-                particleBaseSize={100}
-                moveParticlesOnHover={true}
-                alphaParticles={false}
-                disableRotation={false}
-              />
-            </div>
-
-            <div className="contenido-derecho">
+            
+              <div className="contenido-derecho ms-5">
               <p className="titulo-bienvenida">
                 {t('hello_welcome')}
               </p>
@@ -125,11 +102,43 @@ function App() {
                 />
               </div>
             </div>
+            <div className="fondo-particulas">
+              <Particles
+                particleColors={["#ffffff", "#ffffff"]}
+                particleCount={200}
+                particleSpread={10}
+                speed={0.1}
+                particleBaseSize={100}
+                moveParticlesOnHover={true}
+                alphaParticles={false}
+                disableRotation={false}
+              />
+            </div>
+  <div className="columna-izquierda scroll-transition">
+            <div className="orb-fondo">
+              <div className="orb-wrapper ">
+                <Orb
+                  hoverIntensity={0.5}
+                  rotateOnHover={true}
+                  hue={0}
+                  forceHoverState={false}
+                />
+              </div>
+              <div className="orb-imagen">
+                <img src={YosiendoFeliz} alt="YosiendoFeliz" />
+              </div>
+            </div>
+          </div>
+          
           </div>
         </div>
 
         <div>
           <MisionAndVision />
+        </div>
+
+        <div>
+          <ProyectosReales />
         </div>
 
         <div>

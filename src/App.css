@@ -156,16 +156,18 @@ background: black;
 .contenido-derecho {
   position: relative;
   z-index: 2;
-  padding: 40px;
+  padding: 40px 20px;
   
   border-radius: 12px;
   width: 100%;
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+
+
 }
+
+
 
 .titulo-bienvenida {
   font-size: 40px;
@@ -464,7 +466,8 @@ body,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px;
+  padding: 20px 70px!important;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -493,39 +496,73 @@ body,
   }
 }
 
-.titulo {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ff72b6;
-}
 
 .tarjeta {
-  flex: 1 1 45%;
-  width: 100%;
-  margin: 30px 0;
-  padding: 20px;
-  min-width: 320px;
-  background: rgba(0, 0, 0, 0.747);
-  backdrop-filter: blur(10px);
-
+  background: linear-gradient(145deg, #1b1e2e, #23273e);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
   padding: 30px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  color: #eaeaea;
 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
 .tarjeta:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 255, 255, 0.25); /* Antes: rgba(255, 114, 182, 0.25) */
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
-
 .tarjeta h3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  color: #00ffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+}
+
+.tarjeta h4 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #ffffff;
+}
+
+.tarjeta .fecha {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.tarjeta ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.tarjeta ul li {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.tarjeta .icono {
+  color: #00ffff;
+  margin-right: 8px;
+  font-size: 1.2rem;
 }
 
 .icono {
@@ -588,13 +625,14 @@ body,
   transform: scale(1.2);
   color: #00ffff; /* Antes: #ff4081 */
 }
-.seccion-experiencia {
-  position: relative;
-  width: 100%;
-background-color: #000;
-  overflow: hidden;
-}
 
+.seccion-experiencia {
+    position: relative;
+    height: 1326px;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
 .seccion-experiencia > div:first-child {
   position: absolute;
   width: 100%;

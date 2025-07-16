@@ -10,7 +10,7 @@
     },
 
     "hello_welcome": "Hello, welcome to my portfolio",
-    "portfolio_description": "Front-end developer with over three years of professional experience (plus two years of internship) developing modern, scalable, and user-centric web solutions. Specializing in React, she has solid knowledge of UI/UX design, REST APIs, state management, and responsive layout. She's progressively incorporating TypeScript to improve code quality and scalability. Proactive, collaborative, and passionate about creating functional and visually compelling products.",
+   "portfolio_description": "I’m a front-end developer with over three years of professional experience (plus two years as an intern) building modern, scalable, and user-focused web solutions. I specialize in React with solid knowledge of UI/UX design, REST APIs, state management, and responsive layouts. I’m progressively incorporating TypeScript to improve code quality and scalability. I’m proactive, collaborative, and passionate about creating functional and visually compelling digital products.",
     "experience_section": {
         "professional_experience": "Professional Experience",
         "sistran_title": "Sistran – Frontend Developer",
