@@ -101,17 +101,18 @@ padding: 0 90px 0 0;
 }
 
 .tarjeta-proyecto a {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 20px;
-  background: #dafb37;
-  color: #141416;
-  font-weight: 600;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.35s ease;
-  font-family: "Manrope", sans-serif;
-  box-shadow: 0 0 10px rgba(218, 251, 55, 0.3);
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 5px;
+    background: #d4ff0091;
+    color: #141416;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    font-family: "Manrope", sans-serif;
+    box-shadow: 0 0 10px rgba(218, 251, 55, 0.3);
 }
 
 .tarjeta-proyecto a:hover {
