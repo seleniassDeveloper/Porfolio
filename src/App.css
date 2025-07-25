@@ -495,52 +495,47 @@ body,
 
 
 .tarjeta {
-  background: linear-gradient(145deg, #1b1e2e, #23273e);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, #141416, #1c1f2a);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 30px;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  color: #eaeaea;
-
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 32px;
+  max-width: 700px;
+  margin: 30px auto;
+  color: #e0e0e0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(12px);
 }
 
 .tarjeta:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 70px rgba(218, 251, 55, 0.2);
+  border-color: #dafb37;
 }
 
 .tarjeta h3 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.6rem;
-  color: #00ffff;
-  margin-bottom: 15px;
-  text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+  color: #dafb37;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.tarjeta h3 .icono {
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 
 .tarjeta h4 {
+  color: #fff;
   font-size: 1.2rem;
   margin: 10px 0 5px;
-  color: #ffffff;
 }
 
 .tarjeta .fecha {
   font-size: 0.95rem;
-  color: #aaa;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.tarjeta p {
-  font-size: 1rem;
-  color: #ccc;
-  line-height: 1.6;
+  color: #bbbbbb;
   margin-bottom: 12px;
 }
 
@@ -550,12 +545,19 @@ body,
 }
 
 .tarjeta ul li {
-  color: #bbb;
+  margin-bottom: 10px;
+  color: #cccccc;
   font-size: 0.95rem;
-  margin-bottom: 8px;
-  line-height: 1.5;
+  line-height: 1.6;
+  position: relative;
 }
 
+.tarjeta ul li::before {
+  content: "•";
+  color: #dafb37;
+  font-weight: bold;
+  margin-right: 8px;
+}
 .tarjeta .icono {
   color: #00ffff;
   margin-right: 8px;

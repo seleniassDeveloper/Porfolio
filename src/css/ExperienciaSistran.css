@@ -6,7 +6,6 @@
   background-image: url("https://sistask.sistran.com/static/media/FONDO_SISTASK_3_JPG.557823031087d9d621dc.jpg");
   background-size: cover;
   background-position: center;
-
   align-items: center;
 }
 
@@ -27,6 +26,8 @@
 .btn-volver:hover {
   background-color: #e65c00;
 }
+
+
 
 /* --- CARD CENTRAL --- */
 .sistran-card {
@@ -128,15 +129,36 @@
   animation: fadeInDown 1s ease;
 }
 
-.tareas-sistran h3,
-.impacto-sistran h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #ff6600; /* Naranja fuerte */
-  border-left: 4px solid #ff6600;
-  padding-left: 0.5rem;
+.tareas-scalabl h3,
+.impacto-scalabl h3 {
+  color: #dafb37;
+  font-size: 1.5rem;
+  border-left: 4px solid #dafb37;
+  padding-left: 0.75rem;
+  margin-bottom: 1.2rem;
 }
 
+.impacto-scalabl ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.scalabl-card ul {
+  padding-left: 1.5rem;
+}
+
+.scalabl-card li::marker {
+  color: #dafb37;
+  font-size: 1rem;
+}
+
+.impacto-scalabl li::before {
+
+  color: #5b455b;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
 .sistran-card strong {
   color: #ffffff;
 }
@@ -178,37 +200,76 @@
 
 /* SCALABL --------------------------------------------------- STYLES */
 .scalabl-container {
-  max-width: 900px;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+  max-width: 1000%;
   margin: 0 auto;
   padding: 2rem;
-  color: #5b455b;
+   background-color: #f8f8f8; /* en vez de white puro */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: #dafb37;
   min-height: 100vh;
 }
 
 .titulo-scalabl {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #5b455b;
-  animation: fadeInDown 1s ease;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
 }
 
 .scalabl-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 15px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 10px rgba(91, 69, 91, 0.1);
+
+    animation: slideUp 1s ease;
+max-width: 850px;
+  background: linear-gradient(135deg, #563454, #402a3f);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.logo-scalabl, .logo-sistran {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  max-height: 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .scalabl-card p,
 .scalabl-card li {
-  color: #444;
+  color: #f0f0f0;
 }
 
-.scalabl-card li::before {
-  content: "✓";
-  color: #5b455b;
+.tareas-scalabl h3,
+.impacto-scalabl h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #dafb37;
+  border-left: 4px solid #dafb37;
+  padding-left: 0.5rem;
+}
+
+.impacto-scalabl li::before {
+  content: \"✔\";
+  color: #dafb37;
   font-weight: bold;
-  margin-right: 8px;
+  margin-right: 0.5rem;
+}
+
+.btn-volverScalabl {
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #dafb37;
+  color: #563454;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(218, 251, 55, 0.4);
+}
+
+.btn-volverScalabl:hover {
+  background-color: #cfe733;
+  box-shadow: 0 6px 14px rgba(218, 251, 55, 0.6);
 }

@@ -37,42 +37,10 @@ export const Experiencia = () => {
   }, []);
 
   return (
-    <div className="experiencia-container">
+    <div className="experiencia-container d-flex justify-content-center ">
       <div className="experiencia-flex">
         {/* EXPERIENCIA PROFESIONAL */}
-        <div
-          ref={(el) => (tarjetasRef.current[0] = el)}
-          className={`tarjeta animated-side left ${
-            visible[0] ? "slide-in" : "slide-out"
-          }`}
-        >
-          <h3>
-            <FaBriefcase className="icono" /> {t("experience_section.professional_experience")}
-          </h3>
-
-          <div className="item">
-            <h4>{t("experience_section.sistran_title")}</h4>
-            <span className="fecha">{t("experience_section.sistran_date")}</span>
-            <p>{t("experience_section.sistran_stack")}</p>
-            <p>{t("experience_section.sistran_desc")}</p>
-            <ul>
-              {t("experience_section.sistran_bullets", { returnObjects: true }).map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="item">
-            <h4>{t("experience_section.scalabl_title")}</h4>
-            <span className="fecha">{t("experience_section.scalabl_date")}</span>
-            <p>{t("experience_section.scalabl_desc")}</p>
-            <ul>
-              {t("experience_section.scalabl_bullets", { returnObjects: true }).map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+       
 
         {/* ESTUDIOS */}
         <div
