@@ -1,0 +1,8 @@
+export const scalabl = () => {
+    
+    return(
+        <> 
+        
+        </>
+    )
+}

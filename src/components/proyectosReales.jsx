@@ -1,9 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/ProyectosReales.css";
 import scalablImg from "../assets/imagenes/scalabl-logo.png";
 import sistaskImg from "../assets/imagenes/sistran-logo.png";
+import { Sistran } from "../components/ComponentesDComponentes/sistran";
 
 export function ProyectosReales() {
+
+   const navigate = useNavigate();
+
   const proyectos = [
     {
       nombre: "Scalabl",
@@ -19,6 +24,11 @@ export function ProyectosReales() {
     },
   ];
 
+  const handleNavigate = (dato) => {
+    navigate(dato)
+    console.log('navegacion', dato)
+  }
+
   return (
     <div className="proyectos-reales-container">
       <h2>Proyectos Reales</h2>
@@ -28,7 +38,7 @@ export function ProyectosReales() {
             <img src={proyecto.imagen} alt={proyecto.nombre} />
          
             <p>{proyecto.descripcion}</p>
-            <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
+            <a onClick={() => navigate("/experiencia-sistran")} target="_blank" rel="noopener noreferrer">
               Ver Proyecto
             </a>
           </div>
