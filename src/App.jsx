@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { ProyectosReales } from "./components/proyectosReales";
 import { TodosLosComponentes } from "./components/todosLosComponente";
 import { Sistran } from "./components/ComponentesDComponentes/sistran";
+import { Scalabl } from "./components/ComponentesDComponentes/scalabl";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -41,6 +42,8 @@ function App() {
           <Route path="/" element={<TodosLosComponentes t={t} YosiendoFeliz={YosiendoFeliz} />} />
           <Route path="/proyectos" element={<ProyectosReales />} />
           <Route path="/experiencia-sistran" element={<Sistran />} />
+          <Route path="/experiencia-scalabl" element={<Scalabl />} />
+          
         </Routes>
       </ScrollReveal>
     </HashRouter>

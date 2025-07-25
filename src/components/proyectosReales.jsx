@@ -11,13 +11,13 @@ export function ProyectosReales() {
 
   const proyectos = [
     {
-      nombre: "Scalabl",
+      nombre: "experiencia-scalabl ",
       url: "https://www.scalabl.com",
       descripcion: "Plataforma educativa global de innovación y emprendimiento.",
       imagen: scalablImg,
     },
     {
-      nombre: "Sistask (Sistran)",
+      nombre: "/experiencia-sistran",
       url: "https://sistask.sistran.com",
       descripcion: "Sistema de gestión de tareas y workflows para consultoras de seguros.",
       imagen: sistaskImg,
@@ -38,7 +38,7 @@ export function ProyectosReales() {
             <img src={proyecto.imagen} alt={proyecto.nombre} />
          
             <p>{proyecto.descripcion}</p>
-            <a onClick={() => navigate("/experiencia-sistran")} target="_blank" rel="noopener noreferrer">
+            <a onClick={() => handleNavigate(proyecto.nombre)} target="_blank" rel="noopener noreferrer">
               Ver Proyecto
             </a>
           </div>
