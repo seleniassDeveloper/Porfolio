@@ -3,7 +3,7 @@ import "../../css/ExperienciaSistran.css";
 import logoSistask from "../../assets/imagenes/scalabl-logo.png";
 import { useNavigate } from "react-router-dom";
 
-export const Scalabl = () => {
+export const Sistran = () => {
   const navigate = useNavigate();
 
   return (
