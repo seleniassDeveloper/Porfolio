@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import logoScalabl from "../../assets/imagenes/scalabl-logo.png";
 import "../../css/ExperienciaSistran.css";
 
 export const Scalabl = () => {
@@ -13,10 +14,11 @@ export const Scalabl = () => {
       </div>
 
 
-<div className="d-flex justify//"></div>
-      <div className="scalabl-card fade-in ">
+<div className="d-flex justify-content-center">
+     <div className="scalabl-card fade-in ">
         <div className="header-scalabl d-flex align-items-center justify-content-between">
           <h1 className="titulo-scalabl">Experiencia en Scalabl</h1>
+            <img src={logoScalabl} alt="Logo Scalabl" className="logo-scalabl" />
         </div>
 
         <div className="info-scalabl">
@@ -48,6 +50,8 @@ export const Scalabl = () => {
           </ul>
         </div>
       </div>
+</div>
+     
     </div>
   );
 };
