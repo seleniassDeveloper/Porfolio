@@ -2,25 +2,14 @@
   --color-bg: #000000;
   --color-text: #ffffff;
   --color-text-soft: #e0e0e0;
-  --color-accent: #00ffff;     /* Cian neón */
-  --color-shadow: rgba(0, 255, 255, 0.25);
+  --color-accent: #ff1cff;      /* Magenta brillante */
+  --color-accent-hover: #ff66c4; /* Fucsia claro */
+  --color-shadow: rgba(255, 28, 255, 0.25);
   --font-primary: 'Manrope', sans-serif;
 }
 
-.manrope {
-  font-family: var(--font-primary);
-  font-weight: 600;
-}
-
-.asap {
-  font-family: "Asap", sans-serif;
-  font-optical-sizing: auto;
-  font-variation-settings: "wdth" 100;
-}
-
-/* === CONTACTO CONTAINER === */
 .contacto-container {
-  background-color: #111;
+  background-color: var(--color-bg);
   color: var(--color-text);
   padding: 80px 20px;
   text-align: center;
@@ -33,47 +22,46 @@
   width: 100%;
 }
 
+
+
 .contacto-contenido h2 {
-  font-size: 2.8rem;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: var(--color-accent);
-  position: relative;
-  display: inline-block;
-  animation: fadeInUp 1s ease-out forwards;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
-               0 0 20px rgba(0, 255, 255, 0.2);
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ff1c1c;
+    position: relative;
+    display: inline-block;
+    animation: fadeInUp 1s ease-out forwards;
+    text-shadow: 0 0 15px var(--color-accent), 0 0 2px var(--color-accent-hover);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Línea glow debajo del título */
 .contacto-contenido h2::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), #66ffff);
-  border-radius: 4px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-out;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 160px;
+  height: 4px;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  opacity: 0.9;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.contacto-contenido h2:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
 }
 
-.contacto-contenido h2:hover::after {
-  transform: scaleX(1);
-}
+
+
 
 .contacto-contenido p {
   font-size: 1.1rem;
@@ -92,35 +80,60 @@
   padding: 15px;
   border: none;
   border-radius: 8px;
-  background-color: #222;
+  background-color: #1a1a1a;
   color: var(--color-text);
   font-size: 1rem;
   resize: none;
   transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(255, 28, 255, 0.1);
 }
 
 .contacto-formulario input:focus,
 .contacto-formulario textarea:focus {
   outline: 2px solid var(--color-accent);
-}
-
-.contacto-formulario button {
-  padding: 12px;
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contacto-formulario button:hover {
-  background-color: #33ffff;
   box-shadow: 0 0 10px var(--color-accent);
 }
 
+.contacto-formulario button {
+ padding: 12px;
+    background-color: #ff1c4cb0;
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contacto-formulario button:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 0 15px var(--color-accent);
+}
+
+/* Íconos */
+.icono-enviar,
+.icono-exito {
+  font-size: 1.2rem;
+}
+
+.mensaje-exito {
+  color: #dafb37;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #dafb37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsivo */
 @media screen and (max-width: 768px) {
   .contacto-container {
     padding: 60px 15px;
@@ -130,15 +143,6 @@
 
   .contacto-contenido h2 {
     font-size: 1.8rem;
-  }
-
-  .contacto-contenido p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .contacto-formulario {
-    gap: 12px;
   }
 
   .contacto-formulario input,

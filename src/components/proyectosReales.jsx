@@ -31,7 +31,7 @@ export function ProyectosReales() {
 
   return (
     <div className="proyectos-reales-container">
-      <h2>Proyectos Reales</h2>
+      <h2>Proyectos </h2>
       <div className="tarjetas-proyectos">
         {proyectos.map((proyecto, index) => (
           <div key={index} className="tarjeta-proyecto">

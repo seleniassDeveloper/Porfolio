@@ -103,7 +103,7 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
         <ProyectosReales />
       </div>
 
-      <div>
+      <div >
         <Tecnologias />
       </div>
 
