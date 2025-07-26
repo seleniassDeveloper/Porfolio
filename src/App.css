@@ -31,7 +31,7 @@
 }
 @media screen and (max-width: 768px) {
   .seccion-truefocus {
-    height: auto;
+  text-align: center;
     min-height: 500px;
   }
 }
@@ -200,7 +200,7 @@
 
 @media screen and (max-width: 768px) {
   .seccion-truefocus {
-    height: auto; /* O podés usar algo como 600px si querés altura fija */
+text-align: center;
     min-height: 500px;
   }
 }
@@ -428,7 +428,9 @@ background: black;
   justify-content: center;
   align-items: center;
   padding: 0 0 30px 0;
+  gap: 40px;
 }
+
 
 * {
   margin: 0;
@@ -654,32 +656,65 @@ body,
 
 }
 
+
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+/* Estilos responsive */
 @media screen and (max-width: 768px) {
-  .experiencia-flex {
+  .hero-container {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
   }
 
-  .icono {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-
-  .titulo {
-    font-size: 22px;
-  }
-
-  .subtitulo {
+  .hero-texto {
+    width: 100%;
+    max-width: 100%;
     font-size: 1rem;
+    line-height: 1.5;
   }
 
-  .item ul li {
-    font-size: 14px;
-    line-height: 1.6;
+  .hero-foto {
+    max-width: 200px;
+    margin: 20px auto;
+  }
+
+  .hero-texto p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .contenedorVisionMision {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card-misionvision {
+    width: 100%;
+    max-width: 90vw;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .card-misionvision p {
+    font-size: 1rem;
+  }
+}
 
 .tarjeta {
   background: linear-gradient(135deg, #141416, #1c1f2a);
@@ -837,6 +872,8 @@ body,
 
   .columna-izquierda,
   .columna-derecha {
+    display: block;
+    justify-content: center;
     width: 100%;
     height: auto;
   }
@@ -886,6 +923,7 @@ body,
   .titulo-tecnologias {
     font-size: 28px;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .carta-tecnologia {

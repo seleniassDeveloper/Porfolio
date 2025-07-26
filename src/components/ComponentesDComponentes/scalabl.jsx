@@ -17,7 +17,7 @@ export const Scalabl = () => {
 <div className="d-flex justify-content-center">
      <div className="scalabl-card fade-in ">
         <div className="header-scalabl d-flex align-items-center justify-content-between">
-          <h1 className="titulo-scalabl">Experiencia en Scalabl</h1>
+          <h1 className="titulo-scalabl ">Experiencia en Scalabl</h1>
             <img src={logoScalabl} alt="Logo Scalabl" className="logo-scalabl" />
         </div>
 

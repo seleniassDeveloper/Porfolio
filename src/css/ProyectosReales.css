@@ -1,19 +1,20 @@
+
 .proyectos-reales-container {
   background-color: #000000;
+  padding: 60px 40px;
 }
 
 .proyectos-reales-container h2 {
- 
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 2.5rem;
-    text-align: end;
-    padding: 0 90px 0 0;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    margin-bottom: 50px;
-    animation: glowSoft 2.8s infinite alternate;
-    position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  text-align: end;
+  padding: 0 90px 0 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+  animation: glowSoft 2.8s infinite alternate;
+  position: relative;
 }
 
 .proyectos-reales-container h2::after {
@@ -109,4 +110,43 @@
   background-color: #3A0073;
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 18px rgba(176, 224, 255, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .proyectos-reales-container {
+    padding: 40px 20px;
+  }
+
+  .proyectos-reales-container h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .proyectos-reales-container h2::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .tarjetas-proyectos {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tarjeta-proyecto {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .tarjeta-proyecto p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .tarjeta-proyecto a {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
 }

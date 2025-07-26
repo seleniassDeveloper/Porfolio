@@ -124,7 +124,6 @@
 .titulo-animado {
   text-align: center;
   font-size: 2.8rem;
-  margin-bottom: 2rem;
   color: #ff6600; /* Naranja fuerte */
   animation: fadeInDown 1s ease;
 }
@@ -272,4 +271,45 @@ max-width: 850px;
 .btn-volverScalabl:hover {
   background-color: #cfe733;
   box-shadow: 0 6px 14px rgba(218, 251, 55, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .scalabl-container,
+  .sistran-container {
+    padding: 40px 15px;
+  }
+
+  .header-scalabl,
+  .header-sistran {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .titulo-scalabl,
+  .titulo-animado {
+    font-size: 1.6rem;
+  }
+
+  .logo-scalabl,
+  .logo-sistran {
+    max-width: 60%;
+  }
+
+  .titulo-scalabl {
+    margin: 0;
+    padding: 0 20px 0 0;
+  }
+
+  .scalabl-card,
+  .sistran-card {
+    padding: 20px;
+  }
+
+  .impacto-scalabl ul,
+  .impacto-sistran ul,
+  .tareas-scalabl ul {
+    padding-left: 20px;
+  }
 }

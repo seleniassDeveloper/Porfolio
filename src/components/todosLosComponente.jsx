@@ -48,7 +48,7 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
         {/* Columna derecha con partículas y contenido */}
         <div className="columna-derecha scroll-transition">
 
-          <div className="contenido-derecho ms-5">
+          <div className="contenido-derecho ms-lg-5">
             <p className="titulo-bienvenida">
               {t('hello_welcome')}
             </p>

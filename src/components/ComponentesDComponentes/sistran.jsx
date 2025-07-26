@@ -12,7 +12,7 @@ export const Sistran = () => {
         <>
 
             <div className="sistran-container">
-                <div className="volver-btn-container">
+                <div className="volver-btn-container my-2">
                     <button className="btn-volver" onClick={volverAtras}>← Volver</button>
                 </div>
                 <div className="d-flex justify-content-center">   <div className="sistran-card fade-in">
