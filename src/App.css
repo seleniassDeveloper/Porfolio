@@ -14,6 +14,176 @@
   width: 100%;
   text-align: center;
   z-index: 1;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+@media screen and (max-width: 768px) {
+  .titulo-portafolio {
+    top: 32%;
+  }
+}
+
+/* SECCION TRUEFOCUS */
+.seccion-truefocus {
+  position: relative;
+  width: 100vw;
+  height: 853px;
+}
+@media screen and (max-width: 768px) {
+  .seccion-truefocus {
+    height: auto;
+    min-height: 500px;
+  }
+}
+
+/* ANIMACIONES */
+@keyframes glowSoft {
+  0% {
+    text-shadow: 0 0 6px #6C00FF, 0 0 12px #3A0073;
+  }
+  100% {
+    text-shadow: 0 0 16px #6C00FF, 0 0 30px #00BFFF;
+  }
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* CAJA FOCUS */
+.cajaFocus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background: black;
+  position: relative;
+}
+
+/* ORB */
+.orb-imagen img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* TEXTO BIENVENIDA */
+.titulo-bienvenida {
+  font-size: 40px;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+}
+
+/* MISION Y VISION */
+.card-misionvision {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(108, 0, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card-misionvision:hover {
+  background: rgba(108, 0, 255, 0.1);
+  box-shadow: 0 30px 80px rgba(108, 0, 255, 0.4);
+}
+
+/* TECNOLOGIAS */
+.titulo-tecnologias {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #6C00FF;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: glowSoft 2.8s infinite alternate;
+}
+
+/* TARJETAS EXPERIENCIA */
+.tarjeta {
+  background: linear-gradient(135deg, #141416, #1c1f2a);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 32px;
+  margin: 30px auto;
+  color: #e0e0e0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(12px);
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 70px rgba(108, 0, 255, 0.3);
+  border-color: #6C00FF;
+}
+
+/* Título principal con ícono */
+.tarjeta h3 {
+    color: #dcc3ff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex
+;
+    align-items: center;
+    gap: 8px;
+}
+
+.tarjeta h3 .icono {
+  color: #00BFFF;
+  font-size: 1.4rem;
+}
+
+/* Subtítulos: cursos, certificaciones, idiomas */
+.subtitulo {
+  margin-top: 20px;
+  color: #B0E0FF;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Fechas */
+.fecha {
+  font-size: 0.95rem;
+  color: #A0A0A0;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Listas de cursos e idiomas */
+.tarjeta ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.tarjeta ul li {
+  margin-bottom: 8px;
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+
+
+
+/* REDES SOCIALES */
+.redes-sociales a:hover {
+  color: #00BFFF;
+  transform: scale(1.2);
+}
+
+/* LANGUAGE SELECTOR */
+.language-selector .idioma-activo {
+  border: 2px solid #6C00FF;
+  background: linear-gradient(135deg, #6C00FF, #3A0073, #00BFFF);
+  color: white;
+  box-shadow: 0 0 10px #6C00FF;
 }
 
 @media screen and (max-width: 768px) {
@@ -322,6 +492,19 @@ body,
   transform: translateY(-5px) scale(1.02);
 }
 
+.destacar-react {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(97, 218, 251, 0.7);
+  border: 2px solid #61dafb;
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.destacar-react .icono-tecnologia {
+  font-size: 54px;
+  color: #61dafb;
+}
+
+
 .card-misionvision::before {
   content: "";
   position: absolute;
@@ -340,9 +523,9 @@ body,
 /**/
 
 .tecnologias-container {
-  padding: 120px 40px!important;
+  padding: 120px 40px !important;
+  padding-left: 90px;
   background: black;
-padding: 0 0 0 90px;
   position: relative;
   z-index: 1;
 }
@@ -350,40 +533,26 @@ padding: 0 0 0 90px;
 .titulo-tecnologias {
   font-size: 40px;
   margin-bottom: 60px;
-  color: #dafb37;
+  color: #eaeaea;
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
- 
-  animation: glowSoft 2.8s infinite alternate;
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
+  animation: glowSoft 2.8s infinite alternate;
 }
 
-/* Efecto de brillo elegante */
+
+/* Brillo animado violeta-azul */
 @keyframes glowSoft {
   0% {
-    text-shadow: 0 0 6px #dafb37, 0 0 12px rgba(218, 251, 55, 0.4);
+    text-shadow: 0 0 6px #6C00FF, 0 0 12px #3A0073;
   }
   100% {
-    text-shadow: 0 0 16px #dafb37, 0 0 30px rgba(218, 251, 55, 0.2);
+    text-shadow: 0 0 16px #6C00FF, 0 0 30px #00BFFF;
   }
 }
 
-/* Línea inferior animada */
-.titulo-tecnologias::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(1);
-  width: 160px;
-  height: 4px;
-  border-radius: 50px;
- 
-  opacity: 0.8;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
 
 .grid-tecnologias {
   display: flex;
@@ -528,22 +697,9 @@ padding: 0 0 0 90px;
 .tarjeta:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 30px 70px rgba(218, 251, 55, 0.2);
-  border-color: #dafb37;
+  border-color: #c78bff;
 }
 
-.tarjeta h3 {
-  color: #dafb37;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.tarjeta h3 .icono {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
 
 .tarjeta h4 {
   color: #fff;
@@ -570,14 +726,10 @@ padding: 0 0 0 90px;
   position: relative;
 }
 
-.tarjeta ul li::before {
-  content: "•";
-  color: #dafb37;
-  font-weight: bold;
-  margin-right: 8px;
-}
+
+
 .tarjeta .icono {
-  color: #00ffff;
+  color: #00BFFF;
   margin-right: 8px;
   font-size: 1.2rem;
 }
@@ -607,7 +759,7 @@ padding: 0 0 0 90px;
 
 .subtitulo {
   margin-top: 20px;
-  color: #ffccff;
+  color: #B0E0FF;
   font-size: 1.2rem;
 }
 
@@ -860,8 +1012,8 @@ padding: 0 0 0 90px;
 }
 
 .language-selector .idioma-activo {
-  border: 2px solid #00ffff;
-  background-color: #001f2f;
-  color: #00ffff;
-  box-shadow: 0 0 10px #00ffff;
+  border: 2px solid #6C00FF;
+  background: linear-gradient(135deg, #6C00FF, #3A0073, #00BFFF);
+  color: white;
+  box-shadow: 0 0 10px #6C00FF;
 }

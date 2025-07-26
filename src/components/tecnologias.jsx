@@ -24,16 +24,21 @@ const tecnologias = [
 
 export const Tecnologias = () => {
   return (
-    <div className="tecnologias-container">
-    <h2 className="titulo-tecnologias">Tecnologías</h2>
-    <div className="grid-tecnologias">
-      {tecnologias.map((tech, index) => (
-        <div className={`carta-tecnologia ${tech.clase}`} key={index}>
-          <div className="icono-tecnologia">{tech.icono}</div>
-          <p>{tech.nombre}</p>
-        </div>
-      ))}
+   <div className="tecnologias-container">
+      <h2 className="titulo-tecnologias">Tecnologías</h2>
+      <div className="grid-tecnologias">
+        {tecnologias.map((tech, index) => (
+          <div
+            className={`carta-tecnologia ${tech.clase} ${
+              tech.nombre === "React" ? "destacar-react" : ""
+            }`}
+            key={index}
+          >
+            <div className="icono-tecnologia">{tech.icono}</div>
+            <p>{tech.nombre}</p>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
   );
 };

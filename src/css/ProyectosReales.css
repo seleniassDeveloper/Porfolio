@@ -1,46 +1,43 @@
 .proyectos-reales-container {
   background-color: #000000;
-
 }
-
 
 .proyectos-reales-container h2 {
-  color: #dafb37;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-align: end;
-padding: 0 90px 0 0;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  margin-bottom: 50px;
-  animation: glowSoft 2.8s infinite alternate;
+ 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    text-align: end;
+    padding: 0 90px 0 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    margin-bottom: 50px;
+    animation: glowSoft 2.8s infinite alternate;
+    position: relative;
 }
 
-/* Efecto de línea moderna debajo */
 .proyectos-reales-container h2::after {
-  
+  content: '';
   position: absolute;
-
   bottom: -12px;
+  right: 90px;
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
   border-radius: 5px;
+  background: #00BFFF;
   animation: pulse-line 2s infinite ease-in-out;
 }
 
-/* Brillo animado */
 @keyframes glowSoft {
   0% {
-    text-shadow: 0 0 6px #dafb37, 0 0 12px #dafb37;
+    text-shadow: 0 0 6px #6C00FF, 0 0 12px #3A0073;
   }
   100% {
-    text-shadow: 0 0 14px #dafb37, 0 0 22px #dafb37;
+    text-shadow: 0 0 14px #6C00FF, 0 0 22px #3A0073;
   }
 }
 
-/* Línea animada */
 @keyframes pulse-line {
   0%, 100% {
     opacity: 0.5;
@@ -56,14 +53,7 @@ padding: 0 90px 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.tarjetas-proyectos {
-  display: flex;
-  justify-content: center;
   gap: 40px;
-  flex-wrap: wrap;
   margin-top: 40px;
 }
 
@@ -83,8 +73,8 @@ padding: 0 90px 0 0;
 
 .tarjeta-proyecto:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 25px rgba(218, 251, 55, 0.3);
-  border-color: #dafb37;
+  box-shadow: 0 0 25px rgba(108, 0, 255, 0.3);
+  border-color: #6C00FF;
 }
 
 .tarjeta-proyecto img {
@@ -101,22 +91,22 @@ padding: 0 90px 0 0;
 }
 
 .tarjeta-proyecto a {
-    font-size: 12px;
-    display: inline-block;
-    margin-top: 8px;
-    padding: 6px 5px;
-    background: #d4ff0091;
-    color: #141416;
-    font-weight: 600;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.35s ease;
-    font-family: "Manrope", sans-serif;
-    box-shadow: 0 0 10px rgba(218, 251, 55, 0.3);
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 5px;
+  background: #6C00FF;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  font-family: "Manrope", sans-serif;
+  box-shadow: 0 0 10px rgba(108, 0, 255, 0.3);
 }
 
 .tarjeta-proyecto a:hover {
-  background-color: #e7ff64;
+  background-color: #3A0073;
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 0 18px rgba(218, 251, 55, 0.5);
+  box-shadow: 0 0 18px rgba(176, 224, 255, 0.5);
 }

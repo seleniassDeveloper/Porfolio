@@ -2,9 +2,9 @@
   --color-bg: #000000;
   --color-text: #ffffff;
   --color-text-soft: #e0e0e0;
-  --color-accent: #ff1cff;      /* Magenta brillante */
-  --color-accent-hover: #ff66c4; /* Fucsia claro */
-  --color-shadow: rgba(255, 28, 255, 0.25);
+  --color-accent: #6C00FF;
+  --color-accent-hover: #00BFFF;
+  --color-shadow: rgba(108, 0, 255, 0.25);
   --font-primary: 'Manrope', sans-serif;
 }
 
@@ -22,19 +22,16 @@
   width: 100%;
 }
 
-
-
 .contacto-contenido h2 {
     font-size: 2.8rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ff1c1c;
+    color: #e6d4ff;
     position: relative;
     display: inline-block;
     animation: fadeInUp 1s ease-out forwards;
-    text-shadow: 0 0 15px var(--color-accent), 0 0 2px var(--color-accent-hover);
+    text-shadow: 0 0 15px var(--color-accent), 0 0 8px var(--color-accent-hover);
 }
-
 .contacto-contenido h2::after {
   content: '';
   position: absolute;
@@ -45,13 +42,8 @@
   width: 160px;
   height: 4px;
   border-radius: 50px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #6C00FF, #00BFFF);
+  box-shadow: 0 0 12px var(--color-accent-hover);
   opacity: 0.9;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
@@ -59,9 +51,6 @@
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
-
-
-
 
 .contacto-contenido p {
   font-size: 1.1rem;
@@ -85,7 +74,7 @@
   font-size: 1rem;
   resize: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 6px rgba(255, 28, 255, 0.1);
+  box-shadow: 0 0 6px rgba(108, 0, 255, 0.2);
 }
 
 .contacto-formulario input:focus,
@@ -95,9 +84,9 @@
 }
 
 .contacto-formulario button {
- padding: 12px;
-    background-color: #ff1c4cb0;
-    color: var(--color-bg);
+    padding: 12px;
+    background: linear-gradient(135deg, #494949, #3A0073);
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -112,21 +101,21 @@
 }
 
 .contacto-formulario button:hover {
-  background-color: var(--color-accent-hover);
-  box-shadow: 0 0 15px var(--color-accent);
+  background: linear-gradient(135deg, #00BFFF, #6C00FF);
+  box-shadow: 0 0 15px #00BFFF;
 }
 
-/* Íconos */
 .icono-enviar,
 .icono-exito {
   font-size: 1.2rem;
+  color: #B0E0FF;
 }
 
 .mensaje-exito {
-  color: #dafb37;
+  color: #B0E0FF;
   font-weight: 500;
   font-size: 1.1rem;
-  text-shadow: 0 0 5px #dafb37;
+  text-shadow: 0 0 5px #6C00FF;
   display: flex;
   flex-direction: column;
   align-items: center;
