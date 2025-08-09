@@ -67,43 +67,43 @@
     "languages": "Idiomas",
     "languages_list": [
       "Inglés – Fluido",
-       "Español – Nativo"
+      "Español – Nativo"
     ]
   },
-   "sistran": {
-        "volver": "← Volver",
-        "titulo": "Experiencia en Sistran",
-        "logoAlt": "Logo de Sistran",
-        "labels": {
-            "rol": "Rol",
-            "duracion": "Duración",
-            "proyecto": "Proyecto",
-            "stack": "Stack"
-        },
-        "rol": "Desarrolladora Frontend",
-        "duracion": "2022/06 - 2025/07",
-        "proyecto": "Sistask – Sistema interno de gestión de tareas (estilo Jira)",
-        "stack": "React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
-        "impacto": {
-            "titulo": "Impacto del Software",
-            "p1": "Sistask está siendo implementado en 17 países de América Latina, lo que representa un salto estratégico en la digitalización de procesos internos en Sistran. Este sistema permite una gestión más eficiente y estandarizada en equipos distribuidos en Argentina, Colombia, Ecuador y el resto de la región.",
-            "p2": "Formo parte del equipo responsable del desarrollo de Sistask, liderando el trabajo del frontend completo, desde la construcción técnica hasta la experiencia de usuario (UX) y la interfaz visual (UI). Este trabajo incluyó:",
-            "bullets": {
-                "diseno": " Definición y desarrollo de un diseño limpio, escalable y accesible.",
-                "xp": " Implementación de una experiencia intuitiva para usuarios técnicos y no técnicos.",
-                "componentes": "Desarrollo de componentes personalizados con React, MUI y Bootstrap.",
-                "adaptabilidad": " Adaptabilidad por país, proyecto y rol de usuario."
-            },
-            "p3": "El impacto del sistema incluye:",
-            "metrics": {
-                "productividad": "Productividad operativa:reducción de tiempos en gestión de tareas.",
-                "visibilidad": " Visibilidad: seguimiento visual de flujos y estados en tiempo real.",
-                "colaboracion": " Colaboración: unificación de criterios y procesos entre países.",
-                "escalabilidad": " Escalabilidad: preparado para soportar múltiples estructuras organizativas."
-            },
-            "cierre": "Gracias a este trabajo en equipo, Sistran cuenta con una herramienta moderna, robusta y adaptable que potencia su expansión regional y fortalece su eficiencia interna."
-        }
+  "sistran": {
+    "volver": "← Volver",
+    "titulo": "Experiencia en Sistran",
+    "logoAlt": "Logo de Sistran",
+    "labels": {
+      "rol": "Rol",
+      "duracion": "Duración",
+      "proyecto": "Proyecto",
+      "stack": "Stack"
     },
+    "rol": "Desarrolladora Frontend",
+    "duracion": "2022/06 - 2025/07",
+    "proyecto": "Sistask – Sistema interno de gestión de tareas (estilo Jira)",
+    "stack": "React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
+    "impacto": {
+      "titulo": "Impacto del Software",
+      "p1": "Sistask está siendo implementado en 17 países de América Latina, lo que representa un salto estratégico en la digitalización de procesos internos en Sistran. Este sistema permite una gestión más eficiente y estandarizada en equipos distribuidos en Argentina, Colombia, Ecuador y el resto de la región.",
+      "p2": "Formo parte del equipo responsable del desarrollo de Sistask, liderando el trabajo del frontend completo, desde la construcción técnica hasta la experiencia de usuario (UX) y la interfaz visual (UI). Este trabajo incluyó:",
+      "bullets": {
+        "diseno": " Definición y desarrollo de un diseño limpio, escalable y accesible.",
+        "xp": " Implementación de una experiencia intuitiva para usuarios técnicos y no técnicos.",
+        "componentes": "Desarrollo de componentes personalizados con React, MUI y Bootstrap.",
+        "adaptabilidad": " Adaptabilidad por país, proyecto y rol de usuario."
+      },
+      "p3": "El impacto del sistema incluye:",
+      "metrics": {
+        "productividad": "Productividad operativa:reducción de tiempos en gestión de tareas.",
+        "visibilidad": " Visibilidad: seguimiento visual de flujos y estados en tiempo real.",
+        "colaboracion": " Colaboración: unificación de criterios y procesos entre países.",
+        "escalabilidad": " Escalabilidad: preparado para soportar múltiples estructuras organizativas."
+      },
+      "cierre": "Gracias a este trabajo en equipo, Sistran cuenta con una herramienta moderna, robusta y adaptable que potencia su expansión regional y fortalece su eficiencia interna."
+    }
+  },
   "scalabl": {
     "volver": "← Volver",
     "titulo": "Experiencia en Scalabl",
@@ -135,20 +135,47 @@
     "title": "Mi Visión",
     "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
   },
-   "tech": {
+  "tech": {
     "title": "Tecnologías",
     "items": {
-      "html": { "desc": "Maquetado semántico y accesible con SEO técnico básico." },
-      "css": { "desc": "Diseños responsivos, grid y flexbox, estilos escalables." },
-      "javascript": { "desc": "Lógica de negocio en frontend, consumo de APIs y manejo de estado." },
-      "react": { "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router." },
-      "github": { "desc": "Flujo Git, PRs, code reviews e integración continua." },
-      "python": { "desc": "Integraciones backend ligeras y scripting de soporte." },
-      "typescript": { "desc": "Tipado estático, modelos de dominio y reducción de bugs en build." },
-      "php": { "desc": "Desarrollo backend y creación de APIs con PHP y frameworks relacionados." }
+      "html": {
+        "desc": "Maquetado semántico y accesible con SEO técnico básico."
+      },
+      "css": {
+        "desc": "Diseños responsivos, grid y flexbox, estilos escalables."
+      },
+      "javascript": {
+        "desc": "Lógica de negocio en frontend, consumo de APIs y manejo de estado."
+      },
+      "react": {
+        "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router."
+      },
+      "github": {
+        "desc": "Flujo Git, PRs, code reviews e integración continua."
+      },
+      "python": {
+        "desc": "Integraciones backend ligeras y scripting de soporte."
+      },
+      "typescript": {
+        "desc": "Tipado estático, modelos de dominio y reducción de bugs en build."
+      },
+      "php": {
+        "desc": "Desarrollo backend y creación de APIs con PHP y frameworks relacionados."
+      },
+      "figma": {
+        "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario."
+      },
+      "canva": {
+        "desc": "Diseño rápido de material gráfico y contenido para redes sociales."
+      },
+      "photoshop": {
+        "desc": "Edición profesional de imágenes y creación de composiciones digitales."
+      },
+      "illustrator": {
+        "desc": "Diseño y creación de gráficos vectoriales para impresión y medios digitales."
+      }
     }
   },
-  
   "cases": {
     "title": "Casos de Éxito",
     "prev": "Anterior",
@@ -170,8 +197,16 @@
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
   },
-  "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
-"canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
-"photoshop": { "desc": "Edición profesional de imágenes y composición digital." },
-"illustrator": { "desc": "Creación de gráficos vectoriales y material para impresión." }
+  "figma": {
+    "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario."
+  },
+  "canva": {
+    "desc": "Diseño rápido de material gráfico y contenido para redes sociales."
+  },
+  "photoshop": {
+    "desc": "Edición profesional de imágenes y composición digital."
+  },
+  "illustrator": {
+    "desc": "Creación de gráficos vectoriales y material para impresión."
+  }
 }
