@@ -8,9 +8,22 @@
         "message_placeholder": "Your message...",
         "submit_button": "Send"
     },
-
-    "hello_welcome": "Hello, welcome to my portfolio",
-   "portfolio_description": "I’m a front-end developer with over three years of professional experience (plus two years as an intern) building modern, scalable, and user-focused web solutions. I specialize in React with solid knowledge of UI/UX design, REST APIs, state management, and responsive layouts. I’m progressively incorporating TypeScript to improve code quality and scalability. I’m proactive, collaborative, and passionate about creating functional and visually compelling digital products.",
+    "Tecnologías": "Technologies",
+    "items": {
+        "scalabl": {
+            "alt": "Scalabl logo",
+            "descripcion": "Global educational platform for innovation and entrepreneurship."
+        },
+        "sistran": {
+            "alt": "Sistran logo",
+            "descripcion": "Task and workflow management system for insurance consulting firms."
+        }
+    },
+    "titulo": " Projects",
+    "verProyecto": "View project",
+    "proyecto_proyecto": "Projects",
+    "hello_welcome": "Hello, welcome",
+    "portfolio_description": "I am a Front-end Developer with over three years of professional experience building modern, scalable, and user-focused web solutions.Specialized in React, with strong expertise in UI/UX design, REST APIs, state management, and responsive design. Currently integrating TypeScript to enhance code quality, scalability, and maintainability.I am proactive, collaborative, and passionate about turning ideas into functional, visually appealing, and high-performance digital products",
     "experience_section": {
         "professional_experience": "Professional Experience",
         "sistran_title": "Sistran – Frontend Developer",
@@ -56,8 +69,104 @@
             "English – Intermediate"
         ]
     },
+     "sistran": {
+    "volver": "← Back",
+    "titulo": "Experience at Sistran",
+    "logoAlt": "Sistran logo",
+    "labels": {
+      "rol": "Role",
+      "duracion": "Duration",
+      "proyecto": "Project",
+      "stack": "Stack"
+    },
+    "rol": "Frontend Developer",
+    "duracion": "2022/06 - 2025/07",
+    "proyecto": "Sistask – Internal task management system (Jira-style)",
+    "stack": "React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
+    "impacto": {
+      "titulo": "Software Impact",
+      "p1": "Sistask is being implemented across 17 Latin American countries, marking a strategic leap in Sistran’s internal process digitalization. The system enables more efficient, standardized management for distributed teams in Argentina, Colombia, Ecuador, and the rest of the region.",
+      "p2": "I am part of the team responsible for Sistask, leading the entire frontend from technical build to user experience (UX) and visual interface (UI). This work included:",
+      "bullets": {
+        "diseno": " Definition and development of a clean, scalable, accessible design.",
+        "xp": " Intuitive experience for both technical and non-technical users.",
+        "componentes": " Custom components built with React, MUI, and Bootstrap.",
+        "adaptabilidad": " Adaptability by country, project, and user role."
+      },
+      "p3": "System impact includes:",
+      "metrics": {
+        "productividad": "Operational productivity: reduced task management time.",
+        "visibilidad": "Visibility:real-time visual tracking of flows and statuses.",
+        "colaboracion": "Collaboration: unified criteria and processes across countries.",
+        "escalabilidad": "Scalability: ready to support multiple organizational structures."
+      },
+      "cierre": "Thanks to this team effort, Sistran now has a modern, robust, and adaptable tool that powers its regional expansion and strengthens internal efficiency."
+    }
+  },
+  
+  "scalabl": {
+    "volver": "← Back",
+    "titulo": "Experience at Scalabl",
+    "logoAlt": "Scalabl logo",
+    "rolLabel": "Role",
+    "rol": "Frontend Developer",
+    "duracionLabel": "Duration",
+    "duracion": "Jan 2022 – Jul 2022",
+    "proyectoLabel": "Project",
+    "proyecto": "Global educational platform present in over 50 countries",
+    "stackLabel": "Stack",
+    "stack": "React, jQuery, Python",
+    "responsabilidades": {
+      "titulo": "Responsibilities",
+      "item1": "Development of interactive interfaces for users in over 50 countries.",
+      "item2": "Efficient integration of frontend with Python backend.",
+      "item3": "Collaboration with UX/UI team on accessibility and navigation.",
+      "item4": "Refactoring modules to improve performance and maintainability."
+    },
+    "impacto": {
+      "titulo": "Impact",
+      "descripcion": "Scalabl is a global educational platform that promotes entrepreneurship and innovation. My work directly contributed to:",
+      "item1": "30% reduction in navigation issues.",
+      "item2": "Significant improvement in load speed and smoothness.",
+      "item3": "Better experience for thousands of users across different continents."
+    }
+  }
+,
     "mision_and_vision": {
         "title": "My Vision",
         "paragraph": "I want to continue growing as a developer, participating in frontend and fullstack projects that challenge me technically and personally. I aim to create digital experiences that are functional, accessible, and visually appealing. My vision is to bring real value to each team, apply best practices, learn emerging technologies, and be part of environments that value quality, design, and collaborative work."
+    },
+      "tech": {
+    "title": "Technologies",
+    "items": {
+      "html": { "desc": "Semantic, accessible markup with basic technical SEO." },
+      "css": { "desc": "Responsive layouts, grid and flexbox, scalable styling." },
+      "javascript": { "desc": "Frontend business logic, API consumption, and state handling." },
+      "react": { "desc": "Dynamic dashboards with custom hooks and routing via React Router." },
+      "github": { "desc": "Git flow, PRs, code reviews, and continuous integration." },
+      "python": { "desc": "Lightweight backend integrations and support scripting." },
+      "typescript": { "desc": "Static typing, domain models, and fewer build-time bugs." }
     }
+  },
+  "cases": {
+    "title": "Success Stories",
+    "prev": "Previous",
+    "next": "Next",
+    "viewProject": "View project",
+    "stackLabel": "Stack",
+    "sistask": {
+      "title": "Sistask – Task Management",
+      "desc": "Internal system for distributed LATAM teams with visual flows and real-time tracking.",
+      "stack": "React, MUI, Bootstrap, ReactFlow, Axios"
+    },
+    "scalabl": {
+      "title": "Scalabl – Educational Platform",
+      "desc": "Interactive interfaces for a global platform focused on innovation and entrepreneurship.",
+      "stack": "React, jQuery, Python"
+    }
+  },
+  "cta": {
+    "hire": "Hire me on Upwork",
+    "talk": "Let’s discuss your project"
+  }
 }

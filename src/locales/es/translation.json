@@ -8,8 +8,22 @@
     "message_placeholder": "Tu mensaje...",
     "submit_button": "Enviar"
   },
-  "hello_welcome": "Hola, bienvenido a mi portafolio",
- "portfolio_description": "Soy desarrolladora Front-end con más de tres años de experiencia profesional (más dos años de pasantía) creando soluciones web modernas, escalables y centradas en el usuario. Estoy especializada en React y tengo sólidos conocimientos en diseño UI/UX, APIs REST, gestión de estados y diseño responsive. Actualmente incorporo TypeScript de forma progresiva para mejorar la calidad y escalabilidad del código. Soy proactiva, colaborativa y me apasiona crear productos digitales funcionales y visualmente atractivos.",
+  "Tecnologías": "Tecnologías",
+  "items": {
+    "scalabl": {
+      "alt": "Logo de Scalabl",
+      "descripcion": "Plataforma educativa global de innovación y emprendimiento."
+    },
+    "sistran": {
+      "alt": "Logo de Sistran",
+      "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
+    }
+  },
+  "titulo": "Proyectos",
+  "verProyecto": "Ver proyecto",
+  "proyecto_proyecto": "Proyectos",
+  "hello_welcome": "Hola, bienvenido ",
+  "portfolio_description": "Soy desarrolladora Front-end con más de tres años de experiencia profesional creando soluciones web modernas, escalables y centradas en el usuario. Especializada en React, con sólidos conocimientos en UI/UX, APIs REST, gestión de estados y diseño responsive. Actualmente incorporo TypeScript para elevar la calidad, escalabilidad y mantenibilidad del código. Me caracterizo por ser proactiva, colaborativa y apasionada por convertir ideas en productos digitales funcionales, atractivos y de alto rendimiento.",
   "experience_section": {
     "professional_experience": "Experiencia Profesional",
     "sistran_title": "Sistran – Desarrolladora Frontend",
@@ -55,8 +69,102 @@
       "Inglés – Intermedio"
     ]
   },
+   "sistran": {
+        "volver": "← Volver",
+        "titulo": "Experiencia en Sistran",
+        "logoAlt": "Logo de Sistran",
+        "labels": {
+            "rol": "Rol",
+            "duracion": "Duración",
+            "proyecto": "Proyecto",
+            "stack": "Stack"
+        },
+        "rol": "Desarrolladora Frontend",
+        "duracion": "2022/06 - 2025/07",
+        "proyecto": "Sistask – Sistema interno de gestión de tareas (estilo Jira)",
+        "stack": "React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
+        "impacto": {
+            "titulo": "Impacto del Software",
+            "p1": "Sistask está siendo implementado en 17 países de América Latina, lo que representa un salto estratégico en la digitalización de procesos internos en Sistran. Este sistema permite una gestión más eficiente y estandarizada en equipos distribuidos en Argentina, Colombia, Ecuador y el resto de la región.",
+            "p2": "Formo parte del equipo responsable del desarrollo de Sistask, liderando el trabajo del frontend completo, desde la construcción técnica hasta la experiencia de usuario (UX) y la interfaz visual (UI). Este trabajo incluyó:",
+            "bullets": {
+                "diseno": " Definición y desarrollo de un diseño limpio, escalable y accesible.",
+                "xp": " Implementación de una experiencia intuitiva para usuarios técnicos y no técnicos.",
+                "componentes": "Desarrollo de componentes personalizados con React, MUI y Bootstrap.",
+                "adaptabilidad": " Adaptabilidad por país, proyecto y rol de usuario."
+            },
+            "p3": "El impacto del sistema incluye:",
+            "metrics": {
+                "productividad": "Productividad operativa:reducción de tiempos en gestión de tareas.",
+                "visibilidad": " Visibilidad: seguimiento visual de flujos y estados en tiempo real.",
+                "colaboracion": " Colaboración: unificación de criterios y procesos entre países.",
+                "escalabilidad": " Escalabilidad: preparado para soportar múltiples estructuras organizativas."
+            },
+            "cierre": "Gracias a este trabajo en equipo, Sistran cuenta con una herramienta moderna, robusta y adaptable que potencia su expansión regional y fortalece su eficiencia interna."
+        }
+    },
+  "scalabl": {
+    "volver": "← Volver",
+    "titulo": "Experiencia en Scalabl",
+    "logoAlt": "Logo de Scalabl",
+    "rolLabel": "Rol",
+    "rol": "Desarrolladora Frontend",
+    "duracionLabel": "Duración",
+    "duracion": "Ene 2022 – Jul 2022",
+    "proyectoLabel": "Proyecto",
+    "proyecto": "Plataforma educativa global presente en más de 50 países",
+    "stackLabel": "Stack",
+    "stack": "React, jQuery, Python",
+    "responsabilidades": {
+      "titulo": "Responsabilidades",
+      "item1": "Desarrollo de interfaces interactivas para usuarios en más de 50 países.",
+      "item2": "Integración eficiente del frontend con backend en Python.",
+      "item3": "Colaboración con el equipo UX/UI en accesibilidad y navegación.",
+      "item4": "Refactorización de módulos para mejorar rendimiento y mantenibilidad."
+    },
+    "impacto": {
+      "titulo": "Impacto",
+      "descripcion": "Scalabl es una plataforma educativa global que promueve el emprendimiento y la innovación. Mi trabajo contribuyó directamente a:",
+      "item1": "Reducción del 30% en problemas de navegación.",
+      "item2": "Mejora significativa en velocidad de carga y fluidez.",
+      "item3": "Mejor experiencia para miles de usuarios en distintos continentes."
+    }
+  },
   "mision_and_vision": {
     "title": "Mi Visión",
     "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
+  },
+   "tech": {
+    "title": "Tecnologías",
+    "items": {
+      "html": { "desc": "Maquetado semántico y accesible con SEO técnico básico." },
+      "css": { "desc": "Diseños responsivos, grid y flexbox, estilos escalables." },
+      "javascript": { "desc": "Lógica de negocio en frontend, consumo de APIs y manejo de estado." },
+      "react": { "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router." },
+      "github": { "desc": "Flujo Git, PRs, code reviews e integración continua." },
+      "python": { "desc": "Integraciones backend ligeras y scripting de soporte." },
+      "typescript": { "desc": "Tipado estático, modelos de dominio y reducción de bugs en build." }
+    }
+  },
+  "cases": {
+    "title": "Casos de Éxito",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "viewProject": "Ver proyecto",
+    "stackLabel": "Stack",
+    "sistask": {
+      "title": "Sistask – Gestión de tareas",
+      "desc": "Sistema interno para equipos distribuidos en LATAM, con flujos visuales y seguimiento en tiempo real.",
+      "stack": "React, MUI, Bootstrap, ReactFlow, Axios"
+    },
+    "scalabl": {
+      "title": "Scalabl – Plataforma educativa",
+      "desc": "Interfaces interactivas para una plataforma global enfocada en innovación y emprendimiento.",
+      "stack": "React, jQuery, Python"
+    }
+  },
+  "cta": {
+    "hire": "Contrátame en Upwork",
+    "talk": "Hablemos de tu proyecto"
   }
 }

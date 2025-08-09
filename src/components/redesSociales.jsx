@@ -19,6 +19,15 @@ export const RedesSociales = () => {
               <i className="fas fa-envelope"></i>
             </a>
           </li>
+           <li>
+          <a
+            href="https://www.upwork.com/freelancers/~019eee23ae575cea8a?viewMode=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-briefcase"></i>
+          </a>
+        </li>
         </ul>
       </div>
     );

@@ -567,8 +567,8 @@ body,
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 25px;
-  width: 130px;
-  height: 140px;
+
+  max-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -827,7 +827,7 @@ body,
 
 .redes-sociales a:hover {
   transform: scale(1.2);
-  color: #00ffff; /* Antes: #ff4081 */
+  color: #a20e6c; /* Antes: #ff4081 */
 }
 
 .seccion-experiencia {
@@ -1055,3 +1055,131 @@ body,
   color: white;
   box-shadow: 0 0 10px #6C00FF;
 }
+
+:root{
+  /* Colores */
+  --bg:#0c0c0f; --surface:#111218; --surface-2:#161825;
+  --text:#EAEAF2; --muted:#A8ADBD; --brand:#7C5CFC; --brand-2:#4BE1EC;
+  --ok:#52d1a5; --warning:#f0b85c;
+
+  /* Tipografía (clamp para que escale bien) */
+  --fs-xs: clamp(0.78rem,.72vw,.85rem);
+  --fs-sm: clamp(0.9rem,.8vw,1rem);
+  --fs-md: clamp(1rem,1vw,1.05rem);
+  --fs-lg: clamp(1.25rem,1.6vw,1.6rem);
+  --fs-xl: clamp(2rem,3vw,3rem);
+
+  /* Espaciado */
+  --sp-1: .5rem; --sp-2: .75rem; --sp-3: 1rem; --sp-4: 1.5rem;
+  --sp-5: 2rem;  --sp-6: 3rem;  --radius: 16px;
+
+  /* Efectos */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --border: 1px solid rgba(255,255,255,.08);
+}
+html,body{background:var(--bg); color:var(--text);}
+.section{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-3);
+}
+.section + .section{ padding-top: 0; }
+.section h2{
+  font-size: var(--fs-xl);
+  letter-spacing: .02em;
+  margin-bottom: var(--sp-4);
+  line-height: 1.1;
+  background: linear-gradient(90deg,var(--brand),var(--brand-2));
+  -webkit-background-clip: text; color: transparent;
+  text-shadow: 0 0 24px rgba(124,92,252,.35);
+}
+p{ font-size: var(--fs-md); color: var(--muted); line-height: 1.7; }
+.tecnologias-container.section{ /* aplica .section al wrapper */
+}
+.grid-tecnologias{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: var(--sp-4);
+}
+.carta-tecnologia{
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.carta-tecnologia:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  border-color: rgba(124,92,252,.35);
+}
+.icono-tecnologia svg{ width: 32px; height: 32px; margin-bottom: var(--sp-2); }
+.nombre-tecnologia{ font-weight: 600; margin-bottom: var(--sp-1); }
+.descripcion-tecnologia{ font-size: var(--fs-sm); color: var(--muted); }
+.destacar-react{
+  outline: 2px solid rgba(124,92,252,.5);
+  box-shadow: 0 0 24px rgba(124,92,252,.25);
+}
+.casos-exito{ margin-top: var(--sp-6); }
+.header-casos{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: var(--sp-3);
+}
+.controles-carrusel button{
+  background: transparent; color: var(--text);
+  border: var(--border); border-radius: 10px;
+  padding: .4rem .65rem; margin-left: .5rem; cursor: pointer;
+}
+.carrusel{ position: relative; min-height: 220px; }
+.tarjeta-caso{
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow);
+  transition: opacity .25s, transform .25s;
+}
+.tarjeta-caso.inactivo{
+  opacity: 0; position: absolute; inset: 0; transform: translateY(10px); pointer-events: none;
+}
+.tarjeta-caso.activo{ opacity: 1; position: relative; transform: translateY(0); }
+.tarjeta-caso h4{ font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
+.tarjeta-caso .desc{ color: var(--muted); margin-bottom: var(--sp-2); }
+.tarjeta-caso .stack{ font-size: var(--fs-sm); color: var(--muted); }
+.link-proyecto{
+  display:inline-block; margin-top: var(--sp-2);
+  color: var(--brand-2); text-decoration: none;
+}
+.link-proyecto:hover{ text-decoration: underline; }
+.casos-exito{ margin-top: var(--sp-6); }
+.header-casos{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: var(--sp-3);
+}
+.controles-carrusel button{
+  background: transparent; color: var(--text);
+  border: var(--border); border-radius: 10px;
+  padding: .4rem .65rem; margin-left: .5rem; cursor: pointer;
+}
+.carrusel{ position: relative; min-height: 220px; }
+.tarjeta-caso{
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow);
+  transition: opacity .25s, transform .25s;
+}
+.tarjeta-caso.inactivo{
+  opacity: 0; position: absolute; inset: 0; transform: translateY(10px); pointer-events: none;
+}
+.tarjeta-caso.activo{ opacity: 1; position: relative; transform: translateY(0); }
+.tarjeta-caso h4{ font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
+.tarjeta-caso .desc{ color: var(--muted); margin-bottom: var(--sp-2); }
+.tarjeta-caso .stack{ font-size: var(--fs-sm); color: var(--muted); }
+.link-proyecto{
+  display:inline-block; margin-top: var(--sp-2);
+  color: var(--brand-2); text-decoration: none;
+}
+.link-proyecto:hover{ text-decoration: underline; }

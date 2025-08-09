@@ -6,10 +6,10 @@ import { RedesSociales } from "./components/redesSociales";
 import "./i18n";
 import YosiendoFeliz from "./assets/imagenes/yosiendoFeliz.jpg";
 import { useTranslation } from "react-i18next";
-import { ProyectosReales } from "./components/proyectosReales";
 import { TodosLosComponentes } from "./components/todosLosComponente";
 import { Sistran } from "./components/ComponentesDComponentes/sistran";
 import { Scalabl } from "./components/ComponentesDComponentes/scalabl";
+import { ProyectosReales } from "./components/proyectosReales";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -40,7 +40,7 @@ function App() {
       <ScrollReveal baseOpacity={0} enableBlur={true} baseRotation={5} blurStrength={10}>
         <Routes>
           <Route path="/" element={<TodosLosComponentes t={t} YosiendoFeliz={YosiendoFeliz} />} />
-          <Route path="/proyectos" element={<ProyectosReales />} />
+          <Route path="/proyectos" element={<ProyectosReales t={t}/>} />
           <Route path="/experiencia-sistran" element={<Sistran />} />
           <Route path="/experiencia-scalabl" element={<Scalabl />} />
           
