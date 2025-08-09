@@ -180,10 +180,10 @@
 
 /* LANGUAGE SELECTOR */
 .language-selector .idioma-activo {
-  border: 2px solid #6C00FF;
-  background: linear-gradient(135deg, #6C00FF, #3A0073, #00BFFF);
+  border: 2px solid #a20e6c;
+ 
   color: white;
-  box-shadow: 0 0 10px #6C00FF;
+  box-shadow: 0 0 10px #a20e6c;
 }
 
 @media screen and (max-width: 768px) {
@@ -1026,6 +1026,8 @@ body,
     opacity: 0;
   }
 }
+
+
 .language-selector {
   position: fixed;
   top: 20px;
@@ -1050,10 +1052,10 @@ body,
 }
 
 .language-selector .idioma-activo {
-  border: 2px solid #6C00FF;
-  background: linear-gradient(135deg, #6C00FF, #3A0073, #00BFFF);
+  border: 2px solid #a20e6c;
+ 
   color: white;
-  box-shadow: 0 0 10px #6C00FF;
+  box-shadow: 0 0 10px #a20e6c;
 }
 
 :root{
