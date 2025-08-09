@@ -166,5 +166,9 @@
   "cta": {
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
-  }
+  },
+  "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
+"canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
+"photoshop": { "desc": "Edición profesional de imágenes y composición digital." },
+"illustrator": { "desc": "Creación de gráficos vectoriales y material para impresión." }
 }

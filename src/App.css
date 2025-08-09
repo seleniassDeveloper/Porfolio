@@ -1185,3 +1185,7 @@ p{ font-size: var(--fs-md); color: var(--muted); line-height: 1.7; }
   color: var(--brand-2); text-decoration: none;
 }
 .link-proyecto:hover{ text-decoration: underline; }
+.carta-tecnologia.figma .icono-tecnologia svg { color: #F24E1E; }
+.carta-tecnologia.canva .icono-tecnologia svg { color: #00C4CC; }
+.carta-tecnologia.photoshop .icono-tecnologia svg { color: #31A8FF; }
+.carta-tecnologia.illustrator .icono-tecnologia svg { color: #FF9A00; }

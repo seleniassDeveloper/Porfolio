@@ -168,5 +168,9 @@
   "cta": {
     "hire": "Hire me on Upwork",
     "talk": "Let’s discuss your project"
-  }
+  },
+  "figma": { "desc": "Collaborative interface prototyping and user experience design." },
+"canva": { "desc": "Quick graphic design and social media content creation." },
+"photoshop": { "desc": "Professional image editing and digital composition." },
+"illustrator": { "desc": "Vector graphics creation and print-ready material." }
 }

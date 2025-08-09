@@ -8,7 +8,12 @@ import {
   SiGithub,
   SiPython,
   SiTypescript,
+  SiFigma,
+  SiCanva,
+  SiAdobephotoshop,
+  SiAdobeillustrator
 } from "react-icons/si";
+
 
 const tecnologias = [
   { id: "html", nombre: "HTML", icono: <SiHtml5 />, clase: "html" },
@@ -18,6 +23,12 @@ const tecnologias = [
   { id: "github", nombre: "GitHub", icono: <SiGithub />, clase: "github" },
   { id: "python", nombre: "Python", icono: <SiPython />, clase: "python" },
   { id: "typescript", nombre: "TypeScript", icono: <SiTypescript />, clase: "typescript" },
+
+  // NUEVAS herramientas de diseño
+  { id: "figma", nombre: "Figma", icono: <SiFigma />, clase: "figma" },
+  { id: "canva", nombre: "Canva", icono: <SiCanva />, clase: "canva" },
+  { id: "photoshop", nombre: "Photoshop", icono: <SiAdobephotoshop />, clase: "photoshop" },
+  { id: "illustrator", nombre: "Illustrator", icono: <SiAdobeillustrator />, clase: "illustrator" },
 ];
 
 // Ejemplos de casos de éxito (ajusta títulos, links y stack)
