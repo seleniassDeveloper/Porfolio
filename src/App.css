@@ -525,7 +525,7 @@ body,
 /**/
 
 .tecnologias-container {
-  padding: 120px 40px !important;
+  padding: 50px 40px !important;
   padding-left: 90px;
   background: black;
   position: relative;
@@ -652,7 +652,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px 70px!important;
+  /* padding: 20px 70px!important; */
 
 }
 
@@ -720,9 +720,8 @@ body,
   background: linear-gradient(135deg, #141416, #1c1f2a);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 32px;
+width: 100%!important;
 
-  margin: 30px auto;
   color: #e0e0e0;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
@@ -1123,7 +1122,11 @@ p{ font-size: var(--fs-md); color: var(--muted); line-height: 1.7; }
   outline: 2px solid rgba(124,92,252,.5);
   box-shadow: 0 0 24px rgba(124,92,252,.25);
 }
-.casos-exito{ margin-top: var(--sp-6); }
+.casos-exito{ 
+  margin-top: var(--sp-6); 
+  margin-top: 120px!important;
+
+}
 .header-casos{
   display:flex; align-items:center; justify-content:space-between;
   margin-bottom: var(--sp-3);
@@ -1156,8 +1159,11 @@ p{ font-size: var(--fs-md); color: var(--muted); line-height: 1.7; }
 .link-proyecto:hover{ text-decoration: underline; }
 .casos-exito{ margin-top: var(--sp-6); }
 .header-casos{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between;
   margin-bottom: var(--sp-3);
+
 }
 .controles-carrusel button{
   background: transparent; color: var(--text);

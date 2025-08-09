@@ -66,7 +66,8 @@
         ],
         "languages": "Languages",
         "languages_list": [
-            "English – Intermediate"
+            "English – Fluent",
+            "Spanish – Native"
         ]
     },
      "sistran": {
@@ -145,7 +146,8 @@
       "react": { "desc": "Dynamic dashboards with custom hooks and routing via React Router." },
       "github": { "desc": "Git flow, PRs, code reviews, and continuous integration." },
       "python": { "desc": "Lightweight backend integrations and support scripting." },
-      "typescript": { "desc": "Static typing, domain models, and fewer build-time bugs." }
+      "typescript": { "desc": "Static typing, domain models, and fewer build-time bugs." },
+      "php": { "desc": "Backend development and API creation with PHP and related frameworks." }
     }
   },
   "cases": {
@@ -162,7 +164,7 @@
     "scalabl": {
       "title": "Scalabl – Educational Platform",
       "desc": "Interactive interfaces for a global platform focused on innovation and entrepreneurship.",
-      "stack": "React, jQuery, Python"
+      "stack": "jQuery, php"
     }
   },
   "cta": {
@@ -173,4 +175,6 @@
 "canva": { "desc": "Quick graphic design and social media content creation." },
 "photoshop": { "desc": "Professional image editing and digital composition." },
 "illustrator": { "desc": "Vector graphics creation and print-ready material." }
+
+
 }

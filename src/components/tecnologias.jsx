@@ -11,9 +11,9 @@ import {
   SiFigma,
   SiCanva,
   SiAdobephotoshop,
-  SiAdobeillustrator
+  SiAdobeillustrator,
+  SiPhp
 } from "react-icons/si";
-
 
 const tecnologias = [
   { id: "html", nombre: "HTML", icono: <SiHtml5 />, clase: "html" },
@@ -23,12 +23,13 @@ const tecnologias = [
   { id: "github", nombre: "GitHub", icono: <SiGithub />, clase: "github" },
   { id: "python", nombre: "Python", icono: <SiPython />, clase: "python" },
   { id: "typescript", nombre: "TypeScript", icono: <SiTypescript />, clase: "typescript" },
-
+  { id: "php", nombre: "PHP", icono: <SiPhp />, clase: "php" },
   // NUEVAS herramientas de diseño
   { id: "figma", nombre: "Figma", icono: <SiFigma />, clase: "figma" },
   { id: "canva", nombre: "Canva", icono: <SiCanva />, clase: "canva" },
   { id: "photoshop", nombre: "Photoshop", icono: <SiAdobephotoshop />, clase: "photoshop" },
   { id: "illustrator", nombre: "Illustrator", icono: <SiAdobeillustrator />, clase: "illustrator" },
+
 ];
 
 // Ejemplos de casos de éxito (ajusta títulos, links y stack)
@@ -80,41 +81,41 @@ export const Tecnologias = ({
       </div>
 
       {/* Casos de Éxito */}
-     <section className="casos-exito">
-  <div className="header-casos">
-    <h3>{t("cases.title")}</h3>
-    <div className="controles-carrusel">
-      <button aria-label={t("cases.prev")} onClick={prev}>‹</button>
-      <span className="paginador">
-        {idx + 1} / {casosExito.length}
-      </span>
-      <button aria-label={t("cases.next")} onClick={next}>›</button>
-    </div>
-  </div>
+      <section className="casos-exito ">
+        <div className="header-casos ">
+          <h3>{t("cases.title")}</h3>
+          <div className="controles-carrusel">
+            <button aria-label={t("cases.prev")} onClick={prev}>‹</button>
+            <span className="paginador">
+              {idx + 1} / {casosExito.length}
+            </span>
+            <button aria-label={t("cases.next")} onClick={next}>›</button>
+          </div>
+        </div>
 
-  <div className="carrusel">
-    {casosExito.map((c, i) => (
-      <article
-        key={c.id}
-        className={`tarjeta-caso ${i === idx ? "activo" : "inactivo"}`}
-        aria-hidden={i !== idx}
-      >
-        <h4>{t(c.tituloKey)}</h4>
-        <p className="desc">{t(c.descKey)}</p>
-        <p className="stack">
-          <span className="stack-label">{t("cases.stackLabel")}:</span>{" "}
-          {t(c.stackKey)}
-        </p>
-        <a className="link-proyecto" href={c.link} target="_blank" rel="noopener noreferrer">
-          {t("cases.viewProject")}
-        </a>
-      </article>
-    ))}
-  </div>
-</section>
+        <div className="carrusel ">
+          {casosExito.map((c, i) => (
+            <article
+              key={c.id}
+              className={`tarjeta-caso ${i === idx ? "activo" : "inactivo"}`}
+              aria-hidden={i !== idx}
+            >
+              <h4>{t(c.tituloKey)}</h4>
+              <p className="desc">{t(c.descKey)}</p>
+              <p className="stack">
+                <span className="stack-label">{t("cases.stackLabel")}:</span>{" "}
+                {t(c.stackKey)}
+              </p>
+              <a className="link-proyecto" href={c.link} target="_blank" rel="noopener noreferrer">
+                {t("cases.viewProject")}
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
 
-     
-      
+
+
     </div>
   );
 };

@@ -16,8 +16,8 @@ export const ProyectosReales = () => {
   ];
 
   return (
-    <div className="proyectos-reales-container">
-      {/* Evita "proyecto_proyecto" y usa una clave clara */}
+    <div className="proyectos-reales-container ">
+  
       <h2>{t("titulo")}</h2>
 
       <div className="tarjetas-proyectos">

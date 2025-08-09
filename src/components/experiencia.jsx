@@ -39,10 +39,7 @@ export const Experiencia = () => {
   return (
     <div className="experiencia-container d-flex justify-content-center ">
       <div className="experiencia-flex">
-        {/* EXPERIENCIA PROFESIONAL */}
-       
-
-        {/* ESTUDIOS */}
+   
         <div
           ref={(el) => (tarjetasRef.current[1] = el)}
           className={`tarjeta ms-lg-3 animated-side right ${

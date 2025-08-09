@@ -66,7 +66,8 @@
     ],
     "languages": "Idiomas",
     "languages_list": [
-      "Inglés – Intermedio"
+      "Inglés – Fluido",
+       "Español – Nativo"
     ]
   },
    "sistran": {
@@ -114,7 +115,7 @@
     "proyectoLabel": "Proyecto",
     "proyecto": "Plataforma educativa global presente en más de 50 países",
     "stackLabel": "Stack",
-    "stack": "React, jQuery, Python",
+    "stack": " jQuery, Php",
     "responsabilidades": {
       "titulo": "Responsabilidades",
       "item1": "Desarrollo de interfaces interactivas para usuarios en más de 50 países.",
@@ -143,9 +144,11 @@
       "react": { "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router." },
       "github": { "desc": "Flujo Git, PRs, code reviews e integración continua." },
       "python": { "desc": "Integraciones backend ligeras y scripting de soporte." },
-      "typescript": { "desc": "Tipado estático, modelos de dominio y reducción de bugs en build." }
+      "typescript": { "desc": "Tipado estático, modelos de dominio y reducción de bugs en build." },
+      "php": { "desc": "Desarrollo backend y creación de APIs con PHP y frameworks relacionados." }
     }
   },
+  
   "cases": {
     "title": "Casos de Éxito",
     "prev": "Anterior",

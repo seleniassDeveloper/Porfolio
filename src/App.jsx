@@ -4,7 +4,7 @@ import ScrollReveal from "./components/ScrollReveal";
 import "./App.css";
 import { RedesSociales } from "./components/redesSociales";
 import "./i18n";
-import YosiendoFeliz from "./assets/imagenes/yosiendoFeliz.jpg";
+import YosiendoFeliz from "./assets/imagenes/yosiendoFeliz.jpeg";
 import { useTranslation } from "react-i18next";
 import { TodosLosComponentes } from "./components/todosLosComponente";
 import { Sistran } from "./components/ComponentesDComponentes/sistran";
