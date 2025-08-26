@@ -10,6 +10,7 @@ import { TodosLosComponentes } from "./components/todosLosComponente";
 import { Sistran } from "./components/ComponentesDComponentes/sistran";
 import { Scalabl } from "./components/ComponentesDComponentes/scalabl";
 import { ProyectosReales } from "./components/proyectosReales";
+import Dogco from "./components/ComponentesDComponentes/Dogco";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -43,7 +44,7 @@ function App() {
           <Route path="/proyectos" element={<ProyectosReales t={t}/>} />
           <Route path="/experiencia-sistran" element={<Sistran />} />
           <Route path="/experiencia-scalabl" element={<Scalabl />} />
-          
+          <Route path="/proyecto-dogco" element={<Dogco />} />
         </Routes>
       </ScrollReveal>
     </HashRouter>

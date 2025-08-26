@@ -1,4 +1,89 @@
 {
+  
+  "dogco": {
+    "back": "← Volver",
+    "hero": {
+      "title": "Conecta paseadores y",
+      "highlight": "dueños de mascotas",
+      "subtitle": "Aplicación para coordinar paseos y cuidados. Como dueño podés enviar solicitudes o buscar paseadores; como paseador, postularte y gestionar tus trabajos.",
+      "cta": "Ver guía rápida",
+      "badge": "Diseño y front-end con React (prototipo)"
+    },
+    "overview": {
+      "title": "¿Qué es DogCo?",
+      "body": "DogCo es una aplicación que une a dueños de mascotas con paseadores cercanos. Permite publicar solicitudes, recibir postulaciones, chatear, agendar y dar seguimiento al paseo.",
+      "cards": [
+        { "title": "Match inteligente", "text": "Búsqueda por radio, precio y tamaño de mascota." },
+        { "title": "Flow de solicitud", "text": "El dueño publica y los paseadores se postulan o se contrata directo." },
+        { "title": "Seguimiento", "text": "Registro en vivo del paseo: notas, fotos y check-ins." }
+      ]
+    },
+    "features": {
+      "title": "Características principales",
+      "owner": {
+        "title": "Para dueños",
+        "items": [
+          "Crear solicitud con fecha, duración y preferencia de zona",
+          "Comparar postulaciones, chatear y reservar",
+          "Dashboard con próximas reservas y gastos",
+          "Perfil de mascota con salud, rutinas y documentos"
+        ]
+      },
+      "walker": {
+        "title": "Para paseadores",
+        "items": [
+          "Perfil verificado, radio de trabajo y servicios",
+          "Bandeja de solicitudes cercanas y postulaciones",
+          "Dashboard con próximos trabajos y paseo en vivo",
+          "Historial y métricas básicas (ingresos, rating)"
+        ]
+      }
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "owner": "Panel del dueño: agenda, próximas reservas y acciones rápidas",
+      "walker": "Panel del paseador: filtros, solicitudes cercanas y paseo en vivo"
+    },
+    "guide": {
+      "title": "Guía rápida",
+      "steps": [
+        { "title": "Crear cuenta y rol", "text": "Elegí si querés usar la app como Dueño o como Paseador. Podés cambiarlo luego." },
+        { "title": "Completar perfil", "text": "Define disponibilidad, radio, servicios y verificaciones (teléfono / email)." },
+        { "title": "Publicar o postularse", "text": "Como dueño, creá una solicitud. Como paseador, postulá a trabajos cercanos o respondé por chat." },
+        { "title": "Paseo en vivo", "text": "Inicia el paseo, marca eventos (agua, pipí, popó), sube fotos y deja una nota." }
+      ]
+    },
+    "roles": {
+      "title": "Roles",
+      "owner": {
+        "title": "Dueño",
+        "items": [
+          "Gestiona mascotas y preferencias",
+          "Publica solicitudes y contrata",
+          "Recibe comprobantes del paseo"
+        ]
+      },
+      "walker": {
+        "title": "Paseador",
+        "items": [
+          "Define precios y radio",
+          "Administra agenda y trabajos",
+          "Registra evidencias del paseo"
+        ]
+      }
+    },
+    "footer": { "cta": "Volver arriba" },
+    "alt": {
+      "home": "Pantalla de inicio DogCo",
+      "login": "Pantalla de login",
+      "walkerProfile": "Perfil de paseador",
+      "ownerProfile": "Perfil de dueña/o",
+      "walkerDash": "Dashboard de paseador",
+      "ownerDash": "Dashboard de dueño",
+      "requests": "Lista de solicitudes",
+      "liveWalk": "Paseo en vivo"
+    }
+  },
   "scalabl": {
     "volver": "← Volver",
     "logoAlt": "Logo de Scalabl",
@@ -242,6 +327,10 @@
     "sistran": {
       "alt": "Logo de Sistran",
       "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
+    },
+     "dogco": {
+      "alt": "Logo de DogCo",
+      "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."
     }
   },
 

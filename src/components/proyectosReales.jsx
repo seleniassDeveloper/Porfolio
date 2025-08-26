@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "../css/ProyectosReales.css";
 import scalablImg from "../assets/imagenes/scalabl-logo.png";
 import sistaskImg from "../assets/imagenes/sistran-logo.png";
+import logoDogco from "../assets/imagenes/dogco/logoDogco.png"
 
 export const ProyectosReales = () => {
   const { t } = useTranslation(); // usa el namespace por defecto ("translation") o el que configures
@@ -13,6 +14,7 @@ export const ProyectosReales = () => {
   const proyectos = [
     { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
     { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
+    { id: "dogco", route: "/proyecto-dogco", img: logoDogco }
   ];
 
   return (

@@ -1,4 +1,89 @@
 {
+  
+  "dogco": {
+    "back": "← Back",
+    "hero": {
+      "title": "Connect dog walkers and",
+      "highlight": "pet owners",
+      "subtitle": "App to coordinate walks and care. Owners can post requests or search walkers; walkers apply to jobs and manage their schedule.",
+      "cta": "See quick guide",
+      "badge": "Design & Front-end in React (prototype)"
+    },
+    "overview": {
+      "title": "What is DogCo?",
+      "body": "DogCo is an app that matches pet owners with nearby walkers. It lets you post requests, receive applications, chat, schedule and track the walk.",
+      "cards": [
+        { "title": "Smart match", "text": "Search by radius, price and pet size." },
+        { "title": "Request flow", "text": "Owners post and walkers apply, or owners hire directly." },
+        { "title": "Tracking", "text": "Live walk log with notes, photos and check-ins." }
+      ]
+    },
+    "features": {
+      "title": "Key features",
+      "owner": {
+        "title": "For owners",
+        "items": [
+          "Create requests with time, duration and area preference",
+          "Compare applications, chat and book",
+          "Dashboard with upcoming bookings and spend",
+          "Pet profile with health, routines and documents"
+        ]
+      },
+      "walker": {
+        "title": "For walkers",
+        "items": [
+          "Verified profile, work radius and services",
+          "Nearby requests inbox and applications",
+          "Dashboard with upcoming jobs and live walk",
+          "History and simple metrics (earnings, rating)"
+        ]
+      }
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "owner": "Owner panel: agenda, upcoming bookings and quick actions",
+      "walker": "Walker panel: filters, nearby requests and live walk"
+    },
+    "guide": {
+      "title": "Quick guide",
+      "steps": [
+        { "title": "Create account & role", "text": "Choose Owner or Walker (you can switch later)." },
+        { "title": "Complete your profile", "text": "Set availability, radius, services and verifications (phone / email)." },
+        { "title": "Post or apply", "text": "Owners post a request. Walkers apply to nearby jobs or reply via chat." },
+        { "title": "Live walk", "text": "Start walk, mark events (water, pee, poop), upload photos and leave a note." }
+      ]
+    },
+    "roles": {
+      "title": "Roles",
+      "owner": {
+        "title": "Owner",
+        "items": [
+          "Manage pets and preferences",
+          "Post requests and hire",
+          "Receive walk proof"
+        ]
+      },
+      "walker": {
+        "title": "Walker",
+        "items": [
+          "Set prices and radius",
+          "Manage schedule and jobs",
+          "Record walk evidence"
+        ]
+      }
+    },
+    "footer": { "cta": "Back to top" },
+    "alt": {
+      "home": "DogCo home screen",
+      "login": "Login screen",
+      "walkerProfile": "Walker profile",
+      "ownerProfile": "Owner profile",
+      "walkerDash": "Walker dashboard",
+      "ownerDash": "Owner dashboard",
+      "requests": "Requests list",
+      "liveWalk": "Live walk"
+    }
+  },
   "scalabl": {
     "volver": "← Back",
     "logoAlt": "Scalabl logo",
@@ -242,6 +327,11 @@
     "sistran": {
       "alt": "Sistran logo",
       "descripcion": "Task and workflow management system for insurance consulting firms."
+    },
+
+    "dogco": {
+      "alt": "DogCo logo",
+      "descripcion": "App that connects pet owners with walkers: requests, applications and live walk tracking."
     }
   },
 
