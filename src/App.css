@@ -1195,3 +1195,12 @@ p{ font-size: var(--fs-md); color: var(--muted); line-height: 1.7; }
 .carta-tecnologia.canva .icono-tecnologia svg { color: #00C4CC; }
 .carta-tecnologia.photoshop .icono-tecnologia svg { color: #31A8FF; }
 .carta-tecnologia.illustrator .icono-tecnologia svg { color: #FF9A00; }
+/* ExperienciaSistran.css (extracto) */
+.tabs-sistran { display:flex; gap:.5rem; margin:1rem 0; }
+.tab { border:1px solid #ddd; background:#f7f7f9; padding:.5rem .9rem; border-radius:10px; cursor:pointer; }
+.tab.active { background:#e6f0ff; border-color:#a8c5ff; }
+
+.guia-accordion .guia-item { border:1px solid #eee; border-radius:10px; padding:.6rem .9rem; margin:.5rem 0; background:#fff; }
+.guia-cta { display:flex; gap:.6rem; margin-top:1rem; }
+.btn-primario { background:#2f6bff; color:#fff; border:none; padding:.5rem .9rem; border-radius:8px; text-decoration:none; }
+.btn-secundario { background:#f2f4f8; border:1px solid #e2e6ee; padding:.5rem .9rem; border-radius:8px; }

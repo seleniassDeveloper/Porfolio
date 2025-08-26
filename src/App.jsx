@@ -1,4 +1,4 @@
-import React from "react";
+
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ScrollReveal from "./components/ScrollReveal";
 import "./App.css";
