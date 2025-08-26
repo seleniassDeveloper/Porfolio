@@ -1,8 +1,86 @@
 {
-  
+  "scalabl": {
+    "volver": "← Volver",
+    "logoAlt": "Logo de Scalabl",
+    "hero": {
+      "title": "Aprende de",
+      "highlight": "negocios",
+      "suffix": ", todos los días",
+      "subtitle": "Comunidades de aprendizaje con contenidos curados, sesiones en vivo, retos prácticos y acompañamiento. Un sistema pensado para que la actualización sea continua y accionable.",
+      "cta": "Hazte miembro",
+      "badge": "+2500 personas formadas en Scalabl®"
+    },
+    "overview": {
+      "title": "¿Qué es Scalabl?",
+      "body": "Scalabl es una plataforma de comunidades de aprendizaje orientada a negocios. Combina una landing pública de adquisición (marketing, SEO, contenido) con un ecosistema privado para miembros: currículas vivas, biblioteca de recursos, calendario de sesiones, foros, retos y seguimiento de progreso.",
+      "cards": {
+        "community": { "title": "Comunidad", "text": "Espacios temáticos, foros, networking y mentorías guiadas." },
+        "content": { "title": "Contenido curado", "text": "Lecciones breves, playbooks y plantillas listas para usar." },
+        "practice": { "title": "Práctica y feedback", "text": "Retos, revisiones en vivo y evidencias de aprendizaje." }
+      }
+    },
+    "development": {
+      "title": "Desarrollo de la landing y la plataforma",
+      "landing": {
+        "title": "Landing (acceso público)",
+        "items": [
+          "Arquitectura SPA con Vite + React (performance y DX).",
+          "Secciones: Hero con valor, prueba social, Comunidades, Qué son, Cómo funcionan, Pricing y CTA persistente.",
+          "SEO técnico: metatags, OG/Twitter cards, sitemap y estructura semántica.",
+          "UI consistente: paleta morado/verde neón, botones redondeados, sombras suaves, tipografías legibles.",
+          "Integraciones: YouTube embebido, WhatsApp CTA y newsletter."
+        ]
+      },
+      "platform": {
+        "title": "Plataforma (área de miembros)",
+        "items": [
+          "Auth por roles (miembro, mentor, admin) con guardas de ruta.",
+          "Módulos: Biblioteca, Calendario, Retos/Entregas, Foros/Comentarios, Progreso.",
+          "Panel de admin para currícula, publicaciones, sesiones y reportes.",
+          "Analítica de engagement (retención, actividad semanal, finalización de retos).",
+          "Arquitectura sugerida: React (FE) + API Node/Express o serverless + DB (PostgreSQL / Firestore)."
+        ]
+      }
+    },
+    "role": {
+      "title": "Mi rol y responsabilidades",
+      "items": [
+        "Diseño UI/UX de la landing y componentes reutilizables.",
+        "Implementación responsive con foco en performance (CLS, LCP, TTI).",
+        "Integración de video, formularios, analítica y CTA de conversión.",
+        "Definición de arquitectura FE, estado y rutas protegidas.",
+        "Propuesta de módulos clave para la comunidad y flujos de miembro."
+      ]
+    },
+    "impact": {
+      "title": "Impacto y resultados",
+      "stats": [
+        { "num": "+45%", "label": "mejora en conversión landing" },
+        { "num": "90+", "label": "eventos/mes gestionados" },
+        { "num": "~1.2s", "label": "LCP en dispositivos móviles" }
+      ],
+      "note": "*Métricas estimadas según benchmarks y pruebas locales. Ajustables a datos reales del entorno productivo."
+    },
+    "stack": {
+      "title": "Stack propuesto",
+      "items": [
+        "Vite + React",
+        "React Router",
+        "Context / Zustand",
+        "Node/Express API",
+        "PostgreSQL / Firestore",
+        "Auth por roles",
+        "YouTube / WhatsApp",
+        "SEO + Analytics"
+      ]
+    },
+    "footer": { "cta": "Visitar Scalabl" }
+  },
+
   "common": {
     "imageNotAvailable": "Imagen no disponible"
   },
+
   "sistaskSummary": {
     "valueImpact": {
       "title": "Valor e impacto",
@@ -18,6 +96,7 @@
       "outcome": "Resultado: mejor tiempo de respuesta, mayor cumplimiento de SLA y visibilidad end-to-end para una implementación consistente en la región."
     }
   },
+
   "sistaskGuide": {
     "title": "Guía Sistask",
     "indexAria": "Índice de la guía",
@@ -152,7 +231,9 @@
     "message_placeholder": "Tu mensaje...",
     "submit_button": "Enviar"
   },
+
   "Tecnologías": "Tecnologías",
+
   "items": {
     "scalabl": {
       "alt": "Logo de Scalabl",
@@ -163,11 +244,13 @@
       "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
     }
   },
+
   "titulo": "Proyectos",
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
   "hello_welcome": "Hola, bienvenido ",
   "portfolio_description": "Soy desarrolladora Front-end con más de tres años de experiencia profesional creando soluciones web modernas, escalables y centradas en el usuario. Especializada en React, con sólidos conocimientos en UI/UX, APIs REST, gestión de estados y diseño responsive. Actualmente incorporo TypeScript para elevar la calidad, escalabilidad y mantenibilidad del código. Me caracterizo por ser proactiva, colaborativa y apasionada por convertir ideas en productos digitales funcionales, atractivos y de alto rendimiento.",
+
   "experience_section": {
     "professional_experience": "Experiencia Profesional",
     "sistran_title": "Sistran – Desarrolladora Frontend",
@@ -214,6 +297,7 @@
       "Español – Nativo"
     ]
   },
+
   "sistran": {
     "volver": "← Volver",
     "titulo": "Experiencia en Sistran",
@@ -248,7 +332,8 @@
       "cierre": "Gracias a este trabajo en equipo, Sistran cuenta con una herramienta moderna, robusta y adaptable que potencia su expansión regional y fortalece su eficiencia interna."
     }
   },
-  "scalabl": {
+
+  "scalablExp": {
     "volver": "← Volver",
     "titulo": "Experiencia en Scalabl",
     "logoAlt": "Logo de Scalabl",
@@ -275,51 +360,30 @@
       "item3": "Mejor experiencia para miles de usuarios en distintos continentes."
     }
   },
+
   "mision_and_vision": {
     "title": "Mi Visión",
     "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
   },
+
   "tech": {
     "title": "Tecnologías",
     "items": {
-      "html": {
-        "desc": "Maquetado semántico y accesible con SEO técnico básico."
-      },
-      "css": {
-        "desc": "Diseños responsivos, grid y flexbox, estilos escalables."
-      },
-      "javascript": {
-        "desc": "Lógica de negocio en frontend, consumo de APIs y manejo de estado."
-      },
-      "react": {
-        "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router."
-      },
-      "github": {
-        "desc": "Flujo Git, PRs, code reviews e integración continua."
-      },
-      "python": {
-        "desc": "Integraciones backend ligeras y scripting de soporte."
-      },
-      "typescript": {
-        "desc": "Tipado estático, modelos de dominio y reducción de bugs en build."
-      },
-      "php": {
-        "desc": "Desarrollo backend y creación de APIs con PHP y frameworks relacionados."
-      },
-      "figma": {
-        "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario."
-      },
-      "canva": {
-        "desc": "Diseño rápido de material gráfico y contenido para redes sociales."
-      },
-      "photoshop": {
-        "desc": "Edición profesional de imágenes y creación de composiciones digitales."
-      },
-      "illustrator": {
-        "desc": "Diseño y creación de gráficos vectoriales para impresión y medios digitales."
-      }
+      "html": { "desc": "Maquetado semántico y accesible con SEO técnico básico." },
+      "css": { "desc": "Diseños responsivos, grid y flexbox, estilos escalables." },
+      "javascript": { "desc": "Lógica de negocio en frontend, consumo de APIs y manejo de estado." },
+      "react": { "desc": "Dashboards dinámicos con hooks personalizados y rutas con React Router." },
+      "github": { "desc": "Flujo Git, PRs, code reviews e integración continua." },
+      "python": { "desc": "Integraciones backend ligeras y scripting de soporte." },
+      "typescript": { "desc": "Tipado estático, modelos de dominio y reducción de bugs en build." },
+      "php": { "desc": "Desarrollo backend y creación de APIs con PHP y frameworks relacionados." },
+      "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
+      "canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
+      "photoshop": { "desc": "Edición profesional de imágenes y creación de composiciones digitales." },
+      "illustrator": { "desc": "Diseño y creación de gráficos vectoriales para impresión y medios digitales." }
     }
   },
+
   "cases": {
     "title": "Casos de Éxito",
     "prev": "Anterior",
@@ -337,21 +401,14 @@
       "stack": "React, jQuery, Python"
     }
   },
+
   "cta": {
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
   },
-  "figma": {
-    "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario."
-  },
-  "canva": {
-    "desc": "Diseño rápido de material gráfico y contenido para redes sociales."
-  },
-  "photoshop": {
-    "desc": "Edición profesional de imágenes y composición digital."
-  },
-  "illustrator": {
-    "desc": "Creación de gráficos vectoriales y material para impresión."
-  }
-  
+
+  "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
+  "canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
+  "photoshop": { "desc": "Edición profesional de imágenes y composición digital." },
+  "illustrator": { "desc": "Creación de gráficos vectoriales y material para impresión." }
 }

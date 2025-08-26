@@ -1,155 +1,165 @@
-
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import logoScalabl from "../../assets/imagenes/scalabl-logo.png";
 import "../../css/ExperienciaScalabl.css";
-import { useTranslation } from "react-i18next";
 
 export const Scalabl = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const volverAtras = () => navigate(-1);
+
+  // Helpers seguros para objetos/arrays desde i18n
+  const tArr = (key) => {
+    const v = t(key, { returnObjects: true });
+    return Array.isArray(v) ? v : [];
+  };
+  const tObj = (key) => {
+    const v = t(key, { returnObjects: true });
+    return v && typeof v === "object" ? v : {};
+  };
+
+  const overviewCards = tObj("scalabl.overview.cards");
 
   return (
-    <div className="scalabl-container">
+    <div className="scalabl py-5">
+      {/* Topbar */}
       <div className="sc-topbar">
-        <button className="sc-btn-back" onClick={volverAtras}>
-          {t("scalabl.volver") || "Volver"}
+        <button className="sc-btn sc-btn-ghost" onClick={() => navigate(-1)}>
+          {t("scalabl.volver")}
         </button>
+
+   
       </div>
 
-      {/* HERO / HEADER */}
+      {/* HERO */}
       <header className="sc-hero">
-        <div className="sc-hero-content">
+        <div className="sc-hero-left">
           <h1 className="sc-title">
-            Aprende de <span>negocios</span>, todos los días
+            {t("scalabl.hero.title")}{" "}
+            <span className="sc-highlight">{t("scalabl.hero.highlight")}</span>
+            {t("scalabl.hero.suffix")}
           </h1>
-          <p className="sc-subtitle">
-            Comunidades de aprendizaje con contenidos curados, sesiones en vivo,
-            retos prácticos y acompañamiento. Un sistema pensado para que la
-            actualización sea continua y accionable.
-          </p>
 
-          <div className="sc-cta-row">
-            <a href="https://scalabl.com" target="_blank" rel="noreferrer" className="sc-btn-primary">
-              Hazte miembro
+          <p className="sc-subtitle">{t("scalabl.hero.subtitle")}</p>
+
+          <div className="sc-hero-cta">
+            <a
+              href="https://scalabl.com"
+              target="_blank"
+              rel="noreferrer"
+              className="sc-btn sc-btn-accent sc-btn-lg"
+            >
+              {t("scalabl.hero.cta")}
             </a>
-            <span className="sc-badge">+2500 personas formadas en Scalabl®</span>
+            <span className="sc-badge">{t("scalabl.hero.badge")}</span>
           </div>
         </div>
 
-        <div className="sc-hero-media">
-       
-          <img src={logoScalabl} alt={t("scalabl.logoAlt") || "Logo Scalabl"} className="sc-logo-hero" />
+        <div className="sc-hero-right">
+          <div className="sc-hero-card">
+            <img
+              src={logoScalabl}
+              alt={t("scalabl.logoAlt")}
+              className="sc-logo"
+            />
+            <div className="sc-hero-video">
+              {/* slot para video/imagen hero si luego lo integrás */}
+              <div className="sc-video-skeleton" />
+            </div>
+          </div>
         </div>
       </header>
 
-      {/* QUÉ ES / OVERVIEW */}
-      <section className="sc-section container">
-        <h2 className="sc-h2">¿Qué es Scalabl?</h2>
-        <p className="sc-p">
-          Scalabl es una <strong>plataforma de comunidades de aprendizaje</strong> orientada a
-          negocios. Combina una landing pública de adquisición (marketing, SEO, contenido)
-          con un ecosistema privado para miembros: <em>currículas vivas</em>, biblioteca
-          de recursos, calendario de sesiones, foros, retos y seguimiento de progreso.
-        </p>
+      {/* OVERVIEW */}
+      <section className="sc-section">
+        <div className="sc-section-header">
+          <h2 className="sc-h2">{t("scalabl.overview.title")}</h2>
+          <p className="sc-section-lead">{t("scalabl.overview.body")}</p>
+        </div>
 
         <div className="sc-grid-3">
-          <div className="sc-card">
-            <h3>Comunidad</h3>
-            <p>Espacios temáticos, foros, networking y mentorías guiadas.</p>
-          </div>
-          <div className="sc-card">
-            <h3>Contenido curado</h3>
-            <p>Lecciones breves, playbooks y plantillas listas para usar.</p>
-          </div>
-          <div className="sc-card">
-            <h3>Práctica y feedback</h3>
-            <p>Retos, revisiones en vivo y evidencias de aprendizaje.</p>
-          </div>
+          {Object.entries(overviewCards).map(([k, card]) => (
+            <article className="sc-card" key={k}>
+              <h3 className="sc-card-title">{card.title}</h3>
+              <p className="sc-card-text">{card.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* LANDING & PLATAFORMA (DESARROLLO) */}
+      {/* DESARROLLO */}
       <section className="sc-section">
-        <h2 className="sc-h2">Desarrollo de la landing y la plataforma</h2>
+        <h2 className="sc-h2">{t("scalabl.development.title")}</h2>
 
-        <div className="sc-feature">
-          <div className="sc-feature-block">
-            <h4>Landing (acceso público)</h4>
+        <div className="sc-features">
+          <div className="sc-feature">
+            <h4 className="sc-feature-title">
+              {t("scalabl.development.landing.title")}
+            </h4>
             <ul className="sc-list">
-              <li>Arquitectura SPA con Vite + React (performance y DX).</li>
-              <li>Secciones: Hero con valor, prueba social, Comunidades, Qué son, Cómo funcionan, Pricing y CTA persistente.</li>
-              <li>SEO técnico: metatags, OG/Twitter cards, sitemap y estructura semántica.</li>
-              <li>UI consistente: paleta morado/verde neón, botones round, sombras suaves, tipografías legibles.</li>
-              <li>Integraciones: YouTube embebido, WhatsApp CTA y newsletter.</li>
+              {tArr("scalabl.development.landing.items").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
-          <div className="sc-feature-block">
-            <h4>Plataforma (área de miembros)</h4>
+
+          <div className="sc-feature">
+            <h4 className="sc-feature-title">
+              {t("scalabl.development.platform.title")}
+            </h4>
             <ul className="sc-list">
-              <li>Auth por roles (miembro, mentor, admin) con guardas de ruta.</li>
-              <li>Módulos: Biblioteca, Calendario, Retos/Entregas, Foros/Comentarios, Progreso.</li>
-              <li>Panel de admin para curricula, publicaciones, sesiones y reportes.</li>
-              <li>Analítica de engagement (retención, actividad semanal, finalización de retos).</li>
-              <li>Arquitectura sugerida: React (FE) + API Node/Express o serverless + DB (PostgreSQL / Firestore).</li>
+              {tArr("scalabl.development.platform.items").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
-      {/* RESPONSABILIDADES (TU ROL) */}
+      {/* ROL */}
       <section className="sc-section">
-        <h2 className="sc-h2">Mi rol y responsabilidades</h2>
-        <ul className="sc-list">
-          <li>Diseño UI/UX de la landing y componentes reutilizables.</li>
-          <li>Implementación responsive con foco en performance (CLS, LCP, TTI).</li>
-          <li>Integración de video, formularios, analítica y CTA de conversión.</li>
-          <li>Definición de arquitectura FE, estado y rutas protegidas.</li>
-          <li>Propuesta de módulos clave para la comunidad y flujos de miembro.</li>
+        <h2 className="sc-h2">{t("scalabl.role.title")}</h2>
+        <ul className="sc-list sc-list-check">
+          {tArr("scalabl.role.items").map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       </section>
 
-      {/* IMPACTO / RESULTADOS */}
+      {/* IMPACTO */}
       <section className="sc-section">
-        <h2 className="sc-h2">Impacto y resultados</h2>
+        <h2 className="sc-h2">{t("scalabl.impact.title")}</h2>
         <div className="sc-stats">
-          <div className="sc-stat">
-            <span className="sc-stat-num">+45%</span>
-            <span className="sc-stat-label">mejora en conversión landing</span>
-          </div>
-          <div className="sc-stat">
-            <span className="sc-stat-num">90+</span>
-            <span className="sc-stat-label">eventos/mes gestionados</span>
-          </div>
-          <div className="sc-stat">
-            <span className="sc-stat-num">~1.2s</span>
-            <span className="sc-stat-label">LCP en dispositivos móviles</span>
-          </div>
+          {tArr("scalabl.impact.stats").map(({ num, label }, i) => (
+            <div className="sc-stat" key={i}>
+              <div className="sc-stat-num">{num}</div>
+              <div className="sc-stat-label">{label}</div>
+            </div>
+          ))}
         </div>
-        <p className="sc-p muted">
-          *Métricas estimadas según benchmarks y pruebas locales. Ajustables a datos reales del entorno productivo.
-        </p>
+        <p className="sc-note">{t("scalabl.impact.note")}</p>
       </section>
 
-      {/* TECNOLOGÍAS / STACK */}
+      {/* STACK */}
       <section className="sc-section">
-        <h2 className="sc-h2">Stack propuesto</h2>
-        <div className="sc-pill-row">
-          <span className="sc-pill">Vite + React</span>
-          <span className="sc-pill">React Router</span>
-          <span className="sc-pill">Context / Zustand</span>
-          <span className="sc-pill">Node/Express API</span>
-          <span className="sc-pill">PostgreSQL / Firestore</span>
-          <span className="sc-pill">Auth por roles</span>
-          <span className="sc-pill">YouTube / WhatsApp</span>
-          <span className="sc-pill">SEO + Analytics</span>
+        <h2 className="sc-h2">{t("scalabl.stack.title")}</h2>
+        <div className="sc-pills">
+          {tArr("scalabl.stack.items").map((tech, i) => (
+            <span className="sc-pill" key={i}>
+              {tech}
+            </span>
+          ))}
         </div>
       </section>
 
-      {/* FOOTER CTA */}
-      <footer className="sc-footer d-flex justify-content-end">
-        <a href="https://scalabl.com" target="_blank" rel="noreferrer" className="sc-btn-primary sc-btn-lg">
-          Visitar Scalabl
+      {/* CTA FINAL */}
+      <footer className="sc-footer">
+        <a
+          href="https://scalabl.com"
+          target="_blank"
+          rel="noreferrer"
+          className="sc-btn sc-btn-accent sc-btn-lg"
+        >
+          {t("scalabl.footer.cta")}
         </a>
       </footer>
     </div>
