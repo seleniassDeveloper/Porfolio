@@ -1,39 +1,44 @@
-
+// src/components/ProyectosReales.jsx
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../css/ProyectosReales.css";
 import scalablImg from "../assets/imagenes/scalabl-logo.png";
 import sistaskImg from "../assets/imagenes/sistran-logo.png";
-import logoDogco from "../assets/imagenes/dogco/logoDogco.png"
+import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 
 export const ProyectosReales = () => {
-  const { t } = useTranslation(); // usa el namespace por defecto ("translation") o el que configures
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // Solo datos no traducibles (rutas, ids e imágenes)
   const proyectos = [
     { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
     { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
-    { id: "dogco", route: "/proyecto-dogco", img: logoDogco }
+    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress" }
   ];
 
   return (
-    <div className="proyectos-reales-container ">
-  
+    <div className="proyectos-reales-container">
       <h2>{t("titulo")}</h2>
 
       <div className="tarjetas-proyectos">
         {proyectos.map((p) => (
-          <div key={p.id} className="tarjeta-proyecto">
-            <img
-              src={p.img}
-              alt={t(`items.${p.id}.alt`)}
-              loading="lazy"
-            />
+          <div
+            key={p.id}
+            className={`tarjeta-proyecto ${p.status === "in-progress" ? "en-proceso" : ""}`}
+          >
+            <div className="proyecto-header">
+              <img src={p.img} alt={t(`items.${p.id}.alt`)} loading="lazy" />
+              {p.status === "in-progress" && (
+                <span className="badge-proceso">{t("enProceso", "En proceso")}</span>
+              )}
+            </div>
+
             <p>{t(`items.${p.id}.descripcion`)}</p>
 
             <button onClick={() => navigate(p.route)}>
-              {t("verProyecto")}
+              {p.status === "in-progress"
+                ? t("verProceso", "Ver proceso")
+                : t("verProyecto", "Ver proyecto")}
             </button>
           </div>
         ))}

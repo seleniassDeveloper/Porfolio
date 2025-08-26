@@ -3,6 +3,36 @@
   background-color: #000000;
   padding: 60px 40px;
 }
+/* src/css/ProyectosReales.css */
+.status-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff7f00, #ffa24a);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* src/css/ProyectosReales.css */
+.proyecto-header {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-proceso {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(90deg, #ff7f00, #ffa24a);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 
 .proyectos-reales-container h2 {
   text-transform: uppercase;
@@ -149,4 +179,42 @@
     font-size: 0.9rem;
     padding: 10px 12px;
   }
+}
+/* ===== Guía de la plataforma (no roadmap) ===== */
+.dogco-guide{ display:grid; gap:18px; }
+.dogco-guide-block{
+  display:grid; grid-template-columns: 1fr 1.4fr; gap:16px; align-items:center;
+}
+.dogco-guide-media img{
+  width:100%; border-radius:14px; box-shadow:var(--dogco-shadow);
+}
+.dogco-guide-title{ margin:0 0 8px; }
+
+.dogco-checklist{ list-style:none; padding:0; margin:10px 0 0; display:grid; gap:8px; }
+.dogco-checklist li{
+  display:flex; align-items:center; gap:10px;
+  background:#fff; border-radius:12px; padding:10px 12px; box-shadow:var(--dogco-shadow);
+}
+.dogco-checklist li .status-dot{
+  width:10px; height:10px; border-radius:999px; background:#bbb; flex:0 0 10px;
+}
+.dogco-checklist li.done .status-dot{ background:var(--dogco-orange); }
+.dogco-checklist li.pending .status-dot{ background:#c9c9c9; }
+
+.chip{
+  margin-left:auto; font-size:.78rem; font-weight:700; padding:5px 9px; border-radius:999px;
+  background:#eee; color:#222;
+}
+.chip.success{
+  background:linear-gradient(90deg, var(--dogco-orange), var(--dogco-orange-2));
+  color:#111;
+}
+.chip.warn{
+  background:#ffe7cc; color:#7a4a00;
+}
+.dogco-muted{ color:var(--dogco-muted); margin-top:8px; }
+
+/* Responsive guía */
+@media (max-width:960px){
+  .dogco-guide-block{ grid-template-columns:1fr; }
 }
