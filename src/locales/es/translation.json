@@ -1,4 +1,148 @@
 {
+  
+  "common": {
+    "imageNotAvailable": "Imagen no disponible"
+  },
+  "sistaskSummary": {
+    "valueImpact": {
+      "title": "Valor e impacto",
+      "p1": "Sistask es el núcleo operativo para la gestión de tickets que Sistran implementará en más de 17 países de LATAM, estandarizando procesos y elevando la calidad de servicio a escala regional.",
+      "points": [
+        { "strong": "Centralización y trazabilidad:", "text": "unifica la operación en una sola plataforma con historial completo por ticket (quién/cuándo/qué)." },
+        { "strong": "Cumplimiento de SLA:", "text": "alertas proactivas y seguimiento en tiempo real (tiempos por estado, carga por agente, backlog crítico)." },
+        { "strong": "Visibilidad ejecutiva:", "text": "dashboards regionales, filtros guardados y KPIs por país/negocio para decisiones rápidas." },
+        { "strong": "Eficiencia operativa:", "text": "workflows por rol, plantillas y filtros reutilizables que reducen tiempos y errores." },
+        { "strong": "Gobernanza y seguridad:", "text": "roles/permisos por país/equipo, auditoría de cambios y cumplimiento normativo." },
+        { "strong": "Escalabilidad regional:", "text": "configuración por mercado con crecimiento sin fricción." }
+      ],
+      "outcome": "Resultado: mejor tiempo de respuesta, mayor cumplimiento de SLA y visibilidad end-to-end para una implementación consistente en la región."
+    }
+  },
+  "sistaskGuide": {
+    "title": "Guía Sistask",
+    "indexAria": "Índice de la guía",
+    "tabsAria": "Secciones",
+    "tabs": {
+      "summary": "Resumen",
+      "guide": "Guía Sistask"
+    },
+    "ip_banner": {
+      "text": "⚠️ Por propiedad intelectual, las imágenes se muestran con desenfoque parcial.",
+      "show": "Entiendo y quiero ver",
+      "hide": "Ocultar desenfoque",
+      "watermark": "Ejemplo | PI"
+    },
+    "aria": {
+      "enlarge": "Ampliar {{title}}"
+    },
+    "steps": {
+      "fillFields": "Completa los campos:"
+    },
+    "sections": {
+      "overview": {
+        "id": "overview",
+        "title": "¿Qué es Sistask?",
+        "body": "Sistask es una plataforma para gestionar proyectos e incidencias con foco en trazabilidad, SLA y visibilidad. Permite crear tickets, priorizarlos, asignarlos por rol y seguir su ciclo de vida con historial, adjuntos y reportes."
+      },
+      "views": {
+        "id": "vistas",
+        "title": "Vistas: Dashboard y Detalle de ticket",
+        "items": [
+          {
+            "id": "dash",
+            "title": "Dashboard",
+            "caption": "Panel principal con gráficos y widgets. Permite ver reportes basados en filtros guardados (estado, prioridad, proyecto, fecha, asignado, etc.), fijar gadgets con KPIs clave, aplicar filtros rápidos y guardar configuraciones.",
+            "alt": "Dashboard con gráficos y gadgets configurables de Sistask"
+          },
+          {
+            "id": "ticket",
+            "title": "Detalle del ticket",
+            "caption": "Ficha completa del caso. Incluye historial (quién/cuándo/qué), workflow (acciones por rol: reabrir, resolver, cerrar), adjuntos, registro de horas, SLA y estado actual, más asignación de usuarios y permisos.",
+            "alt": "Detalle del ticket con historial, workflow, adjuntos y SLA en Sistask"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "flujo",
+        "title": "Flujo de trabajo",
+        "lead": "Ciclo típico configurable por proyecto:",
+        "bullets": [
+          "To Do → In Progress → En Revisión/QA → Done.",
+          "Estados opcionales: Blocked (Bloqueado), QA Testing (Pruebas), Ready for Release.",
+          "Cada transición registra evento en el historial (quién/cuándo/qué)."
+        ]
+      },
+      "boards": {
+        "id": "tableros",
+        "title": "Tableros",
+        "bullets": [
+          "Scrum: backlog, sprints, estimaciones y velocity.",
+          "Kanban: flujo continuo, límites WIP y control visual.",
+          "Filtros avanzados y búsquedas guardadas (estado, prioridad, proyecto, asignado, fechas)."
+        ],
+        "queryLabel": "Ejemplo de consulta de filtro",
+        "query": "project = HDS\nAND status = \"In Progress\"\nAND assignee = currentUser()"
+      },
+      "reports": {
+        "id": "reportes",
+        "title": "Dashboards y Reportes",
+        "bullets": [
+          "Burndown chart: progreso del sprint.",
+          "Velocity chart: capacidad de entrega por sprint.",
+          "Pie chart: distribución por estado/prioridad/usuario.",
+          "Cumulative Flow Diagram: flujo y cuellos de botella."
+        ]
+      },
+      "roles": {
+        "id": "roles",
+        "title": "Roles y permisos",
+        "bullets": [
+          "Admin: configura proyectos, flujos, campos y usuarios.",
+          "Project Lead: prioriza backlog y gestiona releases.",
+          "Agente/Assignee: ejecuta trabajo de los tickets asignados.",
+          "Reporter: crea el ticket y valida el cierre."
+        ]
+      },
+      "create": {
+        "id": "crear",
+        "title": "Crear un ticket",
+        "steps": [
+          "Haz clic en “Crear”.",
+          [
+            "Project: proyecto al que pertenece.",
+            "Issue type: Epic, Story, Task, Bug, etc.",
+            "Summary: título corto y descriptivo.",
+            "Description: detalle, pasos y resultado esperado.",
+            "Priority: alta / media / baja.",
+            "Assignee: responsable.",
+            "Labels / Components: etiquetas/categorías.",
+            "Adjuntos: evidencias y archivos relevantes."
+          ],
+          "Guardar. El ticket inicia en el estado inicial del flujo y notifica al equipo."
+        ]
+      },
+      "sla": {
+        "id": "sla",
+        "title": "SLA y notificaciones",
+        "bullets": [
+          "Definición de tiempos objetivo por tipo/prioridad.",
+          "Alertas cuando un ticket se acerca o supera el SLA.",
+          "Notificaciones por cambios de estado, comentarios y reasignaciones."
+        ]
+      },
+      "best": {
+        "id": "buenas",
+        "title": "Buenas prácticas",
+        "bullets": [
+          "Usar títulos claros y específicos.",
+          "Describir pasos para reproducir y resultado esperado.",
+          "Adjuntar evidencias (capturas, logs).",
+          "Mantener estados al día y cerrar con validación del solicitante."
+        ]
+      }
+    }
+  },
+
   "formulario": {
     "title": "¿Querés trabajar conmigo?",
     "paragraph": "Completá el formulario o escribime por redes sociales. Estoy lista para crear algo increíble juntos.",
@@ -209,4 +353,5 @@
   "illustrator": {
     "desc": "Creación de gráficos vectoriales y material para impresión."
   }
+  
 }

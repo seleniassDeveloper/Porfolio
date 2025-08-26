@@ -1,4 +1,148 @@
 {
+    
+  "common": {
+    "imageNotAvailable": "Image not available"
+  },
+  "sistaskSummary": {
+    "valueImpact": {
+      "title": "Value and impact",
+      "p1": "Sistask is the core operational platform for ticket management that Sistran will roll out across more than 17 LATAM countries, standardizing processes and elevating service quality at a regional scale.",
+      "points": [
+        { "strong": "Centralization & traceability:", "text": "unifies operations in one platform with full per-ticket history (who/when/what)." },
+        { "strong": "SLA compliance:", "text": "proactive alerts and real-time monitoring (status times, agent load, critical backlog)." },
+        { "strong": "Executive visibility:", "text": "regional dashboards, saved filters, and KPIs per country/business for faster decisions." },
+        { "strong": "Operational efficiency:", "text": "role-based workflows, templates, and reusable filters that reduce time and errors." },
+        { "strong": "Governance & security:", "text": "roles/permissions by country/team, audit logs, and compliance support." },
+        { "strong": "Regional scalability:", "text": "market-level configuration with frictionless growth." }
+      ],
+      "outcome": "Result: faster response times, higher SLA compliance, and end-to-end visibility for a consistent regional implementation."
+    }
+  },
+  "sistaskGuide": {
+    "title": "Sistask Guide",
+    "indexAria": "Guide index",
+    "tabsAria": "Sections",
+    "tabs": {
+      "summary": "Summary",
+      "guide": "Sistask Guide"
+    },
+    "ip_banner": {
+      "text": "⚠️ For intellectual property reasons, the images are partially blurred.",
+      "show": "I understand, show images",
+      "hide": "Hide blur",
+      "watermark": "Sample | PI"
+    },
+    "aria": {
+      "enlarge": "Enlarge {{title}}"
+    },
+    "steps": {
+      "fillFields": "Complete the fields:"
+    },
+    "sections": {
+      "overview": {
+        "id": "overview",
+        "title": "What is Sistask?",
+        "body": "Sistask is a platform to manage projects and incidents with focus on traceability, SLAs, and visibility. It allows creating tickets, prioritizing them, assigning by role, and following their lifecycle with history, attachments, and reports."
+      },
+      "views": {
+        "id": "vistas",
+        "title": "Views: Dashboard and Ticket Detail",
+        "items": [
+          {
+            "id": "dash",
+            "title": "Dashboard",
+            "caption": "Main panel with charts and widgets. View reports based on saved filters (status, priority, project, date, assignee, etc.), pin gadgets with key KPIs, apply quick filters, and save configurations.",
+            "alt": "Dashboard with configurable charts and widgets in Sistask"
+          },
+          {
+            "id": "ticket",
+            "title": "Ticket Detail",
+            "caption": "Complete ticket record. Includes history (who/when/what), workflow (role-based actions: reopen, resolve, close), attachments, time logs, SLA and current status, plus user assignment and permissions.",
+            "alt": "Ticket detail with history, workflow, attachments and SLA in Sistask"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "flujo",
+        "title": "Workflow",
+        "lead": "Typical lifecycle configurable per project:",
+        "bullets": [
+          "To Do → In Progress → In Review/QA → Done.",
+          "Optional states: Blocked, QA Testing, Ready for Release.",
+          "Each transition logs an event into the history (who/when/what)."
+        ]
+      },
+      "boards": {
+        "id": "tableros",
+        "title": "Boards",
+        "bullets": [
+          "Scrum: backlog, sprints, estimations, and velocity.",
+          "Kanban: continuous flow, WIP limits, and visual control.",
+          "Advanced filters and saved searches (status, priority, project, assignee, dates)."
+        ],
+        "queryLabel": "Filter query example",
+        "query": "project = HDS\nAND status = \"In Progress\"\nAND assignee = currentUser()"
+      },
+      "reports": {
+        "id": "reportes",
+        "title": "Dashboards and Reports",
+        "bullets": [
+          "Burndown chart: sprint progress.",
+          "Velocity chart: delivery capacity per sprint.",
+          "Pie chart: distribution by status/priority/user.",
+          "Cumulative Flow Diagram: flow and bottlenecks."
+        ]
+      },
+      "roles": {
+        "id": "roles",
+        "title": "Roles and Permissions",
+        "bullets": [
+          "Admin: configures projects, workflows, fields, and users.",
+          "Project Lead: prioritizes backlog and manages releases.",
+          "Assignee/Agent: executes work on assigned tickets.",
+          "Reporter: creates the ticket and validates closure."
+        ]
+      },
+      "create": {
+        "id": "crear",
+        "title": "Create a Ticket",
+        "steps": [
+          "Click on “Create”.",
+          [
+            "Project: project the ticket belongs to.",
+            "Issue type: Epic, Story, Task, Bug, etc.",
+            "Summary: short and descriptive title.",
+            "Description: details, steps, and expected result.",
+            "Priority: high / medium / low.",
+            "Assignee: responsible user.",
+            "Labels / Components: tags/categories.",
+            "Attachments: evidence and related files."
+          ],
+          "Save. The ticket starts in the initial workflow state and notifies the team."
+        ]
+      },
+      "sla": {
+        "id": "sla",
+        "title": "SLAs and Notifications",
+        "bullets": [
+          "Target times by type/priority.",
+          "Alerts when a ticket approaches or exceeds SLA.",
+          "Notifications on status changes, comments, and reassignments."
+        ]
+      },
+      "best": {
+        "id": "buenas",
+        "title": "Best Practices",
+        "bullets": [
+          "Use clear and specific titles.",
+          "Describe steps to reproduce and expected result.",
+          "Attach evidence (screenshots, logs).",
+          "Keep statuses updated and close with requester validation."
+        ]
+      }
+    }
+  },
+
     "formulario": {
         "title": "Do you want to work with me?",
         "paragraph": "Fill out the form or contact me on social media. I'm ready to create something amazing together.",
