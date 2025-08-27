@@ -1,10 +1,22 @@
-import { useState, useRef } from "react";
+// src/components/Tecnologias.jsx
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Carousel from "react-bootstrap/Carousel";
 import {
-  SiHtml5, SiCss3, SiJavascript, SiReact, SiGithub, SiPython,
-  SiTypescript, SiFigma, SiCanva, SiAdobephotoshop, SiAdobeillustrator, SiPhp
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiGithub,
+  SiPython,
+  SiTypescript,
+  SiFigma,
+  SiCanva,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiPhp,
 } from "react-icons/si";
-import "../css/technologias.css"
+import "../css/technologias.css"; // tu hoja de estilos
 
 const tecnologias = [
   { id: "html", nombre: "HTML", icono: <SiHtml5 />, clase: "html" },
@@ -22,9 +34,27 @@ const tecnologias = [
 ];
 
 const casosExito = [
-  { id: "sistask", tituloKey: "cases.sistask.title", descKey: "cases.sistask.desc", stackKey: "cases.sistask.stack", link: "https://sistask.sistran.com" },
-  { id: "scalabl", tituloKey: "cases.scalabl.title", descKey: "cases.scalabl.desc", stackKey: "cases.scalabl.stack", link: "https://www.scalabl.com" },
+  {
+    id: "sistask",
+    tituloKey: "cases.sistask.title",
+    descKey: "cases.sistask.desc",
+    stackKey: "cases.sistask.stack",
+    link: "https://sistask.sistran.com",
+  },
+  {
+    id: "scalabl",
+    tituloKey: "cases.scalabl.title",
+    descKey: "cases.scalabl.desc",
+    stackKey: "cases.scalabl.stack",
+    link: "https://www.scalabl.com",
+  },
 ];
+
+// helper para agrupar elementos en slides del carrusel
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
 
 export const Tecnologias = () => {
   const { t } = useTranslation();
@@ -33,60 +63,50 @@ export const Tecnologias = () => {
   const next = () => setIdx((i) => (i + 1) % casosExito.length);
   const prev = () => setIdx((i) => (i - 1 + casosExito.length) % casosExito.length);
 
-  // Soporte teclado (← →) y swipe en mobile
-  const carruselRef = useRef(null);
-  const touch = useRef({ x: 0, y: 0 });
-
-  const onKeyDown = (e) => {
-    if (e.key === "ArrowRight") next();
-    if (e.key === "ArrowLeft") prev();
-  };
-
-  const onTouchStart = (e) => {
-    const t0 = e.touches?.[0];
-    if (!t0) return;
-    touch.current = { x: t0.clientX, y: t0.clientY };
-  };
-  const onTouchEnd = (e) => {
-    const t1 = e.changedTouches?.[0];
-    if (!t1) return;
-    const dx = t1.clientX - touch.current.x;
-    const dy = t1.clientY - touch.current.y;
-    // Evita disparar en scroll vertical
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
-      dx < 0 ? next() : prev();
-    }
-  };
-
   return (
-    <div className="tecnologias-container ">
+    <div className="tecnologias-container">
       <h2 className="titulo-tecnologias">{t("tech.title")}</h2>
 
-      <div className="grid-tecnologias">
-        {tecnologias.map((tech) => (
-          <div
-            className={`carta-tecnologia  ${tech.clase} ${tech.id === "react" ? "destacar-react" : ""}`}
-            key={tech.id}
-          >
-            <div className="icono-tecnologia" aria-hidden>{tech.icono}</div>
-            <p className="nombre-tecnologia">{tech.nombre}</p>
-            <p className="descripcion-tecnologia">
-              {t(`tech.items.${tech.id}.desc`)}
-            </p>
-          </div>
-        ))}
+      {/* Desktop/Tablet: GRID (visible >= md) */}
+      <div className="d-none d-md-block">
+        <div className="grid-tecnologias">
+          {tecnologias.map((tech) => (
+            <div
+              key={tech.id}
+              className={`carta-tecnologia ${tech.clase} ${tech.id === "react" ? "destacar-react" : ""}`}
+            >
+              <div className="icono-tecnologia" aria-hidden>
+                {tech.icono}
+              </div>
+              <p className="nombre-tecnologia">{tech.nombre}</p>
+              <p className="descripcion-tecnologia">
+                {t(`tech.items.${tech.id}.desc`)}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <section
-        className="casos-exito"
-        ref={carruselRef}
-        role="region"
-        aria-label={t("cases.title")}
-        tabIndex={0}
-        onKeyDown={onKeyDown}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
+      {/* Mobile: CARRUSEL (visible < md) */}
+      <div className="d-md-none">
+        <Carousel interval={null} indicators={false} controls={true} className="tech-carousel">
+          {chunk(tecnologias, 6).map((grupo, slideIndex) => (
+            <Carousel.Item key={`slide-${slideIndex}`}>
+              <div className="slide-grid">
+                {grupo.map((tech) => (
+                  <div key={tech.id} className={`slide-icon ${tech.clase}`} role="button" tabIndex={0}>
+                    <span className="icono-tecnologia">{tech.icono}</span>
+                    <span className="slide-label">{tech.nombre}</span>
+                  </div>
+                ))}
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+
+      {/* Casos de Éxito (queda como lo tenías) */}
+      <section className="casos-exito" role="region" aria-label={t("cases.title")} tabIndex={0}>
         <div className="header-casos">
           <h3>{t("cases.title")}</h3>
           <div className="controles-carrusel">

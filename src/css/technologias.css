@@ -58,3 +58,52 @@
     cursor: pointer;
   }
 }
+
+/* Carrusel móvil: grilla de iconos (2 filas x 3 columnas) */
+.slide-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 12px 14px;
+  padding: 8px 6px 14px;
+}
+
+.slide-icon{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 14px 10px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.slide-icon .icono-tecnologia svg{
+  width: 28px;
+  height: 28px;
+}
+
+.slide-label{
+  font-size: .85rem;
+  line-height: 1.1;
+  opacity: .95;
+}
+
+.slide-icon:active{ transform: scale(.98); }
+.slide-icon:hover{ border-color: rgba(124,92,252,.35); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+
+/* Colores de hover por tecnología (opcional) */
+.slide-icon.html:hover .icono-tecnologia svg { color:#e44d26; }
+.slide-icon.css:hover .icono-tecnologia svg { color:#264de4; }
+.slide-icon.javascript:hover .icono-tecnologia svg { color:#f0db4f; }
+.slide-icon.react:hover .icono-tecnologia svg { color:#61dafb; }
+.slide-icon.github:hover .icono-tecnologia svg { color:#ffffff; }
+.slide-icon.python:hover .icono-tecnologia svg { color:#3776ab; }
+.slide-icon.typescript:hover .icono-tecnologia svg { color:#3178c6; }
+.slide-icon.figma:hover .icono-tecnologia svg { color:#F24E1E; }
+.slide-icon.canva:hover .icono-tecnologia svg { color:#00C4CC; }
+.slide-icon.photoshop:hover .icono-tecnologia svg { color:#31A8FF; }
+.slide-icon.illustrator:hover .icono-tecnologia svg { color:#FF9A00; }
