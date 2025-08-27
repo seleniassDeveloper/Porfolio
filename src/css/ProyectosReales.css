@@ -273,7 +273,18 @@
   display: inline-block;
 }
 
-
+.badge-proceso {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(90deg, #ff7f00, #ffa24a);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 /* ===== Guía de la plataforma (no roadmap) ===== */
 .dogco-guide{ display:grid; gap:18px; }
 .dogco-guide-block{

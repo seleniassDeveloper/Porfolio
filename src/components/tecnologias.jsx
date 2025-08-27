@@ -50,10 +50,7 @@ const casosExito = [
   },
 ];
 
-export const Tecnologias = ({
-  upworkUrl = "https://www.upwork.com/", // pásame tu perfil real
-  contactoUrl = "/contacto",            // o un mailto:
-}) => {
+export const Tecnologias = () => {
   const { t } = useTranslation();
   const [idx, setIdx] = useState(0);
 
