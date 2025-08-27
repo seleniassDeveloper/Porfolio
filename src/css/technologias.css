@@ -1,0 +1,60 @@
+/* Por defecto ocultamos el carrusel (desktop/tablet muestra grid) */
+.tech-carousel {
+  display: none;
+}
+
+/* Para móvil: mostramos carrusel y ocultamos grid */
+@media (max-width: 768px) {
+  .grid-tecnologias {
+    display: none;
+  }
+
+  .tech-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+  }
+
+  .tech-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding: 8px;
+    flex: 1;
+  }
+
+  .tech-slide {
+    flex: 0 0 70%; /* ocupa 70% del ancho visible */
+    max-width: 280px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 14px;
+    padding: 16px;
+    scroll-snap-align: start;
+    transition: transform .25s ease;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .tech-slide.is-open {
+    flex: 0 0 90%;
+    text-align: left;
+  }
+
+  .tech-nav {
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

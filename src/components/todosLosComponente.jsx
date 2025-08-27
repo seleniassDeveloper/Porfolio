@@ -8,7 +8,6 @@ import { ProyectosReales } from "./proyectosReales"
 import { Tecnologias } from "./tecnologias"
 import TrueFocus from "./TrueFocus"
 import Waves from "./Waves"
-import { useTranslation } from "react-i18next";
 import "../../src/App.css";
 
 
