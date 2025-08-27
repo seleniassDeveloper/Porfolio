@@ -13,7 +13,7 @@ export const ProyectosReales = () => {
   const proyectos = [
     { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
     { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
-    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress" }
+    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress", progress: 60 }
   ];
 
   return (
@@ -25,21 +25,51 @@ export const ProyectosReales = () => {
           <div
             key={p.id}
             className={`tarjeta-proyecto ${p.status === "in-progress" ? "en-proceso" : ""}`}
+            onClick={() => navigate(p.route)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === "Enter" && navigate(p.route)}
           >
             <div className="proyecto-header">
               <img src={p.img} alt={t(`items.${p.id}.alt`)} loading="lazy" />
               {p.status === "in-progress" && (
-                <span className="badge-proceso">{t("enProceso", "En proceso")}</span>
+                <>
+                  <span className="badge-proceso">{t("enProceso", "En proceso")}</span>
+                  <div className="overlay-proceso">
+                    {/* <p>{t("enProcesoDesc", "Este proyecto está en desarrollo")}</p> */}
+                  </div>
+                </>
               )}
             </div>
 
-            <p>{t(`items.${p.id}.descripcion`)}</p>
+            <p className="proyecto-desc">{t(`items.${p.id}.descripcion`)}</p>
 
-            <button onClick={() => navigate(p.route)}>
-              {p.status === "in-progress"
-                ? t("verProceso", "Ver proceso")
-                : t("verProyecto", "Ver proyecto")}
-            </button>
+            {p.status === "in-progress" && typeof p.progress === "number" && (
+              <div className="progress-wrap" aria-label={t("progreso", "Progreso")}>
+                <div
+                  className="progress-bar"
+                  style={{ width: `${p.progress}%` }}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={p.progress}
+                />
+                <span className="progress-label">{p.progress}%</span>
+              </div>
+            )}
+
+            <div className="proyecto-actions">
+              <button
+                className={`btn ${p.status === "in-progress" ? "btn-secondary" : "btn-primary"}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(p.route);
+                }}
+              >
+                {p.status === "in-progress"
+                  ? t("verProceso", "Ver proceso")
+                  : t("verProyecto", "Ver proyecto")}
+              </button>
+            </div>
           </div>
         ))}
       </div>
