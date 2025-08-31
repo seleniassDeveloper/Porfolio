@@ -1,115 +1,63 @@
-
 import "../css/Dinosaurios.css";
+import logo from "../../assets/imagenes/logoblancoverDino.jpeg";
+import trex from "../../assets/imagenes/trex-right.png";
+import apasur from "../../assets/imagenes/logoAPASUR.jpeg";
 
-export default function Dinosaurios()  {
+export default function Dinosaurios() {
   return (
-    <main className="with-fixed-nav dinoCase">
-
+    <main className="dino-page py-5">
       {/* HERO */}
-      <section className="dc-hero">
-        <div className="dc-veil" />
-        <div className="dc-heroInner dc-container">
-          <div className="dc-copy">
-            <div className="dc-logos">
-              <img src="/apa-lacev.png" alt="APA Sur & LACEV" />
-              <span className="dc-kicker">Science powered by exploration</span>
-            </div>
-
-            <h1 className="dc-title">
-              Let’s discover new <span className="dc-brand">species</span>
-              <span className="dc-titleBreak" /> in the next expedition
-            </h1>
-
-            <p className="dc-sub">
-              Team: 11 researchers, 5 technicians, 2 educators and 10+ students.
-              Based at the Bernardino Rivadavia Museum (Buenos Aires). 5 Nature
-              covers and 400+ publications. In the last 20 years: 35 species in
-              Argentina and 5 in Antarctica/LatAm (40 total).
-            </p>
-
-            <div className="dc-ctas">
-              <a className="dc-btn dc-btn--primary" href="/donate">Donate now</a>
-              <a className="dc-btn dc-btn--ghost" href="#plan">See expedition plan</a>
-            </div>
+      <section className="dino-hero container">
+        <div className="dino-hero-left">
+          <div className="dino-badge">
+            <img src={logo} alt="APA Sur & LACEV" />
+            <img src={apasur} alt="APA Sur" />
+            <span>CIENCIA IMPULSADA POR LA EXPLORACIÓN</span>
           </div>
 
-          {/* Arte con halo */}
-          <figure className="dc-art">
-            <div className="dc-glow" />
-      
-          </figure>
-        </div>
-      </section>
+          <h1>
+            <span className="dino-orange">Descubramos nuevas especies</span><br />
+            <span className="dino-black">en la próxima expedición</span>
+          </h1>
 
-      {/* META / LOGROS */}
-      <section className="dc-container dc-padY">
-        <div className="dc-highlight">
-          <p className="dc-tag">2025 goal</p>
-          <h3 className="dc-h3">Publish a new article in <i>Nature</i></h3>
-          <p className="dc-muted">
-            Antarctic expeditions 2027–2032 (IAA & CONICET) to uncover 70 Ma dinosaurs.
+          <p className="dino-description">
+            Equipo: 11 investigadores, 5 técnicos, 2 educadores y 10+ estudiantes. Con sede en el Museo
+            Bernardino Rivadavia (Buenos Aires). 5 portadas en Nature y 400+ publicaciones. En los últimos 20 años:
+            35 especies en Argentina y 5 en Antártida/LatAm (40 en total).
           </p>
 
-          <div className="dc-badges">
-            <span className="dc-badge"><span className="dc-dot" /> National Geographic (4)</span>
-            <span className="dc-badge"><span className="dc-dot" /> Explorers Club (3)</span>
-            <span className="dc-badge"><span className="dc-dot" /> Jurassic Foundation (3)</span>
+          <div className="dino-buttons">
+            <button className="green">Donar ahora</button>
+            <button className="outline">Ver plan de expedición</button>
           </div>
+        </div>
 
-          <div className="dc-kpis">
-            <div className="dc-kpi"><div className="dc-kpiN">5×</div><div className="dc-kpiL">Covers in Nature</div></div>
-            <div className="dc-kpi"><div className="dc-kpiN">400+</div><div className="dc-kpiL">Published articles</div></div>
-            <div className="dc-kpi"><div className="dc-kpiN">40</div><div className="dc-kpiL">New species (20 years)</div></div>
-            <div className="dc-kpi"><div className="dc-kpiN">200+</div><div className="dc-kpiL">Outreach initiatives</div></div>
-          </div>
+        <div className="dino-hero-right">
+          <img src={trex} alt="Dinosaurio render" />
         </div>
       </section>
 
-      {/* RESUMEN / HALLAZGOS */}
-      <section id="plan" className="dc-container dc-padY">
-        <div className="dc-split">
-          <div>
-            <h2 className="dc-h2">What we do in the field</h2>
-            <ul className="dc-checklist">
-              <li>Prospecting & mapping: remote sensing + systematic transects.</li>
-              <li>Excavation: plaster jackets, detailed logs, context photos/GPS.</li>
-              <li>Preparation & curation in our fossil lab with official permits.</li>
-              <li>Publication & outreach: 400+ papers, 200+ science actions.</li>
-            </ul>
-          </div>
-          <div className="dc-cards dc-cards--compact">
-            <article className="dc-card">
-              <h4>Maip macrothorax</h4>
-              <p className="dc-meta">10 m predator from the far south with a lethal 30+ cm claw.</p>
-            </article>
-            <article className="dc-card">
-              <h4>Patagorhynchus</h4>
-              <p className="dc-meta">Oldest platypus in South America (70 Ma).</p>
-            </article>
-            <article className="dc-card">
-              <h4>Taurovenator violantei</h4>
-              <p className="dc-meta">Nearly complete giant theropod, rivaling T. rex.</p>
-            </article>
-            <article className="dc-card">
-              <h4>Oldest tadpole</h4>
-              <p className="dc-meta">Unique 200+ Ma fossil from Patagonia.</p>
-            </article>
-          </div>
+      {/* OBJETIVO */}
+      <section className="dino-objetivo container">
+        <h3 className="objetivo-label">OBJETIVO 2025</h3>
+        <h2>Publicar un nuevo artículo en <em>Nature</em></h2>
+        <p>
+          Expediciones 2027–2032 en Antártida (IAA & CONICET) para hallar dinosaurios de hace 70 Ma.
+        </p>
+
+        <div className="objetivo-tags">
+          <span>📺 National Geographic (4)</span>
+          <span>🧭 Explorers Club (3)</span>
+          <span>🦖 Jurassic Foundation (3)</span>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="dc-container dc-padY">
-        <div className="dc-ctaWide">
-          <h3 className="dc-h3">Partner with the next expedition</h3>
-          <p className="dc-muted">Compliant with Argentine National Law. Official permits and in-house prep lab.</p>
-          <div className="dc-amounts">
-            <span className="dc-amount">Corporate sponsor</span>
-            <span className="dc-amount">Research grant</span>
-            <span className="dc-amount">Individual donor</span>
-          </div>
-          <a className="dc-btn dc-btn--primary" href="/donate">Donate now</a>
-        </div>
+      {/* MÉTRICAS */}
+      <section className="dino-metricas container">
+        <div className="metric-card"><strong>5×</strong><span>Portadas en Nature</span></div>
+        <div className="metric-card"><strong>400+</strong><span>Artículos publicados</span></div>
+        <div className="metric-card"><strong>40</strong><span>Nuevas especies (20 años)</span></div>
+        <div className="metric-card"><strong>200+</strong><span>Iniciativas de divulgación</span></div>
       </section>
     </main>
   );
