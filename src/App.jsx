@@ -11,6 +11,7 @@ import { Sistran } from "./components/ComponentesDComponentes/sistran";
 import { Scalabl } from "./components/ComponentesDComponentes/scalabl";
 import { ProyectosReales } from "./components/proyectosReales";
 import Dogco from "./components/ComponentesDComponentes/Dogco";
+import Dinosaurios from "./components/ComponentesDComponentes/Dinosaurios";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -45,6 +46,7 @@ function App() {
           <Route path="/experiencia-sistran" element={<Sistran />} />
           <Route path="/experiencia-scalabl" element={<Scalabl />} />
           <Route path="/proyecto-dogco" element={<Dogco />} />
+          <Route path="/Dinosaurios" element={<Dinosaurios/>} />
         </Routes>
       </ScrollReveal>
     </HashRouter>

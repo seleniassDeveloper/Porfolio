@@ -5,16 +5,18 @@ import "../css/ProyectosReales.css";
 import scalablImg from "../assets/imagenes/scalabl-logo.png";
 import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
+import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const proyectos = [
-    { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
-    { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
-    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress", progress: 60 }
-  ];
+const proyectos = [
+  { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
+  { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
+  { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress", progress: 60 },
+  { id: "dinosaurios", route: "/Dinosaurios", img: dinoImg, status: "in-progress", progress: 80 }, // NUEVO
+];
 
   return (
     <div className="proyectos-reales-container">
