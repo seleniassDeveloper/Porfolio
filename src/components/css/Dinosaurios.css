@@ -1,24 +1,73 @@
-/* src/css/Dinosaurios.css */
+.dino-hero-bg {
+  background-image: url('/Users/seleniasanchez/Porfolio/src/assets/imagenes/disnoporfolio/decierto.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+ 
+  background-repeat: no-repeat;
+  background-position: center;
 
-/* ====== Base ====== */
+  position: relative;
+  color: white;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  color: white;
+
+}
+.boton{
+  color: white!important;
+  background-color: #3A0073!important;}
+
+  .boton:hover{
+  color: white!important;
+  background-color: #9047d8!important;}
+
 .dino-page {
-  background: #fff8ef;
-  font-family: 'Inter', sans-serif;
-  color: #1f1f1f;
-  padding-bottom: 4rem;
+  background-color: #f5efe5;
+  color: #333;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.dino-hero-inner {
+  max-width: 720px;
+  z-index: 2;
+  position: relative;
 }
+
+.dino-hero-inner h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.dino-hero-inner p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+.dino-hero-inner .green {
+  background-color: #1e8a5f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.dino-hero-inner .green:hover {
+  background-color: #146b4b;
+}
+
 
 /* ====== Hero Section ====== */
-.dino-hero-bg {
-  background: linear-gradient(to right, #fcf1e0 40%, transparent 100%);
-  padding: 4rem 0 2rem;
-}
+
 
 .dino-hero {
   display: flex;
@@ -27,19 +76,19 @@
   flex-wrap: wrap;
 }
 
-.dino-hero-left {
-  flex: 1 1 500px;
-}
+
 
 .hero-title {
-  font-size: 2.5rem;
+  color: rgb(255, 183, 0);
+  font-size: 2.9rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.3;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); /* sombra suave y difusa */
 }
 
 .hero-title .watch-live {
-  color: #0c4b33;
+  color: #055200;
   font-style: italic;
   font-weight: 900;
 }
@@ -96,15 +145,20 @@
 }
 
 /* ====== Galería ====== */
-.dino-galeria {
-  padding-top: 4rem;
-}
-
 .galeria-title {
+  display: inline-block;
+  background-color: #fff1a8; /* fondo tipo post-it o sticker */
+  color: #1e1e1e;
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  margin: 2rem auto;
   text-align: center;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .galeria-grid {
@@ -116,7 +170,7 @@
 .galeria-item {
   position: relative;
   background: #fff;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
@@ -154,4 +208,48 @@
   .hero-title {
     font-size: 2rem;
   }
+}
+
+
+
+.dino-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dino-hero-left {
+  flex: 1 1 500px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.634);
+  border-radius: 20px;
+}
+
+
+.dino-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.green {
+  background-color: #1e8a5f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.43);
+}
+
+.trex-sticker {
+  width: 100%;
+  max-width: 460px;
+  transform: rotate(-2deg);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+  margin: 0 2rem;
 }

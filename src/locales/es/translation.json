@@ -1,5 +1,13 @@
 {
-  
+  "dinosaurios": {
+    "heroTitleLine1": "Sumate a la Búsqueda de",
+    "heroTitleHighlight": "Nuevas Especies",
+    "heroTitleLine2": "en la Patagonia Argentina",
+    "heroDescription": "Este sitio documenta las campañas paleontológicas del equipo de APASUR & LACEV, con base en el Museo Bernardino Rivadavia (Buenos Aires). Desde 2002, han descubierto más de 40 nuevas especies y publicado 5 portadas en Nature. Ahora te invitan a participar, votar, donar y ver excavaciones en vivo.",
+    "exploraBtn": "Explorá las campañas",
+    "galeriaTitulo": "Descubrimientos y campañas destacadas",
+    "campañaNumero": "Campaña #{{num}}"
+  },
   "dogco": {
     "back": "← Volver",
     "hero": {
@@ -328,6 +336,11 @@
       "alt": "Logo de Sistran",
       "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
     },
+    "dinosaurios": {
+      "alt": "Logo Dinosaurios",
+      "descripcion": "Landing científica para campañas paleontológicas en la Patagonia. Incluye livestream, descubrimientos, votaciones y donaciones en tiempo real."
+    },
+
      "dogco": {
       "alt": "Logo de DogCo",
       "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."

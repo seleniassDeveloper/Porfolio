@@ -14,8 +14,8 @@ export const ProyectosReales = () => {
 const proyectos = [
   { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
   { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
+  { id: "dinosaurios", route: "/Dinosaurios", img: dinoImg },
   { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress", progress: 60 },
-  { id: "dinosaurios", route: "/Dinosaurios", img: dinoImg, status: "in-progress", progress: 80 }, // NUEVO
 ];
 
   return (
@@ -61,7 +61,7 @@ const proyectos = [
 
             <div className="proyecto-actions">
               <button
-                className={`btn ${p.status === "in-progress" ? "btn-secondary" : "btn-primary"}`}
+                className={`btn ${p.status === "in-progress" ? "btn-secondary" : "boton"}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   navigate(p.route);
