@@ -1,64 +1,59 @@
+// src/pages/Dinosaurios.jsx
+
 import "../css/Dinosaurios.css";
-import logo from "../../assets/imagenes/logoblancoverDino.jpeg";
 import trex from "../../assets/imagenes/trex-right.png";
-import apasur from "../../assets/imagenes/logoAPASUR.jpeg";
+import dino1 from "../../assets/imagenes/disnoporfolio/dino1.jpg";
+import dino2 from "../../assets/imagenes/disnoporfolio/dino2.png";
+import dino3 from "../../assets/imagenes/disnoporfolio/dino3.jpg";
+import dino4 from "../../assets/imagenes/disnoporfolio/dino4.jpg";
+import dino5 from "../../assets/imagenes/disnoporfolio/dino5.jpg";
+import dino6 from "../../assets/imagenes/disnoporfolio/dino6.jpg";
 
 export default function Dinosaurios() {
   return (
-    <main className="dino-page py-5">
+    <main className="dino-page">
+
       {/* HERO */}
-      <section className="dino-hero container">
-        <div className="dino-hero-left">
-          <div className="dino-badge">
-            <img src={logo} alt="APA Sur & LACEV" />
-            <img src={apasur} alt="APA Sur" />
-            <span>CIENCIA IMPULSADA POR LA EXPLORACIÓN</span>
+      <section className="dino-hero-bg">
+        <div className="dino-hero container">
+          <div className="dino-hero-left">
+            <h1 className="hero-title">
+              Sumate a la búsqueda de <span className="watch-live">nuevas especies</span><br />
+              en la Patagonia Argentina
+            </h1>
+
+            <p className="dino-description">
+              Este sitio documenta las campañas paleontológicas del equipo de APASUR & LACEV,
+              con base en el Museo Bernardino Rivadavia (Buenos Aires). Desde 2002, han descubierto más
+              de 40 nuevas especies y publicado 5 portadas en <em>Nature</em>. Ahora te invitan a
+              participar, votar, donar y ver excavaciones en vivo.
+            </p>
+
+            <div className="dino-buttons">
+              <button className="green">Explorá las campañas</button>
+              <button className="outline">Ver hallazgos</button>
+            </div>
           </div>
 
-          <h1>
-            <span className="dino-orange">Descubramos nuevas especies</span><br />
-            <span className="dino-black">en la próxima expedición</span>
-          </h1>
-
-          <p className="dino-description">
-            Equipo: 11 investigadores, 5 técnicos, 2 educadores y 10+ estudiantes. Con sede en el Museo
-            Bernardino Rivadavia (Buenos Aires). 5 portadas en Nature y 400+ publicaciones. En los últimos 20 años:
-            35 especies en Argentina y 5 en Antártida/LatAm (40 en total).
-          </p>
-
-          <div className="dino-buttons">
-            <button className="green">Donar ahora</button>
-            <button className="outline">Ver plan de expedición</button>
+          <div className="dino-hero-right">
+            <img src={trex} alt="T-Rex render" className="trex-sticker" />
           </div>
         </div>
+      </section>
 
-        <div className="dino-hero-right">
-          <img src={trex} alt="Dinosaurio render" />
+      {/* GALERÍA EDITORIAL */}
+      <section className="dino-galeria container">
+        <h2 className="galeria-title">Descubrimientos y campañas destacadas</h2>
+        <div className="galeria-grid">
+          {[dino1, dino2, dino3, dino4, dino5, dino6].map((img, i) => (
+            <div className="galeria-item" key={i}>
+              <img src={img} alt={`Imagen ${i + 1}`} className="sticker-image" />
+              <span className="galeria-label">Campaña #{i + 1}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* OBJETIVO */}
-      <section className="dino-objetivo container">
-        <h3 className="objetivo-label">OBJETIVO 2025</h3>
-        <h2>Publicar un nuevo artículo en <em>Nature</em></h2>
-        <p>
-          Expediciones 2027–2032 en Antártida (IAA & CONICET) para hallar dinosaurios de hace 70 Ma.
-        </p>
-
-        <div className="objetivo-tags">
-          <span>📺 National Geographic (4)</span>
-          <span>🧭 Explorers Club (3)</span>
-          <span>🦖 Jurassic Foundation (3)</span>
-        </div>
-      </section>
-
-      {/* MÉTRICAS */}
-      <section className="dino-metricas container">
-        <div className="metric-card"><strong>5×</strong><span>Portadas en Nature</span></div>
-        <div className="metric-card"><strong>400+</strong><span>Artículos publicados</span></div>
-        <div className="metric-card"><strong>40</strong><span>Nuevas especies (20 años)</span></div>
-        <div className="metric-card"><strong>200+</strong><span>Iniciativas de divulgación</span></div>
-      </section>
     </main>
   );
 }

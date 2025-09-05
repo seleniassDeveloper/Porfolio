@@ -1,165 +1,157 @@
-:root {
-  --beige: #f3efe5;
-  --beige-medium: #e0d8c2;
-  --marron: #4e3b2a;
-  --verde: #386641;
-  --naranja: #f4a300;
-  --negro: #111111;
-}
+/* src/css/Dinosaurios.css */
 
-body, .dino-page {
+/* ====== Base ====== */
+.dino-page {
+  background: #fff8ef;
   font-family: 'Inter', sans-serif;
-  background: var(--beige);
-  color: var(--marron);
+  color: #1f1f1f;
+  padding-bottom: 4rem;
 }
 
-/* Hero Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ====== Hero Section ====== */
+.dino-hero-bg {
+  background: linear-gradient(to right, #fcf1e0 40%, transparent 100%);
+  padding: 4rem 0 2rem;
+}
+
 .dino-hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 80px 20px;
-  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .dino-hero-left {
-  flex: 1;
+  flex: 1 1 500px;
 }
 
-.dino-badge {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  margin-bottom: 20px;
-}
-
-.dino-badge img {
-  height: 50px;
-}
-
-.dino-orange {
-  color: var(--naranja);
+.hero-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
-.dino-black {
-  color: var(--negro);
-  font-size: 2.5rem;
-  font-weight: 800;
+.hero-title .watch-live {
+  color: #0c4b33;
+  font-style: italic;
+  font-weight: 900;
 }
 
 .dino-description {
-  margin: 20px 0;
-  color: #555;
+  font-size: 1.125rem;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-.dino-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-button.green {
-  background: var(--verde);
-  color: white;
+.dino-buttons button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  margin-right: 1rem;
+  border-radius: 12px;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease all;
 }
 
-button.outline {
-  background: transparent;
-  border: 2px solid var(--verde);
-  color: var(--verde);
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
+.dino-buttons .green {
+  background: #0c4b33;
+  color: white;
+}
+
+.dino-buttons .green:hover {
+  background: #063a26;
+}
+
+.dino-buttons .outline {
+  background: white;
+  border: 2px solid #0c4b33;
+  color: #0c4b33;
+}
+
+.dino-buttons .outline:hover {
+  background: #f6f6f6;
 }
 
 .dino-hero-right {
-  position: relative;
-  z-index: 1;
-}
-
-.dino-hero-right::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,165,0,0.5) 0%, rgba(255,165,0,0) 70%);
-  filter: blur(60px);
-  opacity: 0.8;
-  z-index: 0;
-}
-
-/* Objetivo */
-.dino-objetivo {
-  margin-top: 60px;
-  background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
-}
-
-.objetivo-label {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: var(--naranja);
-  text-transform: uppercase;
-}
-
-.dino-objetivo h2 {
-  margin: 8px 0;
-}
-
-.objetivo-tags {
+  flex: 1 1 400px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
-.objetivo-tags span {
-  background: var(--beige-medium);
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 0.85rem;
+.trex-sticker {
+  width: 100%;
+  max-width: 420px;
+  transform: rotate(-2deg);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+  border-radius: 24px;
 }
 
-/* Métricas */
-.dino-metricas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-  margin-bottom: 80px;
+/* ====== Galería ====== */
+.dino-galeria {
+  padding-top: 4rem;
 }
 
-.metric-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.metric-card strong {
-  display: block;
+.galeria-title {
   font-size: 2rem;
-  color: var(--verde);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.metric-card span {
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.galeria-item {
+  position: relative;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+.sticker-image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+  border: 4px solid #f9f0d9;
+}
+
+.galeria-label {
+  position: absolute;
+  bottom: -10px;
+  left: 16px;
+  background: #ffebc2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
   font-size: 0.9rem;
-  margin-top: 4px;
-  display: block;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+}
+
+@media screen and (max-width: 768px) {
+  .dino-hero {
+    flex-direction: column;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
 }
