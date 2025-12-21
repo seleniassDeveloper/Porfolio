@@ -345,7 +345,11 @@
     "dogco": {
       "alt": "DogCo logo",
       "descripcion": "App that connects pet owners with walkers: requests, applications and live walk tracking."
-    }
+    },
+    "masRepuestos": {
+  "alt": "Mas Repuestos application",
+  "descripcion": "Digital platform that connects automotive parts sellers and suppliers with end customers, enabling product search, comparison, and purchasing. It centralizes pricing and availability to streamline decision-making and improve the buying experience."
+}
   },
 
   "titulo": "Projects",

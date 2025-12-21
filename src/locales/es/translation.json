@@ -344,7 +344,11 @@
      "dogco": {
       "alt": "Logo de DogCo",
       "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."
-    }
+    },
+  "masRepuestos": {
+    "alt": "Aplicación Mas Repuestos",
+    "descripcion": "Plataforma digital que conecta vendedores y proveedores de repuestos automotrices con clientes finales, facilitando la búsqueda, comparación y compra de productos. Centraliza ofertas, precios y disponibilidad para optimizar la toma de decisiones y mejorar la experiencia de compra."
+  }
   },
 
   "titulo": "Proyectos",
