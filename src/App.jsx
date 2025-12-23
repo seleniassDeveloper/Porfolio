@@ -12,6 +12,7 @@ import { Scalabl } from "./components/ComponentesDComponentes/scalabl";
 import { ProyectosReales } from "./components/proyectosReales";
 import Dogco from "./components/ComponentesDComponentes/Dogco";
 import Dinosaurios from "./components/ComponentesDComponentes/Dinosaurios";
+import { MasRepuestos } from "./components/ComponentesDComponentes/MasRepuestos";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -47,6 +48,7 @@ function App() {
           <Route path="/experiencia-scalabl" element={<Scalabl />} />
           <Route path="/proyecto-dogco" element={<Dogco />} />
           <Route path="/Dinosaurios" element={<Dinosaurios/>} />
+          <Route path="/proyecto-mas-repuestos" element={<MasRepuestos/>}/>
         </Routes>
       </ScrollReveal>
     </HashRouter>

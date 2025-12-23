@@ -8,7 +8,7 @@ import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 
-// ✅ Mas Repuestos (PATH CONFIRMADO)
+
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
 
 export const ProyectosReales = () => {
