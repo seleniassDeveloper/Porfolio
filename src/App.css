@@ -5,7 +5,121 @@
 }
 
 
+/* =========================
+   FUTURISTIC THEME TOKENS
+   ========================= */
+:root{
+  --fx-bg: #07090f;            /* negro azul */
+  --fx-surface: rgba(255,255,255,.06);
+  --fx-surface-2: rgba(255,255,255,.10);
+  --fx-border: rgba(255,255,255,.14);
 
+  --fx-text: rgba(255,255,255,.92);
+  --fx-muted: rgba(255,255,255,.68);
+
+  --fx-accent: #ff8a3d;        /* naranja (tu marca) */
+  --fx-accent-2: #00e5ff;      /* cian “futurista” */
+  --fx-glow: 0 0 22px rgba(0,229,255,.35);
+  --fx-glow2: 0 0 26px rgba(255,138,61,.30);
+
+  --fx-radius: 14px;
+}
+
+
+
+/* brillo sutil en el borde */
+.redes-sociales a::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: var(--fx-radius);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0,229,255,.55), rgba(255,138,61,.45));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: .35;
+  pointer-events:none;
+  transition: opacity .18s ease;
+}
+
+/* Hover PRO */
+.redes-sociales a:hover{
+  transform: translateY(-2px) scale(1.06);
+  border-color: rgba(0,229,255,.45);
+  color: var(--fx-accent);
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+  box-shadow: 0 26px 70px rgba(0,0,0,.55), var(--fx-glow), var(--fx-glow2);
+}
+
+.redes-sociales a:hover::before{
+  opacity: .85;
+}
+
+/* =========================
+   TOOLTIP (data-tooltip)
+   ========================= */
+.redes-sociales a::after{
+  content: attr(data-tooltip);
+  position:absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+
+  background: rgba(10,12,18,.92);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events:none;
+  filter: blur(.2px);
+  transition: opacity .18s ease, transform .18s ease;
+  box-shadow: 0 18px 45px rgba(0,0,0,.55);
+}
+
+/* triangulito */
+.redes-sociales a span{ display:none; } /* por si tenías spans */
+.redes-sociales a:hover::after{
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Accesibilidad: también al focus */
+.redes-sociales a:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,229,255,.22), 0 0 0 6px rgba(255,138,61,.12);
+}
+
+/* Mobile: barra abajo */
+@media (max-width: 768px){
+  .redes-sociales{
+    top: auto;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .redes-sociales ul{
+    flex-direction: row;
+    gap: 12px;
+  }
+  .redes-sociales a::after{
+    left: 50%;
+    top: auto;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(6px);
+  }
+  .redes-sociales a:hover::after{
+    transform: translateX(-50%) translateY(0);
+  }
+}
 
 .titulo-portafolio {
   color: white;

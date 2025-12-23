@@ -1,11 +1,16 @@
 import "../css/MasRepuestos.css";
+import { useNavigate } from "react-router-dom";
 import { ProjectSection } from "../components/ProjectSection.jsx";
 
+import { useTranslation } from "react-i18next";
 import screen1 from "../../assets/MasRepuestos/masrepuesto.jpg";
 import screen2 from "../../assets/MasRepuestos/masrepuestos2.jpg";
 import screen3 from "../../assets/MasRepuestos/masrepuestos3.jpg";
 
 export const MasRepuestos = () => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
   const sections = [
     {
       title: "Mas Repuestos",
@@ -33,6 +38,17 @@ export const MasRepuestos = () => {
 
   return (
     <section className="mr-page">
+      {/* BOTÓN VOLVER */}
+      <div className="px-4 py-4">
+        <button
+          className="btn btnmasrepuesto"
+          onClick={() => navigate(-1)}
+          aria-label="Volver"
+        >
+          {t("scalabl.volver")}
+        </button>
+      </div>
+
       {sections.map((section, index) => (
         <ProjectSection
           key={index}
@@ -40,6 +56,7 @@ export const MasRepuestos = () => {
           subtitle={section.subtitle}
           description={section.description}
           image={section.image}
+          reverse={index % 2 !== 0}
         />
       ))}
     </section>
