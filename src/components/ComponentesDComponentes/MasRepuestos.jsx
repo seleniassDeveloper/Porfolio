@@ -1,8 +1,8 @@
 import "../css/MasRepuestos.css";
 import { useNavigate } from "react-router-dom";
 import { ProjectSection } from "../components/ProjectSection.jsx";
-
 import { useTranslation } from "react-i18next";
+
 import screen1 from "../../assets/MasRepuestos/masrepuesto.jpg";
 import screen2 from "../../assets/MasRepuestos/masrepuestos2.jpg";
 import screen3 from "../../assets/MasRepuestos/masrepuestos3.jpg";
@@ -18,28 +18,29 @@ export const MasRepuestos = () => {
         "Marketplace automotriz para buscar, comparar y comprar repuestos más rápido.",
       image: { src: screen1, alt: "Mas Repuestos - Vista general" },
       description:
-        "Mas Repuestos es una plataforma digital que conecta vendedores y proveedores de repuestos automotrices con clientes finales. Centraliza ofertas, precios y disponibilidad para facilitar la búsqueda, comparación y compra desde un solo lugar, reduciendo fricción y acelerando la toma de decisiones.",
+        "Conecta vendedores de repuestos con clientes finales para buscar, comparar y comprar desde un solo lugar.",
     },
     {
       title: "Búsqueda y catálogo",
       subtitle: "Exploración rápida por categorías y productos.",
       image: { src: screen2, alt: "Mas Repuestos - Búsqueda" },
       description:
-        "El foco está en que el usuario encuentre el repuesto correcto rápidamente. Navegación clara, resultados comparables y acceso directo a info clave para decidir sin perder tiempo.",
+        "Navegación simple y resultados claros para encontrar el repuesto correcto en menos tiempo.",
     },
     {
       title: "Detalle y decisión",
       subtitle: "Información clara para comparar y contactar.",
       image: { src: screen3, alt: "Mas Repuestos - Detalle de producto" },
       description:
-        "La experiencia prioriza transparencia: precio, disponibilidad y opciones. Desde el detalle, el usuario puede avanzar al contacto o compra con menos pasos.",
+        "Precio, disponibilidad y contacto directo para tomar decisiones rápido y sin fricción.",
     },
   ];
 
   return (
     <section className="mr-page">
-      {/* BOTÓN VOLVER */}
-      <div className="px-4 py-4">
+      
+      {/* Top actions */}
+      <div className="mr-top-actions">
         <button
           className="btn btnmasrepuesto"
           onClick={() => navigate(-1)}
@@ -47,6 +48,15 @@ export const MasRepuestos = () => {
         >
           {t("scalabl.volver")}
         </button>
+
+        <a
+          href="https://play.google.com/store/apps/details?id=com.masrepuestos0126.user&pcampaignid=web_share"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-playstore"
+        >
+          Descargar en Google Play
+        </a>
       </div>
 
       {sections.map((section, index) => (

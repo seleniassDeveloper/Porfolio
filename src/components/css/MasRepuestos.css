@@ -243,3 +243,30 @@
   color: rgba(0,0,0,.62);
   border: 1px solid rgba(0,0,0,.10);
 }
+
+/* Top action container */
+.mr-top-actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1120px;
+  margin: 0 auto 40px;
+  padding: 0 10px;
+}
+
+/* Botón Play Store */
+.btn-playstore{
+  background: linear-gradient(135deg, #34a853, #3ddc84);
+  color:#fff;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration:none;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 25px rgba(52,168,83,.35);
+}
+
+.btn-playstore:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(52,168,83,.45);
+}

@@ -1,4 +1,3 @@
-
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ScrollReveal from "./components/ScrollReveal";
 import "./App.css";
@@ -13,6 +12,9 @@ import { ProyectosReales } from "./components/proyectosReales";
 import Dogco from "./components/ComponentesDComponentes/Dogco";
 import Dinosaurios from "./components/ComponentesDComponentes/Dinosaurios";
 import { MasRepuestos } from "./components/ComponentesDComponentes/MasRepuestos";
+import ProyectoDashboard from "./pages/ProyectoDashboard";
+
+
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -43,12 +45,17 @@ function App() {
       <ScrollReveal baseOpacity={0} enableBlur={true} baseRotation={5} blurStrength={10}>
         <Routes>
           <Route path="/" element={<TodosLosComponentes t={t} YosiendoFeliz={YosiendoFeliz} />} />
-          <Route path="/proyectos" element={<ProyectosReales t={t}/>} />
+          <Route path="/proyectos" element={<ProyectosReales t={t} />} />
+
           <Route path="/experiencia-sistran" element={<Sistran />} />
           <Route path="/experiencia-scalabl" element={<Scalabl />} />
+
           <Route path="/proyecto-dogco" element={<Dogco />} />
-          <Route path="/Dinosaurios" element={<Dinosaurios/>} />
-          <Route path="/proyecto-mas-repuestos" element={<MasRepuestos/>}/>
+          <Route path="/Dinosaurios" element={<Dinosaurios />} />
+          <Route path="/proyecto-mas-repuestos" element={<MasRepuestos />} />
+
+          {/* ✅ NUEVA RUTA */}
+          <Route path="/proyecto-dashboard" element={<ProyectoDashboard />} />
         </Routes>
       </ScrollReveal>
     </HashRouter>

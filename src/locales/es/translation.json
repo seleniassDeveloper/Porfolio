@@ -169,11 +169,9 @@
     },
     "footer": { "cta": "Visitar Scalabl" }
   },
-
   "common": {
     "imageNotAvailable": "Imagen no disponible"
   },
-
   "sistaskSummary": {
     "valueImpact": {
       "title": "Valor e impacto",
@@ -189,7 +187,6 @@
       "outcome": "Resultado: mejor tiempo de respuesta, mayor cumplimiento de SLA y visibilidad end-to-end para una implementación consistente en la región."
     }
   },
-
   "sistaskGuide": {
     "title": "Guía Sistask",
     "indexAria": "Índice de la guía",
@@ -217,7 +214,7 @@
         "body": "Sistask es una plataforma para gestionar proyectos e incidencias con foco en trazabilidad, SLA y visibilidad. Permite crear tickets, priorizarlos, asignarlos por rol y seguir su ciclo de vida con historial, adjuntos y reportes."
       },
       "views": {
-        "id": "vistas",
+        "id": "views",
         "title": "Vistas: Dashboard y Detalle de ticket",
         "items": [
           {
@@ -235,7 +232,7 @@
         ]
       },
       "workflow": {
-        "id": "flujo",
+        "id": "workflow",
         "title": "Flujo de trabajo",
         "lead": "Ciclo típico configurable por proyecto:",
         "bullets": [
@@ -245,7 +242,7 @@
         ]
       },
       "boards": {
-        "id": "tableros",
+        "id": "boards",
         "title": "Tableros",
         "bullets": [
           "Scrum: backlog, sprints, estimaciones y velocity.",
@@ -256,7 +253,7 @@
         "query": "project = HDS\nAND status = \"In Progress\"\nAND assignee = currentUser()"
       },
       "reports": {
-        "id": "reportes",
+        "id": "reports",
         "title": "Dashboards y Reportes",
         "bullets": [
           "Burndown chart: progreso del sprint.",
@@ -276,7 +273,7 @@
         ]
       },
       "create": {
-        "id": "crear",
+        "id": "create",
         "title": "Crear un ticket",
         "steps": [
           "Haz clic en “Crear”.",
@@ -303,7 +300,7 @@
         ]
       },
       "best": {
-        "id": "buenas",
+        "id": "best",
         "title": "Buenas prácticas",
         "bullets": [
           "Usar títulos claros y específicos.",
@@ -314,7 +311,6 @@
       }
     }
   },
-
   "formulario": {
     "title": "¿Querés trabajar conmigo?",
     "paragraph": "Completá el formulario o escribime por redes sociales. Estoy lista para crear algo increíble juntos.",
@@ -324,9 +320,7 @@
     "message_placeholder": "Tu mensaje...",
     "submit_button": "Enviar"
   },
-
   "Tecnologías": "Tecnologías",
-
   "items": {
     "scalabl": {
       "alt": "Logo de Scalabl",
@@ -340,23 +334,20 @@
       "alt": "Logo Dinosaurios",
       "descripcion": "Landing científica para campañas paleontológicas en la Patagonia. Incluye livestream, descubrimientos, votaciones y donaciones en tiempo real."
     },
-
-     "dogco": {
+    "dogco": {
       "alt": "Logo de DogCo",
       "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."
     },
-  "masRepuestos": {
-    "alt": "Aplicación Mas Repuestos",
-    "descripcion": "Plataforma digital que conecta vendedores y proveedores de repuestos automotrices con clientes finales, facilitando la búsqueda, comparación y compra de productos. Centraliza ofertas, precios y disponibilidad para optimizar la toma de decisiones y mejorar la experiencia de compra."
-  }
+    "masRepuestos": {
+      "alt": "Aplicación Mas Repuestos",
+      "descripcion": "Marketplace para buscar, comparar y comprar repuestos automotrices en un solo lugar."
+    }
   },
-
   "titulo": "Proyectos",
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
   "hello_welcome": "Hola, bienvenido ",
   "portfolio_description": "Soy desarrolladora Front-end con más de tres años de experiencia profesional creando soluciones web modernas, escalables y centradas en el usuario. Especializada en React, con sólidos conocimientos en UI/UX, APIs REST, gestión de estados y diseño responsive. Actualmente incorporo TypeScript para elevar la calidad, escalabilidad y mantenibilidad del código. Me caracterizo por ser proactiva, colaborativa y apasionada por convertir ideas en productos digitales funcionales, atractivos y de alto rendimiento.",
-
   "experience_section": {
     "professional_experience": "Experiencia Profesional",
     "sistran_title": "Sistran – Desarrolladora Frontend",
@@ -403,7 +394,6 @@
       "Español – Nativo"
     ]
   },
-
   "sistran": {
     "volver": "← Volver",
     "titulo": "Experiencia en Sistran",
@@ -438,7 +428,6 @@
       "cierre": "Gracias a este trabajo en equipo, Sistran cuenta con una herramienta moderna, robusta y adaptable que potencia su expansión regional y fortalece su eficiencia interna."
     }
   },
-
   "scalablExp": {
     "volver": "← Volver",
     "titulo": "Experiencia en Scalabl",
@@ -466,12 +455,10 @@
       "item3": "Mejor experiencia para miles de usuarios en distintos continentes."
     }
   },
-
   "mision_and_vision": {
     "title": "Mi Visión",
     "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
   },
-
   "tech": {
     "title": "Tecnologías",
     "items": {
@@ -489,7 +476,6 @@
       "illustrator": { "desc": "Diseño y creación de gráficos vectoriales para impresión y medios digitales." }
     }
   },
-
   "cases": {
     "title": "Casos de Éxito",
     "prev": "Anterior",
@@ -507,12 +493,10 @@
       "stack": "React, jQuery, Python"
     }
   },
-
   "cta": {
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
   },
-
   "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
   "canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
   "photoshop": { "desc": "Edición profesional de imágenes y composición digital." },

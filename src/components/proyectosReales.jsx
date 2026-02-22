@@ -7,9 +7,10 @@ import scalablImg from "../assets/imagenes/scalabl-logo.png";
 import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
-
-
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
+
+// ✅ NUEVO
+import dashboardImg from "../assets/imagenes/Dashboard/Dashboard1.png"
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
@@ -19,15 +20,19 @@ export const ProyectosReales = () => {
     { id: "scalabl", route: "/experiencia-scalabl", img: scalablImg },
     { id: "sistran", route: "/experiencia-sistran", img: sistaskImg },
     { id: "dinosaurios", route: "/Dinosaurios", img: dinoImg },
-    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress", progress: 60 },
 
+    // 👇 NUEVO: Dashboard (en proceso)
     {
-      id: "masRepuestos",
-      route: "/proyecto-mas-repuestos",
-      img: masRepuestosImg,
+      id: "dashboard",
+      route: "/proyecto-dashboard",
+      img: dashboardImg,
       status: "in-progress",
-      progress: 40,
     },
+
+    // 👇 Dogco sigue “en proceso”
+    { id: "dogco", route: "/proyecto-dogco", img: logoDogco, status: "in-progress" },
+
+    { id: "masRepuestos", route: "/proyecto-mas-repuestos", img: masRepuestosImg },
   ];
 
   return (
@@ -57,22 +62,9 @@ export const ProyectosReales = () => {
 
             <p className="proyecto-desc">{t(`items.${p.id}.descripcion`)}</p>
 
-            {p.status === "in-progress" && typeof p.progress === "number" && (
-              <div className="progress-wrap" aria-label={t("progreso", "Progreso")}>
-                <div
-                  className="progress-bar"
-                  style={{ width: `${p.progress}%` }}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-valuenow={p.progress}
-                />
-                <span className="progress-label">{p.progress}%</span>
-              </div>
-            )}
-
             <div className="proyecto-actions">
               <button
-                className={`btn ${p.status === "in-progress" ? "btn-secondary" : "boton"}`}
+                className={`btn ${p.status === "in-progress" ? "btn-secondary" : "btn-primary"}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   navigate(p.route);
