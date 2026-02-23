@@ -497,6 +497,50 @@
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
   },
+  "dashboard": {
+  "badge": "Plataforma SaaS con IA",
+  "title": "Smart Appointment & Analytics Dashboard",
+  "subtitle": "Plataforma completa de gestión de citas con métricas dinámicas, análisis automatizado con IA y arquitectura preparada para escalar como producto SaaS.",
+  "back": "Volver a proyectos",
+
+  "management": {
+    "title": "Gestión inteligente de citas",
+    "desc": "Permite crear, editar y administrar citas con validaciones estructuradas y sincronización automática.",
+    "points": [
+      "Estados dinámicos (Pendiente, Confirmada, Cancelada, Finalizada)",
+      "Filtros combinables por fecha y estado",
+      "Paginación inteligente",
+      "Sincronización automática post actualización"
+    ]
+  },
+
+  "analytics": {
+    "title": "Dashboard analítico en tiempo real",
+    "desc": "Métricas dinámicas calculadas desde base de datos con visualización gráfica por servicio y trabajador.",
+    "points": [
+      "KPI total y por estado",
+      "Gráficos tipo torta por servicio",
+      "Gráficos por trabajador",
+      "Datos en tiempo real"
+    ]
+  },
+
+  "ai": {
+    "title": "Motor analítico con IA",
+    "desc": "Chat integrado que permite generar reportes estructurados con KPIs dinámicos y visualizaciones automáticas.",
+    "points": [
+      "Interfaz tipo SaaS con chat flotante",
+      "Generación de reportes estructurados",
+      "Fallback automático si OpenAI falla",
+      "Widgets visuales generados dinámicamente"
+    ]
+  },
+
+  "architecture": {
+    "title": "Arquitectura preparada para SaaS",
+    "desc": "Backend REST con Prisma, separación frontend/backend, Context API para estado global y sistema preparado para producción."
+  }
+},
   "figma": { "desc": "Prototipado y diseño colaborativo de interfaces y experiencias de usuario." },
   "canva": { "desc": "Diseño rápido de material gráfico y contenido para redes sociales." },
   "photoshop": { "desc": "Edición profesional de imágenes y composición digital." },

@@ -512,7 +512,50 @@
     "hire": "Hire me on Upwork",
     "talk": "Let’s discuss your project"
   },
+"dashboard": {
+  "badge": "AI-Powered SaaS Platform",
+  "title": "Smart Appointment & Analytics Dashboard",
+  "subtitle": "Complete appointment management platform with dynamic metrics, AI-powered analytics, and architecture ready to scale as a SaaS product.",
+  "back": "Back to projects",
 
+  "management": {
+    "title": "Smart Appointment Management",
+    "desc": "Create, edit, and manage appointments with structured validation and automatic synchronization.",
+    "points": [
+      "Dynamic statuses (Pending, Confirmed, Cancelled, Completed)",
+      "Combined filters by date and status",
+      "Smart pagination",
+      "Automatic sync after updates"
+    ]
+  },
+
+  "analytics": {
+    "title": "Real-Time Analytics Dashboard",
+    "desc": "Dynamic metrics calculated from database with graphical visualization by service and worker.",
+    "points": [
+      "Total and per-status KPIs",
+      "Pie charts by service",
+      "Worker performance charts",
+      "Real-time data updates"
+    ]
+  },
+
+  "ai": {
+    "title": "AI Analytical Engine",
+    "desc": "Integrated chat that generates structured reports with dynamic KPIs and automated visualizations.",
+    "points": [
+      "SaaS-style interface with floating chat",
+      "Structured report generation",
+      "Automatic fallback if OpenAI fails",
+      "Dynamically generated visual widgets"
+    ]
+  },
+
+  "architecture": {
+    "title": "SaaS-Ready Architecture",
+    "desc": "REST backend with Prisma, frontend/backend separation, Context API for global state, and production-ready structure."
+  }
+},
   "figma": { "desc": "Collaborative interface prototyping and user experience design." },
   "canva": { "desc": "Quick graphic design and social media content creation." },
   "photoshop": { "desc": "Professional image editing and digital composition." },
