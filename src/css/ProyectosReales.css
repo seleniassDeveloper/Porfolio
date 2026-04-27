@@ -1,357 +1,375 @@
 /* ===========================
-   ProyectosReales.css
-   Unificado + En Proceso
-   =========================== */
+   PROJECTS SHOWCASE
+=========================== */
 
-/* Contenedor general */
-.proyectos-reales-container {
-  background-color: #000;
-  padding: 60px 40px;
-  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    "Apple Color Emoji", "Segoe UI Emoji";
-}
-
-/* Título */
-.proyectos-reales-container h2 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
-  text-align: end;
-  padding: 0 90px 0 0;
-  font-weight: 600;
-  margin-bottom: 50px;
-  animation: glowSoft 2.8s infinite alternate;
+.projects-showcase-section {
   position: relative;
-  color: #ffffff;
-}
-
-.proyectos-reales-container h2::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  right: 90px;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  border-radius: 5px;
-  background: #00bfff;
-  animation: pulse-line 2s infinite ease-in-out;
-}
-
-@keyframes glowSoft {
-  0% {
-    text-shadow: 0 0 6px #6c00ff, 0 0 12px #3a0073;
-  }
-  100% {
-    text-shadow: 0 0 14px #6c00ff, 0 0 22px #3a0073;
-  }
-}
-
-@keyframes pulse-line {
-  0%,
-  100% {
-    opacity: 0.5;
-    width: 70px;
-  }
-  50% {
-    opacity: 1;
-    width: 100px;
-  }
-}
-
-/* Grid de tarjetas */
-.tarjetas-proyectos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-/* ---------- Tarjeta base ---------- */
-.tarjeta-proyecto {
-  position: relative;
-  background: linear-gradient(145deg, #141416, #1e1f2a);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 30px 25px;
-  color: #e0e0e0;
-  width: 300px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease-in-out;
-  backdrop-filter: blur(10px);
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-}
-
-.tarjeta-proyecto:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 25px rgba(108, 0, 255, 0.3);
-  border-color: #6c00ff;
-}
-
-/* Header (imagen y cintas) */
-.proyecto-header {
-  position: relative;
-  border-radius: 14px;
+  padding: 110px 24px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0, 191, 255, 0.14), transparent 32%),
+    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.16), transparent 34%),
+    #030509;
   overflow: hidden;
-  background: #0f0f13;
-  padding: 14px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 14px;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.proyecto-header img {
-  max-width: 140px;
-  height: auto;
-  display: block;
-  filter: brightness(1.1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
-}
-
-/* Descripción */
-.proyecto-desc {
-  font-size: 0.95rem;
-  margin-bottom: 14px;
-  color: #cfcfcf;
-  min-height: 44px;
-}
-
-/* ---------- Estado EN PROCESO ---------- */
-.tarjeta-proyecto.en-proceso .proyecto-header img {
-  filter: grayscale(1) contrast(0.95) brightness(0.95);
-  opacity: 0.9;
-}
-
-/* Cinta diagonal (la dejamos como tu versión PRO) */
-.badge-proceso {
-  position: absolute;
-  top: 30px;
-  right: -52px;
-  background: linear-gradient(90deg, #ff7f00, #ffa84d);
-  color: #111;
-  font-weight: 800;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 8px 64px;
-  transform: rotate(35deg);
-  box-shadow: 0 8px 20px rgba(255, 127, 0, 0.35);
-  letter-spacing: 0.04em;
-  z-index: 3;
-}
-
-/* Overlay sutil */
-.overlay-proceso {
+.projects-bg-grid {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 162, 74, 0), rgba(255, 162, 74, 0.18) 70%);
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: .35;
   pointer-events: none;
-  z-index: 2;
 }
 
-/* Píldora de estado (si la usas aparte) */
-.status-pill {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(90deg, #ff7f00, #ffa24a);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* ---------- Barra de progreso (opcional) ---------- */
-.progress-wrap {
+.projects-showcase-container {
   position: relative;
-  width: 100%;
-  height: 10px;
-  background: #1d1e28;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 2;
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #ff7f00, #ffa84d);
-  border-radius: 999px;
-  transition: width 0.4s ease;
+.projects-showcase-header {
+  max-width: 760px;
+  margin-bottom: 54px;
 }
 
-.progress-label {
-  position: absolute;
-  top: -22px;
-  right: 0;
+.projects-showcase-header span {
+  display: inline-block;
+  color: #00d4ff;
   font-size: 12px;
-  color: #a5a5a5;
-  font-weight: 700;
+  font-weight: 950;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
-/* ---------- Acciones / Botones ---------- */
-.proyecto-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+.projects-showcase-header h2 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: .88;
+  font-weight: 950;
+  letter-spacing: -.08em;
+  text-transform: none;
 }
 
-.btn {
-  border: 0;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 700;
+.projects-showcase-header p {
+  max-width: 620px;
+  color: rgba(255,255,255,.64);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.projects-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.project-glass-card {
+  --accent: #00d4ff;
+  --accent-2: #3b82f6;
+
+  position: relative;
+  min-height: 430px;
+  padding: 20px;
+  border-radius: 30px;
+  color: #fff;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  user-select: none;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 32%),
+    linear-gradient(135deg, rgba(21,25,38,.94), rgba(4,8,13,.98));
+  border: 1px solid color-mix(in srgb, var(--accent) 52%, rgba(255,255,255,.16));
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.05) inset,
+    0 28px 80px rgba(0,0,0,.5);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  animation: projectCardIn .55s ease both;
+  animation-delay: var(--delay);
 }
 
-.btn-primary {
-  background: #6c00ff;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(108, 0, 255, 0.3);
-}
-
-.btn-primary:hover {
-  background-color: #3a0073;
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(176, 224, 255, 0.5);
-}
-
-.btn-secondary {
-  background: #fff6ec;
-  color: #7a4a00;
-  border: 1px solid #ffd9b0;
-}
-
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 162, 74, 0.25);
-}
-
-/* Accesibilidad teclado */
-.tarjeta-proyecto[role="button"]:focus {
-  outline: 2px solid #ff7f00;
-  outline-offset: 3px;
-}
-
-/* ---------- Responsive ---------- */
-@media screen and (max-width: 768px) {
-  .proyectos-reales-container {
-    padding: 40px 20px;
+@keyframes projectCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(.97);
   }
 
-  .proyectos-reales-container h2 {
-    font-size: 1.8rem;
-    text-align: center;
-    padding: 0;
-  }
-
-  .proyectos-reales-container h2::after {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-  }
-
-  .tarjetas-proyectos {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .tarjeta-proyecto {
-    width: 90%;
-    max-width: 340px;
-    padding: 22px 18px;
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-/* ===== Guía de la plataforma (no roadmap) ===== */
-.dogco-guide {
-  display: grid;
-  gap: 18px;
+.project-glass-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, transparent, color-mix(in srgb, var(--accent) 35%, transparent), transparent);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .28s ease;
 }
 
-.dogco-guide-block {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 16px;
-  align-items: center;
+.project-glass-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 34px 100px rgba(0,0,0,.58),
+    0 0 45px color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
-.dogco-guide-media img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: var(--dogco-shadow);
+.project-glass-card:hover::before {
+  opacity: 1;
 }
 
-.dogco-guide-title {
-  margin: 0 0 8px;
+/* Themes */
+
+.project-glass-card.theme-blue {
+  --accent: #00d4ff;
+  --accent-2: #3b82f6;
 }
 
-.dogco-checklist {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: grid;
-  gap: 8px;
+.project-glass-card.theme-green {
+  --accent: #3ddc84;
+  --accent-2: #00c4cc;
 }
 
-.dogco-checklist li {
+.project-glass-card.theme-orange {
+  --accent: #ff8a3d;
+  --accent-2: #ffcc33;
+}
+
+.project-glass-card.theme-gold {
+  --accent: #ffd84d;
+  --accent-2: #3ddc84;
+}
+
+.project-glass-card.theme-pink {
+  --accent: #ff4fd8;
+  --accent-2: #ff8a3d;
+}
+
+.project-glass-card.theme-purple {
+  --accent: #8b5cf6;
+  --accent-2: #00bfff;
+}
+
+/* ===========================
+   CARD CONTENT
+=========================== */
+
+.project-card-top {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 10px 12px;
-  box-shadow: var(--dogco-shadow);
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
-.dogco-checklist li .status-dot {
-  width: 10px;
-  height: 10px;
+.project-index {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.32);
+  border: 1px solid color-mix(in srgb, var(--accent) 64%, rgba(255,255,255,.12));
+  color: #fff;
+  font-weight: 950;
+}
+
+.project-type {
+  max-width: 190px;
+  padding: 9px 13px;
   border-radius: 999px;
-  background: #bbb;
-  flex: 0 0 10px;
+  background: color-mix(in srgb, var(--accent) 22%, rgba(255,255,255,.06));
+  color: rgba(255,255,255,.86);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.dogco-checklist li.done .status-dot {
-  background: var(--dogco-orange);
+.project-image-frame {
+  position: relative;
+  height: 160px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, color-mix(in srgb, var(--accent) 18%, transparent), transparent 56%),
+    rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
 }
 
-.dogco-checklist li.pending .status-dot {
-  background: #c9c9c9;
+.project-image-frame img {
+  max-width: 68%;
+  max-height: 88px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 24px rgba(0,0,0,.45));
+  transition: transform .28s ease, filter .28s ease;
 }
 
-.chip {
-  margin-left: auto;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 5px 9px;
+.project-glass-card:hover .project-image-frame img {
+  transform: scale(1.06);
+  filter: drop-shadow(0 18px 30px color-mix(in srgb, var(--accent) 35%, rgba(0,0,0,.4)));
+}
+
+.project-status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
   border-radius: 999px;
-  background: #eee;
-  color: #222;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #080808;
+  font-size: .72rem;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
-.chip.success {
-  background: linear-gradient(90deg, var(--dogco-orange), var(--dogco-orange-2));
-  color: #111;
+.project-card-content {
+  padding: 20px 2px 0;
 }
 
-.chip.warn {
-  background: #ffe7cc;
-  color: #7a4a00;
+.project-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-2);
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
-.dogco-muted {
-  color: var(--dogco-muted);
-  margin-top: 8px;
+.project-card-content h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.55rem;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -.045em;
 }
 
-/* Responsive guía */
-@media (max-width: 960px) {
-  .dogco-guide-block {
+.project-card-content p {
+  margin: 0;
+  color: rgba(255,255,255,.62);
+  font-size: .94rem;
+  line-height: 1.55;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.project-card-btn {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 22px;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, rgba(255,255,255,.16));
+  border-radius: 18px;
+  background: rgba(0,0,0,.28);
+  color: #fff;
+  padding: 8px 9px 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 950;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.project-card-btn span {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.project-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 26px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+/* ===========================
+   IN PROGRESS
+=========================== */
+
+.project-glass-card.is-progress .project-image-frame img {
+  opacity: .85;
+  filter: grayscale(.3) drop-shadow(0 16px 24px rgba(0,0,0,.45));
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+
+.project-glass-card:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1050px) {
+  .projects-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .projects-showcase-section {
+    padding: 78px 18px;
+  }
+
+  .projects-showcase-header {
+    margin-bottom: 34px;
+  }
+
+  .projects-showcase-header h2 {
+    font-size: 3rem;
+  }
+
+  .projects-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-glass-card {
+    min-height: auto;
+    border-radius: 26px;
+    padding: 18px;
+  }
+
+  .project-image-frame {
+    height: 150px;
   }
 }
