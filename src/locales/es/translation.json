@@ -1,13 +1,45 @@
 {
-  "dinosaurios": {
-    "heroTitleLine1": "Sumate a la Búsqueda de",
-    "heroTitleHighlight": "Nuevas Especies",
-    "heroTitleLine2": "en la Patagonia Argentina",
-    "heroDescription": "Este sitio documenta las campañas paleontológicas del equipo de APASUR & LACEV, con base en el Museo Bernardino Rivadavia (Buenos Aires). Desde 2002, han descubierto más de 40 nuevas especies y publicado 5 portadas en Nature. Ahora te invitan a participar, votar, donar y ver excavaciones en vivo.",
-    "exploraBtn": "Explorá las campañas",
-    "galeriaTitulo": "Descubrimientos y campañas destacadas",
-    "campañaNumero": "Campaña #{{num}}"
+"dinosaurios": {
+  "back": "← Volver",
+  "eyebrow": "CONICET · LACEV · APASUR",
+  "heroTitleLine1": "Sumate a la búsqueda de",
+  "heroTitleHighlight": "nuevas especies",
+  "heroTitleLine2": "en la Patagonia Argentina",
+  "heroDescription": "Proyecto de divulgación científica que documenta campañas paleontológicas lideradas por investigadores vinculados al CONICET y al laboratorio LACEV, con base en el Museo Argentino de Ciencias Naturales Bernardino Rivadavia. Una iniciativa que combina investigación, excavación real, educación pública y participación en vivo.",
+  "exploraBtn": "Explorá la campaña",
+  "galeriaTitulo": "Descubrimientos y campañas destacadas",
+  "campañaNumero": "Campaña #{{num}}",
+  "galleryAlt": "Campaña paleontológica {{num}}",
+
+  "about": {
+    "label": "Quiénes son",
+    "title": "Un equipo científico argentino con impacto internacional",
+    "body": "LACEV es un equipo de paleontología vinculado al CONICET, especializado en anatomía comparada y evolución de vertebrados. Junto a APASUR, impulsan campañas de excavación, investigación y divulgación científica en la Patagonia, una de las regiones más importantes del mundo para el hallazgo de fósiles."
   },
+
+  "kpis": [
+    { "num": "40+", "label": "nuevas especies descubiertas" },
+    { "num": "300+", "label": "publicaciones científicas" },
+    { "num": "5", "label": "portadas en Nature" },
+    { "num": "70–80%", "label": "tasa de éxito en campañas" }
+  ],
+
+  "achievements": {
+    "label": "Logros científicos",
+    "title": "Descubrimientos de clase mundial desde la Patagonia",
+    "body": "El equipo ha participado en hallazgos paleontológicos de enorme valor científico, desde grandes dinosaurios carnívoros hasta fósiles excepcionalmente preservados que ayudan a reconstruir la historia evolutiva de Sudamérica.",
+    "items": [
+      "Descubrimiento de Maip macrothorax, uno de los megaraptores más grandes registrados.",
+      "Hallazgos clave como Taurovenator y otros dinosaurios carnívoros de la Patagonia.",
+      "Fósiles excepcionales, incluyendo renacuajos jurásicos y huevos de dinosaurio con preservación única.",
+      "Campañas de excavación en Patagonia y participación en proyectos científicos en Antártida.",
+      "Más de 100 apariciones en medios internacionales y divulgación científica global.",
+      "Colaboraciones con instituciones como CONICET y el Museo Argentino de Ciencias Naturales.",
+      "Producción de contenido educativo y científico para audiencias globales.",
+      "Desarrollo de iniciativas que conectan ciencia, tecnología y participación pública."
+    ]
+  }
+},
   "dogco": {
     "back": "← Volver",
     "hero": {
@@ -92,101 +124,140 @@
       "liveWalk": "Paseo en vivo"
     }
   },
-  "scalabl": {
-    "volver": "← Volver",
-    "logoAlt": "Logo de Scalabl",
-    "hero": {
-      "title": "Aprende de",
-      "highlight": "negocios",
-      "suffix": ", todos los días",
-      "subtitle": "Comunidades de aprendizaje con contenidos curados, sesiones en vivo, retos prácticos y acompañamiento. Un sistema pensado para que la actualización sea continua y accionable.",
-      "cta": "Hazte miembro",
-      "badge": "+2500 personas formadas en Scalabl®"
-    },
-    "overview": {
-      "title": "¿Qué es Scalabl?",
-      "body": "Scalabl es una plataforma de comunidades de aprendizaje orientada a negocios. Combina una landing pública de adquisición (marketing, SEO, contenido) con un ecosistema privado para miembros: currículas vivas, biblioteca de recursos, calendario de sesiones, foros, retos y seguimiento de progreso.",
-      "cards": {
-        "community": { "title": "Comunidad", "text": "Espacios temáticos, foros, networking y mentorías guiadas." },
-        "content": { "title": "Contenido curado", "text": "Lecciones breves, playbooks y plantillas listas para usar." },
-        "practice": { "title": "Práctica y feedback", "text": "Retos, revisiones en vivo y evidencias de aprendizaje." }
-      }
-    },
-    "development": {
-      "title": "Desarrollo de la landing y la plataforma",
-      "landing": {
-        "title": "Landing (acceso público)",
-        "items": [
-          "Arquitectura SPA con Vite + React (performance y DX).",
-          "Secciones: Hero con valor, prueba social, Comunidades, Qué son, Cómo funcionan, Pricing y CTA persistente.",
-          "SEO técnico: metatags, OG/Twitter cards, sitemap y estructura semántica.",
-          "UI consistente: paleta morado/verde neón, botones redondeados, sombras suaves, tipografías legibles.",
-          "Integraciones: YouTube embebido, WhatsApp CTA y newsletter."
-        ]
-      },
-      "platform": {
-        "title": "Plataforma (área de miembros)",
-        "items": [
-          "Auth por roles (miembro, mentor, admin) con guardas de ruta.",
-          "Módulos: Biblioteca, Calendario, Retos/Entregas, Foros/Comentarios, Progreso.",
-          "Panel de admin para currícula, publicaciones, sesiones y reportes.",
-          "Analítica de engagement (retención, actividad semanal, finalización de retos).",
-          "Arquitectura sugerida: React (FE) + API Node/Express o serverless + DB (PostgreSQL / Firestore)."
-        ]
-      }
-    },
-    "role": {
-      "title": "Mi rol y responsabilidades",
-      "items": [
-        "Diseño UI/UX de la landing y componentes reutilizables.",
-        "Implementación responsive con foco en performance (CLS, LCP, TTI).",
-        "Integración de video, formularios, analítica y CTA de conversión.",
-        "Definición de arquitectura FE, estado y rutas protegidas.",
-        "Propuesta de módulos clave para la comunidad y flujos de miembro."
-      ]
-    },
-    "impact": {
-      "title": "Impacto y resultados",
-      "stats": [
-        { "num": "+45%", "label": "mejora en conversión landing" },
-        { "num": "90+", "label": "eventos/mes gestionados" },
-        { "num": "~1.2s", "label": "LCP en dispositivos móviles" }
-      ],
-      "note": "*Métricas estimadas según benchmarks y pruebas locales. Ajustables a datos reales del entorno productivo."
-    },
-    "stack": {
-      "title": "Stack propuesto",
-      "items": [
-        "Vite + React",
-        "React Router",
-        "Context / Zustand",
-        "Node/Express API",
-        "PostgreSQL / Firestore",
-        "Auth por roles",
-        "YouTube / WhatsApp",
-        "SEO + Analytics"
-      ]
-    },
-    "footer": { "cta": "Visitar Scalabl" }
+ "scalabl": {
+  "volver": "← Volver",
+  "logoAlt": "Logo de Scalabl",
+
+  "hero": {
+    "title": "Aprende de",
+    "highlight": "negocios",
+    "suffix": ", todos los días",
+    "subtitle": "Plataforma educativa global enfocada en innovación y emprendimiento, con presencia en más de 50 países y miles de usuarios activos.",
+    "cta": "Visitar plataforma",
+    "badge": "+2500 profesionales en la comunidad"
   },
+
+  "overview": {
+    "title": "¿Qué es Scalabl?",
+    "body": "Scalabl es una plataforma de aprendizaje enfocada en negocios, donde los usuarios consumen contenido, participan en sesiones y siguen su progreso dentro de comunidades activas.",
+    "cards": {
+      "community": {
+        "title": "Comunidad global",
+        "text": "Usuarios en más de 50 países participando activamente en contenidos y sesiones."
+      },
+      "content": {
+        "title": "Sistema de contenido",
+        "text": "Consumo de videos, recursos y aprendizaje estructurado dentro de la plataforma."
+      },
+      "experience": {
+        "title": "Experiencia optimizada",
+        "text": "Rediseño enfocado en reducir fricción y mejorar la navegación del usuario."
+      }
+    }
+  },
+
+  "development": {
+    "title": "Qué construí y mejoré",
+    
+    "landing": {
+      "title": "Experiencia de consumo",
+      "items": [
+        "Rediseño completo del sistema de reproducción de video.",
+        "Implementación de tracking de progreso en tiempo real.",
+        "Optimización del flujo de consumo de contenido.",
+        "Mejora de navegación para reducir fricción en el usuario."
+      ]
+    },
+
+    "platform": {
+      "title": "Frontend y estructura",
+      "items": [
+        "Refactorización del frontend para mejorar mantenibilidad.",
+        "Integración con backend en PHP para sincronización de datos.",
+        "Mejora de performance en carga y renderizado.",
+        "Trabajo conjunto con UX/UI para mejorar accesibilidad."
+      ]
+    }
+  },
+
+  "role": {
+    "title": "Mi rol",
+    "items": [
+      "Desarrollo frontend en una plataforma con usuarios globales.",
+      "Participación activa en decisiones de experiencia de usuario.",
+      "Implementación de mejoras en consumo de contenido.",
+      "Colaboración con diseño y backend para evolución del producto."
+    ]
+  },
+
+  "impact": {
+    "title": "Impacto real",
+    "stats": [
+      { "num": "+35%", "label": "aumento en finalización de cursos" },
+      { "num": "50+", "label": "países con usuarios activos" },
+      { "num": "+2500", "label": "usuarios en la plataforma" }
+    ],
+    "note": "Las mejoras implementadas aumentaron el engagement y redujeron la fricción en la experiencia de aprendizaje."
+  },
+
+  "stack": {
+    "title": "Stack",
+    "items": [
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "CSS",
+      "APIs REST"
+    ]
+  },
+
+  "footer": {
+    "cta": "Ver Scalabl"
+  }
+},
   "common": {
     "imageNotAvailable": "Imagen no disponible"
   },
-  "sistaskSummary": {
-    "valueImpact": {
-      "title": "Valor e impacto",
-      "p1": "Sistask es el núcleo operativo para la gestión de tickets que Sistran implementará en más de 17 países de LATAM, estandarizando procesos y elevando la calidad de servicio a escala regional.",
-      "points": [
-        { "strong": "Centralización y trazabilidad:", "text": "unifica la operación en una sola plataforma con historial completo por ticket (quién/cuándo/qué)." },
-        { "strong": "Cumplimiento de SLA:", "text": "alertas proactivas y seguimiento en tiempo real (tiempos por estado, carga por agente, backlog crítico)." },
-        { "strong": "Visibilidad ejecutiva:", "text": "dashboards regionales, filtros guardados y KPIs por país/negocio para decisiones rápidas." },
-        { "strong": "Eficiencia operativa:", "text": "workflows por rol, plantillas y filtros reutilizables que reducen tiempos y errores." },
-        { "strong": "Gobernanza y seguridad:", "text": "roles/permisos por país/equipo, auditoría de cambios y cumplimiento normativo." },
-        { "strong": "Escalabilidad regional:", "text": "configuración por mercado con crecimiento sin fricción." }
-      ],
-      "outcome": "Resultado: mejor tiempo de respuesta, mayor cumplimiento de SLA y visibilidad end-to-end para una implementación consistente en la región."
-    }
-  },
+ "sistaskSummary": {
+  "valueImpact": {
+    "title": "Valor e impacto",
+
+    "p1": "Sistask es el núcleo operativo para la gestión de tickets en Sistran, desarrollado para reemplazar herramientas externas como Jira y centralizar la operación en una única plataforma. Su implementación en más de 17 países de LATAM permitió estandarizar procesos, mejorar la calidad del servicio y reducir costos operativos a gran escala.",
+
+    "points": [
+      { 
+        "strong": "Centralización y trazabilidad:", 
+        "text": "unifica la operación en una sola plataforma con historial completo por ticket (quién/cuándo/qué), eliminando la dispersión de información." 
+      },
+      { 
+        "strong": "Reducción de costos:", 
+        "text": "elimina dependencias de herramientas externas como Jira (~$3.000 USD por cliente), generando ahorros significativos y mayor control del sistema." 
+      },
+      { 
+        "strong": "Cumplimiento de SLA:", 
+        "text": "alertas proactivas y monitoreo en tiempo real que mejoran tiempos de respuesta y reducen cuellos de botella." 
+      },
+      { 
+        "strong": "Visibilidad ejecutiva:", 
+        "text": "dashboards regionales con KPIs por país y equipo, facilitando la toma de decisiones estratégicas." 
+      },
+      { 
+        "strong": "Eficiencia operativa:", 
+        "text": "automatización mediante workflows configurables que reducen tareas manuales y errores humanos." 
+      },
+      { 
+        "strong": "Gobernanza y seguridad:", 
+        "text": "sistema robusto de roles y permisos con auditoría completa de acciones." 
+      },
+      { 
+        "strong": "Escalabilidad y producto:", 
+        "text": "arquitectura preparada para múltiples clientes (multi-tenant), permitiendo evolucionar de sistema interno a producto SaaS comercializable." 
+      }
+    ],
+
+    "outcome": "Resultado: reducción significativa de costos operativos, mayor eficiencia en equipos distribuidos y transformación de una herramienta interna en un activo estratégico con potencial de comercialización."
+  }
+},
   "sistaskGuide": {
     "title": "Guía Sistask",
     "indexAria": "Índice de la guía",
@@ -347,7 +418,7 @@
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
   "hello_welcome": "Hola, bienvenido ",
-  "portfolio_description": "Soy desarrolladora Front-end con más de tres años de experiencia profesional creando soluciones web modernas, escalables y centradas en el usuario. Especializada en React, con sólidos conocimientos en UI/UX, APIs REST, gestión de estados y diseño responsive. Actualmente incorporo TypeScript para elevar la calidad, escalabilidad y mantenibilidad del código. Me caracterizo por ser proactiva, colaborativa y apasionada por convertir ideas en productos digitales funcionales, atractivos y de alto rendimiento.",
+  "portfolio_description": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack. He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere. Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad.",
   "experience_section": {
     "professional_experience": "Experiencia Profesional",
     "sistran_title": "Sistran – Desarrolladora Frontend",
@@ -455,10 +526,10 @@
       "item3": "Mejor experiencia para miles de usuarios en distintos continentes."
     }
   },
-  "mision_and_vision": {
-    "title": "Mi Visión",
-    "paragraph": "Quiero seguir creciendo como desarrolladora, participando en proyectos frontend y fullstack que me reten a nivel técnico y personal. Busco crear experiencias digitales que sean funcionales, accesibles y visualmente atractivas. Mi visión es aportar valor real a cada equipo, aplicar buenas prácticas, aprender tecnologías emergentes y formar parte de entornos que valoren la calidad, el diseño y el trabajo colaborativo."
-  },
+"mision_and_vision": {
+  "title": "Mi Visión",
+  "paragraph": "Quiero seguir creciendo como desarrolladora participando en proyectos frontend y fullstack que me reten a nivel profesional y técnico. Mi objetivo es combinar mi desarrollo profesional con un estilo de vida flexible, donde pueda seguir trabajando de forma remota mientras viajo. Durante el último año he trabajado bajo este modelo, adaptándome a distintos equipos y zonas horarias sin fricción. Busco formar parte de equipos que impulsen el aprendizaje continuo, donde pueda seguir mejorando como profesional, aportar valor y rodearme de personas que eleven mi nivel."
+},
   "tech": {
     "title": "Tecnologías",
     "items": {
@@ -476,27 +547,108 @@
       "illustrator": { "desc": "Diseño y creación de gráficos vectoriales para impresión y medios digitales." }
     }
   },
-  "cases": {
-    "title": "Casos de Éxito",
-    "prev": "Anterior",
-    "next": "Siguiente",
-    "viewProject": "Ver proyecto",
-    "stackLabel": "Stack",
-    "sistask": {
-      "title": "Sistask – Gestión de tareas",
-      "desc": "Sistema interno para equipos distribuidos en LATAM, con flujos visuales y seguimiento en tiempo real.",
-      "stack": "React, MUI, Bootstrap, ReactFlow, Axios"
-    },
-    "scalabl": {
-      "title": "Scalabl – Plataforma educativa",
-      "desc": "Interfaces interactivas para una plataforma global enfocada en innovación y emprendimiento.",
-      "stack": "React, jQuery, Python"
-    }
+
+
+"cases": {
+  "eyebrow": "Cases",
+  "title": "Casos de impacto",
+  "subtitle": "Proyectos reales que generaron resultados medibles y valor para empresas, usuarios y productos digitales.",
+  "projectLabel": "Proyecto",
+  "metricLabel": "Métricas clave",
+  "impactLabel": "Impacto generado",
+  "reachLabel": "Alcance",
+  "resultLabel": "Resultado",
+  "techLabel": "Tecnología",
+  "viewProject": "Ver proyecto",
+  "viewCase": "Ver {{project}}",
+
+  "sistask": {
+    "label": "Sistema enterprise",
+    "title": "Sistask",
+    "desc": "Plataforma enterprise de gestión de workflows, tareas, horas y estados internos para equipos distribuidos.",
+    "stack": "React · JavaScript · CSS · APIs",
+    "metricBig": "820+ usuarios",
+    "metricSmall": "17 países · 100+ clientes · $300K+ ahorro estimado",
+    "detailOne": "17 países",
+    "detailTwo": "100+ clientes enterprise",
+    "detailThree": "React · Workflows · Enterprise",
+    "impact": "Construí el frontend de una plataforma de workflows que reemplazó Jira, alcanzando adopción del 100% en más de 820 usuarios internos en 17 países, con despliegue a más de 100 clientes enterprise en 2 meses y ahorro estimado de más de $300K USD en licencias."
   },
+
+  "scalabl": {
+    "label": "Plataforma EdTech",
+    "title": "Scalabl",
+    "desc": "Plataforma educativa con experiencia de video, navegación de contenidos y seguimiento de progreso.",
+    "stack": "jQuery · PHP · JavaScript · CSS · APIs",
+    "metricBig": "+35%",
+    "metricSmall": "más finalización de cursos",
+    "detailOne": "2.500+ profesionales",
+    "detailTwo": "50+ países",
+    "detailThree": "Video · Tracking · UX",
+    "impact": "Rediseñé la experiencia de consumo de contenido con un nuevo sistema de reproducción de video y tracking de progreso, aumentando la finalización de cursos en 35% y mejorando el engagement en una plataforma con 2.500+ profesionales en 50+ países."
+  },
+
+  "masRepuestos": {
+    "label": "Marketplace mobile",
+    "title": "Más Repuestos",
+    "desc": "Marketplace mobile para búsqueda, comparación y compra de repuestos, conectando compradores, vendedores y repartidores.",
+    "stack": "Flutter · Firebase · APIs",
+    "metricBig": "4 meses",
+    "metricSmall": "app marketplace construida y lanzada",
+    "detailOne": "Multi-vendedor",
+    "detailTwo": "Compradores + vendedores + repartidores",
+    "detailThree": "Flutter · Firebase · Marketplace",
+    "impact": "Construí y lancé una app mobile marketplace multi-vendedor en 4 meses, conectando compradores, vendedores y repartidores mediante flujos de búsqueda, comparación, compra y coordinación de entregas."
+  },
+
+  "lacev": {
+    "label": "Campaña científica",
+    "title": "LACEV / APASUR",
+    "desc": "Landing multilenguaje para una campaña paleontológica nacional con foco en visibilidad científica y divulgación.",
+    "stack": "React · i18n · CSS · GitHub · GoDaddy",
+    "metricBig": "Visibilidad global",
+    "metricSmall": "campaña científica multilenguaje",
+    "detailOne": "Alcance internacional",
+    "detailTwo": "Descubrimientos paleontológicos",
+    "detailThree": "React · i18n · Landing",
+    "impact": "Desarrollé una plataforma multilenguaje para una campaña paleontológica nacional, ayudando a amplificar la visibilidad internacional de descubrimientos como nuevas especies de dinosaurios y un huevo de dinosaurio excepcionalmente preservado."
+  },
+
+  "dogco": {
+    "label": "Marketplace 2 lados",
+    "title": "DogCo",
+    "desc": "Marketplace de dos lados para conectar dueños de mascotas con paseadores mediante roles, reservas y datos en tiempo real.",
+    "stack": "React · TypeScript · Firebase · CSS",
+    "metricBig": "2 lados",
+    "metricSmall": "dueños de mascotas + paseadores",
+    "detailOne": "Roles separados",
+    "detailTwo": "Reservas en tiempo real",
+    "detailThree": "React · Firebase · Roles",
+    "impact": "Diseñé y desarrollé la lógica central de un marketplace de dos lados para conectar dueños de mascotas y paseadores, incluyendo autenticación, roles, reservas y sincronización en tiempo real con Firebase."
+  },
+
+  "dashboard": {
+    "label": "SaaS + IA",
+    "title": "Appointment & Analytics SaaS",
+    "desc": "Plataforma SaaS para gestión de turnos, análisis de datos, estados operativos y dashboards KPI.",
+    "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
+    "metricBig": "IA + datos",
+    "metricSmall": "dashboards, turnos e insights automáticos",
+    "detailOne": "Dashboards en tiempo real",
+    "detailTwo": "Consultas en lenguaje natural",
+    "detailThree": "React · Node · PostgreSQL",
+    "impact": "Construí una plataforma SaaS de turnos y analítica con dashboards en tiempo real, gestión de estados e integración de IA para consultar datos en lenguaje natural y generar insights visuales automatizados."
+  }
+},
+
+
+
   "cta": {
     "hire": "Contrátame en Upwork",
     "talk": "Hablemos de tu proyecto"
   },
+
+
   "dashboard": {
   "badge": "Plataforma SaaS con IA",
   "title": "Smart Appointment & Analytics Dashboard",

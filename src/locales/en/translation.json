@@ -1,14 +1,46 @@
 {
   
-  "dinosaurios": {
-    "heroTitleLine1": "Join the Search for",
-    "heroTitleHighlight": "New Species",
-    "heroTitleLine2": "in Patagonia, Argentina",
-    "heroDescription": "This site documents the paleontological campaigns of the APASUR & LACEV team, based at the Bernardino Rivadavia Museum (Buenos Aires). Since 2002, they have discovered over 40 new species and published 5 covers in Nature. Now they invite you to participate, vote, donate, and watch live excavations.",
-    "exploraBtn": "Explore the Campaigns",
-    "galeriaTitulo": "Featured Discoveries and Campaigns",
-    "campañaNumero": "Campaign #{{num}}"
+"dinosaurios": {
+  "back": "← Back",
+  "eyebrow": "CONICET · LACEV · APASUR",
+  "heroTitleLine1": "Join the search for",
+  "heroTitleHighlight": "new species",
+  "heroTitleLine2": "in Patagonia, Argentina",
+  "heroDescription": "Scientific outreach project documenting paleontological campaigns led by researchers connected to CONICET and the LACEV laboratory, based at the Bernardino Rivadavia Argentine Museum of Natural Sciences. An initiative combining research, real field excavation, public education, and live participation.",
+  "exploraBtn": "Explore the campaign",
+  "galeriaTitulo": "Featured discoveries and campaigns",
+  "campañaNumero": "Campaign #{{num}}",
+  "galleryAlt": "Paleontological campaign {{num}}",
+
+  "about": {
+    "label": "Who they are",
+    "title": "An Argentine scientific team with international impact",
+    "body": "LACEV is a CONICET-linked paleontology team focused on comparative anatomy and vertebrate evolution. Together with APASUR, they promote excavation, research, and scientific outreach campaigns in Patagonia, one of the world’s most important regions for fossil discoveries."
   },
+
+  "kpis": [
+    { "num": "40+", "label": "new species discovered" },
+    { "num": "300+", "label": "scientific publications" },
+    { "num": "5", "label": "Nature covers" },
+    { "num": "70–80%", "label": "success rate in expeditions" }
+  ],
+
+  "achievements": {
+    "label": "Scientific achievements",
+    "title": "World-class discoveries from Patagonia",
+    "body": "The team has contributed to major paleontological discoveries, from large carnivorous dinosaurs to exceptionally preserved fossils that help reconstruct the evolutionary history of South America.",
+    "items": [
+      "Discovery of Maip macrothorax, one of the largest known megaraptors.",
+      "Key findings such as Taurovenator and other Patagonian carnivorous dinosaurs.",
+      "Exceptional fossils, including Jurassic tadpoles and uniquely preserved dinosaur eggs.",
+      "Field campaigns in Patagonia and participation in scientific projects in Antarctica.",
+      "Over 100 appearances in international media and global scientific outreach.",
+      "Collaborations with institutions such as CONICET and the Argentine Museum of Natural Sciences.",
+      "Production of educational and scientific content for global audiences.",
+      "Development of initiatives connecting science, technology, and public participation."
+    ]
+  }
+},
 
   "dogco": {
     "back": "← Back",
@@ -95,102 +127,141 @@
     }
   },
   "scalabl": {
-    "volver": "← Back",
-    "logoAlt": "Scalabl logo",
-    "hero": {
-      "title": "Learn about",
-      "highlight": "business",
-      "suffix": ", every day",
-      "subtitle": "Learning communities with curated content, live sessions, practical challenges, and mentoring. A system designed for continuous and actionable learning.",
-      "cta": "Join now",
-      "badge": "+2500 people trained at Scalabl®"
-    },
-    "overview": {
-      "title": "What is Scalabl?",
-      "body": "Scalabl is a learning communities platform focused on business. It combines a public acquisition landing page (marketing, SEO, content) with a private member ecosystem: living curricula, resource library, session calendar, forums, challenges, and progress tracking.",
-      "cards": {
-        "community": { "title": "Community", "text": "Topic spaces, forums, networking, and guided mentoring." },
-        "content": { "title": "Curated content", "text": "Short lessons, playbooks, and ready-to-use templates." },
-        "practice": { "title": "Practice & feedback", "text": "Challenges, live reviews, and learning evidence." }
-      }
-    },
-    "development": {
-      "title": "Landing & platform development",
-      "landing": {
-        "title": "Landing (public access)",
-        "items": [
-          "SPA architecture with Vite + React (performance & DX).",
-          "Sections: Value hero, social proof, Communities, What they are, How they work, Pricing, and persistent CTA.",
-          "Technical SEO: metatags, OG/Twitter cards, sitemap, semantic structure.",
-          "Consistent UI: purple/green palette, rounded buttons, soft shadows, legible type.",
-          "Integrations: YouTube embed, WhatsApp CTA, and newsletter."
-        ]
-      },
-      "platform": {
-        "title": "Platform (members area)",
-        "items": [
-          "Role-based auth (member, mentor, admin) with route guards.",
-          "Modules: Library, Calendar, Challenges/Deliverables, Forums/Comments, Progress.",
-          "Admin panel for curricula, posts, sessions, and reports.",
-          "Engagement analytics (retention, weekly activity, challenge completion).",
-          "Suggested architecture: React (FE) + Node/Express API or serverless + DB (PostgreSQL / Firestore)."
-        ]
-      }
-    },
-    "role": {
-      "title": "My role & responsibilities",
-      "items": [
-        "UI/UX design for the landing and reusable components.",
-        "Responsive implementation focused on performance (CLS, LCP, TTI).",
-        "Integration of video, forms, analytics, and conversion CTAs.",
-        "Definition of FE architecture, state, and protected routes.",
-        "Proposal of key modules for the community and member flows."
-      ]
-    },
-    "impact": {
-      "title": "Impact & results",
-      "stats": [
-        { "num": "+45%", "label": "improvement in landing conversion" },
-        { "num": "90+", "label": "events/month managed" },
-        { "num": "~1.2s", "label": "LCP on mobile devices" }
-      ],
-      "note": "*Estimated metrics based on benchmarks and local tests. Adjustable to production data."
-    },
-    "stack": {
-      "title": "Proposed stack",
-      "items": [
-        "Vite + React",
-        "React Router",
-        "Context / Zustand",
-        "Node/Express API",
-        "PostgreSQL / Firestore",
-        "Role-based Auth",
-        "YouTube / WhatsApp",
-        "SEO + Analytics"
-      ]
-    },
-    "footer": { "cta": "Visit Scalabl" }
+  "volver": "← Back",
+  "logoAlt": "Scalabl logo",
+
+  "hero": {
+    "title": "Learn about",
+    "highlight": "business",
+    "suffix": ", every day",
+    "subtitle": "Global educational platform focused on innovation and entrepreneurship, with presence in over 50 countries and thousands of active users.",
+    "cta": "Visit platform",
+    "badge": "+2500 professionals in the community"
   },
+
+  "overview": {
+    "title": "What is Scalabl?",
+    "body": "Scalabl is a business-focused learning platform where users consume content, join sessions, and track their progress within active communities.",
+    "cards": {
+      "community": {
+        "title": "Global community",
+        "text": "Users across 50+ countries actively engaging with content and sessions."
+      },
+      "content": {
+        "title": "Content system",
+        "text": "Structured learning through video content, resources, and guided experiences."
+      },
+      "experience": {
+        "title": "Optimized experience",
+        "text": "Redesign focused on reducing friction and improving user navigation."
+      }
+    }
+  },
+
+  "development": {
+    "title": "What I built and improved",
+    
+    "landing": {
+      "title": "Content consumption experience",
+      "items": [
+        "Redesigned the video playback system.",
+        "Implemented real-time progress tracking.",
+        "Optimized content consumption flow.",
+        "Improved navigation to reduce user friction."
+      ]
+    },
+
+    "platform": {
+      "title": "Frontend and structure",
+      "items": [
+        "Refactored the frontend to improve maintainability.",
+        "Integrated with PHP backend for data synchronization.",
+        "Improved performance in loading and rendering.",
+        "Collaborated with UX/UI to enhance accessibility."
+      ]
+    }
+  },
+
+  "role": {
+    "title": "My role",
+    "items": [
+      "Frontend development in a globally used platform.",
+      "Active participation in user experience decisions.",
+      "Implemented improvements in content consumption flows.",
+      "Collaborated with design and backend to evolve the product."
+    ]
+  },
+
+  "impact": {
+    "title": "Real impact",
+    "stats": [
+      { "num": "+35%", "label": "increase in course completion rate" },
+      { "num": "50+", "label": "countries with active users" },
+      { "num": "+2500", "label": "platform users" }
+    ],
+    "note": "The implemented improvements increased engagement and reduced friction in the learning experience."
+  },
+
+  "stack": {
+    "title": "Stack",
+    "items": [
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "CSS",
+      "REST APIs"
+    ]
+  },
+
+  "footer": {
+    "cta": "View Scalabl"
+  }
+},
 
   "common": {
     "imageNotAvailable": "Image not available"
   },
 
-  "sistaskSummary": {
-    "valueImpact": {
-      "title": "Value and impact",
-      "p1": "Sistask is the core operational platform for ticket management that Sistran will roll out across more than 17 LATAM countries, standardizing processes and elevating service quality at a regional scale.",
-      "points": [
-        { "strong": "Centralization & traceability:", "text": "unifies operations in one platform with full per-ticket history (who/when/what)." },
-        { "strong": "SLA compliance:", "text": "proactive alerts and real-time monitoring (status times, agent load, critical backlog)." },
-        { "strong": "Executive visibility:", "text": "regional dashboards, saved filters, and KPIs per country/business for faster decisions." },
-        { "strong": "Operational efficiency:", "text": "role-based workflows, templates, and reusable filters that reduce time and errors." },
-        { "strong": "Governance & security:", "text": "roles/permissions by country/team, audit logs, and compliance support." },
-        { "strong": "Regional scalability:", "text": "market-level configuration with frictionless growth." }
-      ],
-      "outcome": "Result: faster response times, higher SLA compliance, and end-to-end visibility for a consistent regional implementation."
-    }
-  },
+"sistaskSummary": {
+  "valueImpact": {
+    "title": "Value & Impact",
+
+    "p1": "Sistask is the core operational platform for ticket management at Sistran, built to replace external tools like Jira and centralize operations into a single system. Its rollout across more than 17 LATAM countries enabled process standardization, improved service quality, and significant cost reduction at scale.",
+
+    "points": [
+      { 
+        "strong": "Centralization & traceability:", 
+        "text": "consolidates operations into one platform with full ticket history (who/when/what), eliminating information fragmentation." 
+      },
+      { 
+        "strong": "Cost reduction:", 
+        "text": "removes dependency on external tools like Jira (~$3,000 USD per client), generating substantial savings and full system control." 
+      },
+      { 
+        "strong": "SLA compliance:", 
+        "text": "proactive alerts and real-time monitoring improve response times and reduce bottlenecks." 
+      },
+      { 
+        "strong": "Executive visibility:", 
+        "text": "regional dashboards with KPIs by country and team, enabling faster strategic decision-making." 
+      },
+      { 
+        "strong": "Operational efficiency:", 
+        "text": "automation through configurable workflows reduces manual work and human errors." 
+      },
+      { 
+        "strong": "Governance & security:", 
+        "text": "robust role-based permissions system with full audit traceability." 
+      },
+      { 
+        "strong": "Scalability & productization:", 
+        "text": "multi-tenant architecture designed to scale across clients, evolving from an internal tool into a SaaS product." 
+      }
+    ],
+
+    "outcome": "Result: significant operational cost reduction, improved efficiency across distributed teams, and transformation of an internal system into a strategic, scalable product with commercial potential."
+  }
+},
 
   "sistaskGuide": {
     "title": "Sistask Guide",
@@ -355,8 +426,7 @@
   "verProyecto": "View project",
   "proyecto_proyecto": "Projects",
   "hello_welcome": "Hello, welcome",
-  "portfolio_description": "I am a Front-end Developer with over three years of professional experience building modern, scalable, and user-focused web solutions. Specialized in React, with strong expertise in UI/UX design, REST APIs, state management, and responsive design. Currently integrating TypeScript to enhance code quality, scalability, and maintainability. I am proactive, collaborative, and passionate about turning ideas into functional, visually appealing, and high-performance digital products.",
-
+  "portfolio_description": "Frontend Developer with a fullstack mindset, focused on building scalable systems and product-driven solutions. I’ve developed SaaS platforms, marketplaces, and internal tools used by teams across multiple countries, leading frontend architecture and contributing to backend development when needed. I work with React and TypeScript to build complex interfaces, integrate APIs, and deliver end-to-end solutions that combine user experience, business logic, and scalability.",
   "experience_section": {
     "professional_experience": "Professional Experience",
     "sistran_title": "Sistran – Frontend Developer",
@@ -467,11 +537,10 @@
     }
   },
 
-  "mision_and_vision": {
-    "title": "My Vision",
-    "paragraph": "I want to continue growing as a developer, participating in frontend and fullstack projects that challenge me technically and personally. I aim to create digital experiences that are functional, accessible, and visually appealing. My vision is to bring real value to each team, apply best practices, learn emerging technologies, and be part of environments that value quality, design, and collaborative work."
-  },
-
+ "mision_and_vision": {
+  "title": "My Vision",
+  "paragraph": "I want to continue growing as a developer by working on frontend and fullstack projects that challenge me at a professional and technical level. My goal is to combine my professional growth with a flexible lifestyle, where I can continue working remotely while traveling. Over the past year, I’ve worked under this model, adapting seamlessly to different teams and time zones. I aim to be part of teams that foster continuous learning, where I can keep improving as a professional, contribute meaningful value, and be surrounded by people who push my level higher."
+},
   "tech": {
     "title": "Technologies",
     "items": {
@@ -490,23 +559,101 @@
     }
   },
 
-  "cases": {
-    "title": "Success Stories",
-    "prev": "Previous",
-    "next": "Next",
-    "viewProject": "View project",
-    "stackLabel": "Stack",
-    "sistask": {
-      "title": "Sistask – Task Management",
-      "desc": "Internal system for distributed LATAM teams with visual flows and real-time tracking.",
-      "stack": "React, MUI, Bootstrap, ReactFlow, Axios"
-    },
-    "scalabl": {
-      "title": "Scalabl – Educational Platform",
-      "desc": "Interactive interfaces for a global platform focused on innovation and entrepreneurship.",
-      "stack": "React, jQuery, Python"
-    }
+
+"cases": {
+  "eyebrow": "Cases",
+  "title": "Impact case studies",
+  "subtitle": "Real projects that generated measurable results and value for companies, users, and digital products.",
+  "projectLabel": "Project",
+  "metricLabel": "Key metrics",
+  "impactLabel": "Generated impact",
+  "reachLabel": "Reach",
+  "resultLabel": "Result",
+  "techLabel": "Technology",
+  "viewProject": "View project",
+  "viewCase": "View {{project}}",
+
+  "sistask": {
+    "label": "Enterprise System",
+    "title": "Sistask",
+    "desc": "Enterprise platform for managing workflows, tasks, hours, and internal statuses for distributed teams.",
+    "stack": "React · JavaScript · CSS · APIs",
+    "metricBig": "820+ users",
+    "metricSmall": "17 countries · 100+ clients · $300K+ estimated savings",
+    "detailOne": "17 countries",
+    "detailTwo": "100+ enterprise clients",
+    "detailThree": "React · Workflows · Enterprise",
+    "impact": "I built the frontend of a workflow platform that replaced Jira, reaching 100% adoption across 820+ internal users in 17 countries, rolling out to 100+ enterprise clients in 2 months, and generating an estimated $300K+ USD in license savings."
   },
+
+  "scalabl": {
+    "label": "EdTech Platform",
+    "title": "Scalabl",
+    "desc": "Educational platform with video experience, content navigation, and progress tracking.",
+    "stack": "jQuery · PHP · JavaScript · CSS · APIs",
+    "metricBig": "+35%",
+    "metricSmall": "higher course completion",
+    "detailOne": "2,500+ professionals",
+    "detailTwo": "50+ countries",
+    "detailThree": "Video · Tracking · UX",
+    "impact": "I redesigned the content consumption experience with a new video playback and progress tracking system, increasing course completion by 35% and improving engagement on a platform with 2,500+ professionals across 50+ countries."
+  },
+
+  "masRepuestos": {
+    "label": "Mobile Marketplace",
+    "title": "Más Repuestos",
+    "desc": "Mobile marketplace for searching, comparing, and purchasing auto parts, connecting buyers, sellers, and delivery drivers.",
+    "stack": "Flutter · Firebase · APIs",
+    "metricBig": "4 months",
+    "metricSmall": "marketplace app built and launched",
+    "detailOne": "Multi-vendor",
+    "detailTwo": "Buyers + sellers + drivers",
+    "detailThree": "Flutter · Firebase · Marketplace",
+    "impact": "I built and launched a multi-vendor mobile marketplace app in 4 months, connecting buyers, sellers, and delivery drivers through search, comparison, purchase, and delivery coordination flows."
+  },
+
+  "lacev": {
+    "label": "Science Campaign",
+    "title": "LACEV / APASUR",
+    "desc": "Multilingual landing page for a national paleontological campaign focused on scientific visibility and public outreach.",
+    "stack": "React · i18n · CSS · GitHub · GoDaddy",
+    "metricBig": "Global visibility",
+    "metricSmall": "multilingual science campaign",
+    "detailOne": "International reach",
+    "detailTwo": "Paleontological discoveries",
+    "detailThree": "React · i18n · Landing",
+    "impact": "I developed a multilingual platform for a national paleontological campaign, helping amplify the international visibility of discoveries such as new dinosaur species and an exceptionally preserved dinosaur egg."
+  },
+
+  "dogco": {
+    "label": "Two-sided Marketplace",
+    "title": "DogCo",
+    "desc": "Two-sided marketplace connecting pet owners with dog walkers through roles, bookings, and real-time data.",
+    "stack": "React · TypeScript · Firebase · CSS",
+    "metricBig": "2-sided",
+    "metricSmall": "pet owners + dog walkers",
+    "detailOne": "Separated roles",
+    "detailTwo": "Real-time bookings",
+    "detailThree": "React · Firebase · Roles",
+    "impact": "I designed and developed the core logic of a two-sided marketplace connecting pet owners and dog walkers, including authentication, user roles, bookings, and real-time synchronization with Firebase."
+  },
+
+  "dashboard": {
+    "label": "SaaS + AI",
+    "title": "Appointment & Analytics SaaS",
+    "desc": "SaaS platform for appointment management, data analysis, operational statuses, and KPI dashboards.",
+    "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
+    "metricBig": "AI + data",
+    "metricSmall": "dashboards, appointments, and automated insights",
+    "detailOne": "Real-time dashboards",
+    "detailTwo": "Natural language queries",
+    "detailThree": "React · Node · PostgreSQL",
+    "impact": "I built a SaaS platform for appointment management and analytics with real-time dashboards, status management, and AI integration to query data in natural language and generate automated visual insights."
+  }
+},
+
+
+
 
   "cta": {
     "hire": "Hire me on Upwork",
