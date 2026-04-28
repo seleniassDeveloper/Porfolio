@@ -100,12 +100,20 @@ const Waves = ({
     const container = containerRef.current;
     ctxRef.current = canvas.getContext("2d");
 
-    function setSize() {
-      boundingRef.current = container.getBoundingClientRect();
-      canvas.width = boundingRef.current.width;
-      canvas.height = boundingRef.current.height;
-    }
+function setSize() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
+  boundingRef.current = {
+    width,
+    height,
+    left: 0,
+    top: 0
+  };
+
+  canvas.width = width;
+  canvas.height = height;
+}
     function setLines() {
       const { width, height } = boundingRef.current;
       linesRef.current = [];
@@ -242,21 +250,18 @@ const Waves = ({
     };
   }, []);
 
-  return (
-    <div
-      ref={containerRef}
-      className={`waves ${className}`}
-      style={{
-        position: "absolute",
-        top: 0, left: 0, margin: 0, padding: 0,
-        width: "100%", height: "100%", overflow: "hidden",
-        backgroundColor,
-        ...style
-      }}
-    >
-      <canvas ref={canvasRef} className="waves-canvas" />
-    </div>
-  );
+return (
+  <div
+    ref={containerRef}
+    className={`waves ${className}`}
+    style={{
+      backgroundColor,
+      ...style
+    }}
+  >
+    <canvas ref={canvasRef} className="waves-canvas" />
+  </div>
+);
 }
 
 export default Waves;
