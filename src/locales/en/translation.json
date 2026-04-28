@@ -537,9 +537,24 @@
     }
   },
 
- "mision_and_vision": {
+"mision_and_vision": {
+  "eyebrow": "My direction",
   "title": "My Vision",
-  "paragraph": "I want to continue growing as a developer by working on frontend and fullstack projects that challenge me at a professional and technical level. My goal is to combine my professional growth with a flexible lifestyle, where I can continue working remotely while traveling. Over the past year, I’ve worked under this model, adapting seamlessly to different teams and time zones. I aim to be part of teams that foster continuous learning, where I can keep improving as a professional, contribute meaningful value, and be surrounded by people who push my level higher."
+  "paragraph": "I want to keep growing as a developer by building frontend and fullstack products that challenge me technically and professionally. My goal is to combine strong product thinking, clean interfaces, scalable systems, and the freedom to work remotely while collaborating with teams that push me to keep improving.",
+  "pillars": {
+    "tech": {
+      "title": "Build better products",
+      "text": "I want to work on real systems where UI, business logic and scalability matter."
+    },
+    "growth": {
+      "title": "Keep growing",
+      "text": "I’m focused on improving through complex challenges, feedback and strong technical teams."
+    },
+    "remote": {
+      "title": "Remote lifestyle",
+      "text": "I want to keep building meaningful work while collaborating across countries and time zones."
+    }
+  }
 },
   "tech": {
     "title": "Technologies",

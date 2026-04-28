@@ -165,7 +165,7 @@ export const Tecnologias = () => {
         <div className="tech-header">
           <span>{t("tech.eyebrow")}</span>
           <h2 className="titulo-tecnologias">{t("tech.title")}</h2>
-          <p>{t("tech.subtitle")}</p>
+     
         </div>
 
         <div className="d-none d-md-block">

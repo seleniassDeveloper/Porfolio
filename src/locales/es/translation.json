@@ -527,9 +527,24 @@
     }
   },
 "mision_and_vision": {
-  "title": "Mi Visión",
-  "paragraph": "Quiero seguir creciendo como desarrolladora participando en proyectos frontend y fullstack que me reten a nivel profesional y técnico. Mi objetivo es combinar mi desarrollo profesional con un estilo de vida flexible, donde pueda seguir trabajando de forma remota mientras viajo. Durante el último año he trabajado bajo este modelo, adaptándome a distintos equipos y zonas horarias sin fricción. Busco formar parte de equipos que impulsen el aprendizaje continuo, donde pueda seguir mejorando como profesional, aportar valor y rodearme de personas que eleven mi nivel."
-},
+  "eyebrow": "Mi dirección",
+  "title": "Mi visión",
+  "paragraph": "Quiero seguir creciendo como desarrolladora construyendo productos frontend y fullstack que me reten a nivel técnico y profesional. Mi objetivo es combinar pensamiento de producto, interfaces limpias, sistemas escalables y la libertad de trabajar de forma remota mientras colaboro con equipos que me impulsen a mejorar.",
+  "pillars": {
+    "tech": {
+      "title": "Construir mejores productos",
+      "text": "Quiero trabajar en sistemas reales donde la interfaz, la lógica de negocio y la escalabilidad importen."
+    },
+    "growth": {
+      "title": "Seguir creciendo",
+      "text": "Estoy enfocada en mejorar a través de desafíos complejos, feedback y equipos técnicos fuertes."
+    },
+    "remote": {
+      "title": "Estilo de vida remoto",
+      "text": "Quiero seguir construyendo trabajo significativo mientras colaboro con equipos de distintos países y zonas horarias."
+    }
+  }
+}, 
   "tech": {
     "title": "Tecnologías",
     "items": {

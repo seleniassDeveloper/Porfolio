@@ -1,101 +1,144 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import {
+  FiBookOpen,
+  FiAward,
+  FiGlobe,
+  FiArrowUpRight,
+  FiCheckCircle,
+} from "react-icons/fi";
 import "../../src/App.css";
 
 export const Experiencia = () => {
   const { t } = useTranslation();
-  const tarjetasRef = useRef([]);
-  const [visible, setVisibles] = useState([false, false]);
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  const courses = t("experience_section.additional_courses_list", {
+    returnObjects: true,
+  });
+
+  const certifications = t("experience_section.certifications_list", {
+    returnObjects: true,
+  });
+
+  const languages = t("experience_section.languages_list", {
+    returnObjects: true,
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = tarjetasRef.current.indexOf(entry.target);
-          if (index !== -1) {
-            setVisibles((prev) => {
-              const updated = [...prev];
-              updated[index] = entry.isIntersecting;
-              return updated;
-            });
-          }
-        });
-      },
-      { threshold: 0.3 }
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.25 }
     );
 
-    tarjetasRef.current.forEach((el) => {
-      if (el) observer.observe(el);
-    });
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
-      tarjetasRef.current.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
   return (
-    <div className="experiencia-container d-flex justify-content-center ">
-      <div className="experiencia-flex">
-   
-        <div
-          ref={(el) => (tarjetasRef.current[1] = el)}
-          className={`tarjeta ms-lg-3 animated-side right ${
-            visible[1] ? "slide-in" : "slide-out"
-          }`}
-        >
-          <h3>
-            <FaGraduationCap className="icono" /> {t("experience_section.academic_training")}
-          </h3>
+    <section
+      ref={sectionRef}
+      className={`experience-showcase ${visible ? "is-visible" : ""}`}
+    >
+      <div className="experience-bg-grid"></div>
 
-          <div className="item">
-            <h4>{t("experience_section.teclab_title")}</h4>
-            <span className="fecha">{t("experience_section.teclab_degree")}</span>
-          </div>
+      <div className="experience-container">
+        <div className="experience-header">
+          <span>{t("experience_section.eyebrow", "Education")}</span>
+          <h2>{t("experience_section.academic_training")}</h2>
+          <p>
+            {t(
+              "experience_section.subtitle",
+              "Formal education, courses and continuous learning that support the way I build real digital products."
+            )}
+          </p>
+        </div>
 
-          <div className="item">
-            <h4>{t("experience_section.davinci_title")}</h4>
-            <span className="fecha">{t("experience_section.davinci_degree")}</span>
-          </div>
+        <div className="experience-layout">
+          <article className="experience-main-card">
+            <div className="experience-top">
+              <div className="experience-icon">
+                <FiBookOpen />
+              </div>
 
-          <div className="d-lg-flex">
-            <div>
-              <h3 className="subtitulo">{t("experience_section.additional_courses")}</h3>
-              <ul>
-                {t("experience_section.additional_courses_list", { returnObjects: true }).map(
-                  (item, idx) => (
-                    <li key={idx}>{item}</li>
-                  )
-                )}
-              </ul>
+              <div>
+                <span>{t("experience_section.main_label", "Academic path")}</span>
+                <h3>{t("experience_section.academic_training")}</h3>
+              </div>
             </div>
 
-            <div className="ps-lg-5">
-              <h3 className="subtitulo">{t("experience_section.certifications_in_progress")}</h3>
-              <ul>
-                {t("experience_section.certifications_list", { returnObjects: true }).map(
-                  (item, idx) => (
-                    <li key={idx}>{item}</li>
-                  )
-                )}
-              </ul>
-            </div>
-          </div>
+            <div className="education-timeline">
+              <div className="education-item">
+                <div className="timeline-dot"></div>
+                <div>
+                  <h4>{t("experience_section.teclab_title")}</h4>
+                  <p>{t("experience_section.teclab_degree")}</p>
+                </div>
+              </div>
 
-          <div>
-            <h3 className="subtitulo">{t("experience_section.languages")}</h3>
-            <ul>
-              {t("experience_section.languages_list", { returnObjects: true }).map(
-                (item, idx) => (
-                  <li key={idx}>{item}</li>
-                )
-              )}
-            </ul>
+              <div className="education-item">
+                <div className="timeline-dot"></div>
+                <div>
+                  <h4>{t("experience_section.davinci_title")}</h4>
+                  <p>{t("experience_section.davinci_degree")}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="experience-note">
+              <FiArrowUpRight />
+              <p>
+                {t(
+                  "experience_section.note",
+                  "I combine formal training with hands-on product experience, learning through real systems, production challenges and continuous practice."
+                )}
+              </p>
+            </div>
+          </article>
+
+          <div className="experience-side-grid">
+            <article className="experience-mini-card">
+              <div className="mini-card-heading">
+                <FiCheckCircle />
+                <span>{t("experience_section.additional_courses")}</span>
+              </div>
+
+              <ul>
+                {Array.isArray(courses) &&
+                  courses.map((item, idx) => <li key={idx}>{item}</li>)}
+              </ul>
+            </article>
+
+            <article className="experience-mini-card">
+              <div className="mini-card-heading">
+                <FiAward />
+                <span>{t("experience_section.certifications_in_progress")}</span>
+              </div>
+
+              <ul>
+                {Array.isArray(certifications) &&
+                  certifications.map((item, idx) => <li key={idx}>{item}</li>)}
+              </ul>
+            </article>
+
+            <article className="experience-mini-card wide">
+              <div className="mini-card-heading">
+                <FiGlobe />
+                <span>{t("experience_section.languages")}</span>
+              </div>
+
+              <ul className="languages-list">
+                {Array.isArray(languages) &&
+                  languages.map((item, idx) => <li key={idx}>{item}</li>)}
+              </ul>
+            </article>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

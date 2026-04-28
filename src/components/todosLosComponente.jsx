@@ -1,20 +1,20 @@
-import DecryptedText from "./DecryptedText"
-import { Experiencia } from "./experiencia"
-import { Formulario } from "./formulario"
-import { MisionAndVision } from "./misionAndVision"
-import Orb from "./Orb"
-import Particles from "./Particles"
-import { ProyectosReales } from "./proyectosReales"
-import { Tecnologias } from "./tecnologias"
-import TrueFocus from "./TrueFocus"
-import Waves from "./Waves"
+// src/components/TodosLosComponentes.jsx
+import DecryptedText from "./DecryptedText";
+import { Experiencia } from "./experiencia";
+import { Formulario } from "./formulario";
+import { MisionAndVision } from "./misionAndVision";
+import Orb from "./Orb";
+import Particles from "./Particles";
+import { ProyectosReales } from "./proyectosReales";
+import { Tecnologias } from "./tecnologias";
+import TrueFocus from "./TrueFocus";
+import Waves from "./Waves";
 import "../../src/App.css";
-
 
 export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
   return (
     <>
-      <div className="seccion-truefocus">
+      <section className="seccion-truefocus">
         <Waves
           lineColor="#fff"
           backgroundColor="rgb(0, 0, 0)"
@@ -33,27 +33,21 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
           <TrueFocus
             manualMode={false}
             blurAmount={2}
-            borderColor="red"
+            borderColor="#00d4ff"
             animationDuration={1}
             pauseBetweenAnimations={3}
           />
         </div>
-      </div>
+      </section>
 
-      <div className="cajaFocus scroll-transition">
-        {/* Columna izquierda */}
-
-
-        {/* Columna derecha con partículas y contenido */}
+      <section className="cajaFocus scroll-transition">
         <div className="columna-derecha scroll-transition">
+          <div className="contenido-derecho">
+            <p className="titulo-bienvenida">{t("hello_welcome")}</p>
 
-          <div className="contenido-derecho ms-lg-5">
-            <p className="titulo-bienvenida">
-              {t('hello_welcome')}
-            </p>
             <div className="cajaencryted">
               <DecryptedText
-                text={t('portfolio_description')}
+                text={t("portfolio_description")}
                 speed={100}
                 maxIterations={20}
                 characters="ABCD1234!?"
@@ -63,6 +57,7 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
               />
             </div>
           </div>
+
           <div className="fondo-particulas">
             <Particles
               particleColors={["#ffffff", "#ffffff"]}
@@ -75,9 +70,10 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
               disableRotation={false}
             />
           </div>
+
           <div className="columna-izquierda scroll-transition">
             <div className="orb-fondo">
-              <div className="orb-wrapper ">
+              <div className="orb-wrapper">
                 <Orb
                   hoverIntensity={0.5}
                   rotateOnHover={true}
@@ -85,36 +81,28 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
                   forceHoverState={false}
                 />
               </div>
+
               <div className="orb-imagen">
-                <img src={YosiendoFeliz} alt="YosiendoFeliz" />
+                <img src={YosiendoFeliz} alt="Selenia" />
               </div>
             </div>
           </div>
-
         </div>
-      </div>
+      </section>
 
-      <div>
-        <MisionAndVision />
-      </div>
+      <MisionAndVision />
 
-      <div>
-        <ProyectosReales />
-      </div>
+      <ProyectosReales />
 
-      <div >
-        <Tecnologias />
-      </div>
+      <Tecnologias />
 
-      <div className="seccion-experiencia">
+      <section className="seccion-experiencia">
         <div className="contenido-experiencia pt-5">
           <Experiencia />
         </div>
-      </div>
+      </section>
 
-      <div>
-        <Formulario />
-      </div>
+      <Formulario />
     </>
-  )
-}
+  );
+};
