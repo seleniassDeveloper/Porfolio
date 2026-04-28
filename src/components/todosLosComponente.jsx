@@ -90,9 +90,11 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
         </div>
       </section>
 
-      <MisionAndVision />
+       <ProyectosReales />
 
-      <ProyectosReales />
+      {/* <MisionAndVision /> */}
+
+     
 
       <Tecnologias />
 

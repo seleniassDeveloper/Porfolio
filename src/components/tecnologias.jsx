@@ -161,51 +161,8 @@ export const Tecnologias = () => {
 
   return (
     <div className="tecnologias-container">
-      <section className="tech-section">
-        <div className="tech-header">
-          <span>{t("tech.eyebrow")}</span>
-          <h2 className="titulo-tecnologias">{t("tech.title")}</h2>
-     
-        </div>
 
-        <div className="d-none d-md-block">
-          <div className="grid-tecnologias">
-            {tecnologias.map((tech) => (
-              <div
-                key={tech.id}
-                className={`carta-tecnologia ${tech.clase} ${
-                  tech.id === "react" ? "destacar-react" : ""
-                }`}
-              >
-                <div className="icono-tecnologia">{tech.icono}</div>
-                <p className="nombre-tecnologia">{tech.nombre}</p>
-                <p className="descripcion-tecnologia">
-                  {t(`tech.items.${tech.id}.desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="d-md-none tech-carousel">
-          <Carousel interval={null} indicators={false} controls>
-            {chunk(tecnologias, 6).map((grupo, slideIndex) => (
-              <Carousel.Item key={`slide-${slideIndex}`}>
-                <div className="slide-grid">
-                  {grupo.map((tech) => (
-                    <div key={tech.id} className={`slide-icon ${tech.clase}`}>
-                      <span className="icono-tecnologia">{tech.icono}</span>
-                      <span className="slide-label">{tech.nombre}</span>
-                    </div>
-                  ))}
-                </div>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
-      </section>
-
-      <section className={`impact-deck-section theme-${active.theme}`}>
+        <section className={`impact-deck-section theme-${active.theme}`}>
         <div className="impact-deck-bg"></div>
 
         <div className="impact-deck-container">
@@ -333,6 +290,51 @@ export const Tecnologias = () => {
           </div>
         </div>
       </section>
+      <section className="tech-section">
+        <div className="tech-header">
+          {/* <span>{t("tech.eyebrow")}</span> */}
+          <h2 className="titulo-tecnologias">Stack</h2>
+     
+        </div>
+
+        <div className="d-none d-md-block">
+          <div className="grid-tecnologias">
+            {tecnologias.map((tech) => (
+              <div
+                key={tech.id}
+                className={`carta-tecnologia ${tech.clase} ${
+                  tech.id === "react" ? "destacar-react" : ""
+                }`}
+              >
+                <div className="icono-tecnologia">{tech.icono}</div>
+                <p className="nombre-tecnologia">{tech.nombre}</p>
+                <p className="descripcion-tecnologia">
+                  {t(`tech.items.${tech.id}.desc`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="d-md-none tech-carousel">
+          <Carousel interval={null} indicators={false} controls>
+            {chunk(tecnologias, 6).map((grupo, slideIndex) => (
+              <Carousel.Item key={`slide-${slideIndex}`}>
+                <div className="slide-grid">
+                  {grupo.map((tech) => (
+                    <div key={tech.id} className={`slide-icon ${tech.clase}`}>
+                      <span className="icono-tecnologia">{tech.icono}</span>
+                      <span className="slide-label">{tech.nombre}</span>
+                    </div>
+                  ))}
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </section>
+
+    
     </div>
   );
 };

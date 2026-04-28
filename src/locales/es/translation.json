@@ -417,7 +417,7 @@
   "titulo": "Proyectos",
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
-  "hello_welcome": "Hola, bienvenido ",
+  "hello_welcome": "Bienvenido ",
   "portfolio_description": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack. He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere. Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad.",
   "experience_section": {
     "professional_experience": "Experiencia Profesional",
@@ -566,7 +566,7 @@
 
 "cases": {
   "eyebrow": "Cases",
-  "title": "Casos de impacto",
+  "title": "Impacto",
   "subtitle": "Proyectos reales que generaron resultados medibles y valor para empresas, usuarios y productos digitales.",
   "projectLabel": "Proyecto",
   "metricLabel": "Métricas clave",

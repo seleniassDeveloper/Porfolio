@@ -425,7 +425,7 @@
   "titulo": "Projects",
   "verProyecto": "View project",
   "proyecto_proyecto": "Projects",
-  "hello_welcome": "Hello, welcome",
+  "hello_welcome": "Welcome",
   "portfolio_description": "Frontend Developer with a fullstack mindset, focused on building scalable systems and product-driven solutions. I’ve developed SaaS platforms, marketplaces, and internal tools used by teams across multiple countries, leading frontend architecture and contributing to backend development when needed. I work with React and TypeScript to build complex interfaces, integrate APIs, and deliver end-to-end solutions that combine user experience, business logic, and scalability.",
   "experience_section": {
     "professional_experience": "Professional Experience",
@@ -577,7 +577,7 @@
 
 "cases": {
   "eyebrow": "Cases",
-  "title": "Impact case studies",
+  "title": "Impact ",
   "subtitle": "Real projects that generated measurable results and value for companies, users, and digital products.",
   "projectLabel": "Project",
   "metricLabel": "Key metrics",
