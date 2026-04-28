@@ -1060,3 +1060,182 @@ p {
     font-size: 3.2rem;
   }
 }
+
+.mobile-portfolio-description {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-description {
+    display: none !important;
+  }
+
+  .mobile-portfolio-description {
+    display: block;
+    margin: 0 auto;
+    max-width: 34rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(0.98rem, 4vw, 1.05rem);
+    line-height: 1.75;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+
+  .cajaencryted {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contenido-derecho {
+    text-align: left;
+  }
+
+  .titulo-bienvenida {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mobile-portfolio-description {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+}
+
+
+.mobile-about-tag,
+.mobile-portfolio-description,
+.mobile-bio-cards {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cajaFocus {
+    padding: 70px 14px 95px;
+  }
+
+  .columna-derecha {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 22px 28px;
+    border-radius: 32px;
+  }
+
+  .columna-izquierda {
+    order: 1;
+  }
+
+  .contenido-derecho {
+    order: 2;
+    padding: 0;
+    text-align: left;
+  }
+
+  .mobile-about-tag {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #70e7ff;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(0, 212, 255, 0.22);
+  }
+
+  .mobile-about-tag::before {
+    content: "✦";
+    margin-right: 8px;
+  }
+
+  .titulo-bienvenida {
+    font-size: clamp(3rem, 17vw, 4.7rem);
+    margin-bottom: 22px;
+    text-align: left;
+  }
+
+  .titulo-bienvenida::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin-top: 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #00d4ff, #ff4fd8);
+  }
+
+  .desktop-description,
+  .all-letters,
+  .revealed,
+  .encrypted {
+    display: none !important;
+  }
+
+  .cajaencryted {
+    padding: 26px 22px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(0, 212, 255, 0.22);
+  }
+
+  .mobile-portfolio-description {
+    display: block;
+  }
+
+  .mobile-portfolio-description strong {
+    display: block;
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: 1.08rem;
+    line-height: 1.55;
+  }
+
+  .mobile-portfolio-description p {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .mobile-bio-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .mobile-bio-card {
+    padding: 17px 14px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+  }
+
+  .mobile-bio-card-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.12);
+  }
+
+  .mobile-bio-card h4 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+
+  .mobile-bio-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+}
