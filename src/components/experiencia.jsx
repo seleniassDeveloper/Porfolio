@@ -6,6 +6,7 @@ import {
   FiGlobe,
   FiArrowUpRight,
   FiCheckCircle,
+  FiBriefcase,
 } from "react-icons/fi";
 import "../../src/App.css";
 
@@ -25,6 +26,29 @@ export const Experiencia = () => {
   const languages = t("experience_section.languages_list", {
     returnObjects: true,
   });
+
+  const educationItems = [
+    {
+      title: t("experience_section.teclab_title"),
+      degree: t("experience_section.teclab_degree"),
+    },
+    {
+      title: t("experience_section.davinci_title"),
+      degree: t("experience_section.davinci_degree"),
+    },
+    {
+      title: t("experience_section.utn_title"),
+      degree: t("experience_section.utn_degree"),
+    },
+    {
+      title: t("experience_section.computer_science_title"),
+      degree: t("experience_section.computer_science_degree"),
+    },
+    {
+      title: t("experience_section.career_start_title"),
+      degree: t("experience_section.career_start_degree"),
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,12 +74,7 @@ export const Experiencia = () => {
         <div className="experience-header">
           <span>{t("experience_section.eyebrow", "Education")}</span>
           <h2>{t("experience_section.academic_training")}</h2>
-          <p>
-            {t(
-              "experience_section.subtitle",
-              "Formal education, courses and continuous learning that support the way I build real digital products."
-            )}
-          </p>
+          <p>{t("experience_section.subtitle")}</p>
         </div>
 
         <div className="experience-layout">
@@ -66,37 +85,26 @@ export const Experiencia = () => {
               </div>
 
               <div>
-                <span>{t("experience_section.main_label", "Academic path")}</span>
+                <span>{t("experience_section.main_label")}</span>
                 <h3>{t("experience_section.academic_training")}</h3>
               </div>
             </div>
 
             <div className="education-timeline">
-              <div className="education-item">
-                <div className="timeline-dot"></div>
-                <div>
-                  <h4>{t("experience_section.teclab_title")}</h4>
-                  <p>{t("experience_section.teclab_degree")}</p>
+              {educationItems.map((item, index) => (
+                <div className="education-item" key={index}>
+                  <div className="timeline-dot"></div>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.degree}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="education-item">
-                <div className="timeline-dot"></div>
-                <div>
-                  <h4>{t("experience_section.davinci_title")}</h4>
-                  <p>{t("experience_section.davinci_degree")}</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="experience-note">
               <FiArrowUpRight />
-              <p>
-                {t(
-                  "experience_section.note",
-                  "I combine formal training with hands-on product experience, learning through real systems, production challenges and continuous practice."
-                )}
-              </p>
+              <p>{t("experience_section.note")}</p>
             </div>
           </article>
 
@@ -123,6 +131,17 @@ export const Experiencia = () => {
                 {Array.isArray(certifications) &&
                   certifications.map((item, idx) => <li key={idx}>{item}</li>)}
               </ul>
+            </article>
+
+            <article className="experience-mini-card">
+              <div className="mini-card-heading">
+                <FiBriefcase />
+                <span>{t("experience_section.learning_focus")}</span>
+              </div>
+
+              <p className="mini-card-text">
+                {t("experience_section.learning_focus_text")}
+              </p>
             </article>
 
             <article className="experience-mini-card wide">

@@ -1,34 +1,32 @@
 html,
 body,
 #root {
-  width: 100%;
-  min-height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
+  width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
+  background: #000;
 }
 
-.hero {
+.hero-section {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
+  width: 100%;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #000;
+}
+
+.waves,
+.waves-canvas {
+  width: 100%;
+  height: 100%;
 }
 
 .waves {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
   z-index: 0;
 }
@@ -36,8 +34,6 @@ body {
 .waves-canvas {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -45,17 +41,160 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .scroll-float-text {
-  font-size: clamp(2.4rem, 11vw, 9rem);
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  font-size: clamp(2.4rem, 13vw, 9rem);
   font-weight: 900;
-  line-height: 1;
-  color: white;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
   text-align: center;
+  color: #fff;
+  overflow-wrap: break-word;
+}
+
+.char {
+  display: inline-block;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 100svh;
+    height: 100svh;
+  }
+
+  .scroll-float {
+    min-height: 100svh;
+    height: 100svh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scroll-float-text {
+    font-size: clamp(2.4rem, 15vw, 4rem);
+    line-height: 0.95;
+    padding: 0 18px;
+    letter-spacing: -0.055em;
+  }
+}
+
+/* iPhone chicos */
+@media (max-width: 390px) {
+  .scroll-float-text {
+    font-size: clamp(2.1rem, 14vw, 3.4rem);
+    padding: 0 14px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scroll-float-text {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .scroll-float-text {
+    font-size: clamp(5rem, 8vw, 10rem);
+  }
+}
+
+.focus-container {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.65rem, 3vw, 1.6rem);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.focus-word {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: clamp(1.45rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.focus-frame {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 12px var(--glow-color));
+}
+
+.corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--border-color);
+}
+
+.top-left {
+  top: -8px;
+  left: -8px;
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+
+.top-right {
+  top: -8px;
+  right: -8px;
+  border-top: 3px solid;
+  border-right: 3px solid;
+}
+
+.bottom-left {
+  bottom: -8px;
+  left: -8px;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+}
+
+.bottom-right {
+  bottom: -8px;
+  right: -8px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}
+
+@media (max-width: 767px) {
+  .focus-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 0 16px;
+    gap: 0.65rem;
+    flex-direction: column;
+  }
+
+  .focus-word {
+    font-size: clamp(1.55rem, 8vw, 2.35rem);
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .corner {
+    width: 14px;
+    height: 14px;
+  }
 }

@@ -427,52 +427,55 @@
   "proyecto_proyecto": "Projects",
   "hello_welcome": "Welcome",
   "portfolio_description": "Frontend Developer with a fullstack mindset, focused on building scalable systems and product-driven solutions. I’ve developed SaaS platforms, marketplaces, and internal tools used by teams across multiple countries, leading frontend architecture and contributing to backend development when needed. I work with React and TypeScript to build complex interfaces, integrate APIs, and deliver end-to-end solutions that combine user experience, business logic, and scalability.",
+  
   "experience_section": {
-    "professional_experience": "Professional Experience",
-    "sistran_title": "Sistran – Frontend Developer",
-    "sistran_date": "2022 – Present",
-    "sistran_stack": "Stack: React, Axios, Bootstrap, MUI, ReactFlow, Cytoscape, React Beautiful DnD",
-    "sistran_desc": "Lead frontend developer for Sistask, an internal Jira-style tool used by more than 150 real users in development, QA, support, and management teams in Argentina, Colombia, and Ecuador.",
-    "sistran_bullets": [
-      "Led the frontend from scratch alongside the backend team.",
-      "Dynamic interface for configuration by project and issue type.",
-      "Conditional logic according to workflow states.",
-      "Workflow visualization with ReactFlow and Cytoscape.",
-      "Permission system by role and project.",
-      "Key work for the system’s success and regional scalability."
-    ],
-    "scalabl_title": "Scalabl – Frontend Developer",
-    "scalabl_date": "Jan 2022 – Jul 2022",
-    "scalabl_desc": "Global educational platform present in more than 50 countries.",
-    "scalabl_bullets": [
-      "Interfaces in React, jQuery, and Python.",
-      "Worked with the UX/UI team for accessibility and smooth navigation.",
-      "Frontend integration with a Python backend.",
-      "Refactoring to improve performance and maintainability.",
-      "Direct impact on thousands of users across the Americas, Europe, and Africa."
-    ],
-    "academic_training": "Academic Education",
-    "teclab_title": "Teclab University",
-    "teclab_degree": "Technical Degree in Web Development",
-    "davinci_title": "Universidad Da Vinci",
-    "davinci_degree": "Web Design and Development",
-    "additional_courses": "Complementary Courses",
-    "additional_courses_list": [
-      "JavaScript / React – CoderHouse",
-      "Advanced JavaScript – EducaciónIT",
-      "React – EdTeam",
-      "UX/UI Design – Digital House"
-    ],
-    "certifications_in_progress": "Certifications in Progress",
-    "certifications_list": [
-      "HarvardX – Introduction to Computer Science"
-    ],
-    "languages": "Languages",
-    "languages_list": [
-      "English – Fluent",
-      "Spanish – Native"
-    ]
-  },
+  "professional_experience": "Professional Experience",
+  "eyebrow": "Education",
+  "academic_training": "Academic Background",
+  "subtitle": "Technical education, courses and continuous learning that support my experience building real digital products.",
+  "main_label": "Academic path",
+
+  "teclab_title": "Teclab Higher Technical Institute",
+  "teclab_degree": "Web Development Technical Degree — 2019–2021",
+
+  "davinci_title": "Da Vinci Institute",
+  "davinci_degree": "Web Design and Development — 2023",
+
+  "utn_title": "National Technological University",
+  "utn_degree": "Programming / Computer Science — 2024",
+
+  "computer_science_title": "Computer Science and Programming",
+  "computer_science_degree": "4.5 years of total training",
+
+  "career_start_title": "Professional career start",
+  "career_start_degree": "In 2022, I started my full-time career as a developer",
+
+  "note": "I combine formal education with hands-on experience building real systems, solving production challenges and continuously improving my skills.",
+
+  "additional_courses": "Additional Courses",
+"additional_courses_list": [
+  "Frontend Development with JavaScript and React – CoderHouse",
+  "Advanced JavaScript – EducaciónIT",
+  "React Development – EdTeam",
+  "TypeScript for scalable frontend applications – Platzi",
+  "Next.js for production-ready applications – Platzi",
+  "UX/UI Design – Digital House"
+],
+
+  "certifications_in_progress": "Certifications in Progress",
+  "certifications_list": [
+    "HarvardX – Introduction to Computer Science"
+  ],
+
+  "learning_focus": "Learning Focus",
+  "learning_focus_text": "My education is strengthened by constant practice in React, TypeScript, APIs, frontend architecture, SaaS products, marketplaces and AI-powered tools.",
+
+  "languages": "Languages",
+  "languages_list": [
+    "English – Fluent",
+    "Spanish – Native"
+  ]
+},
 
   "sistran": {
     "volver": "← Back",

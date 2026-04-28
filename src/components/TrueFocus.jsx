@@ -3,21 +3,20 @@ import { motion } from "framer-motion";
 import "./../css/TrueFocus.css";
 
 const TrueFocus = ({
-  manualMode = true,
+  manualMode = false,
   blurAmount = 5,
-  borderColor = "green",
-  glowColor = "rgba(0, 255, 0, 0.6)",
+  borderColor = "#00e5ff",
+  glowColor = "rgba(0, 229, 255, 0.65)",
   animationDuration = 0.25,
   pauseBetweenAnimations = 1.2,
 }) => {
-  const words = ["Selenia Sanchez,", "Frontend Developer"];
+  const words = ["Selenia Sanchez", "Frontend Developer"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
   const wordRefs = useRef([]);
   const [focusRect, setFocusRect] = useState(null);
 
-  // 🔁 AUTO MODE
   useEffect(() => {
     if (!manualMode) {
       const interval = setInterval(() => {
@@ -28,7 +27,6 @@ const TrueFocus = ({
     }
   }, [manualMode, animationDuration, pauseBetweenAnimations]);
 
-  // 📐 CALCULAR POSICIÓN DEL FRAME
   const updateFocus = () => {
     const el = wordRefs.current[currentIndex];
     const parent = containerRef.current;
@@ -47,13 +45,18 @@ const TrueFocus = ({
   };
 
   useEffect(() => {
-    updateFocus();
-    window.addEventListener("resize", updateFocus);
+    const timer = setTimeout(updateFocus, 50);
 
-    return () => window.removeEventListener("resize", updateFocus);
+    window.addEventListener("resize", updateFocus);
+    window.addEventListener("orientationchange", updateFocus);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateFocus);
+      window.removeEventListener("orientationchange", updateFocus);
+    };
   }, [currentIndex]);
 
-  // 🖱️ HOVER
   const handleEnter = (index) => {
     if (manualMode) setCurrentIndex(index);
   };
@@ -69,6 +72,7 @@ const TrueFocus = ({
             ref={(el) => (wordRefs.current[index] = el)}
             className="focus-word"
             onMouseEnter={() => handleEnter(index)}
+            onClick={() => setCurrentIndex(index)}
             style={{
               filter: isActive ? "blur(0px)" : `blur(${blurAmount}px)`,
               transition: `filter ${animationDuration}s ease`,

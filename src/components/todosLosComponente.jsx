@@ -14,31 +14,20 @@ import "../../src/App.css";
 export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
   return (
     <>
-      <section className="seccion-truefocus">
-        <Waves
-          lineColor="#fff"
-          backgroundColor="rgb(0, 0, 0)"
-          waveSpeedX={0.02}
-          waveSpeedY={0.01}
-          waveAmpX={40}
-          waveAmpY={20}
-          friction={0.9}
-          tension={0.01}
-          maxCursorMove={120}
-          xGap={12}
-          yGap={36}
-        />
+   <section className="hero-section">
+  <Waves
+    lineColor="rgba(255,255,255,0.75)"
+    backgroundColor="#000"
+    waveAmpX={28}
+    waveAmpY={14}
+    xGap={12}
+    yGap={30}
+  />
 
-        <div className="titulo-portafolio">
-          <TrueFocus
-            manualMode={false}
-            blurAmount={2}
-            borderColor="#00d4ff"
-            animationDuration={1}
-            pauseBetweenAnimations={3}
-          />
-        </div>
-      </section>
+  <div className="scroll-float">
+    <TrueFocus />
+  </div>
+</section>
 
       <section className="cajaFocus scroll-transition">
         <div className="columna-derecha scroll-transition">
