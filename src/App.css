@@ -1102,6 +1102,9 @@ p {
   }
 }
 
+/* =========================
+   BIO / ABOUT RESPONSIVE
+========================= */
 
 .mobile-about-tag,
 .mobile-portfolio-description,
@@ -1109,6 +1112,40 @@ p {
   display: none;
 }
 
+/* Desktop */
+@media screen and (min-width: 769px) {
+  .contenido-derecho {
+    max-width: 560px;
+  }
+
+  .cajaencryted {
+    max-width: 540px;
+    margin-top: 10px;
+  }
+
+  .all-letters {
+    display: block;
+    max-width: 520px;
+    font-size: 1.05rem !important;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .revealed {
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .encrypted {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .titulo-bienvenida {
+    margin-bottom: 32px;
+  }
+}
+
+/* Mobile */
 @media screen and (max-width: 768px) {
   .cajaFocus {
     padding: 70px 14px 95px;
@@ -1175,6 +1212,8 @@ p {
   }
 
   .cajaencryted {
+    width: 100%;
+    max-width: 100%;
     padding: 26px 22px;
     border-radius: 26px;
     background: rgba(255, 255, 255, 0.045);
@@ -1238,4 +1277,26 @@ p {
     font-size: 0.78rem;
     line-height: 1.5;
   }
+}
+
+@media screen and (max-width: 420px) {
+  .columna-derecha {
+    padding: 30px 18px 26px;
+  }
+
+  .mobile-portfolio-description p {
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .mobile-bio-cards {
+    gap: 12px;
+  }
+
+  .mobile-bio-card {
+    padding: 15px 12px;
+  }
+}
+.all-letters {
+  white-space: pre-line;
 }

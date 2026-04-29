@@ -446,9 +446,40 @@
   "titulo": "Proyectos",
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
-  "hello_welcome": "Bienvenido ",
-  "portfolio_description": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack. He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere. Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad.",
- "experience_section": {
+"hello_welcome": "Bienvenido",
+"portfolio_description": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack. He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere. Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad.",
+"portfolio_description_short": "Desarrolladora Frontend con mentalidad fullstack, enfocada en construir sistemas escalables y soluciones orientadas a producto.\n\nDesarrollo plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países.",
+"bio_section": {
+  "mobile_tag": "Hola, soy",
+  "mobile_intro": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack.",
+  "mobile_paragraph_1": "He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere.",
+  "mobile_paragraph_2": "Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad."
+},
+
+"bio_cards": [
+  {
+    "icon": "</>",
+    "title": "Desarrollo Frontend",
+    "text": "Interfaces modernas, accesibles y de alto rendimiento."
+  },
+  {
+    "icon": "▰",
+    "title": "Enfoque Fullstack",
+    "text": "Participo en todo el ciclo de vida del producto."
+  },
+  {
+    "icon": "↗",
+    "title": "Sistemas Escalables",
+    "text": "Arquitecturas sólidas pensadas para crecer."
+  },
+  {
+    "icon": "☷",
+    "title": "Trabajo en equipo",
+    "text": "Colaboro con equipos en múltiples países."
+  }
+],
+
+"experience_section": {
   "professional_experience": "Experiencia Profesional",
   "eyebrow": "Educación",
   "academic_training": "Formación Académica",
