@@ -402,24 +402,35 @@
 
   "items": {
     "scalabl": {
+      "title": "Scalabl",
       "alt": "Scalabl logo",
       "descripcion": "Global educational platform for innovation and entrepreneurship."
     },
     "sistran": {
-      "alt": "Sistran logo",
-      "descripcion": "Task and workflow management system for insurance consulting firms."
+      "title": "Sistask",
+      "alt": "Sistask logo",
+      "descripcion": "Internal ticket and workflow management platform that replaced Jira at Sistran, adopted across 17 countries."
     },
-        "dinosaurios": {
+    "dinosaurios": {
+      "title": "LACEV / APASUR",
       "alt": "Dinosaur Project Logo",
       "descripcion": "Scientific landing page for real-time paleontological campaigns in Patagonia, featuring livestreams, discoveries, voting, and donations."
     },
     "dogco": {
+      "title": "DogCo",
       "alt": "DogCo logo",
       "descripcion": "App that connects pet owners with walkers: requests, applications and live walk tracking."
     },
     "masRepuestos": {
-  "alt": "Mas Repuestos application",
-"descripcion": "Marketplace to search, compare, and buy auto parts in one place."}
+      "title": "Más Repuestos",
+      "alt": "Mas Repuestos application",
+      "descripcion": "Marketplace to search, compare, and buy auto parts in one place."
+    },
+    "dashboard": {
+      "title": "systemsDash",
+      "alt": "systemsDash — appointment management platform",
+      "descripcion": "SaaS for salons and appointment-based businesses: scheduling, clients, team, finances, and automations."
+    }
   },
 
   "titulo": "Projects",
@@ -508,8 +519,9 @@
 
   "sistran": {
     "volver": "← Back",
-    "titulo": "Experience at Sistran",
-    "logoAlt": "Sistran logo",
+    "titulo": "Sistask",
+    "subtitulo": "Experience at Sistran · Ticket and workflow management",
+    "logoAlt": "Sistask logo",
     "labels": {
       "rol": "Role",
       "duracion": "Duration",
@@ -686,16 +698,16 @@
   },
 
   "dashboard": {
-    "label": "SaaS + AI",
-    "title": "Appointment & Analytics SaaS",
-    "desc": "SaaS platform for appointment management, data analysis, operational statuses, and KPI dashboards.",
-    "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
-    "metricBig": "AI + data",
-    "metricSmall": "dashboards, appointments, and automated insights",
-    "detailOne": "Real-time dashboards",
-    "detailTwo": "Natural language queries",
-    "detailThree": "React · Node · PostgreSQL",
-    "impact": "I built a SaaS platform for appointment management and analytics with real-time dashboards, status management, and AI integration to query data in natural language and generate automated visual insights."
+    "label": "SaaS · Service businesses",
+    "title": "systemsDash",
+    "desc": "All-in-one platform for salons, clinics, and appointment-based businesses: scheduling, clients, team, finances, and automations in one panel.",
+    "stack": "React · Vite · Node.js · APIs",
+    "metricBig": "7 modules",
+    "metricSmall": "appointments, clients, finances, and automations",
+    "detailOne": "Real-time KPI dashboard",
+    "detailTwo": "Calendar and team management",
+    "detailThree": "Finances and automated workflows",
+    "impact": "I built systemsDash, a SaaS for service businesses that centralizes appointments, clients, staff, revenue, and automated communication in a clear, scalable interface."
   }
 },
 
@@ -707,47 +719,115 @@
     "talk": "Let’s discuss your project"
   },
 "dashboard": {
-  "badge": "AI-Powered SaaS Platform",
-  "title": "Smart Appointment & Analytics Dashboard",
-  "subtitle": "Complete appointment management platform with dynamic metrics, AI-powered analytics, and architecture ready to scale as a SaaS product.",
+  "badge": "SaaS · Salons, clinics & services",
+  "title": "systemsDash",
+  "subtitle": "Management software for appointment-based businesses.",
+  "intro": "systemsDash is a web platform that brings together daily operations for salons, aesthetics studios, barbershops, and clinics: bookings, clients, staff, revenue, and automated communication — so owners stop juggling spreadsheets, WhatsApp, and separate calendars.",
+  "heroAlt": "Responsive systemsDash view on desktop and mobile",
   "back": "Back to projects",
-
-  "management": {
-    "title": "Smart Appointment Management",
-    "desc": "Create, edit, and manage appointments with structured validation and automatic synchronization.",
-    "points": [
-      "Dynamic statuses (Pending, Confirmed, Cancelled, Completed)",
-      "Combined filters by date and status",
-      "Smart pagination",
-      "Automatic sync after updates"
-    ]
+  "highlights": [
+    "Schedule appointments and see the day at a glance with clear metrics",
+    "Manage clients, staff, and schedules from one system",
+    "Track income, transactions, and monthly goals",
+    "Automate reminders, loyalty, and campaigns via WhatsApp or email"
+  ],
+  "gallery": {
+    "title": "Product modules",
+    "desc": "Each screen solves a specific part of the business: operations, data, and growth."
   },
-
-  "analytics": {
-    "title": "Real-Time Analytics Dashboard",
-    "desc": "Dynamic metrics calculated from database with graphical visualization by service and worker.",
-    "points": [
-      "Total and per-status KPIs",
-      "Pie charts by service",
-      "Worker performance charts",
-      "Real-time data updates"
-    ]
+  "features": {
+    "overview": {
+      "tag": "Main panel",
+      "title": "Today's summary",
+      "desc": "Central view with appointment metrics (pending, confirmed, completed, cancelled), charts by service and staff member, and today's agenda with quick edit/delete actions.",
+      "alt": "systemsDash dashboard with metrics and daily agenda",
+      "points": [
+        "Appointment KPIs with totals by status",
+        "Distribution charts by service and staff",
+        "Filterable agenda by status and professional",
+        "One-click access to create a new appointment"
+      ]
+    },
+    "calendar": {
+      "tag": "Scheduling",
+      "title": "Appointment calendar",
+      "desc": "Visual calendar with month, week, and day views to plan schedules and bookings without losing business context.",
+      "alt": "Monthly appointment calendar in systemsDash",
+      "points": [
+        "Month navigation with Today button",
+        "Month, Week, and Day views",
+        "Appointments visible directly on the grid",
+        "Built for salons and aesthetic centers"
+      ]
+    },
+    "clients": {
+      "tag": "CRM",
+      "title": "Client management",
+      "desc": "Centralized database with search by name, email, or phone, pagination, and per-record edit and delete actions.",
+      "alt": "Client table with search and actions",
+      "points": [
+        "List with avatar, phone, and email",
+        "Search and refresh in real time",
+        "Add clients in one click",
+        "Ready to link with appointment history"
+      ]
+    },
+    "team": {
+      "tag": "Team",
+      "title": "Your team",
+      "desc": "Staff management with role, rating, contact info, and schedule access. Includes email invites to onboard new collaborators.",
+      "alt": "Team member cards with schedules",
+      "points": [
+        "Profiles with role and status (online, away)",
+        "Ratings and contact details",
+        "Link to schedules per staff member",
+        "Invite new members by email"
+      ]
+    },
+    "finances": {
+      "tag": "Finance",
+      "title": "Financial control",
+      "desc": "Panel for monthly income, online payments, cash balance, recent transactions, and monthly goal with breakdown by services and products.",
+      "alt": "Financial dashboard with income and transactions",
+      "points": [
+        "Total income with percentage change",
+        "Online payments and pending cash",
+        "Transaction table with status",
+        "Progress bar toward monthly goal"
+      ]
+    },
+    "workflows": {
+      "tag": "Automation",
+      "title": "Workflows & processes",
+      "desc": "Design automated flows with execution metrics, time saved, and success rate. Examples: 24h reminder, post-appointment coupon, and inactive client reactivation.",
+      "alt": "List of active automated workflows",
+      "points": [
+        "KPIs: runs, hours saved, and success rate",
+        "Triggers by time or event (end of appointment, inactivity)",
+        "Active / paused status per workflow",
+        "Create new flows from the panel"
+      ]
+    },
+    "automations": {
+      "tag": "Communication",
+      "title": "Automation center",
+      "desc": "Enable or disable channels like WhatsApp, email marketing, push notifications, and 24/7 booking bot with simple toggles — no technical setup.",
+      "alt": "Automation center with channel toggles",
+      "points": [
+        "WhatsApp for confirmations and reminders",
+        "Automatic birthday and promo campaigns",
+        "AI booking assistant bot (roadmap)",
+        "Upcoming Instagram and TikTok integration"
+      ]
+    }
   },
-
-  "ai": {
-    "title": "AI Analytical Engine",
-    "desc": "Integrated chat that generates structured reports with dynamic KPIs and automated visualizations.",
-    "points": [
-      "SaaS-style interface with floating chat",
-      "Structured report generation",
-      "Automatic fallback if OpenAI fails",
-      "Dynamically generated visual widgets"
-    ]
+  "stack": {
+    "title": "Technologies",
+    "items": ["React", "Vite", "React Router", "Modular CSS", "REST APIs", "Responsive design"]
   },
-
   "architecture": {
-    "title": "SaaS-Ready Architecture",
-    "desc": "REST backend with Prisma, frontend/backend separation, Context API for global state, and production-ready structure."
+    "title": "Built to scale",
+    "desc": "Modular frontend by section, unified sidebar navigation, global search with ⌘K shortcut, and structure ready to connect backend, payments, and more integrations as a multi-tenant SaaS product."
   }
 },
   "figma": { "desc": "Collaborative interface prototyping and user experience design." },

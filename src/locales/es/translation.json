@@ -423,24 +423,34 @@
   "Tecnologías": "Tecnologías",
   "items": {
     "scalabl": {
+      "title": "Scalabl",
       "alt": "Logo de Scalabl",
       "descripcion": "Plataforma educativa global de innovación y emprendimiento."
     },
     "sistran": {
-      "alt": "Logo de Sistran",
-      "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
+      "title": "Sistask",
+      "alt": "Logo de Sistask",
+      "descripcion": "Plataforma interna de gestión de tickets y workflows que reemplazó Jira en Sistran, con adopción en 17 países."
     },
     "dinosaurios": {
+      "title": "LACEV / APASUR",
       "alt": "Logo Dinosaurios",
       "descripcion": "Landing científica para campañas paleontológicas en la Patagonia. Incluye livestream, descubrimientos, votaciones y donaciones en tiempo real."
     },
     "dogco": {
+      "title": "DogCo",
       "alt": "Logo de DogCo",
       "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."
     },
     "masRepuestos": {
+      "title": "Más Repuestos",
       "alt": "Aplicación Mas Repuestos",
       "descripcion": "Marketplace para buscar, comparar y comprar repuestos automotrices en un solo lugar."
+    },
+    "dashboard": {
+      "title": "systemsDash",
+      "alt": "systemsDash — plataforma de gestión de citas",
+      "descripcion": "SaaS para salones y negocios con citas: agenda, clientes, equipo, finanzas y automatizaciones."
     }
   },
   "titulo": "Proyectos",
@@ -529,8 +539,9 @@
 },
   "sistran": {
     "volver": "← Volver",
-    "titulo": "Experiencia en Sistran",
-    "logoAlt": "Logo de Sistran",
+    "titulo": "Sistask",
+    "subtitulo": "Experiencia en Sistran · Gestión de tickets y workflows",
+    "logoAlt": "Logo de Sistask",
     "labels": {
       "rol": "Rol",
       "duracion": "Duración",
@@ -721,16 +732,16 @@
       "impact": "Diseñé y desarrollé la lógica central de un marketplace de dos lados para conectar dueños de mascotas y paseadores, incluyendo autenticación, roles, reservas y sincronización en tiempo real con Firebase."
     },
     "dashboard": {
-      "label": "SaaS + IA",
-      "title": "Appointment & Analytics SaaS",
-      "desc": "Plataforma SaaS para gestión de turnos, análisis de datos, estados operativos y dashboards KPI.",
-      "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
-      "metricBig": "IA + datos",
-      "metricSmall": "dashboards, turnos e insights automáticos",
-      "detailOne": "Dashboards en tiempo real",
-      "detailTwo": "Consultas en lenguaje natural",
-      "detailThree": "React · Node · PostgreSQL",
-      "impact": "Construí una plataforma SaaS de turnos y analítica con dashboards en tiempo real, gestión de estados e integración de IA para consultar datos en lenguaje natural y generar insights visuales automatizados."
+      "label": "SaaS · Negocios de servicios",
+      "title": "systemsDash",
+      "desc": "Plataforma integral para salones, clínicas y negocios con citas: agenda, clientes, equipo, finanzas y automatizaciones en un solo panel.",
+      "stack": "React · Vite · Node.js · APIs",
+      "metricBig": "7 módulos",
+      "metricSmall": "citas, clientes, finanzas y automatizaciones",
+      "detailOne": "Dashboard con KPIs en tiempo real",
+      "detailTwo": "Calendario y gestión de equipo",
+      "detailThree": "Finanzas y workflows automáticos",
+      "impact": "Desarrollé systemsDash, un SaaS para negocios de servicios que centraliza citas, clientes, colaboradores, ingresos y comunicaciones automatizadas con una interfaz clara y lista para escalar."
     }
   },
   "cta": {
@@ -738,43 +749,115 @@
     "talk": "Hablemos de tu proyecto"
   },
   "dashboard": {
-    "badge": "Plataforma SaaS con IA",
-    "title": "Smart Appointment & Analytics Dashboard",
-    "subtitle": "Plataforma completa de gestión de citas con métricas dinámicas, análisis automatizado con IA y arquitectura preparada para escalar como producto SaaS.",
+    "badge": "SaaS · Salones, clínicas y servicios",
+    "title": "systemsDash",
+    "subtitle": "Software de gestión para negocios que trabajan con citas.",
+    "intro": "systemsDash es una plataforma web que reúne en un solo lugar la operación diaria de un salón, estética, barbería o clínica: reservas, clientes, equipo, ingresos y comunicación automática. Está pensada para que el dueño del negocio vea el día a día sin saltar entre planillas, WhatsApp y agendas sueltas.",
+    "heroAlt": "Vista responsive de systemsDash en escritorio y móvil",
     "back": "Volver a proyectos",
-    "management": {
-      "title": "Gestión inteligente de citas",
-      "desc": "Permite crear, editar y administrar citas con validaciones estructuradas y sincronización automática.",
-      "points": [
-        "Estados dinámicos (Pendiente, Confirmada, Cancelada, Finalizada)",
-        "Filtros combinables por fecha y estado",
-        "Paginación inteligente",
-        "Sincronización automática post actualización"
-      ]
+    "highlights": [
+      "Agenda citas y visualiza el día en un panel con métricas claras",
+      "Administra clientes, colaboradores y sus horarios desde el mismo sistema",
+      "Controla ingresos, transacciones y metas mensuales",
+      "Automatiza recordatorios, fidelización y campañas por WhatsApp o email"
+    ],
+    "gallery": {
+      "title": "Módulos del producto",
+      "desc": "Cada pantalla resuelve una parte concreta del negocio: operación, datos y crecimiento."
     },
-    "analytics": {
-      "title": "Dashboard analítico en tiempo real",
-      "desc": "Métricas dinámicas calculadas desde base de datos con visualización gráfica por servicio y trabajador.",
-      "points": [
-        "KPI total y por estado",
-        "Gráficos tipo torta por servicio",
-        "Gráficos por trabajador",
-        "Datos en tiempo real"
-      ]
+    "features": {
+      "overview": {
+        "tag": "Panel principal",
+        "title": "Resumen del día",
+        "desc": "Vista central con métricas de citas (pendientes, confirmadas, finalizadas y canceladas), gráficos por servicio y por trabajador, y la agenda del día con acciones rápidas de editar o eliminar.",
+        "alt": "Dashboard de systemsDash con métricas y agenda del día",
+        "points": [
+          "KPIs de citas con totales por estado",
+          "Gráficos de distribución por servicio y colaborador",
+          "Agenda filtrable por estado y profesional",
+          "Acceso directo para crear una nueva cita"
+        ]
+      },
+      "calendar": {
+        "tag": "Agenda",
+        "title": "Calendario de citas",
+        "desc": "Calendario visual en vistas mes, semana y día para planificar horarios y reservas sin perder contexto del negocio.",
+        "alt": "Calendario mensual de citas en systemsDash",
+        "points": [
+          "Navegación por mes con botón «Hoy»",
+          "Vistas Mes, Semana y Día",
+          "Citas visibles directamente en la grilla",
+          "Ideal para salones y centros de estética"
+        ]
+      },
+      "clients": {
+        "tag": "CRM",
+        "title": "Gestión de clientes",
+        "desc": "Base de datos centralizada con búsqueda por nombre, email o teléfono, paginación y acciones de edición y eliminación por registro.",
+        "alt": "Tabla de clientes con búsqueda y acciones",
+        "points": [
+          "Listado con avatar, teléfono y correo",
+          "Búsqueda y refresco en tiempo real",
+          "Alta de clientes con un clic",
+          "Historial listo para vincular con citas"
+        ]
+      },
+      "team": {
+        "tag": "Equipo",
+        "title": "Tu equipo",
+        "desc": "Gestión de colaboradores con rol, valoración, contacto y acceso a horarios. Incluye invitación por email para sumar nuevo talento al negocio.",
+        "alt": "Tarjetas de miembros del equipo con horarios",
+        "points": [
+          "Perfiles con rol y estado (online, ausente)",
+          "Valoraciones y datos de contacto",
+          "Enlace a horarios por colaborador",
+          "Invitación de nuevos miembros por email"
+        ]
+      },
+      "finances": {
+        "tag": "Finanzas",
+        "title": "Control financiero",
+        "desc": "Panel de ingresos del mes, pagos online, balance en efectivo, transacciones recientes y meta mensual con desglose por servicios y productos.",
+        "alt": "Dashboard financiero con ingresos y transacciones",
+        "points": [
+          "Ingresos totales con variación porcentual",
+          "Pagos online y efectivo pendiente de cobro",
+          "Tabla de transacciones con estado",
+          "Barra de progreso hacia la meta mensual"
+        ]
+      },
+      "workflows": {
+        "tag": "Automatización",
+        "title": "Workflows y procesos",
+        "desc": "Diseño de flujos automáticos con métricas de ejecución, ahorro de tiempo y tasa de éxito. Ejemplos: recordatorio 24 h antes, cupón post-cita y reactivación de clientes inactivos.",
+        "alt": "Lista de workflows automáticos activos",
+        "points": [
+          "KPIs: ejecuciones, horas ahorradas y éxito",
+          "Triggers por tiempo o evento (fin de cita, inactividad)",
+          "Estados activo / pausado por workflow",
+          "Creación de nuevos flujos desde el panel"
+        ]
+      },
+      "automations": {
+        "tag": "Comunicación",
+        "title": "Centro de automatización",
+        "desc": "Activa o desactiva canales como WhatsApp, email marketing, notificaciones push y bot de reservas 24/7 desde interruptores simples, sin configuración técnica.",
+        "alt": "Centro de automatización con toggles de canales",
+        "points": [
+          "WhatsApp para confirmaciones y recordatorios",
+          "Campañas automáticas de cumpleaños y promos",
+          "Bot de reservas con asistente IA (roadmap)",
+          "Próxima integración con Instagram y TikTok"
+        ]
+      }
     },
-    "ai": {
-      "title": "Motor analítico con IA",
-      "desc": "Chat integrado que permite generar reportes estructurados con KPIs dinámicos y visualizaciones automáticas.",
-      "points": [
-        "Interfaz tipo SaaS con chat flotante",
-        "Generación de reportes estructurados",
-        "Fallback automático si OpenAI falla",
-        "Widgets visuales generados dinámicamente"
-      ]
+    "stack": {
+      "title": "Tecnologías",
+      "items": ["React", "Vite", "React Router", "CSS modular", "APIs REST", "Diseño responsive"]
     },
     "architecture": {
-      "title": "Arquitectura preparada para SaaS",
-      "desc": "Backend REST con Prisma, separación frontend/backend, Context API para estado global y sistema preparado para producción."
+      "title": "Producto pensado para escalar",
+      "desc": "Frontend modular por secciones, navegación lateral unificada, búsqueda global con atajo ⌘K y estructura lista para conectar backend, pagos y más integraciones como producto SaaS multi-tenant."
     }
   },
   "figma": {

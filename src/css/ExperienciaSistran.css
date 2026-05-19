@@ -210,6 +210,19 @@
 }
 
 /* Header */
+.header-sistran-titles {
+  flex: 1;
+  min-width: 0;
+}
+
+.sistran-subtitulo {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: #5b6b82;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
 .header-sistran {
   display: flex;
   align-items: flex-start;

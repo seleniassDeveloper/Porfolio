@@ -9,7 +9,7 @@ import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
-import dashboardImg from "../assets/imagenes/Dashboard/Dashboard1.png";
+import dashboardImg from "../assets/imagenes/Dashboard/systemsdash-hero.jpg";
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
@@ -20,28 +20,40 @@ export const ProyectosReales = () => {
       id: "scalabl",
       route: "/experiencia-scalabl",
       img: scalablImg,
-      type: "EdTech",
+      typeKey: "cases.scalabl.label",
+      titleKey: "cases.scalabl.title",
+      descKey: "cases.scalabl.desc",
+      altKey: "items.scalabl.alt",
       theme: "green",
     },
     {
       id: "sistran",
       route: "/experiencia-sistran",
       img: sistaskImg,
-      type: "Enterprise",
+      typeKey: "cases.sistask.label",
+      titleKey: "cases.sistask.title",
+      descKey: "cases.sistask.desc",
+      altKey: "items.sistran.alt",
       theme: "blue",
     },
     {
       id: "dinosaurios",
       route: "/Dinosaurios",
       img: dinoImg,
-      type: "Science",
+      typeKey: "cases.lacev.label",
+      titleKey: "cases.lacev.title",
+      descKey: "cases.lacev.desc",
+      altKey: "items.dinosaurios.alt",
       theme: "gold",
     },
     {
       id: "dashboard",
       route: "/proyecto-dashboard",
       img: dashboardImg,
-      type: "SaaS + AI",
+      typeKey: "cases.dashboard.label",
+      titleKey: "cases.dashboard.title",
+      descKey: "cases.dashboard.desc",
+      altKey: "items.dashboard.alt",
       theme: "purple",
       status: "in-progress",
     },
@@ -49,7 +61,10 @@ export const ProyectosReales = () => {
       id: "dogco",
       route: "/proyecto-dogco",
       img: logoDogco,
-      type: "Marketplace",
+      typeKey: "cases.dogco.label",
+      titleKey: "cases.dogco.title",
+      descKey: "cases.dogco.desc",
+      altKey: "items.dogco.alt",
       theme: "pink",
       status: "in-progress",
     },
@@ -57,7 +72,10 @@ export const ProyectosReales = () => {
       id: "masRepuestos",
       route: "/proyecto-mas-repuestos",
       img: masRepuestosImg,
-      type: "Mobile App",
+      typeKey: "cases.masRepuestos.label",
+      titleKey: "cases.masRepuestos.title",
+      descKey: "cases.masRepuestos.desc",
+      altKey: "items.masRepuestos.alt",
       theme: "orange",
     },
   ];
@@ -99,11 +117,11 @@ export const ProyectosReales = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="project-type">{p.type}</span>
+                  <span className="project-type">{t(p.typeKey)}</span>
                 </div>
 
                 <div className="project-image-frame">
-                  <img src={p.img} alt={t(`items.${p.id}.alt`)} loading="lazy" />
+                  <img src={p.img} alt={t(p.altKey)} loading="lazy" />
 
                   {isProgress && (
                     <div className="project-status-badge">
@@ -123,9 +141,9 @@ export const ProyectosReales = () => {
                     </span>
                   </div>
 
-                  <h3>{t(`items.${p.id}.title`, p.id)}</h3>
+                  <h3>{t(p.titleKey)}</h3>
 
-                  <p>{t(`items.${p.id}.descripcion`)}</p>
+                  <p>{t(p.descKey)}</p>
                 </div>
 
                 <button

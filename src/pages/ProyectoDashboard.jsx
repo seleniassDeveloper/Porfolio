@@ -2,34 +2,49 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../css/ProyectoDashboard.css";
 
-import dashboard1 from "../assets/imagenes/Dashboard/Dashboard1.png";
-import dashboard2 from "../assets/imagenes/Dashboard/Dasboard2.png";
-import dashboard3 from "../assets/imagenes/Dashboard/Dashboard3.png";
-import dashboard4 from "../assets/imagenes/Dashboard/Dashboard4.png";
+import heroImg from "../assets/imagenes/Dashboard/systemsdash-hero.jpg";
+import overviewImg from "../assets/imagenes/Dashboard/systemsdash-overview.png";
+import calendarImg from "../assets/imagenes/Dashboard/systemsdash-calendar.png";
+import clientsImg from "../assets/imagenes/Dashboard/systemsdash-clients.png";
+import teamImg from "../assets/imagenes/Dashboard/systemsdash-team.png";
+import financesImg from "../assets/imagenes/Dashboard/systemsdash-finances.png";
+import workflowsImg from "../assets/imagenes/Dashboard/systemsdash-workflows.png";
+import automationsImg from "../assets/imagenes/Dashboard/systemsdash-automations.png";
+
+const FEATURES = [
+  { key: "overview", image: overviewImg, reverse: false },
+  { key: "calendar", image: calendarImg, reverse: true },
+  { key: "clients", image: clientsImg, reverse: false },
+  { key: "team", image: teamImg, reverse: true },
+  { key: "finances", image: financesImg, reverse: false },
+  { key: "workflows", image: workflowsImg, reverse: true },
+  { key: "automations", image: automationsImg, reverse: false },
+];
 
 export default function ProyectoDashboard() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const highlights = t("dashboard.highlights", { returnObjects: true });
+  const stackItems = t("dashboard.stack.items", { returnObjects: true });
+
   return (
     <div className="pd-container">
-
-      {/* HERO */}
       <section className="pd-hero">
         <div className="pd-hero-text">
-          <span className="pd-badge">
-            {t("dashboard.badge")}
-          </span>
+          <span className="pd-badge">{t("dashboard.badge")}</span>
+          <h1 className="pd-title">{t("dashboard.title")}</h1>
+          <p className="pd-subtitle">{t("dashboard.subtitle")}</p>
+          <p className="pd-intro">{t("dashboard.intro")}</p>
 
-          <h1 className="pd-title">
-            {t("dashboard.title")}
-          </h1>
-
-          <p className="pd-subtitle">
-            {t("dashboard.subtitle")}
-          </p>
+          <ul className="pd-highlights">
+            {(Array.isArray(highlights) ? highlights : []).map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
 
           <button
+            type="button"
             className="pd-btn-primary"
             onClick={() => navigate("/proyectos")}
           >
@@ -38,73 +53,76 @@ export default function ProyectoDashboard() {
         </div>
 
         <div className="pd-hero-image">
-          <img src={dashboard1} alt="Dashboard principal" />
+          <img src={heroImg} alt={t("dashboard.heroAlt")} />
         </div>
       </section>
 
-      {/* GESTIÓN */}
-      <section className="pd-section split">
-        <div className="pd-image">
-          <img src={dashboard2} alt="Sistema de citas" />
-        </div>
-
-        <div className="pd-text">
-          <h2>{t("dashboard.management.title")}</h2>
-          <p>{t("dashboard.management.desc")}</p>
-
-          <ul>
-            <li>{t("dashboard.management.points.0")}</li>
-            <li>{t("dashboard.management.points.1")}</li>
-            <li>{t("dashboard.management.points.2")}</li>
-            <li>{t("dashboard.management.points.3")}</li>
-          </ul>
+      <section className="pd-gallery">
+        <h2>{t("dashboard.gallery.title")}</h2>
+        <p>{t("dashboard.gallery.desc")}</p>
+        <div className="pd-gallery-grid">
+          {FEATURES.map(({ key, image }) => (
+            <figure key={key} className="pd-gallery-card">
+              <img
+                src={image}
+                alt={t(`dashboard.features.${key}.alt`)}
+                loading="lazy"
+              />
+              <figcaption>{t(`dashboard.features.${key}.title`)}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
-      {/* MÉTRICAS */}
-      <section className="pd-section split reverse">
-        <div className="pd-text">
-          <h2>{t("dashboard.analytics.title")}</h2>
-          <p>{t("dashboard.analytics.desc")}</p>
+      {FEATURES.map(({ key, image, reverse }) => {
+        const points = t(`dashboard.features.${key}.points`, {
+          returnObjects: true,
+        });
 
-          <ul>
-            <li>{t("dashboard.analytics.points.0")}</li>
-            <li>{t("dashboard.analytics.points.1")}</li>
-            <li>{t("dashboard.analytics.points.2")}</li>
-            <li>{t("dashboard.analytics.points.3")}</li>
-          </ul>
-        </div>
+        return (
+          <section
+            key={key}
+            className={`pd-section split${reverse ? " reverse" : ""}`}
+          >
+            <div className="pd-image">
+              <img
+                src={image}
+                alt={t(`dashboard.features.${key}.alt`)}
+                loading="lazy"
+              />
+            </div>
 
-        <div className="pd-image">
-          <img src={dashboard3} alt="Métricas y gráficos" />
+            <div className="pd-text">
+              <span className="pd-feature-tag">
+                {t(`dashboard.features.${key}.tag`)}
+              </span>
+              <h2>{t(`dashboard.features.${key}.title`)}</h2>
+              <p>{t(`dashboard.features.${key}.desc`)}</p>
+              <ul>
+                {(Array.isArray(points) ? points : []).map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+      })}
+
+      <section className="pd-stack">
+        <h2>{t("dashboard.stack.title")}</h2>
+        <div className="pd-stack-grid">
+          {(Array.isArray(stackItems) ? stackItems : []).map((item) => (
+            <span key={item} className="pd-stack-pill">
+              {item}
+            </span>
+          ))}
         </div>
       </section>
 
-      {/* IA */}
-      <section className="pd-section split">
-        <div className="pd-image">
-          <img src={dashboard4} alt="Chat IA analítico" />
-        </div>
-
-        <div className="pd-text">
-          <h2>{t("dashboard.ai.title")}</h2>
-          <p>{t("dashboard.ai.desc")}</p>
-
-          <ul>
-            <li>{t("dashboard.ai.points.0")}</li>
-            <li>{t("dashboard.ai.points.1")}</li>
-            <li>{t("dashboard.ai.points.2")}</li>
-            <li>{t("dashboard.ai.points.3")}</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* ARQUITECTURA */}
       <section className="pd-final">
         <h2>{t("dashboard.architecture.title")}</h2>
         <p>{t("dashboard.architecture.desc")}</p>
       </section>
-
     </div>
   );
 }

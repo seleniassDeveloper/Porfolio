@@ -105,7 +105,10 @@ export const Sistran = () => {
         <main className="sistran-main">
           <div className="sistran-card fade-in">
             <div className="header-sistran">
-              <h1 className="titulo-animado">{t("sistran.titulo")}</h1>
+              <div className="header-sistran-titles">
+                <h1 className="titulo-animado">{t("sistran.titulo")}</h1>
+                <p className="sistran-subtitulo">{t("sistran.subtitulo")}</p>
+              </div>
 
               <div className="tabs-sistran" role="tablist" aria-label={t("sistaskGuide.tabsAria")}>
                 <button
