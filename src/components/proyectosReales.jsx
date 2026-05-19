@@ -9,7 +9,7 @@ import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
-import dashboardImg from "../assets/imagenes/Dashboard/systemsdash-hero.jpg";
+import systemsDashLogo from "../assets/imagenes/Dashboard/systemsdash-logo.svg";
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
@@ -49,7 +49,8 @@ export const ProyectosReales = () => {
     {
       id: "dashboard",
       route: "/proyecto-dashboard",
-      img: dashboardImg,
+      img: systemsDashLogo,
+      imageVariant: "logo",
       typeKey: "cases.dashboard.label",
       titleKey: "cases.dashboard.title",
       descKey: "cases.dashboard.desc",
@@ -120,7 +121,11 @@ export const ProyectosReales = () => {
                   <span className="project-type">{t(p.typeKey)}</span>
                 </div>
 
-                <div className="project-image-frame">
+                <div
+                  className={`project-image-frame${
+                    p.imageVariant === "logo" ? " is-logo" : ""
+                  }`}
+                >
                   <img src={p.img} alt={t(p.altKey)} loading="lazy" />
 
                   {isProgress && (
