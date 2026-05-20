@@ -57,7 +57,7 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
               </div>
 
               <div className="orb-imagen">
-                <img src={YosiendoFeliz} alt="Selenia" />
+                <img src={YosiendoFeliz} alt="Selenia Sanchez" />
               </div>
             </div>
           </div>
