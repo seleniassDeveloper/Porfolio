@@ -2,7 +2,6 @@
 import DecryptedText from "./DecryptedText";
 import { Experiencia } from "./experiencia";
 import { Formulario } from "./formulario";
-import Orb from "./Orb";
 import Particles from "./Particles";
 import { ProyectosReales } from "./proyectosReales";
 import { Tecnologias } from "./tecnologias";
@@ -46,18 +45,10 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
           </div>
 
           <div className="columna-izquierda scroll-transition">
-            <div className="orb-fondo">
-              <div className="orb-wrapper">
-                <Orb
-                  hoverIntensity={0.5}
-                  rotateOnHover={true}
-                  hue={0}
-                  forceHoverState={false}
-                />
-              </div>
-
-              <div className="orb-imagen">
-                <img src={YosiendoFeliz} alt="Selenia Sanchez" />
+            <div className="profile-showcase">
+              <div className="profile-glow" aria-hidden="true" />
+              <div className="profile-portrait">
+                <img src={YosiendoFeliz} alt="Selenia Sanchez" loading="eager" />
               </div>
             </div>
           </div>
