@@ -9,7 +9,7 @@ import sistaskImg from "../assets/imagenes/sistran-logo.png";
 import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
-import dashboardImg from "../assets/imagenes/Dashboard/Dashboard1.png";
+import dashboardImg from "../Aura Pictures/logoAuraDas.png";
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
@@ -42,8 +42,7 @@ export const ProyectosReales = () => {
       route: "/proyecto-dashboard",
       img: dashboardImg,
       type: "SaaS + AI",
-      theme: "purple",
-      status: "in-progress",
+      theme: "pink",
     },
     {
       id: "dogco",

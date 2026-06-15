@@ -441,6 +441,10 @@
     "masRepuestos": {
       "alt": "Aplicación Mas Repuestos",
       "descripcion": "Marketplace para buscar, comparar y comprar repuestos automotrices en un solo lugar."
+    },
+    "dashboard": {
+      "title": "AuraDash",
+      "descripcion": "Plataforma SaaS integral de gestión de negocios con agendamiento inteligente, finanzas y métricas IA automatizadas."
     }
   },
   "titulo": "Proyectos",
@@ -738,43 +742,92 @@
     "talk": "Hablemos de tu proyecto"
   },
   "dashboard": {
-    "badge": "Plataforma SaaS con IA",
-    "title": "Smart Appointment & Analytics Dashboard",
-    "subtitle": "Plataforma completa de gestión de citas con métricas dinámicas, análisis automatizado con IA y arquitectura preparada para escalar como producto SaaS.",
+    "badge": "Plataforma SaaS en Producción",
+    "title": "AuraDash: Smart Dashboard & Management",
+    "subtitle": "Sistema integral de gestión para negocios. Incluye agendamiento inteligente, control financiero, gestión de personal, inventario y workflows automatizados, ya disponible en auradash.digital.com.",
     "back": "Volver a proyectos",
-    "management": {
-      "title": "Gestión inteligente de citas",
-      "desc": "Permite crear, editar y administrar citas con validaciones estructuradas y sincronización automática.",
-      "points": [
-        "Estados dinámicos (Pendiente, Confirmada, Cancelada, Finalizada)",
-        "Filtros combinables por fecha y estado",
-        "Paginación inteligente",
-        "Sincronización automática post actualización"
-      ]
-    },
-    "analytics": {
-      "title": "Dashboard analítico en tiempo real",
-      "desc": "Métricas dinámicas calculadas desde base de datos con visualización gráfica por servicio y trabajador.",
-      "points": [
-        "KPI total y por estado",
-        "Gráficos tipo torta por servicio",
-        "Gráficos por trabajador",
-        "Datos en tiempo real"
-      ]
-    },
-    "ai": {
-      "title": "Motor analítico con IA",
-      "desc": "Chat integrado que permite generar reportes estructurados con KPIs dinámicos y visualizaciones automáticas.",
-      "points": [
-        "Interfaz tipo SaaS con chat flotante",
-        "Generación de reportes estructurados",
-        "Fallback automático si OpenAI falla",
-        "Widgets visuales generados dinámicamente"
-      ]
-    },
-    "architecture": {
-      "title": "Arquitectura preparada para SaaS",
-      "desc": "Backend REST con Prisma, separación frontend/backend, Context API para estado global y sistema preparado para producción."
+    "visit": "Visitar sitio en vivo",
+    "modules": {
+      "dashboard": {
+        "title": "Panel de Control",
+        "desc": "Pantalla de inicio y central de monitoreo en tiempo real.",
+        "points": [
+          "Gadgets KPI: Facturación, Comisiones, Ganancia Neta y Stock crítico.",
+          "Gráficos dinámicos comparativos con Recharts.",
+          "Agenda rápida del día y resumen de métodos de pago.",
+          "Configuración modular persistida en base de datos."
+        ]
+      },
+      "agenda": {
+        "title": "Agenda Inteligente",
+        "desc": "Herramienta principal de agendamiento y control diario.",
+        "points": [
+          "Calendario interactivo con código de colores por profesional.",
+          "Buscador automático de huecos y Lista de Espera integrada.",
+          "Cálculo dinámico de duración y precio de servicios.",
+          "Integración con recordatorios por WhatsApp Web."
+        ]
+      },
+      "crm": {
+        "title": "Base de Clientes (CRM)",
+        "desc": "Directorio avanzado de clientes y fichas técnicas.",
+        "points": [
+          "Perfil del cliente con historial de visitas y ticket promedio.",
+          "Ficha técnica para fórmulas, diagnósticos y notas.",
+          "Galería de imágenes 'Antes y Después' en la nube.",
+          "Indicadores de retención y riesgo de abandono."
+        ]
+      },
+      "team": {
+        "title": "Gestión de Equipo",
+        "desc": "Control de personal, horarios y liquidaciones.",
+        "points": [
+          "Definición de turnos, horarios y pausas de almuerzo.",
+          "Bloqueo automático en agenda fuera de horario laboral.",
+          "Cálculo automatizado de comisiones por profesional.",
+          "Historial de pagos y liquidación de saldos pendientes."
+        ]
+      },
+      "finance": {
+        "title": "Finanzas & Caja",
+        "desc": "Gestión de ingresos, egresos y control de efectivo.",
+        "points": [
+          "Control de Caja Diaria (Apertura, Movimientos, Arqueo).",
+          "Balance automático cruzado con pagos electrónicos.",
+          "Registro y categorización de gastos operativos.",
+          "Auditoría de diferencias de caja y cierres de jornada."
+        ]
+      },
+      "inventory": {
+        "title": "Inventario ERP",
+        "desc": "Control total de stock, lotes y consumo automatizado.",
+        "points": [
+          "Control de Lotes (FIFO) y alertas de vencimiento (semáforo).",
+          "Reglas de Consumo: Descuento automático de insumos al cobrar citas.",
+          "Generación de órdenes de compra para reposición.",
+          "Valorización de stock y detección de puntos de quiebre."
+        ]
+      },
+      "automations": {
+        "title": "Copilot IA & Workflows",
+        "desc": "Módulo de inteligencia operativa y flujos automáticos.",
+        "points": [
+          "Constructor visual de Workflows (Triggers y Acciones).",
+          "Sugerencias de la IA basadas en el análisis de PostgreSQL.",
+          "Campañas automáticas para recuperar clientes fugados.",
+          "Alertas proactivas de inventario y días de baja demanda."
+        ]
+      },
+      "config": {
+        "title": "Configuración y Roles",
+        "desc": "Administración de seguridad y personalización.",
+        "points": [
+          "Matriz de Roles (RBAC) con más de 70 permisos individuales.",
+          "Actualización de permisos aplicados en caliente a sesiones activas.",
+          "Configuración de marca, sucursales y estética visual.",
+          "Importador masivo sincronizado con Google Sheets."
+        ]
+      }
     }
   },
   "figma": {

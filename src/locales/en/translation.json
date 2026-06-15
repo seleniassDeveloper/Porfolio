@@ -418,8 +418,13 @@
       "descripcion": "App that connects pet owners with walkers: requests, applications and live walk tracking."
     },
     "masRepuestos": {
-  "alt": "Mas Repuestos application",
-"descripcion": "Marketplace to search, compare, and buy auto parts in one place."}
+      "alt": "Mas Repuestos application",
+      "descripcion": "Marketplace to search, compare, and buy auto parts in one place."
+    },
+    "dashboard": {
+      "title": "AuraDash",
+      "descripcion": "Comprehensive SaaS business management platform with smart scheduling, financial control, and automated AI metrics."
+    }
   },
 
   "titulo": "Projects",
@@ -704,54 +709,107 @@
 
   "cta": {
     "hire": "Hire me on Upwork",
-    "talk": "Let’s discuss your project"
+    "talk": "Let's discuss your project"
   },
-"dashboard": {
-  "badge": "AI-Powered SaaS Platform",
-  "title": "Smart Appointment & Analytics Dashboard",
-  "subtitle": "Complete appointment management platform with dynamic metrics, AI-powered analytics, and architecture ready to scale as a SaaS product.",
+  "dashboard": {
+    "badge": "Live SaaS Platform",
+  "title": "AuraDash: Smart Dashboard & Management",
+  "subtitle": "Comprehensive business management system including smart scheduling, financial control, staff management, inventory, and automated workflows. Live at auradash.digital.com.",
   "back": "Back to projects",
-
-  "management": {
-    "title": "Smart Appointment Management",
-    "desc": "Create, edit, and manage appointments with structured validation and automatic synchronization.",
-    "points": [
-      "Dynamic statuses (Pending, Confirmed, Cancelled, Completed)",
-      "Combined filters by date and status",
-      "Smart pagination",
-      "Automatic sync after updates"
-    ]
-  },
-
-  "analytics": {
-    "title": "Real-Time Analytics Dashboard",
-    "desc": "Dynamic metrics calculated from database with graphical visualization by service and worker.",
-    "points": [
-      "Total and per-status KPIs",
-      "Pie charts by service",
-      "Worker performance charts",
-      "Real-time data updates"
-    ]
-  },
-
-  "ai": {
-    "title": "AI Analytical Engine",
-    "desc": "Integrated chat that generates structured reports with dynamic KPIs and automated visualizations.",
-    "points": [
-      "SaaS-style interface with floating chat",
-      "Structured report generation",
-      "Automatic fallback if OpenAI fails",
-      "Dynamically generated visual widgets"
-    ]
-  },
-
-  "architecture": {
-    "title": "SaaS-Ready Architecture",
-    "desc": "REST backend with Prisma, frontend/backend separation, Context API for global state, and production-ready structure."
+  "visit": "Visit Live Site",
+  "modules": {
+    "dashboard": {
+      "title": "Control Panel",
+      "desc": "Home screen and real-time monitoring center.",
+      "points": [
+        "KPI Gadgets: Revenue, Commissions, Net Profit, and Critical Stock.",
+        "Dynamic comparative charts built with Recharts.",
+        "Quick daily agenda and payment method summaries.",
+        "Modular layout configuration persisted in the database."
+      ]
+    },
+    "agenda": {
+      "title": "Smart Scheduling",
+      "desc": "Main scheduling and daily control tool.",
+      "points": [
+        "Interactive calendar color-coded by professional.",
+        "Automated availability finder and Waitlist management.",
+        "Dynamic calculation of service duration and pricing.",
+        "Integration with WhatsApp Web for appointment reminders."
+      ]
+    },
+    "crm": {
+      "title": "Client Base (CRM)",
+      "desc": "Advanced client directory and technical records.",
+      "points": [
+        "Client profile with visit history and average ticket.",
+        "Technical dossier for chemical formulas, diagnostics, and notes.",
+        "Cloud-based 'Before & After' image gallery.",
+        "Retention indicators and churn risk alerts."
+      ]
+    },
+    "team": {
+      "title": "Team Management",
+      "desc": "Staff control, schedules, and payroll settlements.",
+      "points": [
+        "Definition of shifts, schedules, and lunch breaks.",
+        "Automatic calendar blocking outside working hours.",
+        "Automated calculation of professional commissions.",
+        "Payment history and outstanding balance settlement."
+      ]
+    },
+    "finance": {
+      "title": "Finance & Cash Register",
+      "desc": "Management of income, expenses, and daily cash control.",
+      "points": [
+        "Daily Cash Register control (Opening, Movements, Closing).",
+        "Automatic cross-balance with electronic payments.",
+        "Registration and categorization of operational expenses.",
+        "Audit of cash discrepancies and daily closing reports."
+      ]
+    },
+    "inventory": {
+      "title": "ERP Inventory",
+      "desc": "Full stock control, batches, and automated consumption.",
+      "points": [
+        "Batch control (FIFO) and expiration alerts (traffic light system).",
+        "Consumption Rules: Automatic inventory deduction upon appointment checkout.",
+        "Generation of purchase orders for stock replenishment.",
+        "Stock valuation and detection of breaking points."
+      ]
+    },
+    "automations": {
+      "title": "Copilot AI & Workflows",
+      "desc": "Operational intelligence module and automated workflows.",
+      "points": [
+        "Visual Workflow Builder (Triggers and Actions).",
+        "AI suggestions based on PostgreSQL data analysis.",
+        "Automated campaigns to recover churned clients.",
+        "Proactive alerts for inventory and low-demand days."
+      ]
+    },
+    "config": {
+      "title": "Configuration & Roles",
+      "desc": "Security administration and customization.",
+      "points": [
+        "Role Matrix (RBAC) with over 70 individual permissions.",
+        "Hot-applied permission updates to active sessions.",
+        "Brand, branch, and visual aesthetics configuration.",
+        "Mass importer synchronized with Google Sheets."
+      ]
+    }
   }
 },
-  "figma": { "desc": "Collaborative interface prototyping and user experience design." },
-  "canva": { "desc": "Quick graphic design and social media content creation." },
-  "photoshop": { "desc": "Professional image editing and digital composition." },
-  "illustrator": { "desc": "Vector graphics creation and print-ready material." }
+  "figma": {
+    "desc": "Collaborative interface prototyping and user experience design."
+  },
+  "canva": {
+    "desc": "Quick graphic design and social media content creation."
+  },
+  "photoshop": {
+    "desc": "Professional image editing and digital composition."
+  },
+  "illustrator": {
+    "desc": "Vector graphics creation and print-ready material."
+  }
 }
