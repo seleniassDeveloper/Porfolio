@@ -697,15 +697,15 @@
 
   "dashboard": {
     "label": "SaaS · Service businesses",
-    "title": "systemsDash",
-    "desc": "All-in-one platform for salons, clinics, and appointment-based businesses: scheduling, clients, team, finances, and automations in one panel.",
-    "stack": "React · Vite · Node.js · APIs",
-    "metricBig": "7 modules",
-    "metricSmall": "appointments, clients, finances, and automations",
-    "detailOne": "Real-time KPI dashboard",
-    "detailTwo": "Calendar and team management",
-    "detailThree": "Finances and automated workflows",
-    "impact": "I built systemsDash, a SaaS for service businesses that centralizes appointments, clients, staff, revenue, and automated communication in a clear, scalable interface."
+    "title": "AuraDash Suite",
+    "desc": "The ultimate all-in-one ERP for managing and scaling businesses: smart scheduling, CRM, finances, inventory, and AI within a centralized ecosystem.",
+    "stack": "React · Vite · Node.js · PostgreSQL",
+    "metricBig": "8 modules",
+    "metricSmall": "ERP, CRM, Inventory, and integrated Automations",
+    "detailOne": "Copilot AI & Workflows",
+    "detailTwo": "ERP Inventory & Finances",
+    "detailThree": "Smart Scheduling & CRM",
+    "impact": "I built AuraDash, a powerful B2B SaaS platform that centralizes entire operations. It features AI-driven insights, strict cash control, real-time stock deduction, and a scalable multi-tenant architecture."
   }
 },
 
