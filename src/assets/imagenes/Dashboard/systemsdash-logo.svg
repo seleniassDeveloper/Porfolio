@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="systemsDash">
+  <defs>
+    <linearGradient id="sd-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c00ff"/>
+      <stop offset="100%" stop-color="#00bfff"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="48" fill="#0c0c14"/>
+  <rect x="44" y="52" width="152" height="104" rx="18" fill="url(#sd-grad)" opacity="0.95"/>
+  <rect x="62" y="72" width="52" height="10" rx="5" fill="#ffffff" opacity="0.95"/>
+  <rect x="62" y="92" width="116" height="8" rx="4" fill="#ffffff" opacity="0.55"/>
+  <rect x="62" y="108" width="96" height="8" rx="4" fill="#ffffff" opacity="0.55"/>
+  <rect x="62" y="124" width="108" height="8" rx="4" fill="#ffffff" opacity="0.55"/>
+  <circle cx="176" cy="132" r="14" fill="#ffffff" opacity="0.9"/>
+  <path d="M170 132 L174 136 L182 126" stroke="#6c00ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="120" y="192" text-anchor="middle" fill="#ffffff" font-family="Manrope, system-ui, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.5">systemsDash</text>
+</svg>

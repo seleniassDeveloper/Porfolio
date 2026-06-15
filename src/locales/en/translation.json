@@ -402,18 +402,22 @@
 
   "items": {
     "scalabl": {
+      "title": "Scalabl",
       "alt": "Scalabl logo",
       "descripcion": "Global educational platform for innovation and entrepreneurship."
     },
     "sistran": {
-      "alt": "Sistran logo",
-      "descripcion": "Task and workflow management system for insurance consulting firms."
+      "title": "Sistask",
+      "alt": "Sistask logo",
+      "descripcion": "Internal ticket and workflow management platform that replaced Jira at Sistran, adopted across 17 countries."
     },
-        "dinosaurios": {
+    "dinosaurios": {
+      "title": "LACEV / APASUR",
       "alt": "Dinosaur Project Logo",
       "descripcion": "Scientific landing page for real-time paleontological campaigns in Patagonia, featuring livestreams, discoveries, voting, and donations."
     },
     "dogco": {
+      "title": "DogCo",
       "alt": "DogCo logo",
       "descripcion": "App that connects pet owners with walkers: requests, applications and live walk tracking."
     },
@@ -513,8 +517,9 @@
 
   "sistran": {
     "volver": "← Back",
-    "titulo": "Experience at Sistran",
-    "logoAlt": "Sistran logo",
+    "titulo": "Sistask",
+    "subtitulo": "Experience at Sistran · Ticket and workflow management",
+    "logoAlt": "Sistask logo",
     "labels": {
       "rol": "Role",
       "duracion": "Duration",
@@ -691,16 +696,16 @@
   },
 
   "dashboard": {
-    "label": "SaaS + AI",
-    "title": "Appointment & Analytics SaaS",
-    "desc": "SaaS platform for appointment management, data analysis, operational statuses, and KPI dashboards.",
-    "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
-    "metricBig": "AI + data",
-    "metricSmall": "dashboards, appointments, and automated insights",
-    "detailOne": "Real-time dashboards",
-    "detailTwo": "Natural language queries",
-    "detailThree": "React · Node · PostgreSQL",
-    "impact": "I built a SaaS platform for appointment management and analytics with real-time dashboards, status management, and AI integration to query data in natural language and generate automated visual insights."
+    "label": "SaaS · Service businesses",
+    "title": "systemsDash",
+    "desc": "All-in-one platform for salons, clinics, and appointment-based businesses: scheduling, clients, team, finances, and automations in one panel.",
+    "stack": "React · Vite · Node.js · APIs",
+    "metricBig": "7 modules",
+    "metricSmall": "appointments, clients, finances, and automations",
+    "detailOne": "Real-time KPI dashboard",
+    "detailTwo": "Calendar and team management",
+    "detailThree": "Finances and automated workflows",
+    "impact": "I built systemsDash, a SaaS for service businesses that centralizes appointments, clients, staff, revenue, and automated communication in a clear, scalable interface."
   }
 },
 

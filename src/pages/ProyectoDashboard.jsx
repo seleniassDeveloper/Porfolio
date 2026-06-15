@@ -87,22 +87,24 @@ export default function ProyectoDashboard() {
 
   const currentModule = modules.find(m => m.id === activeModule) || modules[0];
 
+  const highlights = t("dashboard.highlights", { returnObjects: true });
+  const stackItems = t("dashboard.stack.items", { returnObjects: true });
+
   return (
     <div className="pd-container">
       {/* HERO */}
       <section className="pd-hero">
         <div className="pd-hero-text">
-          <span className="pd-badge">
-            {t("dashboard.badge")}
-          </span>
+          <span className="pd-badge">{t("dashboard.badge")}</span>
+          <h1 className="pd-title">{t("dashboard.title")}</h1>
+          <p className="pd-subtitle">{t("dashboard.subtitle")}</p>
+          <p className="pd-intro">{t("dashboard.intro")}</p>
 
-          <h1 className="pd-title">
-            {t("dashboard.title")}
-          </h1>
-
-          <p className="pd-subtitle">
-            {t("dashboard.subtitle")}
-          </p>
+          <ul className="pd-highlights">
+            {(Array.isArray(highlights) ? highlights : []).map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
 
           <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <button

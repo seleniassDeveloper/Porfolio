@@ -423,22 +423,27 @@
   "Tecnologías": "Tecnologías",
   "items": {
     "scalabl": {
+      "title": "Scalabl",
       "alt": "Logo de Scalabl",
       "descripcion": "Plataforma educativa global de innovación y emprendimiento."
     },
     "sistran": {
-      "alt": "Logo de Sistran",
-      "descripcion": "Sistema de gestión de tareas y workflows para consultoras de seguros."
+      "title": "Sistask",
+      "alt": "Logo de Sistask",
+      "descripcion": "Plataforma interna de gestión de tickets y workflows que reemplazó Jira en Sistran, con adopción en 17 países."
     },
     "dinosaurios": {
+      "title": "LACEV / APASUR",
       "alt": "Logo Dinosaurios",
       "descripcion": "Landing científica para campañas paleontológicas en la Patagonia. Incluye livestream, descubrimientos, votaciones y donaciones en tiempo real."
     },
     "dogco": {
+      "title": "DogCo",
       "alt": "Logo de DogCo",
       "descripcion": "App que conecta dueños con paseadores: solicitudes, postulaciones y seguimiento del paseo."
     },
     "masRepuestos": {
+      "title": "Más Repuestos",
       "alt": "Aplicación Mas Repuestos",
       "descripcion": "Marketplace para buscar, comparar y comprar repuestos automotrices en un solo lugar."
     },
@@ -533,8 +538,9 @@
 },
   "sistran": {
     "volver": "← Volver",
-    "titulo": "Experiencia en Sistran",
-    "logoAlt": "Logo de Sistran",
+    "titulo": "Sistask",
+    "subtitulo": "Experiencia en Sistran · Gestión de tickets y workflows",
+    "logoAlt": "Logo de Sistask",
     "labels": {
       "rol": "Rol",
       "duracion": "Duración",
@@ -725,16 +731,16 @@
       "impact": "Diseñé y desarrollé la lógica central de un marketplace de dos lados para conectar dueños de mascotas y paseadores, incluyendo autenticación, roles, reservas y sincronización en tiempo real con Firebase."
     },
     "dashboard": {
-      "label": "SaaS + IA",
-      "title": "Appointment & Analytics SaaS",
-      "desc": "Plataforma SaaS para gestión de turnos, análisis de datos, estados operativos y dashboards KPI.",
-      "stack": "React · Node.js · Prisma · PostgreSQL · APIs",
-      "metricBig": "IA + datos",
-      "metricSmall": "dashboards, turnos e insights automáticos",
-      "detailOne": "Dashboards en tiempo real",
-      "detailTwo": "Consultas en lenguaje natural",
-      "detailThree": "React · Node · PostgreSQL",
-      "impact": "Construí una plataforma SaaS de turnos y analítica con dashboards en tiempo real, gestión de estados e integración de IA para consultar datos en lenguaje natural y generar insights visuales automatizados."
+      "label": "SaaS · Negocios de servicios",
+      "title": "systemsDash",
+      "desc": "Plataforma integral para salones, clínicas y negocios con citas: agenda, clientes, equipo, finanzas y automatizaciones en un solo panel.",
+      "stack": "React · Vite · Node.js · APIs",
+      "metricBig": "7 módulos",
+      "metricSmall": "citas, clientes, finanzas y automatizaciones",
+      "detailOne": "Dashboard con KPIs en tiempo real",
+      "detailTwo": "Calendario y gestión de equipo",
+      "detailThree": "Finanzas y workflows automáticos",
+      "impact": "Desarrollé systemsDash, un SaaS para negocios de servicios que centraliza citas, clientes, colaboradores, ingresos y comunicaciones automatizadas con una interfaz clara y lista para escalar."
     }
   },
   "cta": {
