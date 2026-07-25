@@ -730,7 +730,7 @@
 
   "dashboard": {
     "label": "SaaS Enterprise · ERP & CRM",
-    "title": "AuraDash Suite",
+    "title": "AuraDash",
     "desc": "Comprehensive SaaS platform for service businesses: Client CRM, inventory ERP with real-time stock deduction, Copilot AI automations, and direct integration with Google Sheets & WhatsApp Web.",
     "stack": "React · Vite · Node.js · PostgreSQL · Google Sheets API",
     "metricBig": "8 modules",

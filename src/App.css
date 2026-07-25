@@ -9,27 +9,27 @@
 }
 
 :root {
-  --app-bg: #0b0f19;
-  --app-surface: rgba(17, 24, 39, 0.75);
-  --app-surface-2: rgba(30, 41, 59, 0.85);
-  --app-border: rgba(255, 255, 255, 0.08);
+  --app-bg: #fafafa;
+  --app-surface: #ffffff;
+  --app-surface-2: #f1f5f9;
+  --app-border: #e2e8f0;
 
-  --app-text: #f8fafc;
-  --app-muted: #94a3b8;
+  --app-text: #0f172a;
+  --app-muted: #475569;
 
-  --app-blue: #3b82f6;
-  --app-purple: #6366f1;
-  --app-cyan: #38bdf8;
-  --app-orange: #f59e0b;
-  --app-green: #10b981;
+  --app-blue: #2563eb;
+  --app-purple: #4f46e5;
+  --app-cyan: #0284c7;
+  --app-orange: #d97706;
+  --app-green: #059669;
 
   --app-radius-sm: 14px;
   --app-radius-md: 20px;
   --app-radius-lg: 28px;
 
-  --app-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  --app-glow-blue: 0 0 35px rgba(59, 130, 246, 0.25);
-  --app-glow-purple: 0 0 35px rgba(99, 102, 241, 0.25);
+  --app-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --app-glow-blue: 0 8px 24px rgba(37, 99, 235, 0.12);
+  --app-glow-purple: 0 8px 24px rgba(79, 70, 229, 0.12);
 }
 
 html,
@@ -60,10 +60,7 @@ p {
   width: 100%;
   height: 850px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(0, 212, 255, 0.14), transparent 30%),
-    radial-gradient(circle at 80% 75%, rgba(139, 92, 246, 0.16), transparent 34%),
-    #030509;
+  background: #fafafa;
 }
 
 .seccion-truefocus::after {
@@ -71,10 +68,10 @@ p {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, .03) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: 0.35;
+  opacity: 0.8;
   pointer-events: none;
 }
 
@@ -85,7 +82,7 @@ p {
   width: 100%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  color: #fff;
+  color: #0f172a;
   text-align: center;
   font-size: clamp(2rem, 6vw, 5rem);
   font-weight: 950;
@@ -104,10 +101,7 @@ p {
   min-height: 760px;
   padding: 100px 7vw;
   gap: 60px;
-  background:
-    radial-gradient(circle at 15% 30%, rgba(59, 130, 246, 0.08), transparent 32%),
-    radial-gradient(circle at 85% 65%, rgba(99, 102, 241, 0.08), transparent 34%),
-    #0b0f19;
+  background: #fafafa;
   overflow: hidden;
 }
 
@@ -116,10 +110,10 @@ p {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, .03) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: 0.25;
+  opacity: 0.8;
   pointer-events: none;
 }
 
@@ -134,12 +128,9 @@ p {
   gap: 56px;
   padding: 48px 52px;
   border-radius: var(--app-radius-lg);
-  background:
-    radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.06), transparent 38%),
-    radial-gradient(circle at 88% 82%, rgba(99, 102, 241, 0.06), transparent 40%),
-    linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(11, 15, 25, 0.98));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
   overflow: hidden;
 }
 
@@ -147,7 +138,7 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.28;
+  opacity: 0.15;
   pointer-events: none;
 }
 
@@ -164,10 +155,10 @@ p {
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #0f172a;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
 }
 
 .cajaencryted {
@@ -175,18 +166,19 @@ p {
 }
 
 .all-letters {
-  color: rgba(255,255,255,.76);
+  color: #334155;
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.98rem, 1.2vw, 1.1rem) !important;
   line-height: 1.75;
 }
 
 .encrypted {
-  color: rgba(255,255,255,.28);
+  color: #94a3b8;
 }
 
 .revealed {
-  color: rgba(255,255,255,.86);
+  color: #0f172a;
+  font-weight: 600;
 }
 
 /* =========================
@@ -216,8 +208,8 @@ p {
   border-radius: 28px;
   background: radial-gradient(
     ellipse at 50% 40%,
-    rgba(0, 212, 255, 0.22),
-    rgba(139, 92, 246, 0.14) 45%,
+    rgba(37, 99, 235, 0.1),
+    rgba(79, 70, 229, 0.05) 45%,
     transparent 72%
   );
   filter: blur(28px);
@@ -231,11 +223,10 @@ p {
   aspect-ratio: 4 / 5;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid #e2e8f0;
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
-  background: #0a0e14;
+    0 10px 30px rgba(15, 23, 42, 0.08);
+  background: #f1f5f9;
 }
 
 .profile-portrait::after {
