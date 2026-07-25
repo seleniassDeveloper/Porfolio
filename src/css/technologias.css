@@ -1,6 +1,5 @@
 /* ==========================================
-   STACK & SKILLS - EDITORIAL FLAT WITH USER PALETTE
-   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
+   STACK & SKILLS - EDITORIAL FLAT (ONLY BORDERS, NO BACKGROUND FILLS, NO GRADIENTS)
 ========================================== */
 
 .tecnologias-container {
@@ -44,23 +43,23 @@
   gap: 1.8rem;
 }
 
-/* FLAT SKILL PILL CARD */
+/* FLAT SKILL PILL CARD - DEFAULT: WHITE TEXT/ICON, NO BG FILL, ONLY BORDER */
 .carta-tecnologia {
   position: relative;
-  background: #110D14 !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-radius: 6px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
   padding: 1.8rem !important;
-  transition: all 0.25s ease !important;
+  transition: all 0.2s ease !important;
   box-shadow: none !important;
   cursor: pointer;
 }
 
 .icono-tecnologia {
   font-size: 2.2rem;
-  color: #FF5733;
+  color: #FFFFFF !important;
   margin-bottom: 1rem;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .nombre-tecnologia {
@@ -68,36 +67,139 @@
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
 }
 
 .descripcion-tecnologia {
   font-size: 0.85rem;
-  color: #A1A1AA;
+  color: #A1A1AA !important;
   line-height: 1.5;
   margin: 0;
 }
 
-/* BRAND COLOR HOVER ON FLAT PILL */
-.carta-tecnologia:hover {
-  background: #1A1420 !important;
-  border-color: #FF5733 !important;
+/* SOLID BRAND COLOR HOVER - NO GRADIENTS, NO HEAVY GLOWS */
+
+/* HTML - #E34F26 */
+.carta-tecnologia.html:hover {
+  border-color: #E34F26 !important;
   transform: translateY(-4px);
 }
+.carta-tecnologia.html:hover .icono-tecnologia,
+.carta-tecnologia.html:hover .nombre-tecnologia {
+  color: #E34F26 !important;
+}
 
-.carta-tecnologia.html:hover .icono-tecnologia { color: #E34F26; }
-.carta-tecnologia.css:hover .icono-tecnologia { color: #1572B6; }
-.carta-tecnologia.javascript:hover .icono-tecnologia { color: #F7DF1E; }
-.carta-tecnologia.react:hover .icono-tecnologia { color: #61DAFB; }
-.carta-tecnologia.github:hover .icono-tecnologia { color: #FFFFFF; }
-.carta-tecnologia.python:hover .icono-tecnologia { color: #3776AB; }
-.carta-tecnologia.typescript:hover .icono-tecnologia { color: #3178C6; }
-.carta-tecnologia.php:hover .icono-tecnologia { color: #777BB4; }
-.carta-tecnologia.figma:hover .icono-tecnologia { color: #F24E1E; }
-.carta-tecnologia.canva:hover .icono-tecnologia { color: #00C4CC; }
-.carta-tecnologia.photoshop:hover .icono-tecnologia { color: #31A8FF; }
-.carta-tecnologia.illustrator:hover .icono-tecnologia { color: #FF9A00; }
+/* CSS - #1572B6 */
+.carta-tecnologia.css:hover {
+  border-color: #1572B6 !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.css:hover .icono-tecnologia,
+.carta-tecnologia.css:hover .nombre-tecnologia {
+  color: #1572B6 !important;
+}
+
+/* JavaScript - #F7DF1E */
+.carta-tecnologia.javascript:hover {
+  border-color: #F7DF1E !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.javascript:hover .icono-tecnologia,
+.carta-tecnologia.javascript:hover .nombre-tecnologia {
+  color: #F7DF1E !important;
+}
+
+/* React - #61DAFB */
+.carta-tecnologia.react:hover {
+  border-color: #61DAFB !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.react:hover .icono-tecnologia,
+.carta-tecnologia.react:hover .nombre-tecnologia {
+  color: #61DAFB !important;
+}
+
+/* GitHub - #FFFFFF */
+.carta-tecnologia.github:hover {
+  border-color: #FFFFFF !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.github:hover .icono-tecnologia,
+.carta-tecnologia.github:hover .nombre-tecnologia {
+  color: #FFFFFF !important;
+}
+
+/* Python - #3776AB */
+.carta-tecnologia.python:hover {
+  border-color: #3776AB !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.python:hover .icono-tecnologia,
+.carta-tecnologia.python:hover .nombre-tecnologia {
+  color: #3776AB !important;
+}
+
+/* TypeScript - #3178C6 */
+.carta-tecnologia.typescript:hover {
+  border-color: #3178C6 !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.typescript:hover .icono-tecnologia,
+.carta-tecnologia.typescript:hover .nombre-tecnologia {
+  color: #3178C6 !important;
+}
+
+/* PHP - #777BB4 */
+.carta-tecnologia.php:hover {
+  border-color: #777BB4 !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.php:hover .icono-tecnologia,
+.carta-tecnologia.php:hover .nombre-tecnologia {
+  color: #777BB4 !important;
+}
+
+/* Figma - #F24E1E */
+.carta-tecnologia.figma:hover {
+  border-color: #F24E1E !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.figma:hover .icono-tecnologia,
+.carta-tecnologia.figma:hover .nombre-tecnologia {
+  color: #F24E1E !important;
+}
+
+/* Canva - #00C4CC */
+.carta-tecnologia.canva:hover {
+  border-color: #00C4CC !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.canva:hover .icono-tecnologia,
+.carta-tecnologia.canva:hover .nombre-tecnologia {
+  color: #00C4CC !important;
+}
+
+/* Photoshop - #31A8FF */
+.carta-tecnologia.photoshop:hover {
+  border-color: #31A8FF !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.photoshop:hover .icono-tecnologia,
+.carta-tecnologia.photoshop:hover .nombre-tecnologia {
+  color: #31A8FF !important;
+}
+
+/* Illustrator - #FF9A00 */
+.carta-tecnologia.illustrator:hover {
+  border-color: #FF9A00 !important;
+  transform: translateY(-4px);
+}
+.carta-tecnologia.illustrator:hover .icono-tecnologia,
+.carta-tecnologia.illustrator:hover .nombre-tecnologia {
+  color: #FF9A00 !important;
+}
 
 @media (max-width: 1000px) {
   .grid-tecnologias {

@@ -1,6 +1,5 @@
 /* ==========================================
-   EDITORIAL HERO WITH CUSTOM USER PALETTE
-   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
+   EDITORIAL HERO WITH SOLID PALETTE COLORS (NO GRADIENTS)
 ========================================== */
 
 .editorial-hero-container {
@@ -70,10 +69,7 @@
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #FF5733;
   margin-bottom: 1.5rem;
 }
 
@@ -108,13 +104,13 @@
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* Buttons - Solid Color, No Gradient */
 .btn-editorial-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 1rem 2.2rem;
-  background: linear-gradient(135deg, #FF5733 0%, #C70039 100%);
+  background: #FF5733;
   color: #FFFFFF;
   font-size: 0.92rem;
   font-weight: 900;
@@ -122,15 +118,13 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
-  transition: all 0.25s ease;
-  box-shadow: 0 8px 25px rgba(255, 87, 51, 0.35);
+  transition: all 0.2s ease;
 }
 
 .btn-editorial-primary:hover {
-  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
+  background: #FFC300;
   color: #070707;
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(255, 195, 0, 0.45);
 }
 
 .btn-editorial-secondary {
@@ -147,17 +141,16 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-editorial-secondary:hover {
   border-color: #FF5733;
-  background: rgba(255, 87, 51, 0.1);
-  color: #FFFFFF;
+  color: #FF5733;
   transform: translateY(-2px);
 }
 
-/* Right Stats */
+/* Right Stats - Solid Color, No Gradient */
 .hero-right-stats {
   display: flex;
   flex-direction: column;
@@ -176,10 +169,7 @@
   font-weight: 950;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #FF5733;
 }
 
 .stat-label {

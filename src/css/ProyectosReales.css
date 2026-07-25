@@ -1,6 +1,5 @@
 /* ==========================================
-   SELECTED PROJECTS - EDITORIAL FLAT WITH USER PALETTE
-   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
+   SELECTED PROJECTS - EDITORIAL FLAT (NO BG FILLS, NO GRADIENTS)
 ========================================== */
 
 .projects-showcase-section {
@@ -40,15 +39,13 @@
   margin: 0;
 }
 
-.projects-showcase-header span {
+.projects-showcase-header span,
+.view-all-label {
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #FF5733;
+  color: #FFC300;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 /* 3-Column Flat Grid */
@@ -58,7 +55,7 @@
   gap: 2.5rem;
 }
 
-/* Flat Project Unit (NO CONTAINER CARDS / NO BORDERS) */
+/* Flat Project Unit (NO CONTAINER CARDS / NO BG FILLS) */
 .project-glass-card {
   position: relative;
   background: transparent !important;
@@ -78,19 +75,19 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: #110D14;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.2rem;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: border-color 0.3s ease;
 }
 
 .project-glass-card:hover .project-image-frame {
-  border-color: #FF5733;
+  border-color: #FFC300;
 }
 
 .project-image-frame img {
@@ -98,7 +95,7 @@
   height: 85%;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  filter: grayscale(15%);
+  filter: grayscale(10%);
 }
 
 .project-glass-card:hover .project-image-frame img {
@@ -111,8 +108,8 @@
   top: 10px;
   right: 10px;
   padding: 0.25rem 0.6rem;
-  background: linear-gradient(135deg, #FF5733, #C70039);
-  color: #FFFFFF;
+  background: #FFC300;
+  color: #070707;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -130,7 +127,7 @@
 .project-index {
   font-size: 1.6rem;
   font-weight: 950;
-  color: #FF5733;
+  color: #FFC300;
   line-height: 1;
   background: transparent !important;
   border: none !important;
@@ -169,7 +166,7 @@
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
-  color: #FF5733 !important;
+  color: #FFC300 !important;
   font-size: 0.85rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -180,7 +177,7 @@
 }
 
 .project-glass-card:hover .project-card-btn {
-  color: #FFC300 !important;
+  color: #FFFFFF !important;
 }
 
 .project-card-btn span {

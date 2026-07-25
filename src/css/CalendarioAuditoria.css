@@ -1,5 +1,4 @@
-/* src/css/CalendarioAuditoria.css - EDITORIAL FLAT WITH USER PALETTE
-   (#FFC300, #FF5733, #C70039, #900C3E, #571845) */
+/* src/css/CalendarioAuditoria.css - EDITORIAL FLAT (NO BG FILLS, NO GRADIENTS) */
 
 .audit-section {
   position: relative;
@@ -16,7 +15,7 @@
 }
 
 .audit-back-btn {
-  background: #110D14;
+  background: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #FFFFFF;
   padding: 0.6rem 1.2rem;
@@ -31,7 +30,7 @@
 }
 
 .audit-back-btn:hover {
-  background: #FF5733;
+  background: #FF5733 !important;
   border-color: #FF5733;
 }
 
@@ -87,11 +86,11 @@
   }
 }
 
-/* FLAT CARDS */
+/* FLAT CARDS - NO BACKGROUND FILLS, ONLY BORDERS */
 .audit-glass-card {
-  background: #110D14 !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-radius: 6px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
   padding: 2rem !important;
   box-shadow: none !important;
 }
@@ -123,7 +122,7 @@
 }
 
 .btn-month-nav {
-  background: #1A1420;
+  background: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #FFFFFF;
   width: 36px;
@@ -136,7 +135,7 @@
 }
 
 .btn-month-nav:hover:not(:disabled) {
-  background: #FF5733;
+  background: #FF5733 !important;
   border-color: #FF5733;
 }
 
@@ -163,8 +162,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #16121C;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   font-size: 0.95rem;
   font-weight: 800;
@@ -174,12 +173,12 @@
 }
 
 .day-cell:hover:not(.disabled):not(.empty) {
-  background: #FF5733;
+  background: #FF5733 !important;
   border-color: #FF5733;
 }
 
 .day-cell.selected {
-  background: linear-gradient(135deg, #FF5733, #C70039) !important;
+  background: #FF5733 !important;
   border-color: #FF5733 !important;
   color: #FFFFFF !important;
 }
@@ -192,8 +191,8 @@
 
 .time-slot-btn {
   padding: 0.7rem 0.8rem;
-  background: #16121C;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   color: #FFFFFF;
   font-size: 0.85rem;
@@ -203,20 +202,20 @@
 }
 
 .time-slot-btn:hover:not(.booked) {
-  background: #FF5733;
+  background: #FF5733 !important;
   border-color: #FF5733;
 }
 
 .time-slot-btn.selected {
-  background: linear-gradient(135deg, #FF5733, #C70039) !important;
+  background: #FF5733 !important;
   border-color: #FF5733 !important;
   color: #FFFFFF !important;
 }
 
 .time-slot-btn.booked {
-  background: #0E0B12;
+  background: transparent !important;
   color: #52525B;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.05);
   cursor: not-allowed;
 }
 
@@ -234,8 +233,8 @@
 .audit-form input,
 .audit-form textarea {
   padding: 0.9rem 1rem;
-  background: #16121C;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   color: #FFFFFF;
   font-size: 0.9rem;
@@ -249,7 +248,7 @@
 
 .btn-submit-audit {
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #FF5733, #C70039);
+  background: #FF5733;
   border: none;
   border-radius: 4px;
   color: #FFFFFF;
@@ -262,11 +261,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 8px 25px rgba(255, 87, 51, 0.35);
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-submit-audit:hover:not(:disabled) {
-  background: linear-gradient(135deg, #FFC300, #FF5733);
+  background: #FFC300;
   color: #070707;
 }

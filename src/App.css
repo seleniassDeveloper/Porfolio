@@ -316,13 +316,13 @@ p {
   align-items: stretch;
 }
 
-/* SOLID 100% OPAQUE CARDS */
+/* EDITORIAL FLAT CARDS - NO BACKGROUND FILLS, ONLY BORDERS */
 .experience-main-card,
 .experience-mini-card {
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  background: #121216 !important;
-  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: transparent !important;
+  border-radius: 4px !important;
   box-shadow: none !important;
 }
 
@@ -345,7 +345,7 @@ p {
   bottom: 8px;
   left: 7px;
   width: 2px;
-  background: #900C3E;
+  background: #C70039;
 }
 
 .education-item {
@@ -398,8 +398,8 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #18151E;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .experience-note svg {
@@ -473,7 +473,7 @@ p {
 }
 
 .experience-mini-card.wide {
-  background: #121216 !important;
+  background: transparent !important;
 }
 
 .languages-list {

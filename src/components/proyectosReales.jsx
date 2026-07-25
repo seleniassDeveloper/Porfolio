@@ -85,14 +85,11 @@ export const ProyectosReales = () => {
 
       <div className="projects-showcase-container">
         <div className="projects-showcase-header">
-          <span>{t("projects.eyebrow", "Real work")}</span>
-          <h2>{t("titulo")}</h2>
-          <p>
-            {t(
-              "projects.subtitle",
-              "A selection of products, platforms and digital systems I’ve built across SaaS, marketplaces, enterprise tools and public-facing experiences."
-            )}
-          </p>
+          <div>
+            <span>{t("projects.eyebrow", "Real work")}</span>
+            <h2>{t("titulo")}</h2>
+          </div>
+          <span className="view-all-label">VIEW ALL PROJECTS ⟶</span>
         </div>
 
         <div className="projects-card-grid">
