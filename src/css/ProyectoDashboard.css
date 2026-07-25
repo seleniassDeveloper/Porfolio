@@ -24,6 +24,72 @@
   border: 1px solid #e2e8f0; /* Borde sutil */
 }
 
+/* DESTACADOS ESPECÍFICOS: CRM, ERP, AUTOMATIZACIONES, INTEGRACIONES */
+.pd-features-grid {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.pd-feature-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.pd-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.08);
+  border-color: #f43f5e;
+}
+
+.pd-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffe4e6;
+  color: #e11d48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.pd-feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.pd-feature-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.pd-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pd-feature-tag {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
 .pd-hero-image img {
   width: 100%;
   border-radius: 16px;

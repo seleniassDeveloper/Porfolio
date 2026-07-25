@@ -763,16 +763,16 @@
       "impact": "Diseñé y desarrollé la lógica central de un marketplace de dos lados para conectar dueños de mascotas y paseadores, incluyendo autenticación, roles, reservas y sincronización en tiempo real con Firebase."
     },
     "dashboard": {
-      "label": "SaaS · Negocios de servicios",
+      "label": "SaaS Enterprise · ERP & CRM",
       "title": "AuraDash Suite",
-      "desc": "El ERP todo en uno más avanzado para gestionar y escalar negocios: citas inteligentes, CRM, finanzas, inventario e inteligencia artificial en un ecosistema centralizado.",
-      "stack": "React · Vite · Node.js · PostgreSQL",
+      "desc": "Plataforma SaaS integral para negocios de servicios: CRM de clientes, ERP de inventario con deducción en tiempo real, automatizaciones con Copilot IA e integración directa con Google Sheets y WhatsApp Web.",
+      "stack": "React · Vite · Node.js · PostgreSQL · Google Sheets API",
       "metricBig": "8 módulos",
-      "metricSmall": "ERP, CRM, Inventario y Automatizaciones integradas",
-      "detailOne": "Copilot IA & Workflows",
-      "detailTwo": "Inventario ERP & Finanzas",
-      "detailThree": "Agenda inteligente y CRM",
-      "impact": "Desarrollé AuraDash, un potente software SaaS B2B que centraliza operaciones enteras. Cuenta con sugerencias por IA, control estricto de caja, deducción de stock en tiempo real y una arquitectura multi-tenant lista para escalar."
+      "metricSmall": "ERP, CRM, Inventario y Workflows IA integrados",
+      "detailOne": "CRM & Fichas Técnicas",
+      "detailTwo": "ERP, Caja & Inventario FIFO",
+      "detailThree": "Workflows IA & Google Sheets",
+      "impact": "Lideré el desarrollo frontend de AuraDash, construyendo un CRM completo para retención de clientes, un ERP con deducción automática de stock e insumos al cobrar citas, un creador visual de Automatizaciones con Copilot IA y sincronización bidireccional en tiempo real con Google Sheets y WhatsApp Web."
     }
   },
   "cta": {

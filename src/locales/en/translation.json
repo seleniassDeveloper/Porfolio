@@ -729,28 +729,24 @@
   },
 
   "dashboard": {
-    "label": "SaaS · Service businesses",
+    "label": "SaaS Enterprise · ERP & CRM",
     "title": "AuraDash Suite",
-    "desc": "The ultimate all-in-one ERP for managing and scaling businesses: smart scheduling, CRM, finances, inventory, and AI within a centralized ecosystem.",
-    "stack": "React · Vite · Node.js · PostgreSQL",
+    "desc": "Comprehensive SaaS platform for service businesses: Client CRM, inventory ERP with real-time stock deduction, Copilot AI automations, and direct integration with Google Sheets & WhatsApp Web.",
+    "stack": "React · Vite · Node.js · PostgreSQL · Google Sheets API",
     "metricBig": "8 modules",
-    "metricSmall": "ERP, CRM, Inventory, and integrated Automations",
-    "detailOne": "Copilot AI & Workflows",
-    "detailTwo": "ERP Inventory & Finances",
-    "detailThree": "Smart Scheduling & CRM",
-    "impact": "I built AuraDash, a powerful B2B SaaS platform that centralizes entire operations. It features AI-driven insights, strict cash control, real-time stock deduction, and a scalable multi-tenant architecture."
+    "metricSmall": "Integrated ERP, CRM, Inventory & AI Workflows",
+    "detailOne": "CRM & Technical Files",
+    "detailTwo": "ERP, Cash & FIFO Inventory",
+    "detailThree": "AI Workflows & Google Sheets",
+    "impact": "I led the frontend development of AuraDash, building a full-featured CRM for client retention, an ERP with automatic stock deduction upon checkout, a visual AI Workflow builder, and real-time bi-directional sync with Google Sheets & WhatsApp Web."
   }
 },
-
-
-
-
-  "cta": {
-    "hire": "Hire me on Upwork",
-    "talk": "Let's discuss your project"
-  },
-  "dashboard": {
-    "badge": "Live SaaS Platform",
+"cta": {
+  "hire": "Hire me on Upwork",
+  "talk": "Let's discuss your project"
+},
+"dashboard": {
+  "badge": "Live SaaS Platform",
   "title": "AuraDash: Smart Dashboard & Management",
   "subtitle": "Comprehensive business management system including smart scheduling, financial control, staff management, inventory, and automated workflows. Live at auradash.digital.com.",
   "back": "Back to projects",

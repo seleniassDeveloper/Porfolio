@@ -129,6 +129,69 @@ export default function ProyectoDashboard() {
         </div>
       </section>
 
+      {/* DESTACADOS ESPECÍFICOS: CRM, ERP, AUTOMATIZACIONES, INTEGRACIONES */}
+      <section className="pd-features-grid">
+        <div className="pd-feature-card">
+          <div className="pd-feature-icon">
+            <FiUsers />
+          </div>
+          <h3>CRM de Clientes</h3>
+          <p>
+            Construí el sistema de gestión de clientes con fichas técnicas personalizadas, historial completo de visitas, fotos "Antes y Después", ticket promedio e indicadores de retención.
+          </p>
+          <div className="pd-feature-tags">
+            <span className="pd-feature-tag">Fichas Técnicas</span>
+            <span className="pd-feature-tag">Retención</span>
+            <span className="pd-feature-tag">Fotos HD</span>
+          </div>
+        </div>
+
+        <div className="pd-feature-card">
+          <div className="pd-feature-icon">
+            <FiBox />
+          </div>
+          <h3>ERP e Inventario FIFO</h3>
+          <p>
+            Desarrollé el control estricto de caja chica (apertura, movimientos, arqueos), alertas por semáforo y la regla de deducción automática de stock e insumos al cobrar citas.
+          </p>
+          <div className="pd-feature-tags">
+            <span className="pd-feature-tag">Lotes FIFO</span>
+            <span className="pd-feature-tag">Descuento Auto</span>
+            <span className="pd-feature-tag">Control Caja</span>
+          </div>
+        </div>
+
+        <div className="pd-feature-card">
+          <div className="pd-feature-icon">
+            <FiCpu />
+          </div>
+          <h3>Copilot IA & Workflows</h3>
+          <p>
+            Implementé el constructor visual de automatizaciones (Triggers & Acciones), análisis de datos para sugerencias de IA y campañas para recuperar clientes fugados.
+          </p>
+          <div className="pd-feature-tags">
+            <span className="pd-feature-tag">Triggers & Actions</span>
+            <span className="pd-feature-tag">AI Copilot</span>
+            <span className="pd-feature-tag">Re-engagement</span>
+          </div>
+        </div>
+
+        <div className="pd-feature-card">
+          <div className="pd-feature-icon">
+            <FiSettings />
+          </div>
+          <h3>Integraciones & Sync</h3>
+          <p>
+            Integré sincronización bidireccional en tiempo real con <strong>Google Sheets</strong>, recordatorios automatizados por <strong>WhatsApp Web</strong> y arquitectura multi-tenant con RBAC (+70 permisos).
+          </p>
+          <div className="pd-feature-tags">
+            <span className="pd-feature-tag">Google Sheets Sync</span>
+            <span className="pd-feature-tag">WhatsApp Web</span>
+            <span className="pd-feature-tag">Multi-Tenant</span>
+          </div>
+        </div>
+      </section>
+
       {/* MÓDULOS INTERACTIVOS */}
       <section className="pd-modules-section">
         <div className="pd-modules-header">
