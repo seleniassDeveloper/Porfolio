@@ -9,21 +9,11 @@ export const TrueFocus = () => {
 
   return (
     <div className="hero-hero-wrapper">
-      <motion.div
-        className="hero-badge-pill"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <span className="badge-dot" />
-        <span>{i18n.language === "en" ? "Available for New Projects & Roles" : "Disponible para Proyectos y Roles Frontend"}</span>
-      </motion.div>
-
       <motion.h1
         className="hero-main-title"
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
       >
         Selenia Sánchez
       </motion.h1>
@@ -32,7 +22,7 @@ export const TrueFocus = () => {
         className="hero-role-title"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
       >
         {i18n.language === "en"
           ? "Frontend Developer & Digital Product Specialist"
@@ -43,7 +33,7 @@ export const TrueFocus = () => {
         className="hero-description-tag"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
+        transition={{ duration: 0.7, delay: 0.25 }}
       >
         {i18n.language === "en"
           ? "Specialized in React, TypeScript, SaaS platforms, ERPs & AI Automations."
@@ -54,7 +44,7 @@ export const TrueFocus = () => {
         className="hero-actions-container"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
+        transition={{ duration: 0.7, delay: 0.35 }}
       >
         <a
           href="/cv-selenia-sanchez.pdf"

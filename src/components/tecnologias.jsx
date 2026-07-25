@@ -24,6 +24,8 @@ import {
   FiUsers,
   FiZap,
   FiTarget,
+  FiChevronLeft,
+  FiChevronRight,
 } from "react-icons/fi";
 import "../css/technologias.css";
 
@@ -161,22 +163,42 @@ export const Tecnologias = () => {
 
   return (
     <div className="tecnologias-container">
-
-        <section className={`impact-deck-section theme-${active.theme}`}>
+      <section className="impact-deck-section">
         <div className="impact-deck-bg"></div>
 
         <div className="impact-deck-container">
-          <div className="impact-deck-header">
-            <span>{t("cases.eyebrow")}</span>
-            <h2>{t("cases.title")}</h2>
-            <p>{t("cases.subtitle")}</p>
+          <div className="impact-deck-header-wrapper">
+            <div className="impact-deck-header">
+              <span>{t("cases.eyebrow")}</span>
+              <h2>{t("cases.title")}</h2>
+              <p>{t("cases.subtitle")}</p>
+            </div>
+
+            {/* CONTROLES ELEGANTES JUNTO AL HEADER */}
+            <div className="deck-nav-buttons-top">
+              <button
+                type="button"
+                className="btn-deck-nav"
+                onClick={prevCase}
+                aria-label="Previous Case Study"
+              >
+                <FiChevronLeft />
+              </button>
+              <span className="deck-counter">
+                {String(activeCase + 1).padStart(2, "0")} / {String(casosExito.length).padStart(2, "0")}
+              </span>
+              <button
+                type="button"
+                className="btn-deck-nav"
+                onClick={nextCase}
+                aria-label="Next Case Study"
+              >
+                <FiChevronRight />
+              </button>
+            </div>
           </div>
 
           <div className="impact-deck-stage">
-            <button className="deck-arrow left" type="button" onClick={prevCase}>
-              <FiArrowLeft />
-            </button>
-
             <div className="deck-stack">
               {casosExito.map((item, index) => {
                 const offset = index - activeCase;
@@ -184,7 +206,7 @@ export const Tecnologias = () => {
                 return (
                   <div
                     key={item.id}
-                    className={`deck-back-card theme-${item.theme} ${
+                    className={`deck-back-card ${
                       index === activeCase ? "is-hidden" : ""
                     }`}
                     style={{
@@ -211,7 +233,6 @@ export const Tecnologias = () => {
 
                 <div className="deck-hero-row">
                   <div className="deck-project-hero">
-                    {/* <div className="deck-icon-box">{active.icon}</div> */}
                     <span>{t("cases.projectLabel")}</span>
                     <h3>{t(active.tituloKey)}</h3>
                     <p>{t(active.descKey)}</p>
@@ -271,10 +292,6 @@ export const Tecnologias = () => {
                 </a>
               </article>
             </div>
-
-            <button className="deck-arrow right" type="button" onClick={nextCase}>
-              <FiArrowRight />
-            </button>
           </div>
 
           <div className="impact-deck-controls">
@@ -290,11 +307,10 @@ export const Tecnologias = () => {
           </div>
         </div>
       </section>
+
       <section className="tech-section">
         <div className="tech-header">
-          {/* <span>{t("tech.eyebrow")}</span> */}
           <h2 className="titulo-tecnologias">Stack</h2>
-     
         </div>
 
         <div className="d-none d-md-block">
@@ -333,8 +349,6 @@ export const Tecnologias = () => {
           </Carousel>
         </div>
       </section>
-
-    
     </div>
   );
 };

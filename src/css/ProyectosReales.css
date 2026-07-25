@@ -1,14 +1,11 @@
 /* ===========================
-   PROJECTS SHOWCASE - DARK LUXURY FEMININE PALETTE (#0A080D)
+   PROJECTS SHOWCASE - CLEAN GRAY & WHITE FLAT/DYNAMIC DESIGN
 =========================== */
 
 .projects-showcase-section {
   position: relative;
   padding: 110px 24px;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(236, 110, 192, 0.1), transparent 32%),
-    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12), transparent 34%),
-    #0A080D;
+  background: #0A080D;
   overflow: hidden;
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -17,10 +14,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(245, 169, 199, .025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 169, 199, .025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: .4;
+  opacity: .35;
   pointer-events: none;
 }
 
@@ -38,7 +35,7 @@
 
 .projects-showcase-header span {
   display: inline-block;
-  color: #F5A9C7;
+  color: #94A3B8;
   font-size: 12px;
   font-weight: 950;
   letter-spacing: .22em;
@@ -48,15 +45,11 @@
 
 .projects-showcase-header h2 {
   margin: 0 0 16px;
-  color: #fff;
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: .88;
+  color: #F8FAFC;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: .95;
   font-weight: 950;
-  letter-spacing: -.08em;
-  background: linear-gradient(135deg, #ffffff 0%, #F5A9C7 50%, #C4A7F0 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  letter-spacing: -.05em;
 }
 
 .projects-showcase-header p {
@@ -81,82 +74,38 @@
 =========================== */
 
 .project-glass-card {
-  --accent: #F5A9C7;
-  --accent-2: #EC6EC0;
-
   position: relative;
   min-height: 430px;
-  padding: 24px;
-  border-radius: 28px;
+  padding: 26px;
+  border-radius: 26px;
   color: #F8FAFC;
   cursor: pointer;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(236, 110, 192, 0.12), transparent 32%),
-    linear-gradient(135deg, rgba(20, 15, 28, 0.95), rgba(12, 9, 17, 0.98));
-  border: 1px solid rgba(245, 169, 199, 0.18);
-  box-shadow:
-    0 24px 70px rgba(0,0,0,.6),
-    0 0 35px rgba(236, 110, 192, 0.1);
-  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
-  animation: projectCardIn .55s ease both;
+  background: rgba(18, 20, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  animation: projectCardIn .5s ease both;
   animation-delay: var(--delay);
 }
 
 @keyframes projectCardIn {
   from {
     opacity: 0;
-    transform: translateY(24px) scale(.97);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
 .project-glass-card:hover {
-  transform: translateY(-8px);
-  border-color: #EC6EC0;
-  box-shadow:
-    0 34px 90px rgba(0,0,0,.7),
-    0 0 40px rgba(236, 110, 192, 0.25);
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
 }
-
-/* Themes */
-.project-glass-card.theme-blue {
-  --accent: #C4A7F0;
-  --accent-2: #8B5CF6;
-}
-
-.project-glass-card.theme-green {
-  --accent: #F5A9C7;
-  --accent-2: #FF9E80;
-}
-
-.project-glass-card.theme-orange {
-  --accent: #FF9E80;
-  --accent-2: #E7C9A9;
-}
-
-.project-glass-card.theme-gold {
-  --accent: #E7C9A9;
-  --accent-2: #F5A9C7;
-}
-
-.project-glass-card.theme-pink {
-  --accent: #EC6EC0;
-  --accent-2: #C4A7F0;
-}
-
-.project-glass-card.theme-purple {
-  --accent: #C4A7F0;
-  --accent-2: #EC6EC0;
-}
-
-/* ===========================
-   CARD CONTENT
-=========================== */
 
 .project-card-top {
   display: flex;
@@ -172,9 +121,9 @@
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: rgba(245, 169, 199, 0.1);
-  border: 1px solid rgba(245, 169, 199, 0.25);
-  color: #F5A9C7;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F8FAFC;
   font-weight: 950;
 }
 
@@ -182,9 +131,9 @@
   max-width: 200px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(245, 169, 199, 0.08);
-  border: 1px solid rgba(245, 169, 199, 0.2);
-  color: #F5A9C7;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #CBD5E1;
   font-size: .75rem;
   font-weight: 800;
   letter-spacing: .06em;
@@ -202,7 +151,7 @@
   place-items: center;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(245, 169, 199, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-image-frame img {
@@ -210,7 +159,7 @@
   max-height: 88px;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
-  transition: transform .28s ease, filter .28s ease;
+  transition: transform .28s ease;
 }
 
 .project-image-frame.is-logo img {
@@ -219,7 +168,7 @@
 }
 
 .project-glass-card:hover .project-image-frame img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .project-status-badge {
@@ -231,12 +180,11 @@
   gap: 7px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
-  color: #ffffff;
+  background: #ffffff;
+  color: #0F172A;
   font-size: .72rem;
   font-weight: 950;
   text-transform: uppercase;
-  box-shadow: 0 0 15px rgba(236, 110, 192, 0.4);
 }
 
 .project-card-content {
@@ -247,7 +195,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--accent);
+  color: #94A3B8;
   font-size: .72rem;
   font-weight: 950;
   letter-spacing: .14em;
@@ -271,23 +219,20 @@
   line-height: 1.55;
 }
 
-/* ===========================
-   BUTTON
-=========================== */
-
+/* Button */
 .project-card-btn {
   width: 100%;
   min-height: 52px;
   margin-top: 22px;
-  border: 1px solid rgba(245, 169, 199, 0.3);
-  border-radius: 18px;
-  background: rgba(245, 169, 199, 0.08);
-  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: #ffffff;
+  color: #0F172A;
   padding: 8px 12px 8px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 0.95rem;
   cursor: pointer;
   transition: .25s ease;
@@ -296,23 +241,18 @@
 .project-card-btn span {
   width: 36px;
   height: 36px;
-  border-radius: 12px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
+  background: #0F172A;
   color: #ffffff;
 }
 
 .project-card-btn:hover {
-  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
-  border-color: transparent;
+  background: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(236, 110, 192, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
-
-/* ===========================
-   RESPONSIVE
-=========================== */
 
 @media (max-width: 1050px) {
   .projects-card-grid {
@@ -321,29 +261,7 @@
 }
 
 @media (max-width: 680px) {
-  .projects-showcase-section {
-    padding: 78px 18px;
-  }
-
-  .projects-showcase-header {
-    margin-bottom: 34px;
-  }
-
-  .projects-showcase-header h2 {
-    font-size: 3rem;
-  }
-
   .projects-card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .project-glass-card {
-    min-height: auto;
-    border-radius: 24px;
-    padding: 18px;
-  }
-
-  .project-image-frame {
-    height: 150px;
   }
 }

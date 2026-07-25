@@ -591,8 +591,8 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  background: rgba(10, 8, 13, 0.85);
-  border-bottom: 1px solid rgba(245, 169, 199, 0.15);
+  background: rgba(10, 8, 13, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(16px);
 }
 
@@ -604,11 +604,10 @@ p {
 }
 
 .brand-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 999px;
-  background: #EC6EC0;
-  box-shadow: 0 0 12px #EC6EC0;
+  background: #ffffff;
 }
 
 .brand-name {
@@ -633,7 +632,7 @@ p {
 }
 
 .nav-item-link:hover {
-  color: #F5A9C7;
+  color: #ffffff;
 }
 
 .nav-actions {
@@ -645,9 +644,9 @@ p {
 .btn-lang-toggle {
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  background: rgba(245, 169, 199, 0.08);
-  border: 1px solid rgba(245, 169, 199, 0.2);
-  color: #F5A9C7;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F8FAFC;
   font-weight: 800;
   font-size: 0.85rem;
   cursor: pointer;
@@ -655,7 +654,8 @@ p {
 }
 
 .btn-lang-toggle:hover {
-  background: rgba(245, 169, 199, 0.18);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
   color: #ffffff;
 }
 
@@ -665,20 +665,22 @@ p {
   gap: 0.4rem;
   padding: 0.45rem 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
-  color: #ffffff;
-  font-weight: 800;
+  background: #ffffff;
+  color: #0F172A;
+  font-weight: 900;
   font-size: 0.85rem;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(236, 110, 192, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease;
 }
 
 .btn-nav-cv:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(236, 110, 192, 0.5);
-  color: #ffffff;
+  background: #f1f5f9;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.35);
+  color: #0F172A;
 }
+
 
 .mobile-hamburger-btn {
   display: none;
