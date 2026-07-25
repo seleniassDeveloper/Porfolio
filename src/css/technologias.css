@@ -4,7 +4,7 @@
 
 .tecnologias-container {
   width: 100%;
-  background: #030509;
+  background: #0b0f19;
   color: #fff;
   overflow: hidden;
   font-family: "Manrope", system-ui, sans-serif;
@@ -18,9 +18,9 @@
   position: relative;
   padding: 110px 24px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(0, 212, 255, 0.14), transparent 30%),
-    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.15), transparent 34%),
-    #030509;
+    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.08), transparent 34%),
+    #0b0f19;
 }
 
 .tech-section::before {
@@ -28,10 +28,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: .35;
+  opacity: .25;
   pointer-events: none;
 }
 
@@ -51,7 +51,7 @@
 .tech-header span,
 .impact-deck-header span {
   display: inline-block;
-  color: #00d4ff;
+  color: #3b82f6;
   font-size: 12px;
   font-weight: 950;
   letter-spacing: .22em;
@@ -261,46 +261,46 @@
 ========================= */
 
 .impact-deck-section {
-  --accent: #6d5dfc;
-  --accent-2: #00d4ff;
+  --accent: #3b82f6;
+  --accent-2: #6366f1;
 
   position: relative;
   padding: 110px 24px 120px;
   background:
-    radial-gradient(circle at 15% 12%, rgba(0, 191, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.16), transparent 30%),
-    #030509;
+    radial-gradient(circle at 15% 12%, rgba(59, 130, 246, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.08), transparent 30%),
+    #0b0f19;
   overflow: hidden;
 }
 
 .impact-deck-section.theme-blue {
   --accent: #3b82f6;
-  --accent-2: #00d4ff;
+  --accent-2: #2563eb;
 }
 
 .impact-deck-section.theme-green {
-  --accent: #3ddc84;
-  --accent-2: #00c4cc;
+  --accent: #10b981;
+  --accent-2: #059669;
 }
 
 .impact-deck-section.theme-orange {
-  --accent: #ff8a3d;
-  --accent-2: #ffcc33;
+  --accent: #f59e0b;
+  --accent-2: #d97706;
 }
 
 .impact-deck-section.theme-gold {
-  --accent: #3ddc84;
-  --accent-2: #ffd84d;
+  --accent: #f59e0b;
+  --accent-2: #b45309;
 }
 
 .impact-deck-section.theme-pink {
-  --accent: #ff4fd8;
-  --accent-2: #ff8a3d;
+  --accent: #6366f1;
+  --accent-2: #3b82f6;
 }
 
 .impact-deck-section.theme-purple {
-  --accent: #8b5cf6;
-  --accent-2: #00bfff;
+  --accent: #4f46e5;
+  --accent-2: #3b82f6;
 }
 
 .impact-deck-bg {

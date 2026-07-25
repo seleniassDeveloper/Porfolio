@@ -9,27 +9,27 @@
 }
 
 :root {
-  --app-bg: #030509;
-  --app-surface: rgba(255, 255, 255, 0.055);
-  --app-surface-2: rgba(255, 255, 255, 0.09);
-  --app-border: rgba(255, 255, 255, 0.12);
+  --app-bg: #0b0f19;
+  --app-surface: rgba(17, 24, 39, 0.75);
+  --app-surface-2: rgba(30, 41, 59, 0.85);
+  --app-border: rgba(255, 255, 255, 0.08);
 
-  --app-text: rgba(255, 255, 255, 0.94);
-  --app-muted: rgba(255, 255, 255, 0.64);
+  --app-text: #f8fafc;
+  --app-muted: #94a3b8;
 
-  --app-blue: #00d4ff;
-  --app-purple: #8b5cf6;
-  --app-pink: #ff4fd8;
-  --app-orange: #ff8a3d;
-  --app-green: #3ddc84;
+  --app-blue: #3b82f6;
+  --app-purple: #6366f1;
+  --app-cyan: #38bdf8;
+  --app-orange: #f59e0b;
+  --app-green: #10b981;
 
-  --app-radius-sm: 16px;
-  --app-radius-md: 24px;
-  --app-radius-lg: 34px;
+  --app-radius-sm: 14px;
+  --app-radius-md: 20px;
+  --app-radius-lg: 28px;
 
-  --app-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
-  --app-glow-blue: 0 0 45px rgba(0, 212, 255, 0.22);
-  --app-glow-purple: 0 0 45px rgba(139, 92, 246, 0.24);
+  --app-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --app-glow-blue: 0 0 35px rgba(59, 130, 246, 0.25);
+  --app-glow-purple: 0 0 35px rgba(99, 102, 241, 0.25);
 }
 
 html,
@@ -105,9 +105,9 @@ p {
   padding: 100px 7vw;
   gap: 60px;
   background:
-    radial-gradient(circle at 15% 30%, rgba(255, 79, 216, 0.12), transparent 28%),
-    radial-gradient(circle at 85% 65%, rgba(0, 212, 255, 0.12), transparent 32%),
-    #030509;
+    radial-gradient(circle at 15% 30%, rgba(59, 130, 246, 0.08), transparent 32%),
+    radial-gradient(circle at 85% 65%, rgba(99, 102, 241, 0.08), transparent 34%),
+    #0b0f19;
   overflow: hidden;
 }
 
@@ -116,10 +116,10 @@ p {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: 0.3;
+  opacity: 0.25;
   pointer-events: none;
 }
 
@@ -135,10 +135,10 @@ p {
   padding: 48px 52px;
   border-radius: var(--app-radius-lg);
   background:
-    radial-gradient(circle at 12% 18%, rgba(0, 212, 255, 0.08), transparent 38%),
-    radial-gradient(circle at 88% 82%, rgba(139, 92, 246, 0.1), transparent 40%),
-    linear-gradient(145deg, rgba(18, 22, 34, 0.96), rgba(6, 10, 16, 0.98));
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.06), transparent 38%),
+    radial-gradient(circle at 88% 82%, rgba(99, 102, 241, 0.06), transparent 40%),
+    linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(11, 15, 25, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
   overflow: hidden;
 }
@@ -164,7 +164,7 @@ p {
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, #ffffff 0%, #b8ecff 48%, #c4b5fd 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

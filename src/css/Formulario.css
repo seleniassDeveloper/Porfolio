@@ -6,9 +6,9 @@
   position: relative;
   padding: 110px 24px;
   background:
-    radial-gradient(circle at 15% 15%, rgba(0, 212, 255, 0.14), transparent 30%),
-    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.16), transparent 34%),
-    #030509;
+    radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.08), transparent 34%),
+    #0b0f19;
   overflow: hidden;
   font-family: "Manrope", system-ui, sans-serif;
 }
@@ -17,10 +17,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: .35;
+  opacity: .25;
   pointer-events: none;
 }
 
@@ -37,15 +37,15 @@
 
 .contact-info-card,
 .contact-form-card {
-  border-radius: 34px;
+  border-radius: 28px;
   color: #fff;
   background:
-    radial-gradient(circle at top left, rgba(0, 212, 255, 0.14), transparent 34%),
-    linear-gradient(135deg, rgba(21,25,38,.94), rgba(4,8,13,.98));
-  border: 1px solid rgba(255,255,255,.12);
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 34%),
+    linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(11, 15, 25, 0.98));
+  border: 1px solid rgba(255,255,255,.08);
   box-shadow:
-    0 30px 90px rgba(0,0,0,.5),
-    0 0 45px rgba(0,212,255,.14);
+    0 20px 60px rgba(0,0,0,.45),
+    0 0 35px rgba(59,130,246,.12);
   backdrop-filter: blur(16px);
 }
 
