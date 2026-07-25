@@ -5,15 +5,15 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../App.css";
 
 export const RedesSociales = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: "#proyectos", label: i18n.language === "en" ? "Projects" : "Proyectos" },
-    { href: "#tecnologias", label: i18n.language === "en" ? "Stack" : "Tecnologías" },
-    { href: "#experiencia", label: i18n.language === "en" ? "Experience" : "Experiencia" },
-    { href: "#auditoria", label: i18n.language === "en" ? "Book Call" : "Agendar" },
-    { href: "#contacto", label: i18n.language === "en" ? "Contact" : "Contacto" },
+  const navItems = [
+    { targetId: "proyectos", label: i18n.language === "en" ? "Projects" : "Proyectos" },
+    { targetId: "tecnologias", label: i18n.language === "en" ? "Stack" : "Tecnologías" },
+    { targetId: "experiencia", label: i18n.language === "en" ? "Experience" : "Experiencia" },
+    { targetId: "auditoria", label: i18n.language === "en" ? "Book Call" : "Agendar" },
+    { targetId: "contacto", label: i18n.language === "en" ? "Contact" : "Contacto" },
   ];
 
   const socialLinks = [
@@ -38,7 +38,7 @@ export const RedesSociales = () => {
       label: "WhatsApp",
     },
     {
-      href: "#auditoria",
+      targetId: "auditoria",
       icon: <FiCalendar />,
       label: i18n.language === "en" ? "Book Call" : "Agendar Cita",
     },
@@ -48,21 +48,42 @@ export const RedesSociales = () => {
     i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
   };
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = `/#/#${targetId}`;
+      setTimeout(() => {
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) targetEl.scrollIntoView({ behavior: "smooth" });
+      }, 200);
+    }
+  };
+
   return (
     <>
       {/* TOP FIXED NAVIGATION BAR */}
       <header className="top-fixed-nav">
         <div className="nav-brand">
-          <a href="/#/">
+          <a href="/#/" onClick={(e) => handleNavClick(e, "hero")}>
             <span className="brand-dot" />
             <span className="brand-name">Selenia Sánchez</span>
           </a>
         </div>
 
         <nav className="desktop-nav-links">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-item-link">
-              {link.label}
+          {navItems.map((item) => (
+            <a
+              key={item.targetId}
+              href={`#${item.targetId}`}
+              className="nav-item-link"
+              onClick={(e) => handleNavClick(e, item.targetId)}
+            >
+              {item.label}
             </a>
           ))}
         </nav>
@@ -93,14 +114,14 @@ export const RedesSociales = () => {
         {/* MOBILE MENU DROPDOWN */}
         {mobileMenuOpen && (
           <div className="mobile-menu-dropdown">
-            {navLinks.map((link) => (
+            {navItems.map((item) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={item.targetId}
+                href={`#${item.targetId}`}
                 className="mobile-nav-link"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item.targetId)}
               >
-                {link.label}
+                {item.label}
               </a>
             ))}
             <a
@@ -120,15 +141,26 @@ export const RedesSociales = () => {
         <ul>
           {socialLinks.map((l) => (
             <li key={l.label}>
-              <a
-                href={l.href}
-                target={l.href.startsWith("http") ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-                aria-label={l.label}
-                data-tooltip={l.label}
-              >
-                {l.icon}
-              </a>
+              {l.href ? (
+                <a
+                  href={l.href}
+                  target={l.href.startsWith("http") ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  aria-label={l.label}
+                  data-tooltip={l.label}
+                >
+                  {l.icon}
+                </a>
+              ) : (
+                <a
+                  href={`#${l.targetId}`}
+                  onClick={(e) => handleNavClick(e, l.targetId)}
+                  aria-label={l.label}
+                  data-tooltip={l.label}
+                >
+                  {l.icon}
+                </a>
+              )}
             </li>
           ))}
         </ul>

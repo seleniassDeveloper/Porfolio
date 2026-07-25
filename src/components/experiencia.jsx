@@ -31,22 +31,27 @@ export const Experiencia = () => {
     {
       title: t("experience_section.teclab_title"),
       degree: t("experience_section.teclab_degree"),
+      year: "2019 - 2021",
     },
     {
       title: t("experience_section.davinci_title"),
       degree: t("experience_section.davinci_degree"),
+      year: "2023",
     },
     {
       title: t("experience_section.utn_title"),
       degree: t("experience_section.utn_degree"),
+      year: "2024",
     },
     {
       title: t("experience_section.computer_science_title"),
       degree: t("experience_section.computer_science_degree"),
+      year: "4.5 Years",
     },
     {
       title: t("experience_section.career_start_title"),
       degree: t("experience_section.career_start_degree"),
+      year: "2022 - Present",
     },
   ];
 
@@ -68,36 +73,25 @@ export const Experiencia = () => {
       ref={sectionRef}
       className={`experience-showcase ${visible ? "is-visible" : ""}`}
     >
-      <div className="experience-bg-grid"></div>
-
       <div className="experience-container">
-        <div className="experience-header">
-          <span>{t("experience_section.eyebrow", "Education")}</span>
-          <h2>{t("experience_section.academic_training")}</h2>
-          <p>{t("experience_section.subtitle")}</p>
+        {/* EDITORIAL HEADER LINE */}
+        <div className="experience-editorial-header">
+          <h2>EDUCATION & EXPERIENCE</h2>
+          <span>TRAINING & KNOWLEDGE ⟶</span>
         </div>
 
         <div className="experience-layout">
+          {/* MAIN EDUCATION TIMELINE */}
           <article className="experience-main-card">
-            <div className="experience-top">
-              <div className="experience-icon">
-                <FiBookOpen />
-              </div>
-
-              <div>
-                <span>{t("experience_section.main_label")}</span>
-                <h3>{t("experience_section.academic_training")}</h3>
-              </div>
-            </div>
-
             <div className="education-timeline">
               {educationItems.map((item, index) => (
                 <div className="education-item" key={index}>
-                  <div className="timeline-dot"></div>
-                  <div>
+                  <div className="timeline-dot" />
+                  <div className="education-info">
                     <h4>{item.title}</h4>
                     <p>{item.degree}</p>
                   </div>
+                  <span className="education-year">{item.year}</span>
                 </div>
               ))}
             </div>
@@ -108,6 +102,7 @@ export const Experiencia = () => {
             </div>
           </article>
 
+          {/* SIDE COURSES & CERTIFICATIONS */}
           <div className="experience-side-grid">
             <article className="experience-mini-card">
               <div className="mini-card-heading">
