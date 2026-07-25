@@ -13,8 +13,7 @@ import Dogco from "./components/ComponentesDComponentes/Dogco";
 import Dinosaurios from "./components/ComponentesDComponentes/Dinosaurios";
 import { MasRepuestos } from "./components/ComponentesDComponentes/MasRepuestos";
 import ProyectoDashboard from "./pages/ProyectoDashboard";
-
-
+import { CalendarioAuditoria } from "./components/CalendarioAuditoria";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -54,8 +53,9 @@ function App() {
           <Route path="/Dinosaurios" element={<Dinosaurios />} />
           <Route path="/proyecto-mas-repuestos" element={<MasRepuestos />} />
 
-          {/* ✅ NUEVA RUTA */}
+          {/* ✅ NUEVAS RUTAS */}
           <Route path="/proyecto-dashboard" element={<ProyectoDashboard />} />
+          <Route path="/agendar-auditoria" element={<CalendarioAuditoria />} />
         </Routes>
       </ScrollReveal>
     </HashRouter>

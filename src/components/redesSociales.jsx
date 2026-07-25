@@ -22,6 +22,11 @@ export const RedesSociales = () => {
       icon: "fas fa-briefcase",
       label: "Upwork",
     },
+    {
+      href: "#/agendar-auditoria",
+      icon: "fas fa-calendar-alt",
+      label: "Agendar Auditoría",
+    },
   ];
 
   return (

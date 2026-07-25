@@ -420,6 +420,47 @@
     "message_placeholder": "Tu mensaje...",
     "submit_button": "Enviar"
   },
+  "auditoria": {
+    "eyebrow": "Agendamiento & Consultoría",
+    "title": "Agenda una Call de Auditoría Técnica",
+    "subtitle": "Seleccioná una fecha y hora para analizar tu sistema, optimizar tu arquitectura o evaluar la experiencia y performance de tu plataforma.",
+    "badge_duration": "45 min · 1 a 1",
+    "select_date_title": "1. Seleccioná una fecha",
+    "select_time_title": "2. Seleccioná un horario",
+    "select_type_title": "3. Tipo de Auditoría",
+    "types": {
+      "frontend": "Auditoría Frontend & UI/UX",
+      "architecture": "Arquitectura & Escalabilidad SaaS",
+      "performance": "Performance & Código React/TS",
+      "custom": "Consultoría Técnica General"
+    },
+    "types_desc": {
+      "frontend": "Revisión de componentes, accesibilidad, diseño y UX.",
+      "architecture": "Análisis de estructura fullstack, módulos y mantenibilidad.",
+      "performance": "Diagnóstico de rendimiento de carga, bundle y buenas prácticas.",
+      "custom": "Evaluación personalizada orientada a las necesidades de tu producto."
+    },
+    "client_details_title": "4. Tus Datos de Contacto",
+    "name_label": "Nombre completo",
+    "name_placeholder": "Ej: Carlos Gómez",
+    "email_label": "Correo electrónico",
+    "email_placeholder": "carlos@empresa.com",
+    "company_label": "Empresa / Sitio Web (Opcional)",
+    "company_placeholder": "https://mi-empresa.com",
+    "notes_label": "Notas o temas específicos a tratar",
+    "notes_placeholder": "Describí brevemente los desafíos o dudas que querés resolver...",
+    "submit_button": "Confirmar y Reservar Cita",
+    "submitting": "Procesando agendamiento...",
+    "summary_title": "Resumen de tu Reserva",
+    "summary_date": "Fecha",
+    "summary_time": "Horario",
+    "summary_service": "Servicio",
+    "success_title": "¡Cita Agendada con Éxito!",
+    "success_message": "Tu solicitud ha sido registrada correctamente. Te responderé por correo a la brevedad con la confirmación y enlace de la llamada.",
+    "add_to_gcal": "Añadir a Google Calendar 📅",
+    "schedule_another": "Agendar otra reunión",
+    "no_slots": "No hay horarios disponibles para esta fecha. Seleccioná otro día."
+  },
   "Tecnologías": "Tecnologías",
   "items": {
     "scalabl": {

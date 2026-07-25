@@ -7,6 +7,7 @@ import { ProyectosReales } from "./proyectosReales";
 import { Tecnologias } from "./tecnologias";
 import TrueFocus from "./TrueFocus";
 import Waves from "./Waves";
+import { CalendarioAuditoria } from "./CalendarioAuditoria";
 import "../../src/App.css";
 
 export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
@@ -103,6 +104,8 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
           <Experiencia />
         </div>
       </section>
+
+      <CalendarioAuditoria />
 
       <Formulario />
     </>

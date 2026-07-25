@@ -398,6 +398,48 @@
     "submit_button": "Send"
   },
 
+  "auditoria": {
+    "eyebrow": "Booking & Consulting",
+    "title": "Schedule a Technical Audit Call",
+    "subtitle": "Select a date and time to review your system, optimize architecture, or evaluate platform UI/UX and performance.",
+    "badge_duration": "45 min · 1 on 1",
+    "select_date_title": "1. Select a Date",
+    "select_time_title": "2. Select a Time Slot",
+    "select_type_title": "3. Audit Type",
+    "types": {
+      "frontend": "Frontend & UI/UX Audit",
+      "architecture": "Architecture & SaaS Scalability",
+      "performance": "Performance & React/TS Code",
+      "custom": "General Technical Consulting"
+    },
+    "types_desc": {
+      "frontend": "Component review, accessibility, design, and UX usability.",
+      "architecture": "Fullstack structure analysis, modularity, and maintainability.",
+      "performance": "Load performance diagnosis, bundle optimization, and best practices.",
+      "custom": "Tailored technical evaluation oriented to your product's specific needs."
+    },
+    "client_details_title": "4. Your Contact Details",
+    "name_label": "Full Name",
+    "name_placeholder": "e.g. John Doe",
+    "email_label": "Email Address",
+    "email_placeholder": "john@company.com",
+    "company_label": "Company / Website (Optional)",
+    "company_placeholder": "https://my-company.com",
+    "notes_label": "Notes or Specific Topics to Discuss",
+    "notes_placeholder": "Briefly describe the key challenges or questions you want to solve...",
+    "submit_button": "Confirm & Book Audit Call",
+    "submitting": "Processing booking...",
+    "summary_title": "Booking Summary",
+    "summary_date": "Date",
+    "summary_time": "Time",
+    "summary_service": "Service",
+    "success_title": "Call Scheduled Successfully!",
+    "success_message": "Your booking request has been registered. I will reply via email shortly with full call confirmation and meeting link.",
+    "add_to_gcal": "Add to Google Calendar 📅",
+    "schedule_another": "Schedule another meeting",
+    "no_slots": "No available slots for this date. Please select another day."
+  },
+
   "Tecnologías": "Technologies",
 
   "items": {
