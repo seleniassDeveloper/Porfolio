@@ -2,10 +2,40 @@
 
 .audit-section {
   position: relative;
+  min-height: 100vh;
   padding: 5rem 1.5rem;
-  background: radial-gradient(circle at 50% 0%, rgba(20, 20, 35, 0.8) 0%, rgba(5, 5, 12, 0.95) 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(20, 20, 35, 0.95) 0%, rgba(5, 5, 12, 0.98) 100%);
   color: #fff;
   overflow: hidden;
+}
+
+.audit-nav-top {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.audit-back-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #a5b4fc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.audit-back-btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  color: #fff;
 }
 
 .audit-bg-glow {

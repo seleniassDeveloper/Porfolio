@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import { useTranslation } from "react-i18next";
 import {
@@ -16,13 +17,15 @@ import {
   FiCode,
   FiCpu,
   FiZap,
-  FiLayers
+  FiLayers,
+  FiArrowLeft
 } from "react-icons/fi";
 import "../css/CalendarioAuditoria.css";
 
 const TIME_SLOTS = ["09:00", "11:00", "14:00", "16:00", "18:00"];
 
 export const CalendarioAuditoria = () => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [formspreeState, handleSubmitFormspree] = useForm("mqabdaae");
 
@@ -137,6 +140,12 @@ export const CalendarioAuditoria = () => {
       <div className="audit-bg-glow"></div>
 
       <div className="audit-container">
+        <div className="audit-nav-top">
+          <button type="button" className="audit-back-btn" onClick={() => navigate("/")}>
+            <FiArrowLeft /> {i18n.language === "en" ? "← Back to Portfolio" : "← Volver al Portafolio"}
+          </button>
+        </div>
+
         <div className="audit-header">
           <span className="audit-eyebrow">
             <FiCalendar />
