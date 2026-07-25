@@ -235,14 +235,13 @@ export const CalendarioAuditoria = () => {
         </div>
 
         <div className="audit-header">
-          <span className="audit-eyebrow">
-            <FiCalendar />
-            {t("auditoria.eyebrow", "Reserva de Llamada 1 a 1")}
-          </span>
-          <h2>{t("auditoria.title", "Agenda una Call de Auditoría Técnica")}</h2>
-          <p className="audit-subtitle">
-            {t("auditoria.subtitle")}
-          </p>
+          <div className="audit-header-title-box">
+            <span className="audit-eyebrow">
+              <FiCalendar />
+              {t("auditoria.eyebrow", "Reserva de Llamada 1 a 1")}
+            </span>
+            <h2>{t("auditoria.title", "Agenda una Call de Auditoría Técnica")}</h2>
+          </div>
           <span className="audit-badge-duration">
             ⏱️ {t("auditoria.badge_duration", "45 min · Videollamada 1 a 1")}
           </span>
