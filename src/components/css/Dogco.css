@@ -82,7 +82,7 @@
 
 .dogco-hero-media img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -103,16 +103,20 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dogco-btn-primary {
   background: #FF5733;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .dogco-btn-primary:hover {
   background: #FFC300;
-  color: #070707;
+  color: #070707 !important;
 }
 
 .dogco-badge {
@@ -133,6 +137,7 @@
   margin: 0 auto;
   padding: 3rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  scroll-margin-top: 100px;
 }
 
 .dogco-h2 {
@@ -248,6 +253,102 @@
   gap: 1.5rem;
 }
 
+/* GUIA DE LA PLATAFORMA (PLATFORM GUIDE SECTION) */
+.dogco-guide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.dogco-guide-block {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.dogco-guide-media img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: block;
+}
+
+.dogco-guide-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 1rem 0;
+}
+
+.dogco-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.dogco-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+  color: #FFFFFF;
+}
+
+.dogco-checklist li span:nth-child(2) {
+  flex: 1;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.status-dot.done {
+  background: #10B981;
+}
+
+.status-dot.pending {
+  background: #F59E0B;
+}
+
+.chip {
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chip.success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.chip.warn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.dogco-muted {
+  color: #A1A1AA;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+
 /* FOOTER */
 .dogco-footer {
   display: flex;
@@ -263,6 +364,7 @@
   .dogco-feature { grid-template-columns: 1fr; }
   .dogco-gallery { grid-template-columns: 1fr; }
   .dogco-steps { grid-template-columns: repeat(2, 1fr); }
+  .dogco-guide-block { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
