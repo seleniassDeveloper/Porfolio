@@ -71,7 +71,6 @@ export const RedesSociales = () => {
       <header className="top-fixed-nav">
         <div className="nav-brand">
           <a href="/#/" onClick={(e) => handleNavClick(e, "hero")}>
-            <span className="brand-dot" />
             <span className="brand-name">Selenia Sánchez</span>
           </a>
         </div>
