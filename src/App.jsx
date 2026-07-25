@@ -36,6 +36,9 @@ function App() {
 
           <Route path="/proyecto-dashboard" element={<ProyectoDashboard />} />
           <Route path="/agendar-auditoria" element={<CalendarioAuditoria />} />
+          <Route path="/auditoria" element={<CalendarioAuditoria />} />
+          <Route path="/book-call" element={<CalendarioAuditoria />} />
+          <Route path="/book" element={<CalendarioAuditoria />} />
         </Routes>
       </ScrollReveal>
     </HashRouter>
