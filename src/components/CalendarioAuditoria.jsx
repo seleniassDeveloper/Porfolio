@@ -304,7 +304,7 @@ export const CalendarioAuditoria = () => {
                   onClick={prevMonth}
                   aria-label="Previous Month"
                 >
-                  <FiChevronLeft style={{ color: "#FFFFFF", fontSize: "1.3rem", strokeWidth: 3 }} />
+                  ‹
                 </button>
                 <span className="month-year">
                   {currentMonthName} {currentYear}
@@ -315,7 +315,7 @@ export const CalendarioAuditoria = () => {
                   onClick={nextMonth}
                   aria-label="Next Month"
                 >
-                  <FiChevronRight style={{ color: "#FFFFFF", fontSize: "1.3rem", strokeWidth: 3 }} />
+                  ›
                 </button>
               </div>
 
