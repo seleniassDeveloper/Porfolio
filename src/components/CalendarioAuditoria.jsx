@@ -117,9 +117,9 @@ export const CalendarioAuditoria = () => {
 
     const formatGCalDate = (date) => date.toISOString().replace(/-|:|\.\d\d\d/g, "");
 
-    const title = encodeURIComponent(`Auditoría Técnica: ${t(`auditoria.types.${auditType}`)} - ${formData.name || "Cliente"}`);
+    const title = encodeURIComponent(`Auditoría Técnica 1 a 1 - ${formData.name || "Cliente"}`);
     const details = encodeURIComponent(
-      `Call de Auditoría con Selenia Sanchez.\nTipo: ${t(`auditoria.types.${auditType}`)}\nCliente: ${formData.name}\nEmail: ${formData.email}\nEmpresa: ${formData.company || "N/A"}\nNotas: ${formData.notes || "N/A"}`
+      `Call de Auditoría con Selenia Sanchez.\nCliente: ${formData.name}\nEmail: ${formData.email}\nEmpresa/Web: ${formData.company || "N/A"}\nDescripción/Notas: ${formData.notes || "N/A"}`
     );
     const dates = `${formatGCalDate(startObj)}/${formatGCalDate(endObj)}`;
 
@@ -149,21 +149,21 @@ export const CalendarioAuditoria = () => {
         <div className="audit-header">
           <span className="audit-eyebrow">
             <FiCalendar />
-            {t("auditoria.eyebrow", "Agendamiento & Consultoría")}
+            {t("auditoria.eyebrow", "Reserva de Llamada 1 a 1")}
           </span>
           <h2>{t("auditoria.title", "Agenda una Call de Auditoría Técnica")}</h2>
           <p className="audit-subtitle">
             {t("auditoria.subtitle")}
           </p>
           <span className="audit-badge-duration">
-            ⏱️ {t("auditoria.badge_duration", "45 min · 1 a 1")}
+            ⏱️ {t("auditoria.badge_duration", "45 min · Videollamada 1 a 1")}
           </span>
         </div>
 
         {formspreeState.succeeded ? (
           <div className="audit-glass-card audit-success-box">
             <FiCheckCircle className="success-icon" />
-            <h3>{t("auditoria.success_title", "¡Cita Agendada con Éxito!")}</h3>
+            <h3>{t("auditoria.success_title", "¡Reserva Confirmada!")}</h3>
             <p>{t("auditoria.success_message")}</p>
 
             <div className="actions-success">
@@ -180,7 +180,7 @@ export const CalendarioAuditoria = () => {
                 className="btn-reset"
                 onClick={() => window.location.reload()}
               >
-                {t("auditoria.schedule_another", "Agendar otra reunión")}
+                {t("auditoria.schedule_another", "Agendar otra llamada")}
               </button>
             </div>
           </div>
@@ -189,7 +189,7 @@ export const CalendarioAuditoria = () => {
             {/* COLUMNA IZQUIERDA: CALENDARIO & HORARIOS */}
             <div className="audit-glass-card">
               <h3 className="step-title">
-                <FiCalendar /> {t("auditoria.select_date_title", "1. Seleccioná una fecha")}
+                <FiCalendar /> {t("auditoria.select_date_title", "1. Selecciona Fecha y Hora")}
               </h3>
 
               <div className="calendar-header">
@@ -247,7 +247,7 @@ export const CalendarioAuditoria = () => {
               {/* HORARIOS */}
               <div className="time-slots-container">
                 <h3 className="step-title">
-                  <FiClock /> {t("auditoria.select_time_title", "2. Seleccioná un horario")}
+                  <FiClock /> {t("auditoria.select_time_title", "Horarios disponibles")}
                 </h3>
                 <div className="time-slots-grid">
                   {TIME_SLOTS.map((slot) => (
@@ -264,10 +264,10 @@ export const CalendarioAuditoria = () => {
               </div>
             </div>
 
-            {/* COLUMNA DERECHA: DATOS DE CONTACTO & MOTIVO DE LA CALL */}
+            {/* COLUMNA DERECHA: DATOS DE CONTACTO Y DESCRIPCIÓN DE LA REUNIÓN */}
             <div className="audit-glass-card">
               <h3 className="step-title">
-                <FiUser /> {t("auditoria.client_details_title", "2. Tus Datos de Contacto")}
+                <FiUser /> {t("auditoria.client_details_title", "2. Tus Datos y Detalles de la Llamada")}
               </h3>
 
               <div className="audit-form">
@@ -279,7 +279,6 @@ export const CalendarioAuditoria = () => {
                 />
                 <input type="hidden" name="RESERVA_FECHA" value={formattedSelectedDate || "No seleccionada"} />
                 <input type="hidden" name="RESERVA_HORARIO" value={`${selectedSlot} hs`} />
-                <input type="hidden" name="RESERVA_TEMA_AUDITORIA" value={t(`auditoria.types.${auditType}`)} />
 
                 <label>
                   <span><FiUser /> {t("auditoria.name_label")}</span>
@@ -318,28 +317,6 @@ export const CalendarioAuditoria = () => {
                   />
                 </label>
 
-                <h3 className="step-title" style={{ marginTop: "1rem" }}>
-                  <FiFileText /> {t("auditoria.select_type_title", "3. ¿De qué vamos a hablar?")}
-                </h3>
-
-                <div className="audit-types-list">
-                  {["frontend", "architecture", "performance", "custom"].map((typeKey) => (
-                    <div
-                      key={typeKey}
-                      className={`audit-type-card ${auditType === typeKey ? "selected" : ""}`}
-                      onClick={() => setAuditType(typeKey)}
-                    >
-                      <div className="audit-type-title">
-                        {auditTypeIcons[typeKey]}
-                        {t(`auditoria.types.${typeKey}`)}
-                      </div>
-                      <div className="audit-type-desc">
-                        {t(`auditoria.types_desc.${typeKey}`)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
                 <label>
                   <span><FiFileText /> {t("auditoria.notes_label")}</span>
                   <textarea
@@ -348,6 +325,7 @@ export const CalendarioAuditoria = () => {
                     onChange={handleChangeInput}
                     placeholder={t("auditoria.notes_placeholder")}
                     required
+                    style={{ minHeight: "120px" }}
                   />
                   <ValidationError prefix="Notes" field="notes" errors={formspreeState.errors} />
                 </label>
@@ -361,9 +339,6 @@ export const CalendarioAuditoria = () => {
                       </div>
                       <div className="summary-item">
                         <FiClock /> <span>{selectedSlot} hs</span>
-                      </div>
-                      <div className="summary-item">
-                        {auditTypeIcons[auditType]} <span>{t(`auditoria.types.${auditType}`)}</span>
                       </div>
                       {formData.name && (
                         <div className="summary-item">
