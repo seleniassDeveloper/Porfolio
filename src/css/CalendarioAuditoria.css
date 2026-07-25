@@ -195,26 +195,36 @@
 
 .btn-month-nav {
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   color: #FFFFFF !important;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1rem;
   transition: all 0.2s ease;
+}
+
+.btn-month-nav svg {
+  color: #FFFFFF !important;
+  font-size: 1.25rem !important;
+  stroke-width: 2.5;
+  display: block;
 }
 
 .btn-month-nav:hover:not(:disabled) {
   border-color: #FF5733 !important;
+  background: rgba(255, 87, 51, 0.15) !important;
+}
+
+.btn-month-nav:hover:not(:disabled) svg {
   color: #FF5733 !important;
 }
 
 .btn-month-nav:disabled {
-  opacity: 0.3;
+  opacity: 0.25;
   cursor: not-allowed;
 }
 
