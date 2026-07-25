@@ -16,8 +16,10 @@
 }
 
 .projects-showcase-container {
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
+  padding-left: clamp(4.5rem, 7.5vw, 6.5rem);
+  padding-right: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 /* Header Line */

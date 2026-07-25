@@ -106,7 +106,7 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 760px;
-  padding: 100px 7vw;
+  padding: 100px clamp(4.5rem, 7.5vw, 6.5rem);
   gap: 60px;
   background: #08070A;
   overflow: hidden;
