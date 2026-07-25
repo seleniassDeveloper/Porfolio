@@ -1,4 +1,7 @@
-/* src/css/CalendarioAuditoria.css - EDITORIAL FLAT (NO BG FILLS, NO GRADIENTS) */
+/* ==========================================
+   BOOK A CALL / CALENDARIO AUDITORIA
+   PURE FLAT EDITORIAL (NO GRADIENTS, NO BG FILLS, ONLY BORDERS)
+========================================== */
 
 .audit-section {
   position: relative;
@@ -9,9 +12,17 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.audit-nav-top {
+.audit-bg-glow {
+  display: none;
+}
+
+.audit-container {
   max-width: 1300px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
+}
+
+.audit-nav-top {
+  margin-bottom: 2rem;
 }
 
 .audit-back-btn {
@@ -30,23 +41,20 @@
 }
 
 .audit-back-btn:hover {
-  background: #FF5733 !important;
   border-color: #FF5733;
-}
-
-.audit-container {
-  max-width: 1300px;
-  margin: 0 auto;
+  color: #FF5733;
 }
 
 .audit-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding-bottom: 1.5rem;
 }
 
 .audit-eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #FF5733;
   font-size: 0.85rem;
   font-weight: 900;
@@ -56,7 +64,7 @@
 }
 
 .audit-header h2 {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 950;
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -70,13 +78,25 @@
   color: #A1A1AA;
   max-width: 650px;
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.audit-badge-duration {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFC300;
+  text-transform: uppercase;
 }
 
 /* GRID LAYOUT */
 .audit-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -86,7 +106,7 @@
   }
 }
 
-/* FLAT CARDS - NO BACKGROUND FILLS, ONLY BORDERS */
+/* CARDS - ONLY BORDERS, TRANSPARENT BACKGROUND, NO GRADIENTS */
 .audit-glass-card {
   background: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -107,11 +127,50 @@
   gap: 0.6rem;
 }
 
+.step-title svg {
+  color: #FF5733;
+}
+
+/* TIMEZONE PICKER */
+.timezone-picker-box {
+  margin-bottom: 1.5rem;
+}
+
+.timezone-picker-box label span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FF5733;
+  margin-bottom: 0.5rem;
+}
+
+.timezone-picker-box select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: #08070A !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.timezone-picker-box select:focus {
+  border-color: #FF5733;
+}
+
+/* CALENDAR HEADER & MONTH NAV */
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .month-year {
@@ -119,26 +178,35 @@
   font-size: 1.1rem;
   color: #FFFFFF;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .btn-month-nav {
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  width: 36px;
-  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  width: 38px;
+  height: 38px;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
 }
 
 .btn-month-nav:hover:not(:disabled) {
-  background: #FF5733 !important;
-  border-color: #FF5733;
+  border-color: #FF5733 !important;
+  color: #FF5733 !important;
 }
 
+.btn-month-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* WEEKDAYS */
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -147,14 +215,14 @@
   font-size: 0.8rem;
   color: #FF5733;
   margin-bottom: 0.8rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* DAYS GRID */
 .calendar-days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  gap: 6px;
+  margin-bottom: 1.5rem;
 }
 
 .day-cell {
@@ -163,67 +231,129 @@
   align-items: center;
   justify-content: center;
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 4px;
   font-size: 0.95rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: none !important;
 }
 
 .day-cell:hover:not(.disabled):not(.empty) {
-  background: #FF5733 !important;
-  border-color: #FF5733;
+  border-color: #FF5733 !important;
+  color: #FF5733 !important;
 }
 
+/* SELECTED DAY CELL - SOLID CORAL COLOR, NO GRADIENT, NO GLOW SHADOW */
 .day-cell.selected {
   background: #FF5733 !important;
   border-color: #FF5733 !important;
   color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+.day-cell.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: transparent !important;
+}
+
+.day-cell.empty {
+  border-color: transparent !important;
+  pointer-events: none;
+}
+
+/* SELECTED DATE BANNER */
+.selected-date-banner {
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 87, 51, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  margin-bottom: 1.8rem;
+  background: transparent !important;
+}
+
+/* TIME SLOTS */
+.time-slots-container {
+  margin-top: 1.5rem;
+}
+
+.slot-shift-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #A1A1AA;
+  margin: 1.2rem 0 0.8rem 0;
 }
 
 .time-slots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
   gap: 0.6rem;
 }
 
+/* TIME SLOT BUTTON - NO GRADIENT */
 .time-slot-btn {
-  padding: 0.7rem 0.8rem;
+  padding: 0.7rem 0.6rem;
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-size: 0.85rem;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
 .time-slot-btn:hover:not(.booked) {
-  background: #FF5733 !important;
-  border-color: #FF5733;
+  border-color: #FF5733 !important;
+  color: #FF5733 !important;
 }
 
+/* SELECTED TIME SLOT - SOLID CORAL COLOR, NO GRADIENT */
 .time-slot-btn.selected {
   background: #FF5733 !important;
   border-color: #FF5733 !important;
   color: #FFFFFF !important;
+  box-shadow: none !important;
 }
 
 .time-slot-btn.booked {
-  background: transparent !important;
-  color: #52525B;
-  border-color: rgba(255, 255, 255, 0.05);
+  opacity: 0.3;
   cursor: not-allowed;
+  border-color: transparent !important;
+}
+
+/* FORM FIELDS ON THE RIGHT */
+.audit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .audit-form label {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 0.82rem;
+}
+
+.audit-form label > span {
+  font-size: 0.78rem;
   color: #FF5733;
   font-weight: 900;
   text-transform: uppercase;
@@ -234,24 +364,64 @@
 .audit-form textarea {
   padding: 0.9rem 1rem;
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
   border-radius: 4px;
   color: #FFFFFF;
   font-size: 0.9rem;
   outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.audit-form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 .audit-form input:focus,
 .audit-form textarea:focus {
-  border-color: #FF5733;
+  border-color: #FF5733 !important;
 }
 
-.btn-submit-audit {
-  padding: 1rem 1.5rem;
-  background: #FF5733;
-  border: none;
+/* SUMMARY BOX */
+.booking-summary-box {
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  background: transparent !important;
+}
+
+.booking-summary-box h4 {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
   color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.booking-summary-box div {
+  font-size: 0.88rem;
+  color: #A1A1AA;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking-summary-box strong {
+  color: #FFFFFF;
+}
+
+/* SUBMIT BUTTON - SOLID CORAL RED, NO GRADIENT, NO GLOW SHADOW */
+.btn-submit-audit {
+  margin-top: 1rem;
+  padding: 1.1rem 1.8rem;
+  background: #FF5733 !important;
+  border: none !important;
+  border-radius: 4px;
+  color: #FFFFFF !important;
   font-size: 0.95rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -260,11 +430,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  box-shadow: none !important;
   transition: all 0.2s ease;
 }
 
 .btn-submit-audit:hover:not(:disabled) {
-  background: #FFC300;
-  color: #070707;
+  background: #FFC300 !important;
+  color: #070707 !important;
+  transform: translateY(-2px);
 }

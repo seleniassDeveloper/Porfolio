@@ -108,23 +108,9 @@ p {
   min-height: 760px;
   padding: 100px 7vw;
   gap: 60px;
-  background:
-    radial-gradient(circle at 15% 30%, rgba(236, 110, 192, 0.12), transparent 32%),
-    radial-gradient(circle at 85% 65%, rgba(139, 92, 246, 0.14), transparent 34%),
-    #0A080D;
+  background: #08070A;
   overflow: hidden;
-}
-
-.cajaFocus::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(245, 169, 199, .025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 169, 199, .025) 1px, transparent 1px);
-  background-size: 42px 42px;
-  opacity: 0.4;
-  pointer-events: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .columna-derecha {
@@ -137,13 +123,10 @@ p {
   align-items: center;
   gap: 56px;
   padding: 48px 52px;
-  border-radius: var(--app-radius-lg);
-  background:
-    radial-gradient(circle at 12% 18%, rgba(245, 169, 199, 0.08), transparent 38%),
-    radial-gradient(circle at 88% 82%, rgba(139, 92, 246, 0.12), transparent 40%),
-    linear-gradient(145deg, rgba(20, 15, 28, 0.95), rgba(12, 9, 17, 0.98));
-  border: 1px solid rgba(245, 169, 199, 0.18);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6), 0 0 35px rgba(236, 110, 192, 0.12);
+  border-radius: 4px;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none !important;
   overflow: hidden;
 }
 
@@ -168,10 +151,7 @@ p {
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, #F5A9C7 0%, #C4A7F0 50%, #FF9E80 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #FF5733;
 }
 
 .cajaencryted {
