@@ -1,5 +1,5 @@
 /* =========================
-   TECNOLOGIAS + CASES - CLEAN GRAY/WHITE BORDERS & DARK SLATE (#0A080D)
+   TECNOLOGIAS + CASES - SOLID DARK SLATE (#0A080D / #141722)
 ========================= */
 
 .tecnologias-container {
@@ -76,7 +76,7 @@
 }
 
 /* =========================
-   IMPACT DECK SECTION
+   IMPACT DECK SECTION (SOLID CARDS)
 ========================= */
 
 .impact-deck-section {
@@ -121,31 +121,30 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  background: rgba(22, 26, 38, 0.9);
+  background: #141722;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
   padding: 0.4rem 0.8rem;
-  backdrop-filter: blur(12px);
 }
 
 .btn-deck-nav {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.06);
   color: #F8FAFC;
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-deck-nav:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffffff;
   border-color: #ffffff;
-  color: #ffffff;
+  color: #0F172A;
   transform: scale(1.05);
 }
 
@@ -153,7 +152,7 @@
   font-size: 0.9rem;
   font-weight: 800;
   color: #CBD5E1;
-  min-width: 50px;
+  min-width: 60px;
   text-align: center;
 }
 
@@ -166,25 +165,24 @@
 
 .deck-stack {
   position: relative;
-  width: min(900px, 100%);
+  width: min(920px, 100%);
   min-height: 590px;
   display: grid;
   place-items: center;
 }
 
-/* Background cards */
+/* Background cards (SOLID NON-TRANSPARENT) */
 .deck-back-card {
   position: absolute;
-  width: min(900px, 100%);
+  width: min(920px, 100%);
   height: 540px;
   border-radius: 30px;
-  opacity: .7;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(18, 20, 28, 0.95);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  opacity: .5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #10121B !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
   transform:
-    translateX(calc(var(--i) * 36px))
-    rotate(calc(var(--i) * 2deg))
+    translateX(calc(var(--i) * 20px))
     scale(calc(1 - (var(--abs) * .02)));
   z-index: calc(4 - var(--abs));
   pointer-events: none;
@@ -194,29 +192,29 @@
   opacity: 0;
 }
 
-/* Main card */
+/* Main card (SOLID 100% OPAQUE DARK SLATE) */
 .deck-main-card {
   position: relative;
   z-index: 20;
-  width: min(900px, 100%);
+  width: min(920px, 100%);
   min-height: 570px;
-  padding: 34px;
+  padding: 36px;
   border-radius: 30px;
   color: #F8FAFC;
-  background: rgba(18, 20, 28, 0.98);
+  background: #141722 !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7);
-  animation: activeCardIn .4s ease both;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85);
+  animation: activeCardIn .35s ease both;
 }
 
 @keyframes activeCardIn {
   from {
     opacity: 0;
-    transform: translateY(15px) scale(.98);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -259,7 +257,7 @@
 }
 
 .deck-stack-pill {
-  max-width: 240px;
+  max-width: 260px;
   padding: 8px 16px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
@@ -285,7 +283,7 @@
   min-height: 250px;
   padding: 26px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #0E1018;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -320,7 +318,7 @@
 .deck-side-metric {
   padding: 26px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #0E1018;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -366,7 +364,7 @@
 .deck-impact-card,
 .deck-detail-list {
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #0E1018;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -452,7 +450,7 @@
 .deck-btn:hover {
   background: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
   color: #0F172A;
 }
 
@@ -491,7 +489,7 @@
 }
 
 /* =========================
-   TECH GRID STYLES
+   STACK GRID WITH BRAND COLOR HOVER ILLUMINATION
 ========================= */
 
 .grid-tecnologias {
@@ -501,36 +499,143 @@
 }
 
 .carta-tecnologia {
-  padding: 24px;
-  border-radius: 20px;
-  background: rgba(18, 20, 28, 0.95);
+  padding: 26px;
+  border-radius: 22px;
+  background: #141722;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.25s ease;
-}
-
-.carta-tecnologia:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .icono-tecnologia {
-  font-size: 2.2rem;
-  color: #F8FAFC;
-  margin-bottom: 12px;
+  font-size: 2.4rem;
+  color: #CBD5E1;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
 }
 
 .nombre-tecnologia {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 900;
   color: #F8FAFC;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .descripcion-tecnologia {
   font-size: 0.88rem;
-  color: #CBD5E1;
-  line-height: 1.5;
-
+  color: #94A3B8;
+  line-height: 1.55;
   margin: 0;
+  transition: color 0.3s ease;
 }
+
+/* BRAND SPECIFIC HOVER ILLUMINATION */
+
+/* HTML - #E34F26 */
+.carta-tecnologia.html:hover {
+  background: rgba(227, 79, 38, 0.1);
+  border-color: #E34F26;
+  box-shadow: 0 0 35px rgba(227, 79, 38, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.html:hover .icono-tecnologia { color: #E34F26; }
+
+/* CSS - #1572B6 */
+.carta-tecnologia.css:hover {
+  background: rgba(21, 114, 182, 0.1);
+  border-color: #1572B6;
+  box-shadow: 0 0 35px rgba(21, 114, 182, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.css:hover .icono-tecnologia { color: #1572B6; }
+
+/* JavaScript - #F7DF1E */
+.carta-tecnologia.javascript:hover {
+  background: rgba(247, 223, 30, 0.1);
+  border-color: #F7DF1E;
+  box-shadow: 0 0 35px rgba(247, 223, 30, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.javascript:hover .icono-tecnologia { color: #F7DF1E; }
+
+/* React - #61DAFB */
+.carta-tecnologia.react:hover {
+  background: rgba(97, 218, 251, 0.1);
+  border-color: #61DAFB;
+  box-shadow: 0 0 35px rgba(97, 218, 251, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.react:hover .icono-tecnologia { color: #61DAFB; }
+
+/* GitHub - #FFFFFF */
+.carta-tecnologia.github:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #FFFFFF;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.github:hover .icono-tecnologia { color: #FFFFFF; }
+
+/* Python - #3776AB */
+.carta-tecnologia.python:hover {
+  background: rgba(55, 118, 171, 0.1);
+  border-color: #3776AB;
+  box-shadow: 0 0 35px rgba(55, 118, 171, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.python:hover .icono-tecnologia { color: #FFD43B; }
+
+/* TypeScript - #3178C6 */
+.carta-tecnologia.typescript:hover {
+  background: rgba(49, 120, 198, 0.1);
+  border-color: #3178C6;
+  box-shadow: 0 0 35px rgba(49, 120, 198, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.typescript:hover .icono-tecnologia { color: #3178C6; }
+
+/* PHP - #777BB4 */
+.carta-tecnologia.php:hover {
+  background: rgba(119, 123, 180, 0.1);
+  border-color: #777BB4;
+  box-shadow: 0 0 35px rgba(119, 123, 180, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.php:hover .icono-tecnologia { color: #777BB4; }
+
+/* Figma - #F24E1E */
+.carta-tecnologia.figma:hover {
+  background: rgba(242, 78, 30, 0.1);
+  border-color: #F24E1E;
+  box-shadow: 0 0 35px rgba(242, 78, 30, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.figma:hover .icono-tecnologia { color: #F24E1E; }
+
+/* Canva - #00C4CC */
+.carta-tecnologia.canva:hover {
+  background: rgba(0, 196, 204, 0.1);
+  border-color: #00C4CC;
+  box-shadow: 0 0 35px rgba(0, 196, 204, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.canva:hover .icono-tecnologia { color: #00C4CC; }
+
+/* Photoshop - #31A8FF */
+.carta-tecnologia.photoshop:hover {
+  background: rgba(49, 168, 255, 0.1);
+  border-color: #31A8FF;
+  box-shadow: 0 0 35px rgba(49, 168, 255, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.photoshop:hover .icono-tecnologia { color: #31A8FF; }
+
+/* Illustrator - #FF9A00 */
+.carta-tecnologia.illustrator:hover {
+  background: rgba(255, 154, 0, 0.1);
+  border-color: #FF9A00;
+  box-shadow: 0 0 35px rgba(255, 154, 0, 0.35);
+  transform: translateY(-6px);
+}
+.carta-tecnologia.illustrator:hover .icono-tecnologia { color: #FF9A00; }
