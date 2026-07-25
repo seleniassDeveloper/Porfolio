@@ -487,14 +487,14 @@
   "titulo": "Proyectos",
   "verProyecto": "Ver proyecto",
   "proyecto_proyecto": "Proyectos",
-"hello_welcome": "Bienvenido",
-"portfolio_description": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack. He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere. Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad.",
-"portfolio_description_short": "Desarrolladora Frontend con mentalidad fullstack, enfocada en construir sistemas escalables y soluciones orientadas a producto.\n\nDesarrollo plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países.",
+"hello_welcome": "Bienvenida",
+"portfolio_description": "Desarrolladora Fullstack orientada a producto, especializada en transformar operaciones manuales en sistemas escalables. Construyo plataformas SaaS, marketplaces, CRMs, ERPs y automatizaciones a medida —desde el front hasta la lógica de negocio— usadas por equipos en múltiples países.\n\nHoy combino desarrollo y consultoría: primero detecto dónde una empresa pierde tiempo y dinero, y después diseño la solución exacta que necesita.",
+"portfolio_description_short": "Desarrolladora Fullstack orientada a producto, especializada en transformar operaciones manuales en sistemas escalables. Construyo plataformas SaaS, marketplaces, CRMs, ERPs y automatizaciones a medida —desde el front hasta la lógica de negocio— usadas por equipos en múltiples países.\n\nHoy combino desarrollo y consultoría: primero detecto dónde una empresa pierde tiempo y dinero, y después diseño la solución exacta que necesita.",
 "bio_section": {
   "mobile_tag": "Hola, soy",
-  "mobile_intro": "Desarrolladora Frontend con enfoque en sistemas escalables y visión fullstack.",
-  "mobile_paragraph_1": "He construido plataformas SaaS, marketplaces y herramientas internas utilizadas por equipos en múltiples países, liderando el desarrollo frontend y participando en la arquitectura backend cuando el producto lo requiere.",
-  "mobile_paragraph_2": "Trabajo con React y TypeScript diseñando interfaces complejas, integrando APIs y lógica de negocio, y desarrollando soluciones end-to-end que combinan experiencia de usuario, estructura técnica y escalabilidad."
+  "mobile_intro": "Desarrolladora Fullstack orientada a producto, especializada en transformar operaciones manuales en sistemas escalables.",
+  "mobile_paragraph_1": "Construyo plataformas SaaS, marketplaces, CRMs, ERPs y automatizaciones a medida —desde el front hasta la lógica de negocio— usadas por equipos en múltiples países.",
+  "mobile_paragraph_2": "Hoy combino desarrollo y consultoría: primero detecto dónde una empresa pierde tiempo y dinero, y después diseño la solución exacta que necesita."
 },
 
 "bio_cards": [
@@ -782,7 +782,7 @@
   "dashboard": {
     "badge": "Plataforma SaaS en Producción",
     "title": "AuraDash: Smart Dashboard & Management",
-    "subtitle": "Sistema integral de gestión para negocios. Incluye agendamiento inteligente, control financiero, gestión de personal, inventario y workflows automatizados, ya disponible en auradash.digital.com.",
+    "subtitle": "Sistema integral de gestión para negocios. Incluye agendamiento inteligente, control financiero, gestión de personal, inventario y workflows automatizados, ya disponible en auradash.digital.",
     "back": "Volver a proyectos",
     "visit": "Visitar sitio en vivo",
     "modules": {

@@ -114,7 +114,7 @@ export default function ProyectoDashboard() {
               {t("dashboard.back")}
             </button>
             <a 
-              href="https://auradash.digital.com" 
+              href="https://auradash.digital/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="pd-btn-primary"

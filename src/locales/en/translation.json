@@ -468,13 +468,13 @@
   "verProyecto": "View project",
   "proyecto_proyecto": "Projects",
 "hello_welcome": "Welcome",
-"portfolio_description": "Frontend Developer with a fullstack mindset, focused on scalable systems and product-driven solutions. I have built SaaS platforms, marketplaces and internal tools used by teams across multiple countries, leading frontend development and contributing to backend architecture when the product requires it. I work with React and TypeScript to design complex interfaces, integrate APIs and business logic, and build end-to-end solutions that combine user experience, technical structure and scalability.",
-"portfolio_description_short": "Frontend Developer with a fullstack mindset, focused on building scalable systems and product-driven solutions.\n\nI develop SaaS platforms, marketplaces, and internal tools used by teams across multiple countries.",
+"portfolio_description": "Product-focused Fullstack Developer specializing in turning manual operations into scalable systems. I build SaaS platforms, marketplaces, CRMs, ERPs and custom automations —from the frontend to the business logic— used by teams across multiple countries.\n\nToday I blend engineering with consulting: I first uncover where a business loses time and money, then design the exact solution it needs.",
+"portfolio_description_short": "Product-focused Fullstack Developer specializing in turning manual operations into scalable systems. I build SaaS platforms, marketplaces, CRMs, ERPs and custom automations —from the frontend to the business logic— used by teams across multiple countries.\n\nToday I blend engineering with consulting: I first uncover where a business loses time and money, then design the exact solution it needs.",
 "bio_section": {
   "mobile_tag": "Hi, I am",
-  "mobile_intro": "Frontend Developer with a fullstack mindset, focused on scalable systems.",
-  "mobile_paragraph_1": "I have built SaaS platforms, marketplaces and internal tools used by teams across multiple countries, leading frontend development and contributing to backend architecture when needed.",
-  "mobile_paragraph_2": "I work with React and TypeScript to design complex interfaces, integrate APIs and business logic, and build end-to-end solutions that combine user experience, technical structure and scalability."
+  "mobile_intro": "Product-focused Fullstack Developer specializing in turning manual operations into scalable systems.",
+  "mobile_paragraph_1": "I build SaaS platforms, marketplaces, CRMs, ERPs and custom automations —from the frontend to the business logic— used by teams across multiple countries.",
+  "mobile_paragraph_2": "Today I blend engineering with consulting: I first uncover where a business loses time and money, then design the exact solution it needs."
 },
 
 "bio_cards": [
@@ -748,7 +748,7 @@
 "dashboard": {
   "badge": "Live SaaS Platform",
   "title": "AuraDash: Smart Dashboard & Management",
-  "subtitle": "Comprehensive business management system including smart scheduling, financial control, staff management, inventory, and automated workflows. Live at auradash.digital.com.",
+  "subtitle": "Comprehensive business management system including smart scheduling, financial control, staff management, inventory, and automated workflows. Live at auradash.digital.",
   "back": "Back to projects",
   "visit": "Visit Live Site",
   "modules": {
