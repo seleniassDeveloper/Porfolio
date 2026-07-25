@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import { useTranslation } from "react-i18next";
@@ -14,15 +14,25 @@ import {
   FiChevronRight,
   FiSend,
   FiCheck,
-  FiCode,
-  FiCpu,
-  FiZap,
-  FiLayers,
+  FiLock,
   FiArrowLeft
 } from "react-icons/fi";
 import "../css/CalendarioAuditoria.css";
 
-const TIME_SLOTS = ["09:00", "11:00", "14:00", "16:00", "18:00"];
+const ALL_TIME_SLOTS = [
+  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00",
+  "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
+];
+
+const TIMEZONES = [
+  { id: "America/Argentina/Buenos_Aires", name: "🇦🇷 Hora Argentina (ART / UTC-3)", offsetHours: -3 },
+  { id: "America/New_York", name: "🇺🇸 EE.UU. Este (EST / UTC-5)", offsetHours: -5 },
+  { id: "America/Los_Angeles", name: "🇺🇸 EE.UU. Pacífico (PST / UTC-8)", offsetHours: -8 },
+  { id: "America/Mexico_City", name: "🇲🇽 México (CST / UTC-6)", offsetHours: -6 },
+  { id: "America/Bogota", name: "🇨🇴 Colombia / Perú (COT/PET / UTC-5)", offsetHours: -5 },
+  { id: "America/Santiago", name: "🇨🇱 Chile (CLT / UTC-3)", offsetHours: -3 },
+  { id: "Europe/Madrid", name: "🇪🇸 España / Europa (CET / UTC+1)", offsetHours: 1 }
+];
 
 export const CalendarioAuditoria = () => {
   const navigate = useNavigate();
@@ -32,9 +42,19 @@ export const CalendarioAuditoria = () => {
   const today = new Date();
   const [currentMonthDate, setCurrentMonthDate] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedSlot, setSelectedSlot] = useState(TIME_SLOTS[1]);
-  const [auditType, setAuditType] = useState("frontend");
+  const [selectedSlot, setSelectedSlot] = useState("14:00");
+  const [selectedTimezone, setSelectedTimezone] = useState("America/Argentina/Buenos_Aires");
   
+  // Persistence for booked slots in localStorage
+  const [bookedSlots, setBookedSlots] = useState(() => {
+    try {
+      const saved = localStorage.getItem("audit_booked_slots");
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,11 +62,35 @@ export const CalendarioAuditoria = () => {
     notes: ""
   });
 
-  const auditTypeIcons = {
-    frontend: <FiCode />,
-    architecture: <FiLayers />,
-    performance: <FiZap />,
-    custom: <FiCpu />
+  // Mark slot as booked upon successful submission
+  useEffect(() => {
+    if (formspreeState.succeeded && selectedDate && selectedSlot) {
+      const dateKey = getDateKey(selectedDate);
+      const slotKey = `${dateKey}_${selectedSlot}`;
+      if (!bookedSlots.includes(slotKey)) {
+        const updated = [...bookedSlots, slotKey];
+        setBookedSlots(updated);
+        try {
+          localStorage.setItem("audit_booked_slots", JSON.stringify(updated));
+        } catch (e) {
+          console.error("Error saving booked slots:", e);
+        }
+      }
+    }
+  }, [formspreeState.succeeded]);
+
+  const getDateKey = (dateObj) => {
+    if (!dateObj) return "";
+    const y = dateObj.getFullYear();
+    const m = String(dateObj.getMonth() + 1).padStart(2, "0");
+    const d = String(dateObj.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  };
+
+  const isSlotBooked = (dateObj, slot) => {
+    if (!dateObj) return false;
+    const key = `${getDateKey(dateObj)}_${slot}`;
+    return bookedSlots.includes(key);
   };
 
   // Month navigation
@@ -108,6 +152,24 @@ export const CalendarioAuditoria = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Calculate local time for selected timezone
+  const getConvertedTimeText = (slotStr) => {
+    if (selectedTimezone === "America/Argentina/Buenos_Aires") return `${slotStr} hs (ART)`;
+
+    const targetTz = TIMEZONES.find((tz) => tz.id === selectedTimezone);
+    if (!targetTz) return `${slotStr} hs`;
+
+    const [h, m] = slotStr.split(":").map(Number);
+    // Argentina is UTC-3. Diff = targetOffset - (-3)
+    const diff = targetTz.offsetHours - (-3);
+    let convertedH = h + diff;
+    if (convertedH < 0) convertedH += 24;
+    if (convertedH >= 24) convertedH -= 24;
+
+    const formattedH = String(convertedH).padStart(2, "0");
+    return `${slotStr} ART = ${formattedH}:${String(m).padStart(2, "0")} hs`;
+  };
+
   // Create Google Calendar link
   const getGoogleCalendarUrl = () => {
     if (!selectedDate) return "#";
@@ -119,7 +181,7 @@ export const CalendarioAuditoria = () => {
 
     const title = encodeURIComponent(`Auditoría Técnica 1 a 1 - ${formData.name || "Cliente"}`);
     const details = encodeURIComponent(
-      `Call de Auditoría con Selenia Sanchez.\nCliente: ${formData.name}\nEmail: ${formData.email}\nEmpresa/Web: ${formData.company || "N/A"}\nDescripción/Notas: ${formData.notes || "N/A"}`
+      `Call de Auditoría con Selenia Sanchez.\nCliente: ${formData.name}\nEmail: ${formData.email}\nEmpresa/Web: ${formData.company || "N/A"}\nZona Horaria Seleccionada: ${selectedTimezone}\nDescripción/Notas: ${formData.notes || "N/A"}`
     );
     const dates = `${formatGCalDate(startObj)}/${formatGCalDate(endObj)}`;
 
@@ -134,6 +196,8 @@ export const CalendarioAuditoria = () => {
         year: "numeric"
       })
     : "";
+
+  const selectedTzObj = TIMEZONES.find((tz) => tz.id === selectedTimezone) || TIMEZONES[0];
 
   return (
     <section className="audit-section" id="auditoria">
@@ -186,12 +250,30 @@ export const CalendarioAuditoria = () => {
           </div>
         ) : (
           <form className="audit-grid" onSubmit={handleSubmitFormspree}>
-            {/* COLUMNA IZQUIERDA: CALENDARIO & HORARIOS */}
+            {/* COLUMNA IZQUIERDA: CALENDARIO, ZONA HORARIA & HORARIOS */}
             <div className="audit-glass-card">
               <h3 className="step-title">
                 <FiCalendar /> {t("auditoria.select_date_title", "1. Selecciona Fecha y Hora")}
               </h3>
 
+              {/* SELECTOR DE ZONA HORARIA */}
+              <div className="timezone-picker-box">
+                <label>
+                  <span><FiGlobe /> {t("auditoria.timezone_label", "Zona Horaria de la Cita")}</span>
+                  <select
+                    value={selectedTimezone}
+                    onChange={(e) => setSelectedTimezone(e.target.value)}
+                  >
+                    {TIMEZONES.map((tz) => (
+                      <option key={tz.id} value={tz.id}>
+                        {tz.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+
+              {/* CALENDARIO */}
               <div className="calendar-header">
                 <button
                   type="button"
@@ -244,22 +326,36 @@ export const CalendarioAuditoria = () => {
                 })}
               </div>
 
-              {/* HORARIOS */}
+              {/* HORARIOS DISPONIBLES DE 08:00 A 20:00 */}
               <div className="time-slots-container">
                 <h3 className="step-title">
                   <FiClock /> {t("auditoria.select_time_title", "Horarios disponibles")}
                 </h3>
                 <div className="time-slots-grid">
-                  {TIME_SLOTS.map((slot) => (
-                    <button
-                      type="button"
-                      key={slot}
-                      className={`time-slot-btn ${selectedSlot === slot ? "selected" : ""}`}
-                      onClick={() => setSelectedSlot(slot)}
-                    >
-                      {selectedSlot === slot && <FiCheck />} {slot} hs
-                    </button>
-                  ))}
+                  {ALL_TIME_SLOTS.map((slot) => {
+                    const booked = isSlotBooked(selectedDate, slot);
+                    const isSelectedSlot = selectedSlot === slot;
+
+                    return (
+                      <button
+                        type="button"
+                        key={slot}
+                        className={`time-slot-btn ${isSelectedSlot ? "selected" : ""} ${booked ? "booked" : ""}`}
+                        onClick={() => !booked && setSelectedSlot(slot)}
+                        disabled={booked}
+                      >
+                        {booked ? (
+                          <>
+                            <FiLock /> {t("auditoria.slot_booked", "Reservado")}
+                          </>
+                        ) : (
+                          <>
+                            {isSelectedSlot && <FiCheck />} {slot} hs
+                          </>
+                        )}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -275,10 +371,11 @@ export const CalendarioAuditoria = () => {
                 <input
                   type="hidden"
                   name="_subject"
-                  value={`📅 RESERVA DE AUDITORÍA: ${formData.name || "Cliente"} - ${formattedSelectedDate} (${selectedSlot} hs)`}
+                  value={`📅 RESERVA DE AUDITORÍA: ${formData.name || "Cliente"} - ${formattedSelectedDate} (${selectedSlot} hs ART)`}
                 />
                 <input type="hidden" name="RESERVA_FECHA" value={formattedSelectedDate || "No seleccionada"} />
-                <input type="hidden" name="RESERVA_HORARIO" value={`${selectedSlot} hs`} />
+                <input type="hidden" name="RESERVA_HORARIO_ART" value={`${selectedSlot} hs (Hora Argentina)`} />
+                <input type="hidden" name="RESERVA_ZONA_HORARIA" value={selectedTzObj.name} />
 
                 <label>
                   <span><FiUser /> {t("auditoria.name_label")}</span>
@@ -338,7 +435,10 @@ export const CalendarioAuditoria = () => {
                         <FiCalendar /> <span>{formattedSelectedDate}</span>
                       </div>
                       <div className="summary-item">
-                        <FiClock /> <span>{selectedSlot} hs</span>
+                        <FiClock /> <span>{getConvertedTimeText(selectedSlot)}</span>
+                      </div>
+                      <div className="summary-item">
+                        <FiGlobe /> <span>{selectedTzObj.name}</span>
                       </div>
                       {formData.name && (
                         <div className="summary-item">

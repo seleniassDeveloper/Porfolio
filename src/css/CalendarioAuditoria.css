@@ -276,7 +276,7 @@
   gap: 0.4rem;
 }
 
-.time-slot-btn:hover {
+.time-slot-btn:hover:not(.booked) {
   background: rgba(99, 102, 241, 0.15);
   border-color: #6366f1;
 }
@@ -286,6 +286,43 @@
   border-color: #818cf8;
   color: #fff;
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+.time-slot-btn.booked {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Timezone Picker Box */
+.timezone-picker-box {
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+}
+
+.timezone-picker-box label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.timezone-picker-box select {
+  padding: 0.6rem 0.8rem;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
 }
 
 /* Audit Types Options */
