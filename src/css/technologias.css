@@ -648,24 +648,15 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
 }
-  text-decoration: none;
-  padding: 8px 10px 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 950;
-  background: rgba(0,0,0,.26);
-  box-shadow: 0 0 26px color-mix(in srgb, var(--accent) 30%, transparent);
-  transition: .25s ease;
-}
 
 .deck-btn span {
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
-  border-radius: 15px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .deck-btn:hover {
