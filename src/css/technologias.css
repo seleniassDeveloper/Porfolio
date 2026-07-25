@@ -1,641 +1,111 @@
-/* =========================
-   TECNOLOGIAS + CASES - SOLID DARK SLATE (#0A080D / #141722)
-========================= */
+/* ==========================================
+   STACK & SKILLS - EDITORIAL FLAT MAGAZINE STYLE (RAYHAN ADITYA)
+========================================== */
 
 .tecnologias-container {
   width: 100%;
-  background: #0A080D;
-  color: #F8FAFC;
-  overflow: hidden;
+  background: #070707;
+  color: #FFFFFF;
   font-family: "Manrope", system-ui, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* =========================
-   TECH SECTION
-========================= */
+.impact-deck-section {
+  display: none;
+}
 
 .tech-section {
   position: relative;
-  padding: 110px 24px;
-  background: #0A080D;
-}
-
-.tech-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
-  background-size: 42px 42px;
-  opacity: .35;
-  pointer-events: none;
-}
-
-.tech-header,
-.grid-tecnologias,
-.tech-carousel {
-  position: relative;
-  z-index: 2;
-  max-width: 1220px;
-  margin-inline: auto;
-}
-
-.tech-header {
-  margin-bottom: 54px;
-}
-
-.tech-header span,
-.impact-deck-header span {
-  display: inline-block;
-  color: #94A3B8;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.titulo-tecnologias,
-.impact-deck-header h2 {
-  margin: 0 0 16px;
-  color: #F8FAFC;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: .95;
-  font-weight: 950;
-  letter-spacing: -.05em;
-  text-transform: none;
-}
-
-.tech-header p,
-.impact-deck-header p {
-  max-width: 620px;
-  color: #CBD5E1;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* =========================
-   IMPACT DECK SECTION (SOLID CARDS)
-========================= */
-
-.impact-deck-section {
-  position: relative;
-  padding: 110px 24px 120px;
-  background: #0A080D;
-  overflow: hidden;
-}
-
-.impact-deck-bg {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
-  background-size: 42px 42px;
-  opacity: .35;
-}
-
-.impact-deck-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1220px;
+  padding: 100px 2rem;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
-/* Header & Controls Alignment */
-.impact-deck-header-wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
+.tech-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1.2rem;
+  margin-bottom: 3.5rem;
 }
 
-.impact-deck-header {
-  max-width: 740px;
-}
-
-.deck-nav-buttons-top {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background: #141722;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
-  padding: 0.4rem 0.8rem;
-}
-
-.btn-deck-nav {
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.06);
-  color: #F8FAFC;
-  display: grid;
-  place-items: center;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-deck-nav:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #0F172A;
-  transform: scale(1.05);
-}
-
-.deck-counter {
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: #CBD5E1;
-  min-width: 60px;
-  text-align: center;
-}
-
-.impact-deck-stage {
-  position: relative;
-  min-height: 640px;
-  display: grid;
-  place-items: center;
-}
-
-.deck-stack {
-  position: relative;
-  width: min(920px, 100%);
-  min-height: 590px;
-  display: grid;
-  place-items: center;
-}
-
-/* Background cards (SOLID NON-TRANSPARENT) */
-.deck-back-card {
-  position: absolute;
-  width: min(920px, 100%);
-  height: 540px;
-  border-radius: 30px;
-  opacity: .5;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #10121B !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-  transform:
-    translateX(calc(var(--i) * 20px))
-    scale(calc(1 - (var(--abs) * .02)));
-  z-index: calc(4 - var(--abs));
-  pointer-events: none;
-}
-
-.deck-back-card.is-hidden {
-  opacity: 0;
-}
-
-/* Main card (SOLID 100% OPAQUE DARK SLATE) */
-.deck-main-card {
-  position: relative;
-  z-index: 20;
-  width: min(920px, 100%);
-  min-height: 570px;
-  padding: 36px;
-  border-radius: 30px;
-  color: #F8FAFC;
-  background: #141722 !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85);
-  animation: activeCardIn .35s ease both;
-}
-
-@keyframes activeCardIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.deck-top-row {
-  display: grid;
-  grid-template-columns: 70px 1fr auto;
-  align-items: center;
-  gap: 18px;
-}
-
-.deck-number {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  color: #F8FAFC;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 1.3rem;
-  font-weight: 950;
-}
-
-.deck-label {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: #E2E8F0;
-  font-size: .8rem;
-  font-weight: 950;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-
-.deck-label span {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #ffffff;
-}
-
-.deck-stack-pill {
-  max-width: 260px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: #CBD5E1;
-  font-size: .82rem;
-  font-weight: 800;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Hero */
-.deck-hero-row {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 28px;
-  align-items: stretch;
-  margin-top: 32px;
-}
-
-.deck-project-hero {
-  min-height: 250px;
-  padding: 26px;
-  border-radius: 22px;
-  background: #0E1018;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.deck-project-hero span,
-.deck-side-metric span,
-.impact-card-heading span {
-  display: block;
-  color: #94A3B8;
-  font-size: .75rem;
-  font-weight: 950;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-
-.deck-project-hero h3 {
-  margin: 10px 0 10px;
-  color: #F8FAFC;
-  font-size: clamp(2.5rem, 4.5vw, 4rem);
-  line-height: .95;
-  font-weight: 950;
-  letter-spacing: -.05em;
-}
-
-.deck-project-hero p {
-  max-width: 620px;
-  margin: 0;
-  color: #CBD5E1;
-  font-size: 0.98rem;
-  line-height: 1.6;
-}
-
-.deck-side-metric {
-  padding: 26px;
-  border-radius: 22px;
-  background: #0E1018;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.deck-side-metric svg {
-  color: #F8FAFC;
-  font-size: 1.6rem;
-  margin-bottom: 14px;
-}
-
-.deck-side-metric strong {
-  display: block;
-  margin-top: 10px;
-  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-  line-height: .9;
-  letter-spacing: -.05em;
-  font-weight: 950;
-  color: #F8FAFC;
-}
-
-.deck-side-metric p {
-  margin: 12px 0 0;
-  color: #CBD5E1;
-  font-size: .95rem;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.deck-divider {
-  height: 1px;
-  width: 100%;
-  margin: 24px 0 20px;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-/* Bottom */
-.deck-bottom-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.deck-impact-card,
-.deck-detail-list {
-  border-radius: 20px;
-  background: #0E1018;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.deck-impact-card {
-  padding: 22px;
-}
-
-.impact-card-heading {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.impact-card-heading svg {
-  color: #F8FAFC;
-  font-size: 1.3rem;
-}
-
-.deck-impact-card p {
-  margin: 14px 0 0;
-  color: #CBD5E1;
-  font-size: .95rem;
-  line-height: 1.6;
-}
-
-.deck-detail-list {
-  padding: 16px;
-}
-
-.deck-detail-list div {
-  display: grid;
-  grid-template-columns: 38px 1fr;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.deck-detail-list div:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.deck-detail-list svg {
-  width: 38px;
-  height: 38px;
-  padding: 9px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #F8FAFC;
-}
-
-.deck-detail-list p {
-  margin: 0;
-  color: #CBD5E1;
-  font-size: .85rem;
-}
-
-.deck-detail-list strong {
-  display: block;
-  margin-top: 2px;
-  color: #F8FAFC;
+.titulo-tecnologias {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
 }
 
-/* Button */
-.deck-btn {
-  margin-top: 20px;
-  min-height: 56px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #F8FAFC;
-  color: #0F172A;
-  padding: 12px 24px;
-  font-weight: 900;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.deck-btn:hover {
-  background: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
-  color: #0F172A;
-}
-
-.deck-btn span {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  background: #0F172A;
-  color: #ffffff;
-}
-
-/* Dots Controls */
-.impact-deck-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-top: 2.5rem;
-}
-
-.deck-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.deck-dot.active {
-  width: 28px;
-  background: #ffffff;
-}
-
-/* =========================
-   STACK GRID WITH BRAND COLOR HOVER ILLUMINATION
-========================= */
-
+/* FLAT EDITORIAL GRID */
 .grid-tecnologias {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 1.8rem;
 }
 
+/* FLAT SKILL PILL CARD (NO HEAVY BOX / NO NEON) */
 .carta-tecnologia {
-  padding: 26px;
-  border-radius: 22px;
-  background: #141722;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  background: #111111 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 6px !important;
+  padding: 1.8rem !important;
+  transition: all 0.25s ease !important;
+  box-shadow: none !important;
   cursor: pointer;
 }
 
 .icono-tecnologia {
-  font-size: 2.4rem;
-  color: #CBD5E1;
-  margin-bottom: 14px;
-  transition: all 0.3s ease;
+  font-size: 2.2rem;
+  color: #DC2626;
+  margin-bottom: 1rem;
+  transition: color 0.25s ease;
 }
 
 .nombre-tecnologia {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 900;
-  color: #F8FAFC;
-  margin-bottom: 8px;
-  transition: color 0.3s ease;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
 }
 
 .descripcion-tecnologia {
-  font-size: 0.88rem;
-  color: #94A3B8;
-  line-height: 1.55;
+  font-size: 0.85rem;
+  color: #71717A;
+  line-height: 1.5;
   margin: 0;
-  transition: color 0.3s ease;
 }
 
-/* BRAND SPECIFIC HOVER ILLUMINATION */
-
-/* HTML - #E34F26 */
-.carta-tecnologia.html:hover {
-  background: rgba(227, 79, 38, 0.1);
-  border-color: #E34F26;
-  box-shadow: 0 0 35px rgba(227, 79, 38, 0.35);
-  transform: translateY(-6px);
+/* BRAND COLOR HOVER ON FLAT PILL */
+.carta-tecnologia:hover {
+  background: #1A1A1A !important;
+  border-color: #DC2626 !important;
+  transform: translateY(-4px);
 }
+
 .carta-tecnologia.html:hover .icono-tecnologia { color: #E34F26; }
-
-/* CSS - #1572B6 */
-.carta-tecnologia.css:hover {
-  background: rgba(21, 114, 182, 0.1);
-  border-color: #1572B6;
-  box-shadow: 0 0 35px rgba(21, 114, 182, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.css:hover .icono-tecnologia { color: #1572B6; }
-
-/* JavaScript - #F7DF1E */
-.carta-tecnologia.javascript:hover {
-  background: rgba(247, 223, 30, 0.1);
-  border-color: #F7DF1E;
-  box-shadow: 0 0 35px rgba(247, 223, 30, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.javascript:hover .icono-tecnologia { color: #F7DF1E; }
-
-/* React - #61DAFB */
-.carta-tecnologia.react:hover {
-  background: rgba(97, 218, 251, 0.1);
-  border-color: #61DAFB;
-  box-shadow: 0 0 35px rgba(97, 218, 251, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.react:hover .icono-tecnologia { color: #61DAFB; }
-
-/* GitHub - #FFFFFF */
-.carta-tecnologia.github:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #FFFFFF;
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.github:hover .icono-tecnologia { color: #FFFFFF; }
-
-/* Python - #3776AB */
-.carta-tecnologia.python:hover {
-  background: rgba(55, 118, 171, 0.1);
-  border-color: #3776AB;
-  box-shadow: 0 0 35px rgba(55, 118, 171, 0.35);
-  transform: translateY(-6px);
-}
-.carta-tecnologia.python:hover .icono-tecnologia { color: #FFD43B; }
-
-/* TypeScript - #3178C6 */
-.carta-tecnologia.typescript:hover {
-  background: rgba(49, 120, 198, 0.1);
-  border-color: #3178C6;
-  box-shadow: 0 0 35px rgba(49, 120, 198, 0.35);
-  transform: translateY(-6px);
-}
+.carta-tecnologia.python:hover .icono-tecnologia { color: #3776AB; }
 .carta-tecnologia.typescript:hover .icono-tecnologia { color: #3178C6; }
-
-/* PHP - #777BB4 */
-.carta-tecnologia.php:hover {
-  background: rgba(119, 123, 180, 0.1);
-  border-color: #777BB4;
-  box-shadow: 0 0 35px rgba(119, 123, 180, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.php:hover .icono-tecnologia { color: #777BB4; }
-
-/* Figma - #F24E1E */
-.carta-tecnologia.figma:hover {
-  background: rgba(242, 78, 30, 0.1);
-  border-color: #F24E1E;
-  box-shadow: 0 0 35px rgba(242, 78, 30, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.figma:hover .icono-tecnologia { color: #F24E1E; }
-
-/* Canva - #00C4CC */
-.carta-tecnologia.canva:hover {
-  background: rgba(0, 196, 204, 0.1);
-  border-color: #00C4CC;
-  box-shadow: 0 0 35px rgba(0, 196, 204, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.canva:hover .icono-tecnologia { color: #00C4CC; }
-
-/* Photoshop - #31A8FF */
-.carta-tecnologia.photoshop:hover {
-  background: rgba(49, 168, 255, 0.1);
-  border-color: #31A8FF;
-  box-shadow: 0 0 35px rgba(49, 168, 255, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.photoshop:hover .icono-tecnologia { color: #31A8FF; }
-
-/* Illustrator - #FF9A00 */
-.carta-tecnologia.illustrator:hover {
-  background: rgba(255, 154, 0, 0.1);
-  border-color: #FF9A00;
-  box-shadow: 0 0 35px rgba(255, 154, 0, 0.35);
-  transform: translateY(-6px);
-}
 .carta-tecnologia.illustrator:hover .icono-tecnologia { color: #FF9A00; }
+
+@media (max-width: 1000px) {
+  .grid-tecnologias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-tecnologias {
+    grid-template-columns: 1fr;
+  }
+}

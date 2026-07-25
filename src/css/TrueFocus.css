@@ -1,107 +1,229 @@
-/* src/css/TrueFocus.css - CLEAN FLAT & DYNAMIC HERO TITLE */
+/* ==========================================
+   EDITORIAL MAGAZINE HERO STYLE (RAYHAN ADITYA INSPIRED)
+========================================== */
 
-.hero-hero-wrapper {
+.editorial-hero-container {
   position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1.5rem 3rem 1.5rem;
-  max-width: 950px;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 6rem 2rem 4rem 2rem;
+  overflow: hidden;
+  font-family: "Manrope", system-ui, sans-serif;
+  color: #FFFFFF;
 }
 
-.hero-main-title {
-  font-size: clamp(3.4rem, 8.5vw, 6.5rem);
+/* Background Watermark */
+.hero-bg-watermark {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(5rem, 18vw, 15rem);
   font-weight: 950;
-  letter-spacing: -0.05em;
-  line-height: 1.02;
-  margin-bottom: 1rem;
-  color: #F8FAFC;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.06em;
+  color: rgba(220, 38, 38, 0.15);
+  -webkit-text-stroke: 1px rgba(220, 38, 38, 0.25);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+  user-select: none;
 }
 
-.hero-role-title {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  font-weight: 800;
-  color: #E2E8F0;
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.02em;
+.editorial-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: center;
 }
 
-.hero-description-tag {
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  color: #CBD5E1;
+/* Left Content */
+.hero-left-content {
+  max-width: 800px;
+}
+
+.hero-script-greeting {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: #EF4444;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.hero-editorial-name {
+  font-size: clamp(3.2rem, 7.5vw, 5.8rem);
+  font-weight: 950;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.hero-editorial-role {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #DC2626;
+  margin-bottom: 1.5rem;
+}
+
+.hero-editorial-desc {
+  font-size: clamp(0.98rem, 1.8vw, 1.12rem);
+  color: #A1A1AA;
+  line-height: 1.7;
   max-width: 680px;
-  margin: 0 auto 2.5rem auto;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.hero-actions-container {
+.hero-location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #71717A;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2.2rem;
+}
+
+.hero-location-badge svg {
+  color: #DC2626;
+}
+
+.hero-editorial-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1.2rem;
   flex-wrap: wrap;
 }
 
-.btn-hero-cv {
+/* Buttons */
+.btn-editorial-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #0F172A;
-  font-size: 1rem;
+  padding: 1rem 2.2rem;
+  background: #DC2626;
+  color: #FFFFFF;
+  font-size: 0.92rem;
   font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid #ffffff;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-  transition: all 0.25s ease;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
 }
 
-.btn-hero-cv:hover {
-  transform: translateY(-3px);
-  background: #f1f5f9;
-  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.35);
-  color: #0F172A;
+.btn-editorial-primary:hover {
+  background: #B91C1C;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(220, 38, 38, 0.5);
 }
 
-.btn-hero-book {
+.btn-editorial-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 999px;
-  background: rgba(18, 20, 28, 0.9);
+  padding: 1rem 2.2rem;
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #F8FAFC;
-  font-size: 1rem;
-  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
-  backdrop-filter: blur(10px);
-  transition: all 0.25s ease;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
-.btn-hero-book:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #ffffff;
-  color: #ffffff;
-  transform: translateY(-3px);
+.btn-editorial-secondary:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 640px) {
-  .hero-actions-container {
+/* Right Stats */
+.hero-right-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: 2.2rem;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: clamp(2.8rem, 4.5vw, 3.8rem);
+  font-weight: 950;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #DC2626;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #71717A;
+  margin-top: 0.4rem;
+}
+
+.stat-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 900px) {
+  .editorial-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-right-stats {
+    flex-direction: row;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 0;
+    padding-top: 2rem;
+    justify-content: space-between;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-editorial-actions {
     flex-direction: column;
     width: 100%;
   }
 
-  .btn-hero-cv,
-  .btn-hero-book {
+  .btn-editorial-primary,
+  .btn-editorial-secondary {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-right-stats {
+    flex-direction: column;
+    gap: 1.2rem;
   }
 }
