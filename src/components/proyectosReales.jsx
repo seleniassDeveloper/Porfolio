@@ -17,14 +17,14 @@ export const ProyectosReales = () => {
 
   const proyectos = [
     {
-      id: "scalabl",
-      route: "/experiencia-scalabl",
-      img: scalablImg,
-      typeKey: "cases.scalabl.label",
-      titleKey: "cases.scalabl.title",
-      descKey: "cases.scalabl.desc",
-      altKey: "items.scalabl.alt",
-      theme: "green",
+      id: "dashboard",
+      route: "/proyecto-dashboard",
+      img: dashboardImg,
+      typeKey: "cases.dashboard.label",
+      titleKey: "cases.dashboard.title",
+      descKey: "cases.dashboard.desc",
+      altKey: "items.dashboard.title",
+      theme: "pink",
     },
     {
       id: "sistran",
@@ -37,6 +37,16 @@ export const ProyectosReales = () => {
       theme: "blue",
     },
     {
+      id: "scalabl",
+      route: "/experiencia-scalabl",
+      img: scalablImg,
+      typeKey: "cases.scalabl.label",
+      titleKey: "cases.scalabl.title",
+      descKey: "cases.scalabl.desc",
+      altKey: "items.scalabl.alt",
+      theme: "green",
+    },
+    {
       id: "dinosaurios",
       route: "/Dinosaurios",
       img: dinoImg,
@@ -45,13 +55,6 @@ export const ProyectosReales = () => {
       descKey: "cases.lacev.desc",
       altKey: "items.dinosaurios.alt",
       theme: "gold",
-    },
-    {
-      id: "dashboard",
-      route: "/proyecto-dashboard",
-      img: dashboardImg,
-      type: "SaaS + AI",
-      theme: "pink",
     },
     {
       id: "dogco",
