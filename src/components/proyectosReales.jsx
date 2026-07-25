@@ -19,6 +19,7 @@ export const ProyectosReales = () => {
     {
       id: "dashboard",
       route: "/proyecto-dashboard",
+      externalUrl: "https://auradash.digital/",
       img: dashboardImg,
       typeKey: "cases.dashboard.label",
       titleKey: "cases.dashboard.title",
@@ -146,21 +147,36 @@ export const ProyectosReales = () => {
                   <p>{t(p.descKey)}</p>
                 </div>
 
-                <button
-                  className="project-card-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(p.route);
-                  }}
-                >
-                  {isProgress
-                    ? t("verProceso", "Ver proceso")
-                    : t("verProyecto", "Ver proyecto")}
+                <div className="project-card-actions" style={{ display: 'flex', gap: '1.2rem', alignItems: 'center', marginTop: '0.8rem' }}>
+                  <button
+                    className="project-card-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(p.route);
+                    }}
+                  >
+                    {isProgress
+                      ? t("verProceso", "Ver proceso")
+                      : t("verProyecto", "Ver caso")}
 
-                  <span>
-                    <FiArrowUpRight />
-                  </span>
-                </button>
+                    <span>
+                      <FiArrowUpRight />
+                    </span>
+                  </button>
+
+                  {p.externalUrl && (
+                    <a
+                      href={p.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-card-btn"
+                      style={{ color: '#FF5733', textDecoration: 'none' }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {t("visitarSitio", "Sitio en vivo")} ↗
+                    </a>
+                  )}
+                </div>
               </article>
             );
           })}
