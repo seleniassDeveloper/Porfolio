@@ -302,15 +302,20 @@ export const CalendarioAuditoria = () => {
                   type="button"
                   className="btn-month-nav"
                   onClick={prevMonth}
-                  disabled={currentMonth === today.getMonth() && currentYear === today.getFullYear()}
+                  aria-label="Previous Month"
                 >
-                  <FiChevronLeft />
+                  <FiChevronLeft style={{ color: "#FFFFFF", fontSize: "1.3rem", strokeWidth: 3 }} />
                 </button>
                 <span className="month-year">
                   {currentMonthName} {currentYear}
                 </span>
-                <button type="button" className="btn-month-nav" onClick={nextMonth}>
-                  <FiChevronRight />
+                <button
+                  type="button"
+                  className="btn-month-nav"
+                  onClick={nextMonth}
+                  aria-label="Next Month"
+                >
+                  <FiChevronRight style={{ color: "#FFFFFF", fontSize: "1.3rem", strokeWidth: 3 }} />
                 </button>
               </div>
 

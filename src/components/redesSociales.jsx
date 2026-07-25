@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FiDownload, FiCalendar, FiMenu, FiX, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import "../App.css";
+import cvPdf from "../assets/cv-selenia-sanchez.pdf";
 
 export const RedesSociales = () => {
   const { i18n } = useTranslation();
@@ -94,7 +95,7 @@ export const RedesSociales = () => {
           </button>
 
           <a
-            href="/cv-selenia-sanchez.pdf"
+            href={cvPdf}
             download="CV_Selenia_Sanchez_Frontend_Developer.pdf"
             className="btn-nav-cv"
           >
@@ -125,7 +126,7 @@ export const RedesSociales = () => {
               </a>
             ))}
             <a
-              href="/cv-selenia-sanchez.pdf"
+              href={cvPdf}
               download="CV_Selenia_Sanchez_Frontend_Developer.pdf"
               className="btn-mobile-cv"
               onClick={() => setMobileMenuOpen(false)}

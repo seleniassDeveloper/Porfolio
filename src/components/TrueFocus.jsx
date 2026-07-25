@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiDownload, FiCalendar, FiArrowRight, FiGlobe } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import "../css/TrueFocus.css";
+import cvPdf from "../assets/cv-selenia-sanchez.pdf";
 
 export const TrueFocus = () => {
   const { t, i18n } = useTranslation();
@@ -71,7 +72,7 @@ export const TrueFocus = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <a
-              href="/cv-selenia-sanchez.pdf"
+              href={cvPdf}
               download="CV_Selenia_Sanchez_Frontend_Developer.pdf"
               className="btn-editorial-primary"
             >
