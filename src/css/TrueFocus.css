@@ -1,75 +1,139 @@
-.focus-container {
-    position: relative;
-    display: flex;
-    gap: 1em;
+/* src/css/TrueFocus.css - HERO TITLE STYLES */
+
+.hero-hero-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.25);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #F5A9C7;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(236, 110, 192, 0.15);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #EC6EC0;
+  box-shadow: 0 0 10px #EC6EC0;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero-main-title {
+  font-size: clamp(3.2rem, 8vw, 6.2rem);
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5A9C7 40%, #C4A7F0 75%, #FF9E80 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(236, 110, 192, 0.2);
+}
+
+.hero-role-title {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #E7C9A9;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-description-tag {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #CBD5E1;
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.hero-actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #EC6EC0 0%, #8B5CF6 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(236, 110, 192, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-hero-cv:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(236, 110, 192, 0.5);
+  color: #ffffff;
+}
+
+.btn-hero-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: rgba(18, 14, 24, 0.9);
+  border: 1px solid rgba(245, 169, 199, 0.3);
+  color: #F8FAFC;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.btn-hero-book:hover {
+  background: rgba(236, 110, 192, 0.15);
+  border-color: #F5A9C7;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .hero-actions-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero-cv,
+  .btn-hero-book {
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .focus-word {
-    position: relative;
-    font-size: 3rem;
-    font-weight: 900;
-    cursor: pointer;
-    transition:
-      filter 0.3s ease,
-      color 0.3s ease;
-  }
-  
-  @media screen and (max-width: 768px) {
-  .focus-word {
-    font-size: 25px;
   }
 }
-  .focus-word.active {
-    filter: blur(0);
-  }
-  
-  .focus-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    box-sizing: content-box;
-    border: none;
-  }
-  
-  .corner {
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border: 3px solid var(--border-color, #fff);
-    filter: drop-shadow(0px 0px 4px var(--border-color, #fff));
-    border-radius: 3px;
-    transition: none;
-  }
-  
-  .top-left {
-    top: -10px;
-    left: -10px;
-    border-right: none;
-    border-bottom: none;
-  }
-  
-  .top-right {
-    top: -10px;
-    right: -10px;
-    border-left: none;
-    border-bottom: none;
-  }
-  
-  .bottom-left {
-    bottom: -10px;
-    left: -10px;
-    border-right: none;
-    border-top: none;
-  }
-  
-  .bottom-right {
-    bottom: -10px;
-    right: -10px;
-    border-left: none;
-    border-top: none;
-  }
-  

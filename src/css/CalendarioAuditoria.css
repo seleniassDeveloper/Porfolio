@@ -1,11 +1,14 @@
-/* src/css/CalendarioAuditoria.css - DESIGNJOY LIGHT STYLE */
+/* src/css/CalendarioAuditoria.css - DARK LUXURY FEMININE PALETTE (#0A080D) */
 
 .audit-section {
   position: relative;
   min-height: 100vh;
-  padding: 5rem 1.5rem;
-  background: #fafafa;
-  color: #0f172a;
+  padding: 110px 1.5rem;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(236, 110, 192, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12), transparent 34%),
+    #0A080D;
+  color: #F8FAFC;
   overflow: hidden;
   font-family: "Manrope", system-ui, sans-serif;
 }
@@ -18,9 +21,9 @@
 }
 
 .audit-back-btn {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  background: rgba(18, 14, 24, 0.9);
+  border: 1px solid rgba(245, 169, 199, 0.25);
+  color: #F8FAFC;
   padding: 0.6rem 1.2rem;
   border-radius: 12px;
   font-size: 0.9rem;
@@ -30,12 +33,13 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .audit-back-btn:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
+  background: rgba(236, 110, 192, 0.18);
+  border-color: #F5A9C7;
+  color: #ffffff;
 }
 
 .audit-bg-glow {
@@ -59,30 +63,30 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.25);
   border-radius: 50px;
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #2563eb;
+  color: #F5A9C7;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .audit-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 950;
   margin-bottom: 1rem;
-  color: #0f172a;
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
+  background: linear-gradient(135deg, #ffffff 0%, #F5A9C7 50%, #C4A7F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .audit-subtitle {
   font-size: 1.1rem;
-  color: #475569;
+  color: #CBD5E1;
   max-width: 650px;
   margin: 0 auto 1.5rem auto;
   line-height: 1.6;
@@ -91,9 +95,9 @@
 .audit-badge-duration {
   display: inline-block;
   padding: 0.35rem 0.9rem;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #334155;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  color: #C4A7F0;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -115,18 +119,21 @@
 
 /* Glass Card */
 .audit-glass-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background:
+    radial-gradient(circle at top left, rgba(236, 110, 192, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(20, 15, 28, 0.95), rgba(12, 9, 17, 0.98));
+  border: 1px solid rgba(245, 169, 199, 0.18);
   border-radius: 24px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(236, 110, 192, 0.12);
+  backdrop-filter: blur(16px);
 }
 
 .step-title {
   font-size: 1.15rem;
   font-weight: 800;
   margin-bottom: 1.25rem;
-  color: #0f172a;
+  color: #F8FAFC;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -143,14 +150,14 @@
 .month-year {
   font-weight: 800;
   font-size: 1.1rem;
-  color: #0f172a;
+  color: #F8FAFC;
   text-transform: capitalize;
 }
 
 .btn-month-nav {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  background: rgba(245, 169, 199, 0.1);
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  color: #F5A9C7;
   width: 34px;
   height: 34px;
   border-radius: 8px;
@@ -162,7 +169,8 @@
 }
 
 .btn-month-nav:hover:not(:disabled) {
-  background: #e2e8f0;
+  background: rgba(236, 110, 192, 0.25);
+  color: #ffffff;
 }
 
 .btn-month-nav:disabled {
@@ -176,10 +184,10 @@
   text-align: center;
   font-weight: 800;
   font-size: 0.85rem;
-  color: #2563eb;
+  color: #F5A9C7;
   margin-bottom: 0.8rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(245, 169, 199, 0.15);
 }
 
 .calendar-days-grid {
@@ -194,12 +202,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.05);
+  border: 1px solid rgba(245, 169, 199, 0.18);
   border-radius: 12px;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #F8FAFC;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -215,40 +223,40 @@
   opacity: 0.25;
   cursor: not-allowed;
   background: transparent;
-  color: #94a3b8;
+  color: #64748B;
   border-color: transparent;
 }
 
 .day-cell:hover:not(.disabled):not(.empty) {
-  background: #f1f5f9;
-  border-color: #0f172a;
-  transform: scale(1.04);
+  background: rgba(236, 110, 192, 0.2);
+  border-color: #EC6EC0;
+  transform: scale(1.05);
 }
 
 .day-cell.selected {
-  background: #0f172a;
-  border-color: #0f172a;
+  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
+  border-color: transparent;
   color: #ffffff;
   font-weight: 800;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
-  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(236, 110, 192, 0.5);
+  transform: scale(1.05);
 }
 
 .day-cell.today:not(.selected) {
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  border: 2px solid #F5A9C7;
+  color: #F5A9C7;
   font-weight: 800;
 }
 
 .selected-date-banner {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.2);
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #F8FAFC;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -257,7 +265,7 @@
 .slot-shift-title {
   font-size: 0.85rem;
   font-weight: 800;
-  color: #2563eb;
+  color: #F5A9C7;
   margin: 1.2rem 0 0.6rem 0;
   display: flex;
   align-items: center;
@@ -268,7 +276,7 @@
 .time-slots-container {
   margin-top: 1.5rem;
   padding-top: 1.2rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid rgba(245, 169, 199, 0.15);
 }
 
 .time-slots-grid {
@@ -279,10 +287,10 @@
 
 .time-slot-btn {
   padding: 0.6rem 0.8rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.06);
+  border: 1px solid rgba(245, 169, 199, 0.18);
   border-radius: 10px;
-  color: #0f172a;
+  color: #F8FAFC;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -294,30 +302,30 @@
 }
 
 .time-slot-btn:hover:not(.booked) {
-  background: #f1f5f9;
-  border-color: #0f172a;
+  background: rgba(236, 110, 192, 0.2);
+  border-color: #EC6EC0;
 }
 
 .time-slot-btn.selected {
-  background: #0f172a;
-  border-color: #0f172a;
+  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
+  border-color: transparent;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 4px 15px rgba(236, 110, 192, 0.4);
 }
 
 .time-slot-btn.booked {
-  background: #fef2f2;
-  border-color: #fecaca;
-  color: #ef4444;
-  opacity: 0.75;
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #64748B;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 /* Timezone Picker Box */
 .timezone-picker-box {
   margin-bottom: 1.25rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.06);
+  border: 1px solid rgba(245, 169, 199, 0.2);
   border-radius: 12px;
   padding: 0.8rem 1rem;
 }
@@ -327,16 +335,16 @@
   flex-direction: column;
   gap: 0.4rem;
   font-size: 0.82rem;
-  color: #2563eb;
+  color: #F5A9C7;
   font-weight: 800;
 }
 
 .timezone-picker-box select {
   padding: 0.6rem 0.8rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: rgba(10, 8, 13, 0.95);
+  border: 1px solid rgba(245, 169, 199, 0.25);
   border-radius: 8px;
-  color: #0f172a;
+  color: #F8FAFC;
   font-size: 0.85rem;
   outline: none;
   cursor: pointer;
@@ -354,17 +362,17 @@
   flex-direction: column;
   gap: 0.4rem;
   font-size: 0.85rem;
-  color: #334155;
+  color: #CBD5E1;
   font-weight: 700;
 }
 
 .audit-form input,
 .audit-form textarea {
   padding: 0.8rem 1rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(245, 169, 199, 0.2);
   border-radius: 10px;
-  color: #0f172a;
+  color: #F8FAFC;
   font-size: 0.9rem;
   outline: none;
   transition: border-color 0.2s ease;
@@ -372,9 +380,9 @@
 
 .audit-form input:focus,
 .audit-form textarea:focus {
-  background: #ffffff;
-  border-color: #0f172a;
-  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+  background: rgba(18, 14, 24, 0.95);
+  border-color: #EC6EC0;
+  box-shadow: 0 0 15px rgba(236, 110, 192, 0.25);
 }
 
 .audit-form textarea {
@@ -383,8 +391,8 @@
 }
 
 .audit-summary-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.2);
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -393,7 +401,7 @@
 .audit-summary-box h4 {
   font-size: 0.9rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #F8FAFC;
   margin-bottom: 0.6rem;
 }
 
@@ -408,18 +416,18 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
-  color: #475569;
+  color: #CBD5E1;
 }
 
 .summary-item svg {
-  color: #2563eb;
+  color: #F5A9C7;
 }
 
 /* Submit Button */
 .btn-submit-audit {
   padding: 0.9rem 1.5rem;
-  background: #0f172a;
-  border: 1px solid #0f172a;
+  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
+  border: 1px solid rgba(245, 169, 199, 0.3);
   border-radius: 12px;
   color: #fff;
   font-size: 0.95rem;
@@ -429,13 +437,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(236, 110, 192, 0.35);
   transition: all 0.2s ease;
 }
 
 .btn-submit-audit:hover:not(:disabled) {
-  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 12px 35px rgba(236, 110, 192, 0.5);
 }
 
 .btn-submit-audit:disabled {
@@ -453,7 +461,7 @@
 
 .success-icon {
   font-size: 4rem;
-  color: #059669;
+  color: #F5A9C7;
   margin-bottom: 1rem;
 }
 
@@ -461,11 +469,11 @@
   font-size: 1.8rem;
   font-weight: 950;
   margin-bottom: 1rem;
-  color: #0f172a;
+  color: #F8FAFC;
 }
 
 .audit-success-box p {
-  color: #475569;
+  color: #CBD5E1;
   margin-bottom: 2rem;
 }
 
@@ -480,7 +488,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.9rem 1.5rem;
-  background: #2563eb;
+  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
   color: #fff;
   text-decoration: none;
   font-weight: 800;
@@ -489,13 +497,14 @@
 }
 
 .btn-gcal:hover {
-  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 110, 192, 0.4);
 }
 
 .btn-reset {
   background: transparent;
-  border: 1px solid #cbd5e1;
-  color: #475569;
+  border: 1px solid rgba(245, 169, 199, 0.25);
+  color: #CBD5E1;
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   font-size: 0.9rem;
@@ -505,6 +514,6 @@
 }
 
 .btn-reset:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: rgba(245, 169, 199, 0.1);
+  color: #ffffff;
 }

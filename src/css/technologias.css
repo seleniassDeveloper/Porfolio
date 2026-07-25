@@ -1,11 +1,11 @@
 /* =========================
-   TECNOLOGIAS + CASES
+   TECNOLOGIAS + CASES - DARK LUXURY FEMININE PALETTE (#0A080D)
 ========================= */
 
 .tecnologias-container {
   width: 100%;
-  background: #0b0f19;
-  color: #fff;
+  background: #0A080D;
+  color: #F8FAFC;
   overflow: hidden;
   font-family: "Manrope", system-ui, sans-serif;
 }
@@ -18,9 +18,9 @@
   position: relative;
   padding: 110px 24px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.08), transparent 30%),
-    radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.08), transparent 34%),
-    #0b0f19;
+    radial-gradient(circle at 15% 20%, rgba(236, 110, 192, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12), transparent 34%),
+    #0A080D;
 }
 
 .tech-section::before {
@@ -28,10 +28,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+    linear-gradient(rgba(245, 169, 199, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 169, 199, .025) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: .25;
+  opacity: .4;
   pointer-events: none;
 }
 
@@ -51,7 +51,7 @@
 .tech-header span,
 .impact-deck-header span {
   display: inline-block;
-  color: #3b82f6;
+  color: #F5A9C7;
   font-size: 12px;
   font-weight: 950;
   letter-spacing: .22em;
@@ -68,246 +68,42 @@
   font-weight: 950;
   letter-spacing: -.08em;
   text-transform: none;
+  background: linear-gradient(135deg, #ffffff 0%, #F5A9C7 50%, #C4A7F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .tech-header p,
 .impact-deck-header p {
   max-width: 620px;
-  color: rgba(255,255,255,.64);
+  color: #CBD5E1;
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
 /* =========================
-   TECH GRID
+   IMPACT DECK SECTION
 ========================= */
-
-.grid-tecnologias {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.carta-tecnologia {
-  --accent: #00d4ff;
-  --accent-2: #8b5cf6;
-
-  position: relative;
-  min-height: 230px;
-  padding: 24px;
-  border-radius: 30px;
-  color: #fff;
-  overflow: hidden;
-  isolation: isolate;
-  background:
-    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 34%),
-    linear-gradient(135deg, rgba(21,25,38,.94), rgba(4,8,13,.98));
-  border: 1px solid color-mix(in srgb, var(--accent) 42%, rgba(255,255,255,.14));
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,.04) inset,
-    0 28px 80px rgba(0,0,0,.48);
-  backdrop-filter: blur(16px);
-  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
-}
-
-.carta-tecnologia::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, transparent, color-mix(in srgb, var(--accent) 38%, transparent), transparent);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity .28s ease;
-}
-
-.carta-tecnologia:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,.06) inset,
-    0 34px 100px rgba(0,0,0,.58),
-    0 0 45px color-mix(in srgb, var(--accent) 26%, transparent);
-}
-
-.carta-tecnologia:hover::before {
-  opacity: 1;
-}
-
-.icono-tecnologia {
-  width: 58px;
-  height: 58px;
-  margin-bottom: 22px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.12);
-  transition: transform .28s ease;
-}
-
-.icono-tecnologia svg {
-  width: 32px;
-  height: 32px;
-}
-
-.carta-tecnologia:hover .icono-tecnologia {
-  transform: rotate(4deg) scale(1.08);
-}
-
-.nombre-tecnologia {
-  margin: 0 0 10px;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 950;
-  letter-spacing: -.04em;
-}
-
-.descripcion-tecnologia {
-  margin: 0;
-  color: rgba(255,255,255,.62);
-  font-size: .94rem;
-  line-height: 1.55;
-}
-
-/* Tech colors */
-
-.carta-tecnologia.html { --accent: #e44d26; --accent-2: #ff8a3d; }
-.carta-tecnologia.css { --accent: #2965f1; --accent-2: #00d4ff; }
-.carta-tecnologia.javascript { --accent: #f7df1e; --accent-2: #ff8a3d; }
-.carta-tecnologia.react { --accent: #61dafb; --accent-2: #3b82f6; }
-.carta-tecnologia.github { --accent: #ffffff; --accent-2: #8b5cf6; }
-.carta-tecnologia.python { --accent: #ffd43b; --accent-2: #3776ab; }
-.carta-tecnologia.typescript { --accent: #3178c6; --accent-2: #00d4ff; }
-.carta-tecnologia.php { --accent: #777bb4; --accent-2: #8b5cf6; }
-.carta-tecnologia.figma { --accent: #a259ff; --accent-2: #ff7262; }
-.carta-tecnologia.canva { --accent: #00c4cc; --accent-2: #8b5cf6; }
-.carta-tecnologia.photoshop { --accent: #31a8ff; --accent-2: #001e36; }
-.carta-tecnologia.illustrator { --accent: #ff9a00; --accent-2: #ff4fd8; }
-
-.destacar-react {
-  transform: translateY(-6px);
-  border-color: #61dafb;
-  box-shadow:
-    0 0 0 1px rgba(97,218,251,.25) inset,
-    0 34px 100px rgba(0,0,0,.58),
-    0 0 52px rgba(97,218,251,.24);
-}
-
-/* =========================
-   MOBILE TECH CAROUSEL
-========================= */
-
-.tech-carousel {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .grid-tecnologias {
-    display: none;
-  }
-
-  .tech-carousel {
-    display: block;
-  }
-}
-
-.slide-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  padding: 8px 6px 22px;
-}
-
-.slide-icon {
-  min-height: 108px;
-  padding: 16px 10px;
-  border-radius: 20px;
-  color: #fff;
-  text-align: center;
-  background:
-    radial-gradient(circle at top, rgba(0,212,255,.12), transparent 48%),
-    rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-
-.slide-icon .icono-tecnologia {
-  width: auto;
-  height: auto;
-  margin: 0;
-  background: transparent;
-  border: 0;
-}
-
-.slide-icon .icono-tecnologia svg {
-  width: 30px;
-  height: 30px;
-}
-
-.slide-label {
-  font-size: .82rem;
-  font-weight: 850;
-  line-height: 1.1;
-}
-
-/* =========================
-   IMPACT DECK SECTION - DESIGNJOY LIGHT STYLE
-======================== */
 
 .impact-deck-section {
-  --accent: #2563eb;
-  --accent-2: #4f46e5;
+  --accent: #F5A9C7;
+  --accent-2: #EC6EC0;
 
   position: relative;
   padding: 110px 24px 120px;
-  background: #fafafa;
+  background: #0A080D;
   overflow: hidden;
-}
-
-.impact-deck-section.theme-blue {
-  --accent: #2563eb;
-  --accent-2: #1d4ed8;
-}
-
-.impact-deck-section.theme-green {
-  --accent: #059669;
-  --accent-2: #047857;
-}
-
-.impact-deck-section.theme-orange {
-  --accent: #d97706;
-  --accent-2: #b45309;
-}
-
-.impact-deck-section.theme-gold {
-  --accent: #d97706;
-  --accent-2: #059669;
-}
-
-.impact-deck-section.theme-pink {
-  --accent: #4f46e5;
-  --accent-2: #2563eb;
-}
-
-.impact-deck-section.theme-purple {
-  --accent: #4f46e5;
-  --accent-2: #2563eb;
 }
 
 .impact-deck-bg {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(15, 23, 42, .03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, .03) 1px, transparent 1px);
+    linear-gradient(rgba(245, 169, 199, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 169, 199, .025) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: .8;
+  opacity: .4;
 }
 
 .impact-deck-container {
@@ -320,14 +116,6 @@
 .impact-deck-header {
   max-width: 740px;
   margin-bottom: 20px;
-}
-
-.impact-deck-header span {
-  color: #2563eb;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: .22em;
-  text-transform: uppercase;
 }
 
 .impact-deck-stage {
@@ -346,16 +134,15 @@
 }
 
 /* Background cards */
-
 .deck-back-card {
   position: absolute;
   width: min(900px, 100%);
   height: 560px;
   border-radius: 34px;
   opacity: .78;
-  border: 1px solid #e2e8f0;
-  background: #f1f5f9;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(245, 169, 199, 0.18);
+  background: rgba(18, 14, 24, 0.85);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   transform:
     translateX(calc(var(--i) * 42px))
     rotate(calc(var(--i) * 2.5deg))
@@ -369,7 +156,6 @@
 }
 
 /* Main card */
-
 .deck-main-card {
   position: relative;
   z-index: 20;
@@ -377,10 +163,14 @@
   min-height: 590px;
   padding: 34px;
   border-radius: 32px;
-  color: #0f172a;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.03);
+  color: #F8FAFC;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(236, 110, 192, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(20, 15, 28, 0.95), rgba(12, 9, 17, 0.98));
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.6),
+    0 0 35px rgba(236, 110, 192, 0.15);
   animation: activeCardIn .45s ease both;
 }
 
@@ -389,7 +179,6 @@
     opacity: 0;
     transform: translateX(42px) rotate(2deg) scale(.97);
   }
-
   to {
     opacity: 1;
     transform: translateX(0) rotate(0) scale(1);
@@ -409,9 +198,9 @@
   border-radius: 16px;
   display: grid;
   place-items: center;
-  color: #0f172a;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
+  color: #F5A9C7;
+  background: rgba(245, 169, 199, 0.1);
+  border: 1px solid rgba(245, 169, 199, 0.25);
   font-size: 1.4rem;
   font-weight: 950;
 }
@@ -420,7 +209,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #2563eb;
+  color: #F5A9C7;
   font-size: .78rem;
   font-weight: 950;
   letter-spacing: .16em;
@@ -431,16 +220,17 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: #2563eb;
+  background: #EC6EC0;
+  box-shadow: 0 0 10px #EC6EC0;
 }
 
 .deck-stack-pill {
   max-width: 220px;
   padding: 10px 16px;
   border-radius: 999px;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #334155;
+  background: rgba(245, 169, 199, 0.08);
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  color: #F5A9C7;
   font-size: .82rem;
   font-weight: 800;
   white-space: nowrap;
@@ -449,7 +239,6 @@
 }
 
 /* Hero */
-
 .deck-hero-row {
   display: grid;
   grid-template-columns: 1fr 330px;
@@ -462,15 +251,15 @@
   min-height: 270px;
   padding: 28px;
   border-radius: 24px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 169, 199, 0.15);
 }
 
 .deck-project-hero span,
 .deck-side-metric span,
 .impact-card-heading span {
   display: block;
-  color: #2563eb;
+  color: #F5A9C7;
   font-size: .75rem;
   font-weight: 950;
   letter-spacing: .14em;
@@ -479,7 +268,7 @@
 
 .deck-project-hero h3 {
   margin: 12px 0 12px;
-  color: #0f172a;
+  color: #F8FAFC;
   font-size: clamp(2.8rem, 5vw, 4.5rem);
   line-height: .9;
   font-weight: 950;
@@ -489,7 +278,7 @@
 .deck-project-hero p {
   max-width: 620px;
   margin: 0;
-  color: #475569;
+  color: #CBD5E1;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -497,13 +286,13 @@
 .deck-side-metric {
   padding: 28px;
   border-radius: 24px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  box-shadow: 0 0 30px rgba(236, 110, 192, 0.12);
 }
 
 .deck-side-metric svg {
-  color: #2563eb;
+  color: #EC6EC0;
   font-size: 1.7rem;
   margin-bottom: 18px;
 }
@@ -515,14 +304,15 @@
   line-height: .88;
   letter-spacing: -.06em;
   font-weight: 950;
-  color: #0f172a;
-  background: none;
-  -webkit-background-clip: unset;
+  background: linear-gradient(135deg, #F5A9C7, #EC6EC0, #8B5CF6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .deck-side-metric p {
   margin: 14px 0 0;
-  color: #475569;
+  color: #CBD5E1;
   font-size: .98rem;
   font-weight: 750;
   line-height: 1.45;
@@ -532,11 +322,10 @@
   height: 1px;
   width: 100%;
   margin: 28px 0 20px;
-  background: #e2e8f0;
+  background: rgba(245, 169, 199, 0.15);
 }
 
 /* Bottom */
-
 .deck-bottom-grid {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -547,8 +336,8 @@
 .deck-impact-card,
 .deck-detail-list {
   border-radius: 20px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 169, 199, 0.15);
 }
 
 .deck-impact-card {
@@ -564,7 +353,7 @@
   top: 64px;
   bottom: 22px;
   width: 3px;
-  background: #2563eb;
+  background: linear-gradient(#EC6EC0, #8B5CF6);
   border-radius: 999px;
 }
 
@@ -575,13 +364,13 @@
 }
 
 .impact-card-heading svg {
-  color: #2563eb;
+  color: #F5A9C7;
   font-size: 1.5rem;
 }
 
 .deck-impact-card p {
   margin: 18px 0 0;
-  color: #334155;
+  color: #CBD5E1;
   font-size: .95rem;
   line-height: 1.65;
 }
@@ -599,7 +388,7 @@
 }
 
 .deck-detail-list div:not(:last-child) {
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(245, 169, 199, 0.15);
 }
 
 .deck-detail-list svg {
@@ -607,32 +396,31 @@
   height: 42px;
   padding: 10px;
   border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  color: #2563eb;
+  background: rgba(245, 169, 199, 0.1);
+  border: 1px solid rgba(245, 169, 199, 0.2);
+  color: #F5A9C7;
 }
 
 .deck-detail-list p {
   margin: 0;
-  color: #475569;
+  color: #CBD5E1;
   font-size: .86rem;
 }
 
 .deck-detail-list strong {
   display: block;
   margin-top: 3px;
-  color: #0f172a;
+  color: #F8FAFC;
   font-weight: 900;
 }
 
 /* Button */
-
 .deck-btn {
   margin-top: 22px;
   min-height: 60px;
   border-radius: 18px;
-  border: 1px solid #0f172a;
-  background: #0f172a;
+  border: 1px solid rgba(245, 169, 199, 0.3);
+  background: linear-gradient(135deg, #EC6EC0, #8B5CF6);
   color: #ffffff;
   padding: 12px 24px;
   font-weight: 800;
@@ -640,13 +428,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(236, 110, 192, 0.35);
   transition: all 0.25s ease;
 }
 
 .deck-btn:hover {
-  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 12px 40px rgba(236, 110, 192, 0.5);
+  color: #ffffff;
 }
 
 .deck-btn span {
@@ -657,203 +447,4 @@
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-}
-
-.deck-btn:hover {
-  transform: translateY(-3px);
-}
-
-/* Controls */
-
-.deck-arrow {
-  position: absolute;
-  z-index: 30;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 58px;
-  height: 58px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.07);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(14px);
-  transition: .22s ease;
-}
-
-.deck-arrow svg {
-  font-size: 1.35rem;
-}
-
-.deck-arrow:hover {
-  background: var(--accent);
-  color: #fff;
-  transform: translateY(-50%) scale(1.08);
-}
-
-.deck-arrow.left {
-  left: -6px;
-}
-
-.deck-arrow.right {
-  right: -6px;
-}
-
-.impact-deck-controls {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: -6px;
-}
-
-.deck-dot {
-  width: 13px;
-  height: 13px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(255,255,255,.42);
-  cursor: pointer;
-  transition: .22s ease;
-}
-
-.deck-dot.active {
-  width: 34px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1050px) {
-  .grid-tecnologias {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .deck-arrow.left {
-    left: 10px;
-  }
-
-  .deck-arrow.right {
-    right: 10px;
-  }
-
-  .deck-stack,
-  .deck-main-card,
-  .deck-back-card {
-    width: min(820px, 100%);
-  }
-}
-
-@media (max-width: 850px) {
-  .tech-section,
-  .impact-deck-section {
-    padding: 80px 18px 110px;
-  }
-
-  .titulo-tecnologias,
-  .impact-deck-header h2 {
-    font-size: 3rem;
-  }
-
-  .impact-deck-stage {
-    min-height: 820px;
-  }
-
-  .deck-stack {
-    min-height: 760px;
-  }
-
-  .deck-main-card {
-    padding: 24px;
-    min-height: auto;
-  }
-
-  .deck-back-card {
-    height: 720px;
-  }
-
-  .deck-top-row {
-    grid-template-columns: 58px 1fr;
-  }
-
-  .deck-stack-pill {
-    grid-column: 1 / -1;
-    max-width: 100%;
-    width: fit-content;
-  }
-
-  .deck-hero-row,
-  .deck-bottom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .deck-side-metric {
-    min-height: 220px;
-  }
-
-  .deck-detail-list {
-    display: grid;
-    gap: 6px;
-  }
-
-  .deck-arrow {
-    top: auto;
-    bottom: -72px;
-    transform: none;
-  }
-
-  .deck-arrow:hover {
-    transform: scale(1.06);
-  }
-
-  .deck-arrow.left {
-    left: calc(50% - 76px);
-  }
-
-  .deck-arrow.right {
-    right: calc(50% - 76px);
-  }
-}
-
-@media (max-width: 520px) {
-  .tech-section,
-  .impact-deck-section {
-    padding-inline: 16px;
-  }
-
-  .titulo-tecnologias,
-  .impact-deck-header h2 {
-    font-size: 2.8rem;
-  }
-
-  .impact-deck-stage {
-    min-height: 900px;
-  }
-
-  .deck-stack {
-    min-height: 850px;
-  }
-
-  .deck-main-card {
-    border-radius: 28px;
-    padding: 20px;
-  }
-
-  .deck-project-hero h3 {
-    font-size: 2.8rem;
-  }
-
-  .deck-side-metric strong {
-    font-size: 3rem;
-  }
-
-  .deck-back-card {
-    transform:
-      translateX(calc(var(--i) * 18px))
-      rotate(calc(var(--i) * 2deg))
-      scale(calc(1 - (var(--abs) * .02)));
-  }
 }

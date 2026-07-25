@@ -16,32 +16,13 @@ import ProyectoDashboard from "./pages/ProyectoDashboard";
 import { CalendarioAuditoria } from "./components/CalendarioAuditoria";
 
 function App() {
-  const { t, i18n } = useTranslation();
-
-  const cambiarIdioma = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <HashRouter>
       <RedesSociales />
 
-      <div className="language-selector">
-        <button
-          onClick={() => cambiarIdioma("en")}
-          className={i18n.language === "en" ? "idioma-activo" : ""}
-        >
-          EN
-        </button>
-        <button
-          onClick={() => cambiarIdioma("es")}
-          className={i18n.language === "es" ? "idioma-activo" : ""}
-        >
-          ES
-        </button>
-      </div>
-
-      <ScrollReveal baseOpacity={0} enableBlur={true} baseRotation={5} blurStrength={10}>
+      <ScrollReveal baseOpacity={1} enableBlur={false} baseRotation={0} blurStrength={0}>
         <Routes>
           <Route path="/" element={<TodosLosComponentes t={t} YosiendoFeliz={YosiendoFeliz} />} />
           <Route path="/proyectos" element={<ProyectosReales t={t} />} />
@@ -53,7 +34,6 @@ function App() {
           <Route path="/Dinosaurios" element={<Dinosaurios />} />
           <Route path="/proyecto-mas-repuestos" element={<MasRepuestos />} />
 
-          {/* ✅ NUEVAS RUTAS */}
           <Route path="/proyecto-dashboard" element={<ProyectoDashboard />} />
           <Route path="/agendar-auditoria" element={<CalendarioAuditoria />} />
         </Routes>

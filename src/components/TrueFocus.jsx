@@ -1,110 +1,73 @@
-import { useEffect, useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import "./../css/TrueFocus.css";
+import { FiDownload, FiCalendar, FiArrowRight } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+import "../css/TrueFocus.css";
 
-const TrueFocus = ({
-  manualMode = false,
-  blurAmount = 5,
-  borderColor = "#00e5ff",
-  glowColor = "rgba(0, 229, 255, 0.65)",
-  animationDuration = 0.25,
-  pauseBetweenAnimations = 1.2,
-}) => {
-  const words = ["Selenia Sanchez", "Frontend Developer"];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef(null);
-  const wordRefs = useRef([]);
-  const [focusRect, setFocusRect] = useState(null);
-
-  useEffect(() => {
-    if (!manualMode) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % words.length);
-      }, (animationDuration + pauseBetweenAnimations) * 1000);
-
-      return () => clearInterval(interval);
-    }
-  }, [manualMode, animationDuration, pauseBetweenAnimations]);
-
-  const updateFocus = () => {
-    const el = wordRefs.current[currentIndex];
-    const parent = containerRef.current;
-
-    if (!el || !parent) return;
-
-    const parentRect = parent.getBoundingClientRect();
-    const rect = el.getBoundingClientRect();
-
-    setFocusRect({
-      x: rect.left - parentRect.left,
-      y: rect.top - parentRect.top,
-      width: rect.width,
-      height: rect.height,
-    });
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(updateFocus, 50);
-
-    window.addEventListener("resize", updateFocus);
-    window.addEventListener("orientationchange", updateFocus);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", updateFocus);
-      window.removeEventListener("orientationchange", updateFocus);
-    };
-  }, [currentIndex]);
-
-  const handleEnter = (index) => {
-    if (manualMode) setCurrentIndex(index);
-  };
+export const TrueFocus = () => {
+  const { t, i18n } = useTranslation();
 
   return (
-    <div className="focus-container" ref={containerRef}>
-      {words.map((word, index) => {
-        const isActive = index === currentIndex;
+    <div className="hero-hero-wrapper">
+      <motion.div
+        className="hero-badge-pill"
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="badge-dot" />
+        <span>{i18n.language === "en" ? "Available for New Projects & Roles" : "Disponible para Proyectos y Roles Frontend"}</span>
+      </motion.div>
 
-        return (
-          <span
-            key={index}
-            ref={(el) => (wordRefs.current[index] = el)}
-            className="focus-word"
-            onMouseEnter={() => handleEnter(index)}
-            onClick={() => setCurrentIndex(index)}
-            style={{
-              filter: isActive ? "blur(0px)" : `blur(${blurAmount}px)`,
-              transition: `filter ${animationDuration}s ease`,
-            }}
-          >
-            {word}
-          </span>
-        );
-      })}
+      <motion.h1
+        className="hero-main-title"
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
+        Selenia Sánchez
+      </motion.h1>
 
-      {focusRect && (
-        <motion.div
-          className="focus-frame"
-          animate={{
-            x: focusRect.x,
-            y: focusRect.y,
-            width: focusRect.width,
-            height: focusRect.height,
-            opacity: 1,
-          }}
-          transition={{ duration: animationDuration }}
-          style={{
-            "--border-color": borderColor,
-            "--glow-color": glowColor,
-          }}
+      <motion.p
+        className="hero-role-title"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        {i18n.language === "en"
+          ? "Frontend Developer & Digital Product Specialist"
+          : "Desarrolladora Frontend & Especialista en Productos Digitales"}
+      </motion.p>
+
+      <motion.p
+        className="hero-description-tag"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+      >
+        {i18n.language === "en"
+          ? "Specialized in React, TypeScript, SaaS platforms, ERPs & AI Automations."
+          : "Especializada en React, TypeScript, plataformas SaaS, ERPs y automatizaciones con Inteligencia Artificial."}
+      </motion.p>
+
+      <motion.div
+        className="hero-actions-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+      >
+        <a
+          href="/cv-selenia-sanchez.pdf"
+          download="CV_Selenia_Sanchez_Frontend_Developer.pdf"
+          className="btn-hero-cv"
         >
-          <span className="corner top-left"></span>
-          <span className="corner top-right"></span>
-          <span className="corner bottom-left"></span>
-          <span className="corner bottom-right"></span>
-        </motion.div>
-      )}
+          <FiDownload /> {i18n.language === "en" ? "Download CV (PDF)" : "Descargar CV (PDF)"}
+        </a>
+
+        <a href="#auditoria" className="btn-hero-book">
+          <FiCalendar /> {i18n.language === "en" ? "Schedule a Call" : "Agendar una Cita"} <FiArrowRight />
+        </a>
+      </motion.div>
     </div>
   );
 };

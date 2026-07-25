@@ -15,27 +15,27 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
 
   return (
     <>
-      <section className="hero-section">
+      <section className="hero-section" id="hero">
         <Waves
-          lineColor="rgba(255,255,255,0.75)"
-          backgroundColor="#000"
+          lineColor="rgba(245, 169, 199, 0.35)"
+          backgroundColor="#0A080D"
           waveAmpX={28}
           waveAmpY={14}
           xGap={12}
           yGap={30}
         />
 
-        <div className="scroll-float">
+        <div className="scroll-float" style={{ width: "100%" }}>
           <TrueFocus />
         </div>
       </section>
 
-      <section className="cajaFocus scroll-transition">
+      <section className="cajaFocus scroll-transition" id="sobre-mi">
         <div className="columna-derecha scroll-transition">
           <div className="fondo-particulas">
             <Particles
-              particleColors={["#ffffff", "#ffffff"]}
-              particleCount={200}
+              particleColors={["#F5A9C7", "#C4A7F0"]}
+              particleCount={150}
               particleSpread={10}
               speed={0.1}
               particleBaseSize={100}
@@ -62,21 +62,19 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
             <p className="titulo-bienvenida">{t("hello_welcome")}</p>
 
             <div className="cajaencryted">
-           <DecryptedText
-  text={t("portfolio_description_short").replace(/\n/g, "\n")}
-  speed={100}
-  maxIterations={20}
-  characters="ABCD1234!?"
-  className="revealed desktop-description"
-  parentClassName="all-letters desktop-description"
-  encryptedClassName="encrypted desktop-description"
-/>
+              <DecryptedText
+                text={t("portfolio_description_short").replace(/\n/g, "\n")}
+                speed={100}
+                maxIterations={20}
+                characters="ABCD1234!?"
+                className="revealed desktop-description"
+                parentClassName="all-letters desktop-description"
+                encryptedClassName="encrypted desktop-description"
+              />
 
               <div className="mobile-portfolio-description">
                 <strong>{t("bio_section.mobile_intro")}</strong>
-
                 <p>{t("bio_section.mobile_paragraph_1")}</p>
-
                 <p>{t("bio_section.mobile_paragraph_2")}</p>
               </div>
             </div>
@@ -95,19 +93,27 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
         </div>
       </section>
 
-      <ProyectosReales />
+      <div id="proyectos">
+        <ProyectosReales />
+      </div>
 
-      <Tecnologias />
+      <div id="tecnologias">
+        <Tecnologias />
+      </div>
 
-      <section className="seccion-experiencia">
+      <section className="seccion-experiencia" id="experiencia">
         <div className="contenido-experiencia pt-5">
           <Experiencia />
         </div>
       </section>
 
-      <CalendarioAuditoria />
+      <div id="auditoria">
+        <CalendarioAuditoria />
+      </div>
 
-      <Formulario />
+      <div id="contacto">
+        <Formulario />
+      </div>
     </>
   );
 };
