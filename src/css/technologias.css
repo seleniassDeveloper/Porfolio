@@ -1,10 +1,11 @@
 /* ==========================================
-   STACK & SKILLS - EDITORIAL FLAT MAGAZINE STYLE (RAYHAN ADITYA)
+   STACK & SKILLS - EDITORIAL FLAT WITH USER PALETTE
+   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
 ========================================== */
 
 .tecnologias-container {
   width: 100%;
-  background: #070707;
+  background: #08070A;
   color: #FFFFFF;
   font-family: "Manrope", system-ui, sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -43,10 +44,10 @@
   gap: 1.8rem;
 }
 
-/* FLAT SKILL PILL CARD (NO HEAVY BOX / NO NEON) */
+/* FLAT SKILL PILL CARD */
 .carta-tecnologia {
   position: relative;
-  background: #111111 !important;
+  background: #110D14 !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 6px !important;
   padding: 1.8rem !important;
@@ -57,7 +58,7 @@
 
 .icono-tecnologia {
   font-size: 2.2rem;
-  color: #DC2626;
+  color: #FF5733;
   margin-bottom: 1rem;
   transition: color 0.25s ease;
 }
@@ -73,15 +74,15 @@
 
 .descripcion-tecnologia {
   font-size: 0.85rem;
-  color: #71717A;
+  color: #A1A1AA;
   line-height: 1.5;
   margin: 0;
 }
 
 /* BRAND COLOR HOVER ON FLAT PILL */
 .carta-tecnologia:hover {
-  background: #1A1A1A !important;
-  border-color: #DC2626 !important;
+  background: #1A1420 !important;
+  border-color: #FF5733 !important;
   transform: translateY(-4px);
 }
 

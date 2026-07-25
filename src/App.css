@@ -9,28 +9,23 @@
 }
 
 :root {
-  --app-bg: #0A080D;
-  --app-surface: rgba(18, 14, 24, 0.85);
-  --app-surface-2: rgba(28, 21, 38, 0.9);
-  --app-border: rgba(245, 169, 199, 0.16);
+  --app-bg: #08070A;
+  --app-surface: #110D14;
+  --app-border: rgba(255, 255, 255, 0.12);
 
-  --app-text: #F8FAFC;
-  --app-muted: #CBD5E1;
+  --app-text: #FFFFFF;
+  --app-muted: #A1A1AA;
 
-  --pink-soft: #F5A9C7;
-  --pink-magenta: #EC6EC0;
-  --lavender: #C4A7F0;
-  --violet: #8B5CF6;
-  --coral: #FF9E80;
-  --champagne: #E7C9A9;
+  /* PALETA USUARIA */
+  --color-amber: #FFC300;
+  --color-coral: #FF5733;
+  --color-crimson: #C70039;
+  --color-burgundy: #900C3E;
+  --color-plum: #571845;
 
-  --app-radius-sm: 14px;
-  --app-radius-md: 20px;
-  --app-radius-lg: 28px;
-
-  --app-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-  --app-glow-pink: 0 0 35px rgba(236, 110, 192, 0.25);
-  --app-glow-lavender: 0 0 35px rgba(196, 167, 240, 0.25);
+  --app-radius-sm: 6px;
+  --app-radius-md: 12px;
+  --app-radius-lg: 20px;
 }
 
 html,

@@ -1,11 +1,12 @@
 /* ==========================================
-   SELECTED PROJECTS - EDITORIAL FLAT MAGAZINE STYLE (RAYHAN ADITYA)
+   SELECTED PROJECTS - EDITORIAL FLAT WITH USER PALETTE
+   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
 ========================================== */
 
 .projects-showcase-section {
   position: relative;
   padding: 100px 2rem;
-  background: #070707;
+  background: #08070A;
   color: #FFFFFF;
   font-family: "Manrope", system-ui, sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -43,7 +44,7 @@
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #71717A;
+  color: #FF5733;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -77,14 +78,19 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: #121212;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #110D14;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.2rem;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.project-glass-card:hover .project-image-frame {
+  border-color: #FF5733;
 }
 
 .project-image-frame img {
@@ -92,7 +98,7 @@
   height: 85%;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  filter: grayscale(20%);
+  filter: grayscale(15%);
 }
 
 .project-glass-card:hover .project-image-frame img {
@@ -105,12 +111,13 @@
   top: 10px;
   right: 10px;
   padding: 0.25rem 0.6rem;
-  background: #DC2626;
+  background: linear-gradient(135deg, #FF5733, #C70039);
   color: #FFFFFF;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  border-radius: 2px;
 }
 
 /* Info Below Image */
@@ -123,7 +130,7 @@
 .project-index {
   font-size: 1.6rem;
   font-weight: 950;
-  color: #DC2626;
+  color: #FF5733;
   line-height: 1;
   background: transparent !important;
   border: none !important;
@@ -147,7 +154,7 @@
 
 .project-card-content p {
   font-size: 0.85rem;
-  color: #71717A;
+  color: #A1A1AA;
   margin: 0;
   line-height: 1.4;
   text-transform: uppercase;
@@ -162,13 +169,18 @@
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
-  color: #DC2626 !important;
+  color: #FF5733 !important;
   font-size: 0.85rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   width: auto !important;
   min-height: auto !important;
+  transition: color 0.2s ease;
+}
+
+.project-glass-card:hover .project-card-btn {
+  color: #FFC300 !important;
 }
 
 .project-card-btn span {
@@ -176,7 +188,7 @@
   width: auto !important;
   height: auto !important;
   background: transparent !important;
-  color: #DC2626 !important;
+  color: inherit !important;
   font-size: 1rem;
 }
 

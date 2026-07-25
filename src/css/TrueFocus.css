@@ -1,5 +1,6 @@
 /* ==========================================
-   EDITORIAL MAGAZINE HERO STYLE (RAYHAN ADITYA INSPIRED)
+   EDITORIAL HERO WITH CUSTOM USER PALETTE
+   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
 ========================================== */
 
 .editorial-hero-container {
@@ -22,8 +23,8 @@
   font-size: clamp(5rem, 18vw, 15rem);
   font-weight: 950;
   letter-spacing: -0.06em;
-  color: rgba(220, 38, 38, 0.15);
-  -webkit-text-stroke: 1px rgba(220, 38, 38, 0.25);
+  color: rgba(255, 87, 51, 0.08);
+  -webkit-text-stroke: 1px rgba(255, 87, 51, 0.18);
   pointer-events: none;
   white-space: nowrap;
   z-index: 0;
@@ -49,7 +50,7 @@
   font-family: "Playfair Display", Georgia, serif;
   font-style: italic;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  color: #EF4444;
+  color: #FF5733;
   margin-bottom: 0.2rem;
   font-weight: 500;
 }
@@ -69,7 +70,10 @@
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #DC2626;
+  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 1.5rem;
 }
 
@@ -94,7 +98,7 @@
 }
 
 .hero-location-badge svg {
-  color: #DC2626;
+  color: #FF5733;
 }
 
 .hero-editorial-actions {
@@ -110,7 +114,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 1rem 2.2rem;
-  background: #DC2626;
+  background: linear-gradient(135deg, #FF5733 0%, #C70039 100%);
   color: #FFFFFF;
   font-size: 0.92rem;
   font-weight: 900;
@@ -118,15 +122,15 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 25px rgba(255, 87, 51, 0.35);
 }
 
 .btn-editorial-primary:hover {
-  background: #B91C1C;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
+  color: #070707;
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 12px 35px rgba(255, 195, 0, 0.45);
 }
 
 .btn-editorial-secondary {
@@ -143,12 +147,12 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-editorial-secondary:hover {
-  border-color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
+  border-color: #FF5733;
+  background: rgba(255, 87, 51, 0.1);
   color: #FFFFFF;
   transform: translateY(-2px);
 }
@@ -172,7 +176,10 @@
   font-weight: 950;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: #DC2626;
+  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .stat-label {

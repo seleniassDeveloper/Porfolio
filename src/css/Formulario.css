@@ -1,11 +1,12 @@
 /* ==========================================
-   CONTACT SECTION - EDITORIAL FLAT MAGAZINE STYLE (RAYHAN ADITYA)
+   CONTACT SECTION - EDITORIAL FLAT WITH USER PALETTE
+   (#FFC300, #FF5733, #C70039, #900C3E, #571845)
 ========================================== */
 
 .contact-section {
   position: relative;
   padding: 100px 2rem;
-  background: #070707;
+  background: #08070A;
   color: #FFFFFF;
   font-family: "Manrope", system-ui, sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -37,7 +38,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #DC2626;
+  color: #FF5733;
   font-size: 0.85rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -64,7 +65,7 @@
 }
 
 .contact-mini-note {
-  background: #111111;
+  background: #110D14;
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 1.5rem;
   border-radius: 6px;
@@ -74,7 +75,7 @@
 }
 
 .contact-mini-note svg {
-  color: #DC2626;
+  color: #FF5733;
   font-size: 1.8rem;
 }
 
@@ -97,14 +98,14 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #DC2626;
+  color: #FF5733;
   margin-bottom: 0.5rem;
 }
 
 .contacto-formulario input,
 .contacto-formulario textarea {
   width: 100%;
-  background: #111111;
+  background: #110D14;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
   padding: 1rem 1.2rem;
@@ -121,13 +122,13 @@
 
 .contacto-formulario input:focus,
 .contacto-formulario textarea:focus {
-  border-color: #DC2626;
-  background: #161616;
+  border-color: #FF5733;
+  background: #16121C;
 }
 
 .btn-futurista {
   padding: 1rem 2rem;
-  background: #DC2626;
+  background: linear-gradient(135deg, #FF5733 0%, #C70039 100%);
   border: none;
   border-radius: 4px;
   color: #FFFFFF;
@@ -140,12 +141,15 @@
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  transition: all 0.2s ease;
+  box-shadow: 0 8px 25px rgba(255, 87, 51, 0.35);
+  transition: all 0.25s ease;
 }
 
 .btn-futurista:hover:not(:disabled) {
-  background: #B91C1C;
+  background: linear-gradient(135deg, #FFC300 0%, #FF5733 100%);
+  color: #070707;
   transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 195, 0, 0.45);
 }
 
 @media (max-width: 900px) {
