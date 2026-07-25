@@ -190,30 +190,35 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: #64748b;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .calendar-days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 
 .day-cell {
   aspect-ratio: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  font-size: 0.9rem;
-  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .day-cell.empty {
@@ -223,34 +228,63 @@
 }
 
 .day-cell.disabled {
-  opacity: 0.3;
+  opacity: 0.25;
   cursor: not-allowed;
   background: transparent;
   color: #475569;
+  border-color: transparent;
 }
 
 .day-cell:hover:not(.disabled):not(.empty) {
-  background: rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #6366f1;
   color: #fff;
+  transform: scale(1.05);
 }
 
 .day-cell.selected {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-  border-color: #818cf8;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  border-color: #a5b4fc;
   color: #fff;
-  font-weight: 700;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+  transform: scale(1.05);
 }
 
-.day-cell.today {
-  border-color: #38bdf8;
+.day-cell.today:not(.selected) {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.selected-date-banner {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slot-shift-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin: 1.2rem 0 0.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 /* Time Slots */
 .time-slots-container {
   margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  padding-top: 1.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 

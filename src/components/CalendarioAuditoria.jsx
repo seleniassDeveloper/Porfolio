@@ -15,14 +15,14 @@ import {
   FiSend,
   FiCheck,
   FiLock,
+  FiSun,
+  FiMoon,
   FiArrowLeft
 } from "react-icons/fi";
 import "../css/CalendarioAuditoria.css";
 
-const ALL_TIME_SLOTS = [
-  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00",
-  "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
-];
+const MORNING_SLOTS = ["08:00", "09:00", "10:00", "11:00", "12:00"];
+const AFTERNOON_SLOTS = ["13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
 
 const TIMEZONES = [
   { id: "America/Argentina/Buenos_Aires", name: "🇦🇷 Hora Argentina (ART / UTC-3)", offsetHours: -3 },
@@ -41,7 +41,7 @@ export const CalendarioAuditoria = () => {
 
   const today = new Date();
   const [currentMonthDate, setCurrentMonthDate] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date()); // Pre-select today for immediate clarity
   const [selectedSlot, setSelectedSlot] = useState("14:00");
   const [selectedTimezone, setSelectedTimezone] = useState("America/Argentina/Buenos_Aires");
   
@@ -160,14 +160,13 @@ export const CalendarioAuditoria = () => {
     if (!targetTz) return `${slotStr} hs`;
 
     const [h, m] = slotStr.split(":").map(Number);
-    // Argentina is UTC-3. Diff = targetOffset - (-3)
     const diff = targetTz.offsetHours - (-3);
     let convertedH = h + diff;
     if (convertedH < 0) convertedH += 24;
     if (convertedH >= 24) convertedH -= 24;
 
     const formattedH = String(convertedH).padStart(2, "0");
-    return `${slotStr} ART = ${formattedH}:${String(m).padStart(2, "0")} hs`;
+    return `${slotStr} ART (${formattedH}:${String(m).padStart(2, "0")} tu hora local)`;
   };
 
   // Create Google Calendar link
@@ -190,14 +189,39 @@ export const CalendarioAuditoria = () => {
 
   const formattedSelectedDate = selectedDate
     ? selectedDate.toLocaleDateString(i18n.language === "en" ? "en-US" : "es-ES", {
-        weekday: "short",
-        month: "short",
+        weekday: "long",
         day: "numeric",
+        month: "long",
         year: "numeric"
       })
     : "";
 
   const selectedTzObj = TIMEZONES.find((tz) => tz.id === selectedTimezone) || TIMEZONES[0];
+
+  const renderSlotButton = (slot) => {
+    const booked = isSlotBooked(selectedDate, slot);
+    const isSelectedSlot = selectedSlot === slot;
+
+    return (
+      <button
+        type="button"
+        key={slot}
+        className={`time-slot-btn ${isSelectedSlot ? "selected" : ""} ${booked ? "booked" : ""}`}
+        onClick={() => !booked && setSelectedSlot(slot)}
+        disabled={booked}
+      >
+        {booked ? (
+          <>
+            <FiLock /> {t("auditoria.slot_booked", "Reservado")}
+          </>
+        ) : (
+          <>
+            {isSelectedSlot && <FiCheck />} {slot} hs
+          </>
+        )}
+      </button>
+    );
+  };
 
   return (
     <section className="audit-section" id="auditoria">
@@ -273,7 +297,7 @@ export const CalendarioAuditoria = () => {
                 </label>
               </div>
 
-              {/* CALENDARIO */}
+              {/* CALENDARIO DE MES */}
               <div className="calendar-header">
                 <button
                   type="button"
@@ -320,42 +344,38 @@ export const CalendarioAuditoria = () => {
                       onClick={() => handleSelectDay(day)}
                       disabled={disabled}
                     >
-                      {day}
+                      <span>{day}</span>
                     </button>
                   );
                 })}
               </div>
 
-              {/* HORARIOS DISPONIBLES DE 08:00 A 20:00 */}
+              {/* BANNER DE FECHA SELECCIONADA */}
+              {selectedDate && (
+                <div className="selected-date-banner">
+                  <span>📅 <strong>{formattedSelectedDate}</strong></span>
+                  <span>🕒 {getConvertedTimeText(selectedSlot)}</span>
+                </div>
+              )}
+
+              {/* HORARIOS ORGANIZADOS POR TURNO */}
               <div className="time-slots-container">
                 <h3 className="step-title">
                   <FiClock /> {t("auditoria.select_time_title", "Horarios disponibles")}
                 </h3>
-                <div className="time-slots-grid">
-                  {ALL_TIME_SLOTS.map((slot) => {
-                    const booked = isSlotBooked(selectedDate, slot);
-                    const isSelectedSlot = selectedSlot === slot;
 
-                    return (
-                      <button
-                        type="button"
-                        key={slot}
-                        className={`time-slot-btn ${isSelectedSlot ? "selected" : ""} ${booked ? "booked" : ""}`}
-                        onClick={() => !booked && setSelectedSlot(slot)}
-                        disabled={booked}
-                      >
-                        {booked ? (
-                          <>
-                            <FiLock /> {t("auditoria.slot_booked", "Reservado")}
-                          </>
-                        ) : (
-                          <>
-                            {isSelectedSlot && <FiCheck />} {slot} hs
-                          </>
-                        )}
-                      </button>
-                    );
-                  })}
+                <div className="slot-shift-title">
+                  <FiSun /> {i18n.language === "en" ? "Morning Shift" : "Turno Mañana (08:00 - 12:00)"}
+                </div>
+                <div className="time-slots-grid">
+                  {MORNING_SLOTS.map(renderSlotButton)}
+                </div>
+
+                <div className="slot-shift-title">
+                  <FiMoon /> {i18n.language === "en" ? "Afternoon Shift" : "Turno Tarde / Noche (13:00 - 20:00)"}
+                </div>
+                <div className="time-slots-grid">
+                  {AFTERNOON_SLOTS.map(renderSlotButton)}
                 </div>
               </div>
             </div>
