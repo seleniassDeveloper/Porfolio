@@ -144,39 +144,50 @@
   color: #FF5733;
 }
 
-/* TIMEZONE PICKER */
+/* TIMEZONE PICKER INLINE */
 .timezone-picker-box {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-.timezone-picker-box label span {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #FF5733;
-  margin-bottom: 0.4rem;
-}
-
-.timezone-picker-box select {
+.timezone-inline-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
   width: 100%;
-  padding: 0.6rem 0.8rem;
+}
+
+.timezone-inline-label span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #FF5733 !important;
+  white-space: nowrap !important;
+  margin-bottom: 0 !important;
+}
+
+.timezone-inline-label select {
+  flex: 1 !important;
+  max-width: 280px !important;
+  padding: 0.5rem 0.8rem !important;
   background: #08070A !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-  color: #FFFFFF;
-  font-size: 0.85rem;
-  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
+  color: #FFFFFF !important;
+  font-size: 0.82rem !important;
+  outline: none !important;
 }
 
-.timezone-picker-box select:focus {
-  border-color: #FF5733;
+.timezone-inline-label select:focus {
+  border-color: #FF5733 !important;
 }
 
-/* CALENDAR HEADER & SOLID CORAL MONTH NAV BUTTONS */
+/* CALENDAR HEADER & MONTH NAV BUTTONS */
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -194,30 +205,39 @@
   letter-spacing: 0.05em;
 }
 
-/* ULTRA VISIBLE MONTH NAVIGATION BUTTONS */
+/* PERFECTLY DEAD-CENTERED MONTH NAVIGATION BUTTONS */
 .btn-month-nav {
-  background: #FF5733 !important;
-  border: none !important;
-  color: #FFFFFF !important;
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 4px !important;
-  display: inline-flex !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #FF5733 !important;
+  border: none !important;
+  border-radius: 4px !important;
   cursor: pointer !important;
-  font-size: 1.6rem !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-  padding-bottom: 3px !important;
   transition: all 0.2s ease !important;
   box-shadow: 0 4px 12px rgba(255, 87, 51, 0.25) !important;
 }
 
+.btn-month-nav svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: #FFFFFF !important;
+  stroke-width: 2.8 !important;
+  display: block !important;
+  margin: auto !important;
+}
+
 .btn-month-nav:hover {
   background: #FFC300 !important;
-  color: #070707 !important;
   transform: scale(1.08);
+}
+
+.btn-month-nav:hover svg {
+  color: #070707 !important;
 }
 
 /* WEEKDAYS */

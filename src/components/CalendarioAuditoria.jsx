@@ -279,10 +279,10 @@ export const CalendarioAuditoria = () => {
                 <FiCalendar /> {t("auditoria.select_date_title", "1. Selecciona Fecha y Hora")}
               </h3>
 
-              {/* SELECTOR DE ZONA HORARIA */}
+              {/* SELECTOR ZONA HORARIA INLINE */}
               <div className="timezone-picker-box">
-                <label>
-                  <span><FiGlobe /> {t("auditoria.timezone_label", "Zona Horaria de la Cita")}</span>
+                <label className="timezone-inline-label">
+                  <span><FiGlobe /> {t("auditoria.timezone_label", "Meeting Time Zone")}</span>
                   <select
                     value={selectedTimezone}
                     onChange={(e) => setSelectedTimezone(e.target.value)}
@@ -304,7 +304,7 @@ export const CalendarioAuditoria = () => {
                   onClick={prevMonth}
                   aria-label="Previous Month"
                 >
-                  ‹
+                  <FiChevronLeft />
                 </button>
                 <span className="month-year">
                   {currentMonthName} {currentYear}
@@ -315,7 +315,7 @@ export const CalendarioAuditoria = () => {
                   onClick={nextMonth}
                   aria-label="Next Month"
                 >
-                  ›
+                  <FiChevronRight />
                 </button>
               </div>
 
