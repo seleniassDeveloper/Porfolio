@@ -14,6 +14,7 @@ import Dogco from "./components/ComponentesDComponentes/Dogco";
 import Dinosaurios from "./components/ComponentesDComponentes/Dinosaurios";
 import { MasRepuestos } from "./components/ComponentesDComponentes/MasRepuestos";
 import ProyectoDashboard from "./pages/ProyectoDashboard";
+import ProyectoIAVisibility from "./pages/ProyectoIAVisibility";
 import { CalendarioAuditoria } from "./components/CalendarioAuditoria";
 
 function HashScrollHandler() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/proyecto-mas-repuestos" element={<MasRepuestos />} />
 
           <Route path="/proyecto-dashboard" element={<ProyectoDashboard />} />
+          <Route path="/proyecto-ia-visibility" element={<ProyectoIAVisibility />} />
           <Route path="/agendar-auditoria" element={<CalendarioAuditoria />} />
           <Route path="/auditoria" element={<CalendarioAuditoria />} />
           <Route path="/book-call" element={<CalendarioAuditoria />} />

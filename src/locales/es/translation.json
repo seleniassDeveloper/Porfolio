@@ -773,6 +773,18 @@
       "detailTwo": "ERP, Caja & Inventario FIFO",
       "detailThree": "Workflows IA & Google Sheets",
       "impact": "Lideré el desarrollo frontend de AuraDash, construyendo un CRM completo para retención de clientes, un ERP con deducción automática de stock e insumos al cobrar citas, un creador visual de Automatizaciones con Copilot IA y sincronización bidireccional en tiempo real con Google Sheets y WhatsApp Web."
+    },
+    "iaVisibility": {
+      "label": "AI Analytics · Brand Intelligence",
+      "title": "IA Visibility",
+      "desc": "Plataforma de auditoría y analítica para medir, diagnosticar y optimizar la visibilidad y reputación de marcas en los principales modelos de IA (ChatGPT, Claude, Gemini, Perplexity).",
+      "stack": "React · Vite · CSS Modules · Python · LLM API Integrations",
+      "metricBig": "5 IAs",
+      "metricSmall": "ChatGPT, Gemini, Perplexity, Claude y Copilot auditados en tiempo real",
+      "detailOne": "Share of Voice & SOV",
+      "detailTwo": "Diagnóstico Competitivo",
+      "detailThree": "React · Analytics · AI LLM",
+      "impact": "Desarrollé la interfaz frontend y el sistema visual de reportes para IA Visibility, una plataforma pionera en medir el posicionamiento, la intención de compra y el Share of Voice (SOV) de marcas globales dentro de respuestas generadas por modelos de Inteligencia Artificial."
     }
   },
   "cta": {
@@ -864,6 +876,81 @@
           "Actualización de permisos aplicados en caliente a sesiones activas.",
           "Configuración de marca, sucursales y estética visual.",
           "Importador masivo sincronizado con Google Sheets."
+        ]
+      }
+    }
+  },
+  "iaVisibility": {
+    "badge": "Plataforma de Analytics & Brand Intelligence para IA",
+    "title": "IA Visibility: Medición y Posicionamiento en Modelos de IA",
+    "subtitle": "Sistema de auditoría y monitoreo continuo de visibilidad de marcas en modelos de inteligencia artificial (ChatGPT, Gemini, Perplexity, Claude y Copilot). Mide Share of Voice (SOV), diagnóstico competitivo e intenciones de compra.",
+    "back": "Volver a proyectos",
+    "visit": "Ver demo interactiva",
+    "intro": "Plataforma SaaS de inteligencia de marca que audita cómo las principales soluciones de Inteligencia Artificial presentan, comparan y recomiendan a tu empresa en respuestas a usuarios finales.",
+    "highlights": [
+      "Monitoreo multi-modelo en tiempo real (ChatGPT, Gemini, Claude, Perplexity y Copilot)",
+      "Medición automatizada de Share of Voice (SOV) e Intención de Compra de clientes",
+      "Diagnóstico competitivo automatizado de fortalezas, debilidades y atributos diferenciales",
+      "Detección proactiva de alucinaciones, sesgos de marca y oportunidades de posicionamiento"
+    ],
+    "modules": {
+      "sov": {
+        "title": "Reporte Share of Voice (SOV)",
+        "desc": "Monitoreo integral del porcentaje de menciones y participación de mercado de la marca en modelos de IA.",
+        "points": [
+          "Métricas comparativas directas entre competidores principales de la industria.",
+          "Evolución histórica de menciones y cuota de voz en el tiempo.",
+          "Desglose detallado por modelo conversacional (ChatGPT, Gemini, Claude, Perplexity).",
+          "Detección de patrones de búsqueda y consultas frecuentes de los usuarios."
+        ]
+      },
+      "competitivo": {
+        "title": "Diagnóstico Competitivo",
+        "desc": "Análisis comparativo de ventajas, debilidades y percepciones frente a la competencia directa.",
+        "points": [
+          "Benchmarking automatizado de competidores líderes y emergentes.",
+          "Matriz de contraste de atributos de productos y servicios.",
+          "Identificación de brechas de visibilidad y nichos desatendidos.",
+          "Recomendaciones estratégicas para dominar respuestas de IA."
+        ]
+      },
+      "compra": {
+        "title": "Intención de Compra",
+        "desc": "Evaluación de la frecuencia y calidad con la que los modelos recomiendan la marca.",
+        "points": [
+          "Medición de recomendación en escenarios de decisión comercial activa.",
+          "Puntuación de intencionalidad de compra y conversión estimada.",
+          "Detección de dudas o barreras que frenan la recomendación de la IA.",
+          "Indicadores de confianza y autoridad percibida en el sector."
+        ]
+      },
+      "posicionamiento": {
+        "title": "Posicionamiento de Marca",
+        "desc": "Mapeo de atributos, percepción y posicionamiento orgánico en respuestas generativas.",
+        "points": [
+          "Matriz de palabras clave y conceptos automáticamente asociados a la empresa.",
+          "Análisis de sentimiento (positivo, neutral o negativo) en la síntesis de la IA.",
+          "Auditoría de coherencia de mensajes y propuesta de valor de marca.",
+          "Segmentación por categoría de producto y perfil de consumidor."
+        ]
+      },
+      "identidad": {
+        "title": "Identidad & Auditorías",
+        "desc": "Gestión de la marca, definición de competidores y configuración de simulaciones.",
+        "points": [
+          "Administración de marcas, productos y listados de competidores clave.",
+          "Configuración de escenarios de prueba personalizados y sintéticos.",
+          "Alertas automáticas ante variaciones drásticas en el Share of Voice.",
+          "Exportación de reportes consolidados para ejecutivos y equipos de marketing."
+        ]
+      },
+      "demo": {
+        "title": "Demostración en Video",
+        "desc": "Recorrido dinámico por las funcionalidades centrales de la plataforma IA Visibility.",
+        "points": [
+          "Demostración en vivo del flujo de análisis de prompts e interacción.",
+          "Visualización interactiva de dashboards de visibilidad e intenciones.",
+          "Navegación por reportes ejecutivos en tiempo real."
         ]
       }
     }

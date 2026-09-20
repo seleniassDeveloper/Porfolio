@@ -739,6 +739,18 @@
     "detailTwo": "ERP, Cash & FIFO Inventory",
     "detailThree": "AI Workflows & Google Sheets",
     "impact": "I led the frontend development of AuraDash, building a full-featured CRM for client retention, an ERP with automatic stock deduction upon checkout, a visual AI Workflow builder, and real-time bi-directional sync with Google Sheets & WhatsApp Web."
+  },
+  "iaVisibility": {
+    "label": "AI Analytics · Brand Intelligence",
+    "title": "IA Visibility",
+    "desc": "Auditing and analytics platform for measuring, diagnosing, and optimizing brand visibility and reputation across major AI models (ChatGPT, Claude, Gemini, Perplexity).",
+    "stack": "React · Vite · CSS Modules · Python · LLM API Integrations",
+    "metricBig": "5 AIs",
+    "metricSmall": "ChatGPT, Gemini, Perplexity, Claude, and Copilot audited in real time",
+    "detailOne": "Share of Voice & SOV",
+    "detailTwo": "Competitive Diagnosis",
+    "detailThree": "React · Analytics · AI LLM",
+    "impact": "I developed the frontend interface and visual reporting engine for IA Visibility, a pioneer platform that measures brand positioning, purchase intent, and Share of Voice (SOV) across AI generative models."
   }
 },
 "cta": {
@@ -830,6 +842,81 @@
         "Hot-applied permission updates to active sessions.",
         "Brand, branch, and visual aesthetics configuration.",
         "Mass importer synchronized with Google Sheets."
+      ]
+    }
+  }
+},
+"iaVisibility": {
+  "badge": "AI Analytics & Brand Intelligence Platform",
+  "title": "IA Visibility: Brand Tracking & Positioning in AI Models",
+  "subtitle": "Continuous audit and monitoring system for brand visibility across Artificial Intelligence models (ChatGPT, Gemini, Perplexity, Claude, and Copilot). Measures Share of Voice (SOV), competitive diagnosis, and purchase intent.",
+  "back": "Back to projects",
+  "visit": "View interactive demo",
+  "intro": "SaaS brand intelligence platform that audits how major AI models present, compare, and recommend your brand in responses to end users.",
+  "highlights": [
+    "Real-time multi-model monitoring (ChatGPT, Gemini, Claude, Perplexity, and Copilot)",
+    "Automated Share of Voice (SOV) and Customer Purchase Intent tracking",
+    "Automated competitive diagnosis of strengths, weaknesses, and differential attributes",
+    "Proactive detection of hallucinations, brand biases, and positioning opportunities"
+  ],
+  "modules": {
+    "sov": {
+      "title": "Share of Voice (SOV) Report",
+      "desc": "Comprehensive monitoring of brand mention percentage and market share in AI outputs.",
+      "points": [
+        "Direct comparative metrics against key industry competitors.",
+        "Historical breakdown of mentions and voice share over time.",
+        "Detailed split by conversational model (ChatGPT, Gemini, Claude, Perplexity).",
+        "Detection of search patterns and frequent user queries."
+      ]
+    },
+    "competitivo": {
+      "title": "Competitive Diagnosis",
+      "desc": "Comparative analysis of advantages, weaknesses, and perceptions vs direct competitors.",
+      "points": [
+        "Automated benchmarking of market leaders and emerging rivals.",
+        "Contrast matrix for product and service key attributes.",
+        "Identification of visibility gaps and underserved niches.",
+        "Strategic recommendations to dominate AI model outputs."
+      ]
+    },
+    "compra": {
+      "title": "Purchase Intent",
+      "desc": "Evaluation of how frequently and effectively models recommend the brand.",
+      "points": [
+        "Recommendation rate measurement in active buying scenarios.",
+        "Purchase intent scoring and estimated conversion metrics.",
+        "Detection of friction points or doubts hindering AI recommendation.",
+        "Trust and authority indicators in your industry."
+      ]
+    },
+    "posicionamiento": {
+      "title": "Brand Positioning",
+      "desc": "Mapping of attributes, sentiment, and organic positioning in generative answers.",
+      "points": [
+        "Matrix of key terms and concepts automatically associated with your company.",
+        "Sentiment analysis (positive, neutral, negative) in AI responses.",
+        "Messaging consistency audit and brand value proposition check.",
+        "Segmentation by product category and buyer persona."
+      ]
+    },
+    "identidad": {
+      "title": "Identity & Audits",
+      "desc": "Brand management, competitor definitions, and test simulation setup.",
+      "points": [
+        "Management of brands, products, and key rival company lists.",
+        "Custom synthetic prompt test scenario creation.",
+        "Automated alerts for sharp drops in Share of Voice.",
+        "Exportable executive reports in PDF and CSV formats."
+      ]
+    },
+    "demo": {
+      "title": "Video Demonstration",
+      "desc": "Dynamic walkthrough of the core features of the IA Visibility platform.",
+      "points": [
+        "Live walkthrough of prompt analysis flow and user interaction.",
+        "Interactive dashboard preview of visibility and purchase intent.",
+        "Real-time navigation of executive reports."
       ]
     }
   }

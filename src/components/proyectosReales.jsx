@@ -10,12 +10,23 @@ import logoDogco from "../assets/imagenes/dogco/logoDogco.png";
 import dinoImg from "../assets/imagenes/logoblancoverDino.jpeg";
 import masRepuestosImg from "../assets/MasRepuestos/masrepuesto.jpg";
 import dashboardImg from "../Aura Pictures/logoAuraDas.png";
+import iaVisibilityImg from "../assets/iaVisibility/reporteSOV.png";
 
 export const ProyectosReales = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const proyectos = [
+    {
+      id: "iaVisibility",
+      route: "/proyecto-ia-visibility",
+      img: iaVisibilityImg,
+      typeKey: "cases.iaVisibility.label",
+      titleKey: "cases.iaVisibility.title",
+      descKey: "cases.iaVisibility.desc",
+      altKey: "cases.iaVisibility.title",
+      theme: "cyan",
+    },
     {
       id: "dashboard",
       route: "/proyecto-dashboard",
