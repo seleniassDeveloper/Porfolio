@@ -42,7 +42,7 @@ export const TrueFocus = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            FRONTEND DEVELOPER & DIGITAL PRODUCT CREATOR
+            BUSINESS SYSTEMS & AUTOMATION CONSULTANT / PRODUCT ENGINEER
           </motion.h2>
 
           <motion.p
@@ -52,8 +52,8 @@ export const TrueFocus = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             {i18n.language === "en"
-              ? "I design and build high-performance web applications, SaaS platforms, CRM/ERPs and AI automations that combine technical strategy with seamless user experience."
-              : "Diseño y desarrollo aplicaciones web de alto rendimiento, plataformas SaaS, CRM/ERPs y automatizaciones con IA que combinan estrategia técnica con una experiencia de usuario fluida."}
+              ? "I analyze business bottlenecks, design system architectures, and build custom software, AI automations, and growth infrastructure."
+              : "Analizo cuellos de botella de negocio, diseño arquitectura de sistemas y desarrollo software a medida, automatizaciones con IA e infraestructura de crecimiento."}
           </motion.p>
 
           <motion.div

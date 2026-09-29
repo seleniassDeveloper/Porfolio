@@ -10,6 +10,7 @@ export const RedesSociales = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { targetId: "sistemas", label: i18n.language === "en" ? "Systems" : "Sistemas" },
     { targetId: "proyectos", label: i18n.language === "en" ? "Projects" : "Proyectos" },
     { targetId: "tecnologias", label: i18n.language === "en" ? "Stack" : "Tecnologías" },
     { targetId: "experiencia", label: i18n.language === "en" ? "Experience" : "Experiencia" },
