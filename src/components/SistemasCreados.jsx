@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FiArrowRight,
+  FiBookOpen,
   FiCheckCircle,
   FiCpu,
   FiExternalLink,
@@ -298,6 +299,44 @@ export const SistemasCreados = () => {
               ? "Internal systems and automation tools I built through SSStudio to solve problems around visibility, content, distribution, and business growth."
               : "Sistemas internos y herramientas de automatización que construí a través de SSStudio para resolver problemas de visibilidad, contenido, distribución y crecimiento."}
           </p>
+
+          {/* SSSTUDIO INSIGHTS: author ↔ agency link */}
+          <div className="ssstudio-insights">
+            <div className="ssstudio-insights-copy">
+              <span className="ssstudio-insights-eyebrow">
+                <FiBookOpen /> {t("ssstudio_insights.eyebrow")}
+              </span>
+              <h3 className="ssstudio-insights-title">{t("ssstudio_insights.title")}</h3>
+              <p className="ssstudio-insights-text">{t("ssstudio_insights.text")}</p>
+            </div>
+
+            <div className="ssstudio-insights-links">
+              <a
+                href={t("ssstudio_insights.blog_url")}
+                target="_blank"
+                rel="noopener"
+                className="ssstudio-insights-link primary"
+              >
+                {t("ssstudio_insights.blog_label")} <FiArrowRight />
+              </a>
+              <a
+                href={t("ssstudio_insights.author_url")}
+                target="_blank"
+                rel="me noopener"
+                className="ssstudio-insights-link"
+              >
+                {t("ssstudio_insights.author_label")} <FiExternalLink />
+              </a>
+              <a
+                href={t("ssstudio_insights.cases_url")}
+                target="_blank"
+                rel="noopener"
+                className="ssstudio-insights-link"
+              >
+                {t("ssstudio_insights.cases_label")} <FiExternalLink />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* NARRATIVE METRICS & METHODOLOGY BANNER */}

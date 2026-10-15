@@ -966,5 +966,16 @@
   },
   "illustrator": {
     "desc": "Creación de gráficos vectoriales y material para impresión."
+    },
+  "ssstudio_insights": {
+    "eyebrow": "Escritura",
+    "title": "Escribo en SSStudio Insights",
+    "text": "Artículos y guías sobre sistemas de negocio, automatización y visibilidad en IA, publicados en el blog de mi agencia.",
+    "blog_label": "Leer SSStudio Insights",
+    "blog_url": "https://www.ssstudio.agency/es/blog",
+    "author_label": "Mi página de autora",
+    "author_url": "https://www.ssstudio.agency/es/blog/autora/selenia-sanchez",
+    "cases_label": "Casos de SSStudio",
+    "cases_url": "https://www.ssstudio.agency/es/casos"
   }
 }

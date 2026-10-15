@@ -932,5 +932,16 @@
   },
   "illustrator": {
     "desc": "Vector graphics creation and print-ready material."
+    },
+  "ssstudio_insights": {
+    "eyebrow": "Writing",
+    "title": "I write at SSStudio Insights",
+    "text": "Articles and guides on business systems, automation and AI visibility, published on my agency's blog.",
+    "blog_label": "Read SSStudio Insights",
+    "blog_url": "https://www.ssstudio.agency/blog",
+    "author_label": "My author page",
+    "author_url": "https://www.ssstudio.agency/blog/author/selenia-sanchez",
+    "cases_label": "SSStudio case studies",
+    "cases_url": "https://www.ssstudio.agency/casos"
   }
 }
