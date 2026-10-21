@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <title>Privacy Policy · Social Publishing Platform</title>
-    <meta
-      name="description"
-      content="Privacy Policy for the Social Publishing Platform: what data is collected, how it is used and protected, and how to request deletion."
-    />
+    <meta name="description" content="Privacy Policy for Social Publishing Platform, a personal private tool for connecting and publishing to the operator's own social accounts." />
     <link rel="canonical" href="https://iamselenia.com/social/privacy" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +22,6 @@
         <a href="/social/privacy" aria-current="page">Privacy</a>
       </nav>
     </header>
-
     <main class="wrap">
       <p class="eyebrow">Social Publishing Platform</p>
       <h1>Privacy Policy</h1>
@@ -34,276 +30,240 @@
         This page is public and does not require an account.
       </p>
 
-      <aside class="review">
-        <strong>For operator review</strong>
-        <p>
-          This policy describes what the Social Publishing Platform is built to process.
-          It is not legal advice. Complete the marked fields and have a lawyer review
-          the text before treating it as a final legal document.
-        </p>
-        <ul>
-          <li>Legal name of the controller, if different from Selenia Sanchez: <mark>[PENDING: legal name of the controller]</mark></li>
-          <li>Postal address: <mark>[PENDING: postal address]</mark></li>
-          <li>Dedicated privacy email, if different from the public site email: <mark>[PENDING: if a different privacy email will be used]</mark></li>
-          <li>Processors that host the application, database, email, and object storage: <mark>[PENDING: processors]</mark></li>
-          <li>Backup retention: <mark>[PENDING: backup retention in days]</mark></li>
-          <li>Application log retention: <mark>[PENDING: log retention in days]</mark></li>
-          <li>Data protection authority: <mark>[PENDING: data protection authority]</mark></li>
-          <li>Minimum age: <mark>[PENDING: minimum age]</mark></li>
-        </ul>
-      </aside>
-
       <p>
-        This policy explains what data the Social Publishing Platform processes when you
-        use it to connect social media accounts and to schedule or publish content to
-        those accounts. Selenia Sanchez is the operator of this website and of the
-        service. The legal name of the controller, if different, is
-        <mark>[PENDING: legal name of the controller]</mark>. Postal address:
-        <mark>[PENDING: postal address]</mark>.
+        Social Publishing Platform is a personal, private tool operated by
+        Selenia Sanchez. It is used only by the operator to connect and manage
+        her own social media accounts. It is not offered to the public, does not
+        accept public registration, is not sold, and has no subscriptions,
+        billing, or commercial plans.
+      </p>
+      <p>
+        This policy explains what data the tool processes when the operator
+        connects accounts and schedules or publishes content. Contact:
+        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>.
       </p>
 
-      <h2>What the service does</h2>
+      <h2>What the tool does</h2>
       <p>
-        The Social Publishing Platform lets the members of a workspace connect social
-        media accounts through each network’s official OAuth flow, and create, schedule,
-        and publish content through those networks’ official APIs. You can disconnect or
-        revoke those connections. We never ask for or store your social network passwords.
+        The tool lets the operator connect her own accounts on networks such as
+        Instagram, Facebook, TikTok, LinkedIn, and YouTube through each
+        network's official OAuth flow, and create, schedule, and publish content
+        through those networks' official APIs. It includes a calendar, scheduled
+        publishing, and a media library. Connections can be disconnected at any
+        time. The tool never asks for or stores social network passwords.
       </p>
 
-      <h2>Data we process</h2>
+      <h2>Data the tool processes</h2>
       <ul>
         <li>
-          <strong>Your account:</strong> email address, optional display name, and a
-          password stored only as a salted hash (scrypt).
+          <strong>Operator sign-in:</strong> the operator's email address,
+          optional display name, and a password stored only as a salted hash
+          (scrypt). There is no public user directory and no open registration.
         </li>
         <li>
-          <strong>Sign-in sessions:</strong> a hash of the session token, the IP address
-          and browser (user agent) used, and dates. They are deleted when the session
-          expires or you sign out.
+          <strong>Sign-in sessions:</strong> a hash of the session token, the IP
+          address and browser (user agent) used, and dates. They are deleted
+          when the session expires or the operator signs out.
         </li>
         <li>
-          <strong>Password reset:</strong> if you request a reset, a one-time token is
-          stored until it expires or is used. The new password is stored only as a hash.
+          <strong>Connected social accounts:</strong> the identifiers each
+          network provides through OAuth (for example an account ID, username
+          or display name, profile picture URL, account type, and the
+          permissions granted).
         </li>
         <li>
-          <strong>Workspaces:</strong> name, time zone, members, and their roles.
+          <strong>Authorizations (tokens):</strong> access and refresh tokens
+          issued by each network. They are encrypted with AES-256-GCM before
+          being stored, are never shown in the browser, and are erased when the
+          account is disconnected or data is deleted.
         </li>
         <li>
-          <strong>Invitations:</strong> the email address and offered role of a person
-          invited to a workspace.
+          <strong>Content and publishing:</strong> the text, schedule, target
+          accounts, and attached media of each post, plus the result returned by
+          the network (post ID and URL).
         </li>
         <li>
-          <strong>Brands or clients:</strong> names and workspace settings you create
-          to organize accounts and content.
+          <strong>Media library:</strong> if the operator uploads files, the
+          tool stores metadata (name, type, size, dimensions, duration, tags,
+          folder, and alt text). Files are stored in object storage configured
+          by the operator, not in the application database. Preview access uses
+          time-limited signed URLs.
         </li>
         <li>
-          <strong>Connected social accounts:</strong> the identifiers the network gives
-          us (for Instagram, your Instagram user ID and the ID that is specific to our
-          app), name, username, profile picture URL, account type, and the permissions
-          you granted.
-        </li>
-        <li>
-          <strong>Authorizations (tokens):</strong> the access tokens issued by each
-          network. They are encrypted with AES-256-GCM (envelope encryption) before
-          being stored, are never shown or sent to your browser, and are erased when
-          you disconnect the account or request deletion.
-        </li>
-        <li>
-          <strong>Content and publishing:</strong> the text, schedule, target accounts,
-          and attached media references of each post you create, and the result returned
-          by the network (post ID and URL).
-        </li>
-        <li>
-          <strong>Media library:</strong> if you upload files, the service stores
-          metadata (original name, type, size, dimensions, duration, tags, folder, and
-          alt text). The file itself is stored in object storage configured for the
-          service, not in the application database. Preview access uses time-limited
-          signed URLs. Production storage provider:
-          <mark>[PENDING: production storage provider]</mark>.
-        </li>
-        <li>
-          <strong>Notifications from networks:</strong> events that Meta sends to our
-          webhook endpoints (for example, that an authorization was revoked).
-        </li>
-        <li>
-          <strong>In-app notifications:</strong> alerts about connections and publishing
-          status for workspace members.
+          <strong>Network notifications:</strong> events a network sends to the
+          tool (for example, that an authorization was revoked).
         </li>
         <li>
           <strong>Audit log:</strong> security-relevant actions (connections,
-          disconnections, deletions) with internal identifiers, dates, the network
-          involved, and the permissions granted. It contains no tokens, emails, names,
-          usernames, or network identifiers.
-        </li>
-        <li>
-          <strong>Data deletion requests:</strong> confirmation code, status, dates, a
-          count of what was deleted, and a one-way hash of the network identifier so
-          repeated requests can be recognized.
+          disconnections, deletions) with internal identifiers, dates, the
+          network involved, and the permissions granted. It does not contain
+          tokens, emails, names, usernames, or network identifiers.
         </li>
       </ul>
 
-      <h2>Instagram</h2>
+      <h2>TikTok</h2>
       <p>
-        When you connect an Instagram professional account we request
-        <code>instagram_business_basic</code> (to read your account’s ID, username, and
-        profile so we can show which account is connected) and
-        <code>instagram_business_content_publish</code> (to publish the content you
-        create or schedule). We use Instagram data only to provide these features to you.
+        When the operator connects a TikTok account, the tool uses TikTok Login
+        Kit and the Content Posting API. It requests:
+      </p>
+      <ul>
+        <li>
+          <code>user.info.basic</code> — TikTok open ID, display name, and
+          avatar, so the tool can show which account is connected.
+        </li>
+        <li>
+          <code>video.publish</code> — to publish videos or photos the operator
+          creates or schedules (Direct Post).
+        </li>
+        <li>
+          <code>video.upload</code> — to upload content to the operator's TikTok
+          inbox or drafts when that flow is used.
+        </li>
+      </ul>
+      <p>
+        TikTok data is used only to operate the operator's own TikTok account.
+        It is not sold, not used for advertising, and not used to build profiles
+        of other people. Use of information received from TikTok APIs complies
+        with the
+        <a href="https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en">TikTok Developer Terms of Service</a>
+        and TikTok's developer policies.
+      </p>
+      <p>
+        To remove TikTok access: disconnect the account in the tool, and in
+        TikTok go to Settings and remove the app's authorization. You can also
+        write to
+        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>
+        to request deletion of TikTok data stored by the tool. Content already
+        published on TikTok is not deleted from TikTok by this process; it can
+        be deleted in TikTok itself.
+      </p>
+
+      <h2>Instagram and Facebook</h2>
+      <p>
+        When the operator connects an Instagram professional account, the tool
+        requests <code>instagram_business_basic</code> (account ID, username,
+        and profile, to show which account is connected) and
+        <code>instagram_business_content_publish</code> (to publish content the
+        operator creates or schedules). Facebook data received through Meta's
+        official OAuth flow is used the same way: to identify the connected
+        account and to publish the operator's content.
       </p>
       <p>
         Use of information received from Meta APIs (Facebook, Instagram, Threads)
         complies with the Meta Platform Terms and Developer Policies.
       </p>
-
-      <h2>Why we use it</h2>
       <p>
-        Only to provide the service you request: connecting your accounts, publishing
-        and scheduling on your behalf, showing you the status of each connection and
-        post, warning you when a connection needs attention, inviting collaborators you
-        choose, keeping the service secure, and complying with legal obligations. We do
-        not sell your data and we do not use it for advertising.
+        To remove Meta access: disconnect the account in the tool, and in
+        Instagram or Facebook go to Settings → Apps and websites and remove the
+        app. Requesting deletion there, or writing to
+        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>,
+        causes the tool to erase stored tokens and account data for that
+        connection.
       </p>
 
-      <h2>Who we share it with</h2>
+      <h2>LinkedIn, YouTube, and other networks</h2>
+      <p>
+        For any other network the operator connects, the tool receives only the
+        identifiers, profile information, and publishing permissions granted on
+        that network's official OAuth screen. The data is used only to show
+        which of the operator's accounts is connected and to publish or schedule
+        the operator's content through the official API.
+      </p>
+
+      <h2>Why this data is used</h2>
+      <p>
+        Only to run the operator's own publishing workflow: connecting her
+        accounts, scheduling and publishing content, showing the status of
+        connections and posts, warning when a connection needs attention,
+        keeping the tool secure, and meeting each network's developer rules.
+        Data is not sold and is not used for advertising.
+      </p>
+
+      <h2>Who it is shared with</h2>
       <ul>
-        <li>Each social network you connect, only to carry out the actions you request.</li>
+        <li>
+          Each social network the operator connects, only to carry out the
+          connect or publish actions she requests.
+        </li>
         <li>
           GitHub, Inc., which hosts these public legal pages on GitHub Pages.
         </li>
         <li>
-          The providers that host the application, its database, email delivery, and
-          object storage: <mark>[PENDING: processors]</mark>.
+          The hosting and storage providers the operator configures for the
+          application and uploaded files.
         </li>
       </ul>
+      <p>The tool is not shared with customers, subscribers, or other users.</p>
 
-      <h2>How we protect it</h2>
-      <p>
-        The following controls are implemented in the application:
-      </p>
+      <h2>How it is protected</h2>
       <ul>
         <li>Application traffic is served over HTTPS in production.</li>
-        <li>Social network tokens are encrypted at rest with AES-256-GCM before storage.</li>
-        <li>Passwords are stored only as salted scrypt hashes, never in clear text.</li>
+        <li>Social network tokens are encrypted at rest with AES-256-GCM.</li>
+        <li>Passwords are stored only as salted scrypt hashes.</li>
         <li>Access tokens are not returned to the browser or written to application logs.</li>
-        <li>
-          Each workspace’s data is isolated from other workspaces; only that workspace’s
-          members can access it, according to their role.
-        </li>
-        <li>We do not store social network passwords.</li>
+        <li>The tool does not store social network passwords.</li>
       </ul>
       <p>
-        This policy does not claim certifications, audits, or other security practices
-        that are not implemented.
+        This policy does not claim certifications, audits, or other security
+        practices that are not implemented.
       </p>
 
-      <h2>How long we keep it</h2>
+      <h2>How long it is kept</h2>
       <ul>
-        <li>Account, workspace, media, and content data: while your account or workspace exists, until you delete it.</li>
-        <li>Tokens: until you disconnect the account, the network revokes the authorization, or you request deletion.</li>
-        <li>Expired or closed sessions, and unused password-reset tokens: deleted automatically when they expire or are used.</li>
-        <li>Database backups kept by the hosting provider: <mark>[PENDING: backup retention in days]</mark>.</li>
-        <li>Application logs kept by the hosting provider: <mark>[PENDING: log retention in days]</mark>.</li>
+        <li>Account, media, and content data: while the operator uses the tool, until she deletes it.</li>
+        <li>Tokens: until the operator disconnects the account, the network revokes authorization, or deletion is requested.</li>
+        <li>Expired or closed sessions: deleted automatically.</li>
         <li>
-          Audit log and deletion-request records: they are not deleted automatically,
-          because they let us prove what was done and when. They contain no tokens or
-          network identifiers.
+          Audit records of connections and deletions: kept so the operator can
+          see what was done and when. They contain no tokens or network
+          identifiers.
         </li>
       </ul>
 
-      <h2>How to request deletion</h2>
-      <p>You can delete your data in any of these ways:</p>
+      <h2>How to delete data</h2>
+      <p>Data stored by the tool can be deleted in these ways:</p>
       <ul>
         <li>
-          <strong>Disconnect a social account</strong> in the application. Tokens for
-          that account are erased, scheduled posts for that account are cancelled, and
-          the account stops being available for publishing.
+          <strong>Disconnect a social account</strong> in the tool. Tokens for
+          that account are erased, scheduled posts for that account are
+          cancelled, and the account stops being available for publishing.
         </li>
         <li>
-          <strong>From Instagram or Facebook:</strong> go to Settings ? Apps and websites,
-          remove the Social Publishing Platform, and request deletion of your data. Meta
-          notifies the application. Removing the app without requesting deletion only
-          revokes the authorization: we stop using the tokens and pause scheduled posts
-          for that account.
-        </li>
-        <li>
-          <strong>Delete a workspace or your account</strong> in the application. A
-          workspace owner can delete the whole workspace. Any person can delete their
-          own account. If you are the only owner of a workspace that still has other
-          members, transfer ownership or delete the workspace first.
+          <strong>From the social network:</strong> remove the app in TikTok,
+          Instagram, Facebook, or the equivalent settings of another network.
+          The tool then stops using the tokens. If the network sends a data
+          deletion request, stored tokens and account data for that identity
+          are erased.
         </li>
         <li>
           <strong>By email:</strong> write to
           <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>
-          from the email address of your account, and ask for your data to be deleted.
-          You can also use the contact form on
-          <a href="https://iamselenia.com/">iamselenia.com</a>.
-        </li>
-      </ul>
-      <p>When a deletion request is processed, the application deletes:</p>
-      <ul>
-        <li>Tokens of the affected connections (the stored encrypted values are erased).</li>
-        <li>
-          Connected social accounts and data derived from them: profile, permissions,
-          authorizations, scheduled and past publications to those accounts with their
-          results, and related notifications.
-        </li>
-        <li>Notifications sent by Meta that mention the person.</li>
-        <li>If you delete a workspace: its content, posts, members, connections, and media files.</li>
-        <li>
-          If you delete your account: your sessions, memberships, the connections you
-          made, and workspaces in which you were the only member. If you created content
-          in a workspace that other people still use, that content stays in that
-          workspace and your account is anonymized (email, name, and password are erased).
-        </li>
-      </ul>
-      <p>What is kept:</p>
-      <ul>
-        <li>
-          Content already published on a social network is not deleted from that network.
-          You can delete it in the network itself.
-        </li>
-        <li>
-          The audit log and the record of the deletion request (confirmation code, status,
-          dates, and counts), without tokens or network identifiers.
-        </li>
-        <li>
-          Database backups until they expire (<mark>[PENDING: backup retention in days]</mark>)
-          and application logs until they expire (<mark>[PENDING: log retention in days]</mark>).
+          and ask for stored data to be deleted. You can also use the contact
+          form on <a href="https://iamselenia.com/">iamselenia.com</a>.
         </li>
       </ul>
       <p>
-        Instagram does not offer an API to revoke an authorization from our side; we
-        erase our tokens, and you can also remove the app from your Instagram settings.
+        Content already published on a social network is not deleted from that
+        network. It can be deleted in the network itself.
       </p>
 
-      <h2>Your rights</h2>
+      <h2>Children</h2>
       <p>
-        You can ask to access, correct, or export your data, or to object to its
-        processing, by writing to
-        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>.
-        You may lodge a complaint with
-        <mark>[PENDING: data protection authority]</mark>.
-      </p>
-
-      <h2>Minimum age</h2>
-      <p>
-        The service is not directed at children. The exact minimum age is
-        <mark>[PENDING: minimum age]</mark>.
+        This tool is not offered to the public and is not directed at children.
       </p>
 
       <h2>Changes</h2>
       <p>
-        We will publish any change to this policy on this page and update the effective
-        date.
+        Changes to this policy will be published on this page with an updated
+        effective date.
       </p>
 
       <h2>Contact</h2>
       <p>
-        Selenia Sanchez · <mark>[PENDING: postal address]</mark> ·
+        Selenia Sanchez ·
         <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>
       </p>
     </main>
-
     <div class="wrap" style="padding-top: 0">
       <nav class="footer">
         <a href="/">iamselenia.com</a>
