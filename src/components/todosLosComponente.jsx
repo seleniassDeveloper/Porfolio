@@ -9,6 +9,7 @@ import TrueFocus from "./TrueFocus";
 import Waves from "./Waves";
 import { CalendarioAuditoria } from "./CalendarioAuditoria";
 import { SistemasCreados } from "./SistemasCreados";
+import { MetricasOnePager } from "./MetricasOnePager";
 import "../../src/App.css";
 
 export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
@@ -96,6 +97,10 @@ export const TodosLosComponentes = ({ t, YosiendoFeliz }) => {
 
       <div id="sistemas">
         <SistemasCreados />
+      </div>
+
+      <div id="metricas">
+        <MetricasOnePager />
       </div>
 
       <div id="proyectos">
