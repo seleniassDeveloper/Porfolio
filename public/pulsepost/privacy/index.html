@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>Privacy Policy · PulsePost</title>
+    <meta name="description" content="Privacy Policy for PulsePost, a personal private tool that publishes to and answers keyword messages on the operator's own social accounts." />
+    <link rel="canonical" href="https://iamselenia.com/pulsepost/privacy" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/social/legal.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <a class="brand" href="/">Selenia Sánchez</a>
+      <nav class="nav-links" aria-label="Legal">
+        <a href="/">Portfolio</a>
+        <a href="/pulsepost/privacy" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+    <main class="wrap">
+      <p class="eyebrow">PulsePost</p>
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        Operated by Selenia Sanchez · Effective 10 November 2026 ·
+        This page is public and does not require an account.
+      </p>
+
+      <p>
+        PulsePost is a personal, private tool operated by Selenia Sanchez. It is
+        used only by the operator to manage her own social media accounts. It is
+        not offered to the public, does not accept public registration, is not
+        sold, and has no subscriptions or billing.
+      </p>
+      <p>
+        This policy explains what data the tool processes. Contact:
+        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>.
+      </p>
+
+      <h2>What the tool does</h2>
+      <ul>
+        <li>Connects the operator's own accounts through each network's official OAuth flow and publishes or schedules the operator's content through official APIs.</li>
+        <li>Reads basic metrics (likes and comments) of the operator's own posts.</li>
+        <li>
+          Sends automatic keyword replies on the operator's own Instagram
+          professional accounts: when someone comments a keyword on one of her
+          posts, or sends her a direct message with a keyword, the tool replies
+          with a predefined message (for example, a link to a free checklist or
+          guide). Automatic messages are labeled as automatic.
+        </li>
+      </ul>
+      <p>The tool never asks for or stores social network passwords.</p>
+
+      <h2>Data the tool processes</h2>
+      <ul>
+        <li><strong>Operator sign-in:</strong> only the operator can sign in, with a password configured on the server. There are no other user accounts.</li>
+        <li><strong>Connected accounts:</strong> the identifiers each network provides through OAuth (account ID, username, profile picture URL, permissions granted).</li>
+        <li><strong>Authorizations (tokens):</strong> access tokens issued by each network, encrypted with AES-256-GCM before storage, never shown in the browser, and erased when the account is disconnected.</li>
+        <li><strong>Content and publishing:</strong> the text, schedule, media and result (post ID and URL) of the operator's posts.</li>
+        <li>
+          <strong>Comments and direct messages received by the operator's
+          Instagram accounts</strong> (only for automatic replies): the
+          Instagram-scoped ID and username of the person, the text of the
+          comment or message, its date, and whether that person follows the
+          operator's account. The tool reads whether the person follows the
+          account only after that person has sent a direct message. This data
+          is kept as an event log so the operator can see what was answered and
+          so the same message is never answered twice.
+        </li>
+      </ul>
+
+      <h2>Instagram and Meta permissions</h2>
+      <ul>
+        <li><code>instagram_business_basic</code>: identify the connected account.</li>
+        <li><code>instagram_business_content_publish</code>: publish the operator's content.</li>
+        <li><code>instagram_business_manage_insights</code>: read metrics of the operator's posts.</li>
+        <li><code>instagram_business_manage_comments</code>: receive comments on the operator's posts and reply to them.</li>
+        <li><code>instagram_business_manage_messages</code>: receive direct messages sent to the operator's accounts and send the automatic reply.</li>
+      </ul>
+      <p>
+        Data received from Meta APIs is used only to operate the operator's own
+        accounts. It is not sold, not shared with third parties, not used for
+        advertising, and not used to build profiles of people. Use of
+        information received from Meta APIs complies with the Meta Platform
+        Terms and Developer Policies.
+      </p>
+
+      <h2>Service providers</h2>
+      <p>
+        The tool runs on Render (application server), Neon (PostgreSQL
+        database) and Vercel (web interface). These providers store data only
+        to run the tool.
+      </p>
+
+      <h2 id="data-deletion">Data deletion</h2>
+      <p>Anyone can ask for their data to be deleted:</p>
+      <ol>
+        <li>
+          Write to
+          <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>
+          with your Instagram username and the subject "Data deletion".
+        </li>
+        <li>
+          The operator deletes every comment, message and event linked to that
+          username from the tool and confirms by email within 30 days.
+        </li>
+      </ol>
+      <p>
+        To remove the tool's access to an Instagram account, disconnect it in
+        Instagram under Settings → Apps and websites. Stored tokens and account
+        data for that connection are then erased.
+      </p>
+
+      <h2>Children</h2>
+      <p>This tool is not offered to the public and is not directed at children.</p>
+
+      <h2>Changes</h2>
+      <p>Changes to this policy will be published on this page with an updated effective date.</p>
+
+      <h2>Contact</h2>
+      <p>
+        Selenia Sanchez ·
+        <a href="mailto:ssseleniasanchez@gmail.com">ssseleniasanchez@gmail.com</a>
+      </p>
+    </main>
+    <div class="wrap" style="padding-top: 0">
+      <nav class="footer">
+        <a href="/">iamselenia.com</a>
+        <a href="/pulsepost/privacy">Privacy Policy</a>
+        <a href="/pulsepost/privacy#data-deletion">Data deletion</a>
+      </nav>
+    </div>
+  </body>
+</html>
