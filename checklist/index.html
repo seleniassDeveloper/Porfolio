@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>¿Tu app expone tus claves? · Checklist de seguridad · Selenia Sánchez</title>
+    <meta name="description" content="Checklist gratis para revisar si tu app expone tus claves de OpenAI, Supabase o Stripe, y qué hacer si ya están expuestas. Pensado para apps hechas con IA." />
+    <link rel="canonical" href="https://iamselenia.com/checklist" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://iamselenia.com/checklist" />
+    <meta property="og:title" content="¿Tu app expone tus claves? · Checklist de seguridad" />
+    <meta property="og:description" content="Revisa en 5 minutos si alguien puede ver tus claves de OpenAI, Supabase o Stripe. Gratis, por Selenia Sánchez." />
+    <meta property="og:image" content="https://iamselenia.com/checklist/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --blue: #a9c4e3;
+        --yellow: #f4df8e;
+        --navy: #22395a;
+        --muted: #46628a;
+        --page: #eef2f7;
+        --soft: #dce7f3;
+        --card: #ffffff;
+        --line: #d3dce8;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Manrope", system-ui, sans-serif;
+        color: var(--navy);
+        background: var(--page);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; }
+      .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+      /* Top bar */
+      .top {
+        display: flex; justify-content: space-between; align-items: center; gap: 12px;
+        padding: 18px 0;
+        font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      }
+      .top a { text-decoration: none; }
+      .top .dl { background: var(--navy); color: #fff; padding: 9px 14px; border-radius: 99px; letter-spacing: .06em; white-space: nowrap; }
+
+      /* Hero */
+      .hero { background: var(--blue); padding-bottom: 56px; }
+      .hero h1 {
+        font-family: "Anton", sans-serif; font-weight: 400;
+        color: var(--yellow);
+        font-size: clamp(54px, 12vw, 104px); line-height: .98;
+        text-transform: uppercase;
+        margin-top: 48px; position: relative; display: inline-block;
+      }
+      .hero .script {
+        font-family: "Mrs Saint Delafield", cursive;
+        color: #fff; text-transform: none;
+        font-size: clamp(34px, 7vw, 58px); line-height: 1;
+        position: absolute; left: -8px; bottom: -0.8em;
+        transform: rotate(-8deg); white-space: nowrap;
+      }
+      .hero .lead { font-size: clamp(16px, 2.4vw, 19px); font-weight: 500; max-width: 620px; margin-top: 64px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+      .chip {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: #e3ebf5; border: 1px solid #fff; border-radius: 99px;
+        padding: 8px 16px; font-size: 14px; font-weight: 600; text-decoration: none;
+      }
+      .chip b { font-family: "Anton", sans-serif; font-weight: 400; font-size: 16px; }
+
+      /* Sections */
+      section.part { padding: 56px 0 8px; }
+      section.part.blue { background: var(--blue); padding-bottom: 56px; margin-top: 48px; }
+      .kicker { font-family: "Anton", sans-serif; color: var(--muted); font-size: 15px; letter-spacing: .12em; }
+      h2 { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(38px, 7vw, 56px); line-height: 1.05; text-transform: uppercase; margin: 4px 0 14px; }
+      .intro { color: var(--muted); font-size: 17px; max-width: 640px; margin-bottom: 22px; }
+      .blue .intro { color: var(--navy); }
+      h3 { font-size: 19px; font-weight: 700; margin: 30px 0 12px; }
+
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; }
+      .card h4 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+      .card p { font-size: 15px; }
+
+      .rows { border-top: 1px solid #b9c4d3; }
+      .row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid #b9c4d3; }
+      .row .tag { font-family: "Anton", sans-serif; font-size: 24px; line-height: 1.1; }
+      .row h4 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+      .row p { font-size: 15px; color: var(--muted); }
+
+      code {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: .86em; font-weight: 600;
+        background: var(--yellow); color: var(--navy);
+        padding: 1px 6px; border-radius: 5px;
+        overflow-wrap: anywhere;
+      }
+
+      /* Interactive checklist */
+      .checks { list-style: none; }
+      .checks li { margin-bottom: 10px; }
+      .checks label {
+        display: grid; grid-template-columns: 28px 1fr; gap: 6px; align-items: start;
+        background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 14px 18px; font-size: 15.5px; cursor: pointer;
+        transition: background .15s, border-color .15s;
+      }
+      .checks input { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; margin-top: 2px; border: 2px solid var(--navy); border-radius: 6px; cursor: pointer; display: grid; place-content: center; }
+      .checks input::after { content: ""; width: 10px; height: 6px; border: solid var(--navy); border-width: 0 0 2.5px 2.5px; transform: rotate(-45deg) translate(1px, -1px); opacity: 0; }
+      .checks input:checked { background: var(--yellow); }
+      .checks input:checked::after { opacity: 1; }
+      .checks input:focus-visible { outline: 3px solid var(--muted); outline-offset: 2px; }
+      .checks label:has(input:checked) { background: #fbf6df; border-color: var(--yellow); }
+
+      .progress { position: sticky; top: 0; z-index: 5; background: var(--navy); color: #fff; font-size: 14px; font-weight: 600; }
+      .progress .wrap { display: flex; align-items: center; gap: 14px; padding-top: 10px; padding-bottom: 10px; }
+      .bar { flex: 1; height: 8px; background: rgba(255,255,255,.2); border-radius: 99px; overflow: hidden; }
+      .bar span { display: block; height: 100%; width: 0; background: var(--yellow); transition: width .25s; }
+
+      /* Services grid */
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .svc .label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+      .svc h4 { font-size: 19px; margin-bottom: 10px; }
+      .svc .ok, .svc .no { display: grid; grid-template-columns: 20px 1fr; font-size: 14.5px; margin-bottom: 4px; }
+      .svc .ok::before { content: "✓"; font-weight: 800; }
+      .svc .no::before { content: "✕"; font-weight: 800; }
+      .svc .check { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+      .svc.gold { background: var(--yellow); border-color: var(--yellow); }
+      .svc.gold .label { color: var(--navy); }
+
+      .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .three .card { padding: 16px 18px; font-size: 14.5px; }
+      .three b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 19px; line-height: 1.15; margin-bottom: 4px; }
+
+      /* Steps */
+      .steps { list-style: none; }
+      .steps li { display: grid; grid-template-columns: 58px 1fr; padding-bottom: 20px; position: relative; }
+      .steps li::before { content: ""; position: absolute; left: 21px; top: 46px; bottom: 0; width: 2px; background: var(--muted); opacity: .45; }
+      .steps li:last-child::before { display: none; }
+      .num { width: 44px; height: 44px; border-radius: 50%; background: var(--yellow); font-family: "Anton", sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+      .num.white { background: #fff; }
+      .steps h4 { font-size: 17px; font-weight: 700; margin-top: 8px; }
+      .steps p { font-size: 15px; }
+      .note { background: var(--soft); border: 1px solid #fff; border-radius: 18px; padding: 22px 24px; margin-top: 10px; }
+      .note h4 { font-size: 18px; margin-bottom: 6px; }
+      .note ul { padding-left: 20px; }
+      .note li { font-size: 15px; }
+
+      /* Offer */
+      .offer { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .offer .card { padding: 0; overflow: hidden; }
+      .offer .head { padding: 22px 24px 18px; }
+      .offer .head.y { background: var(--yellow); }
+      .offer .head.b { background: var(--blue); }
+      .offer .head h4 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 34px; line-height: 1.05; text-transform: uppercase; margin-bottom: 4px; }
+      .offer .head p { font-size: 14px; font-weight: 700; }
+      .offer .body { padding: 20px 24px 22px; font-size: 15px; }
+      .offer ul { padding-left: 20px; margin: 10px 0; }
+      .offer li { margin-bottom: 6px; }
+      .offer .foot { color: var(--muted); font-size: 14px; }
+
+      .cta { background: var(--navy); color: #fff; border-radius: 22px; padding: 28px; margin-top: 16px; }
+      .cta h4 { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(32px, 6vw, 42px); line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; }
+      .cta h4 span { color: var(--yellow); }
+      .cta p { font-size: 15.5px; }
+      .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+      .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 99px; font-weight: 700; font-size: 15px; text-decoration: none; }
+      .btn.y { background: var(--yellow); color: var(--navy); }
+      .btn.o { border: 1.5px solid var(--blue); color: #fff; }
+
+      footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+      footer a { font-weight: 700; color: var(--navy); }
+
+      @media (max-width: 640px) {
+        .row { grid-template-columns: 1fr; gap: 4px; }
+        .grid, .offer, .three { grid-template-columns: 1fr; }
+        .top .label-right { display: none; }
+        .card, .note, .cta { padding: 20px; }
+      }
+      @media print {
+        .progress, .top .dl { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="wrap">
+        <div class="top">
+          <a href="/">Selenia Sánchez · Checklist gratis</a>
+          <a class="dl" href="/checklist/Checklist-Seguridad-Selenia-Sanchez.pdf" download>Descargar PDF</a>
+        </div>
+        <h1>¿Tu app expone tus claves?<span class="script">checklist de seguridad</span></h1>
+        <p class="lead">Una revisión práctica para saber si alguien puede ver tus claves de OpenAI, Supabase o Stripe, y qué hacer si ya están expuestas. Pensada para apps hechas con IA o con vibe coding.</p>
+        <nav class="chips" aria-label="Partes del checklist">
+          <a class="chip" href="#parte-01"><b>01</b> Revisa en 5 minutos</a>
+          <a class="chip" href="#parte-02"><b>02</b> Tu repositorio</a>
+          <a class="chip" href="#parte-03"><b>03</b> Por servicio</a>
+          <a class="chip" href="#parte-04"><b>04</b> Protecciones extra</a>
+          <a class="chip" href="#parte-05"><b>05</b> Si encontraste una</a>
+          <a class="chip" href="#parte-06"><b>06</b> ¿Lo revisamos juntos?</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="progress" aria-live="polite">
+      <div class="wrap"><span id="count">0 de 0 revisados</span><div class="bar"><span id="fill"></span></div></div>
+    </div>
+
+    <main>
+      <section class="part wrap" id="parte-01">
+        <div class="kicker">PARTE 01</div>
+        <h2>Revisa en 5 minutos</h2>
+        <div class="card">
+          <h4>Primero: ¿qué es una clave expuesta?</h4>
+          <p>Es una clave secreta que cualquiera puede ver desde el navegador o desde tu GitHub. Con ella pueden gastar tu saldo de IA, leer o borrar tu base de datos o usar tu cuenta de pagos. Pasa mucho en apps hechas con IA: el asistente pone la clave donde funciona, no donde es segura.</p>
+        </div>
+        <h3>Abre tu app publicada → clic derecho → Inspeccionar</h3>
+        <div class="rows">
+          <div class="row">
+            <div class="tag">Sources</div>
+            <div><h4>Busca palabras clave en el código</h4>
+              <p>Pulsa Ctrl/Cmd + Shift + F y busca: <code>sk-</code> <code>sk_live</code> <code>sk-ant-</code> <code>service_role</code> <code>secret</code> <code>api_key</code> <code>AIza</code>. Si aparece una clave secreta, está expuesta.</p></div>
+          </div>
+          <div class="row">
+            <div class="tag">Network</div>
+            <div><h4>Mira a quién llama tu app</h4>
+              <p>Usa la app con esta pestaña abierta. Si ves llamadas directas a <code>api.openai.com</code>, <code>api.anthropic.com</code> o <code>api.stripe.com</code> con una clave en los headers, está expuesta.</p></div>
+          </div>
+          <div class="row">
+            <div class="tag">Variables</div>
+            <div><h4>Revisa los prefijos públicos</h4>
+              <p>Todo lo que empieza por <code>NEXT_PUBLIC_</code> <code>VITE_</code> <code>REACT_APP_</code> o <code>EXPO_PUBLIC_</code> se mete en el código del navegador. Ahí solo van claves públicas.</p></div>
+          </div>
+        </div>
+        <h3>Marca lo que ya revisaste</h3>
+        <ul class="checks">
+          <li><label><input type="checkbox" data-id="1a"><span>Busqué las palabras clave en Sources y no apareció ninguna clave secreta.</span></label></li>
+          <li><label><input type="checkbox" data-id="1b"><span>Ninguna petición en Network lleva una clave secreta.</span></label></li>
+          <li><label><input type="checkbox" data-id="1c"><span>Mis variables con prefijo público solo tienen claves públicas.</span></label></li>
+        </ul>
+      </section>
+
+      <section class="part wrap" id="parte-02">
+        <div class="kicker">PARTE 02</div>
+        <h2>Tu repositorio</h2>
+        <p class="intro">Si tu código está en GitHub, la clave puede estar ahí aunque ya no la veas en el proyecto. Borrar un archivo no lo quita del historial.</p>
+        <ul class="checks">
+          <li><label><input type="checkbox" data-id="2a"><span>El archivo <code>.env</code> está en <code>.gitignore</code> y no aparece en GitHub.</span></label></li>
+          <li><label><input type="checkbox" data-id="2b"><span>El <code>.env</code> nunca se subió antes. Compruébalo con <code>git log --all -- .env</code>: si sale algo, se subió.</span></label></li>
+          <li><label><input type="checkbox" data-id="2c"><span>Ninguna clave está escrita directo en el código, como <code>const apiKey = "sk-..."</code>.</span></label></li>
+          <li><label><input type="checkbox" data-id="2d"><span>Si el repositorio es público, sé exactamente por qué. Si no hace falta, lo pongo privado.</span></label></li>
+          <li><label><input type="checkbox" data-id="2e"><span>Tengo activado <strong>Secret scanning</strong> y <strong>Push protection</strong> en GitHub (Settings → Code security). Bloquean el push si subo una clave.</span></label></li>
+          <li><label><input type="checkbox" data-id="2f"><span>Revisé todo el historial de una vez con <code>gitleaks detect</code> o <code>trufflehog git file://.</code></span></label></li>
+        </ul>
+        <div class="note">
+          <h4>¿Repositorio privado = seguro?</h4>
+          <ul>
+            <li>Ayuda, pero no basta: cualquiera con acceso al repo ve la clave.</li>
+            <li>Si alguna vez fue público, aunque sea un día, trata la clave como expuesta.</li>
+            <li>Las claves de producción van en las variables del hosting (Vercel, Netlify, Railway), no en el código.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="part wrap" id="parte-03">
+        <div class="kicker">PARTE 03</div>
+        <h2>Por servicio</h2>
+        <p class="intro">No todas las claves son secretas. El problema es poner la secreta donde va la pública, o dejar la pública sin reglas.</p>
+        <div class="grid">
+          <div class="card svc">
+            <div class="label">Base de datos</div>
+            <h4>Supabase</h4>
+            <div class="ok"><span>Navegador: <code>anon</code> o publishable key</span></div>
+            <div class="no"><span>Nunca: <code>service_role</code> o secret key</span></div>
+            <div class="check">RLS activado en todas las tablas, con políticas. Sin RLS, la anon key puede leer y borrar todo.</div>
+          </div>
+          <div class="card svc">
+            <div class="label">Base de datos</div>
+            <h4>Firebase</h4>
+            <div class="ok"><span>Navegador: la config del proyecto</span></div>
+            <div class="no"><span>Nunca: la cuenta de servicio (JSON del Admin SDK)</span></div>
+            <div class="check">Tus reglas no dicen <code>if true</code>. Nada de «modo de prueba» en producción.</div>
+          </div>
+          <div class="card svc">
+            <div class="label">Pagos</div>
+            <h4>Stripe</h4>
+            <div class="ok"><span>Navegador: <code>pk_live_</code></span></div>
+            <div class="no"><span>Nunca: <code>sk_live_</code> ni <code>whsec_</code></span></div>
+            <div class="check">Los cobros y webhooks se crean en el servidor. El precio nunca lo manda el navegador.</div>
+          </div>
+          <div class="card svc">
+            <div class="label">Inteligencia artificial</div>
+            <h4>OpenAI, Claude, Gemini</h4>
+            <div class="ok"><span>Navegador: ninguna</span></div>
+            <div class="no"><span>Nunca: <code>sk-</code>, <code>sk-ant-</code> ni ninguna otra</span></div>
+            <div class="check">Las llamadas pasan por tu backend o una edge function, con usuario autenticado.</div>
+          </div>
+          <div class="card svc">
+            <div class="label">Mapas</div>
+            <h4>Google Maps</h4>
+            <div class="ok"><span>Navegador: la API key, restringida</span></div>
+            <div class="no"><span>Nunca: una clave sin restricciones</span></div>
+            <div class="check">En Google Cloud: limitada a tu dominio y solo a las APIs que usas.</div>
+          </div>
+          <div class="card svc gold">
+            <div class="label">Regla de oro</div>
+            <h4>Si cobra o lee datos, va en el servidor</h4>
+            <p>Si una clave puede gastar dinero o leer datos privados, el navegador no la ve nunca. Ni con un prefijo público ni «solo por ahora».</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="part wrap" id="parte-04">
+        <div class="kicker">PARTE 04</div>
+        <h2>Protecciones extra</h2>
+        <p class="intro">Aunque todo lo anterior esté bien, esto limita el daño si algo se escapa.</p>
+        <ul class="checks">
+          <li><label><input type="checkbox" data-id="4a"><span><strong>Límite de gasto</strong> en cada API de pago (OpenAI, Anthropic, Google Cloud) y alerta por correo al 50% y al 80%.</span></label></li>
+          <li><label><input type="checkbox" data-id="4b"><span><strong>Límite de peticiones</strong> en tus endpoints de IA, por usuario y por IP. Si no, alguien puede usar tu backend gratis.</span></label></li>
+          <li><label><input type="checkbox" data-id="4c"><span>Los endpoints que gastan dinero piden <strong>usuario con sesión iniciada</strong>.</span></label></li>
+          <li><label><input type="checkbox" data-id="4d"><span>Tus <strong>logs y mensajes de error</strong> no muestran claves, tokens ni el <code>.env</code>.</span></label></li>
+          <li><label><input type="checkbox" data-id="4e"><span>Una clave para <strong>desarrollo</strong> y otra para <strong>producción</strong>, cada una con los permisos mínimos.</span></label></li>
+          <li><label><input type="checkbox" data-id="4f"><span>Sabes <strong>quién tiene acceso</strong> a tus paneles (hosting, base de datos, pagos) y quitaste a quien ya no trabaja contigo.</span></label></li>
+        </ul>
+        <h3>Los 3 errores más comunes en apps hechas con IA</h3>
+        <div class="three">
+          <div class="card"><b>Clave de IA en el frontend</b>La app llama a OpenAI o Claude desde el navegador, con la clave a la vista.</div>
+          <div class="card"><b>Supabase sin RLS</b>Las tablas no tienen reglas, así que la clave pública puede leer y borrar todo.</div>
+          <div class="card"><b>Firebase en modo de prueba</b>Las reglas siguen abiertas a cualquiera, también en producción.</div>
+        </div>
+      </section>
+
+      <section class="part blue" id="parte-05">
+        <div class="wrap">
+          <div class="kicker">PARTE 05</div>
+          <h2>Si encontraste una clave</h2>
+          <p class="intro">Borrarla del código no basta: da por hecho que ya la copiaron. Hazlo en este orden.</p>
+          <ol class="steps">
+            <li><div class="num">1</div><div><h4>Rota la clave</h4><p>Crea una nueva en el panel del servicio y revoca la vieja. Este es el paso que de verdad te protege.</p></div></li>
+            <li><div class="num">2</div><div><h4>Guárdala bien</h4><p>Pon la nueva solo en el servidor o en las variables del hosting.</p></div></li>
+            <li><div class="num">3</div><div><h4>Mueve la llamada</h4><p>Pasa la llamada al backend o a una edge function, para que el navegador nunca vea la clave.</p></div></li>
+            <li><div class="num">4</div><div><h4>Revisa el uso</h4><p>Mira el consumo y la facturación de los últimos días por si alguien la usó.</p></div></li>
+            <li><div class="num">5</div><div><h4>Limpia el historial</h4><p>Si estaba en GitHub, bórrala del historial con <code>git filter-repo</code> o BFG.</p></div></li>
+            <li><div class="num white">6</div><div><h4>Revisa los datos</h4><p>Si había datos de usuarios expuestos, revisa qué se pudo leer y avisa a quien corresponda.</p></div></li>
+          </ol>
+          <div class="note">
+            <h4>Lo que no te protege</h4>
+            <ul>
+              <li>Borrar la clave del código sin rotarla.</li>
+              <li>Ocultarla en otra variable o «cifrarla» en el frontend.</li>
+              <li>Poner el repositorio privado después de que fue público.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="part wrap" id="parte-06">
+        <div class="kicker">PARTE 06</div>
+        <h2>¿Lo revisamos juntos?</h2>
+        <p class="intro">Puedes hacer todo esto por tu cuenta con este checklist. Si prefieres que lo vea yo, hacemos una llamada y revisamos tu sistema juntos.</p>
+        <div class="offer">
+          <div class="card">
+            <div class="head y"><h4>Seguridad</h4><p>Una capa de seguridad para tu app</p></div>
+            <div class="body">
+              <p>Revisamos tu app y te digo qué está expuesto y cómo cerrarlo.</p>
+              <ul>
+                <li>Dónde están tus claves y qué se ve desde el navegador.</li>
+                <li>Llamadas a IA y pagos movidas al servidor.</li>
+                <li>Reglas de tu base de datos: RLS en Supabase o reglas de Firebase.</li>
+                <li>Límites de gasto y de peticiones para que nadie use tu saldo.</li>
+              </ul>
+              <p class="foot">Ideal si hiciste tu app con IA y no sabes qué tan expuesta está.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head b"><h4>Funcionalidad</h4><p>Si quieres, también la mejoramos</p></div>
+            <div class="body">
+              <p>Aprovechamos la llamada para ver qué puede funcionar mejor.</p>
+              <ul>
+                <li>Qué falla, qué va lento y por qué.</li>
+                <li>Qué le falta para tus usuarios o tu negocio.</li>
+                <li>Automatizaciones y dashboards que te ahorren trabajo.</li>
+                <li>Un plan claro con lo que conviene hacer primero.</li>
+              </ul>
+              <p class="foot">Opcional: solo si lo quieres.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <h4>Escríbeme <span>“llamada”</span></h4>
+          <p>Mándame la palabra por mensaje directo con el link de tu app y agendamos la llamada.</p>
+          <div class="btns">
+            <a class="btn y" href="https://www.instagram.com/ssseleniadev/" target="_blank" rel="noopener">Instagram @ssseleniadev</a>
+            <a class="btn o" href="https://www.tiktok.com/@seleedev" target="_blank" rel="noopener">TikTok @seleedev</a>
+            <a class="btn o" href="/checklist/Checklist-Seguridad-Selenia-Sanchez.pdf" download>Descargar PDF</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      De esto y de cómo programar en la era de la IA hablé en el podcast <a href="https://open.spotify.com/episode/0yJFGNSw96ek8ahcI8dnvG" target="_blank" rel="noopener">Se Vende Humo, episodio 62</a>.
+      · <a href="/">iamselenia.com</a>
+    </footer>
+
+    <script>
+      (function () {
+        var KEY = "checklist-claves-v1";
+        var boxes = Array.prototype.slice.call(document.querySelectorAll(".checks input"));
+        var saved = {};
+        try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
+        function update() {
+          var done = boxes.filter(function (b) { return b.checked; }).length;
+          document.getElementById("count").textContent = done + " de " + boxes.length + " revisados";
+          document.getElementById("fill").style.width = (100 * done / boxes.length) + "%";
+        }
+        boxes.forEach(function (b) {
+          b.checked = !!saved[b.dataset.id];
+          b.addEventListener("change", function () {
+            saved[b.dataset.id] = b.checked;
+            try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+            update();
+          });
+        });
+        update();
+      })();
+    </script>
+  </body>
+</html>
