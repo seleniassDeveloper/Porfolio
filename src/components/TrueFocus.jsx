@@ -102,8 +102,8 @@ export const TrueFocus = () => {
           <div className="stat-divider" />
 
           <div className="stat-block">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">PRODUCTION READY</span>
+            <span className="stat-number">2022</span>
+            <span className="stat-label">FULL-TIME DEV SINCE</span>
           </div>
         </div>
       </div>

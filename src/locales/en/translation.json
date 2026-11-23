@@ -136,7 +136,7 @@
     "suffix": ", every day",
     "subtitle": "Global educational platform focused on innovation and entrepreneurship, with presence in over 50 countries and thousands of active users.",
     "cta": "Visit platform",
-    "badge": "+2500 professionals in the community"
+    "badge": "Scalabl learning platform"
   },
 
   "overview": {
@@ -193,13 +193,13 @@
   },
 
   "impact": {
-    "title": "Real impact",
+    "title": "What I did",
     "stats": [
-      { "num": "+35%", "label": "increase in course completion rate" },
-      { "num": "50+", "label": "countries with active users" },
-      { "num": "+2500", "label": "platform users" }
+      { "num": "Video", "label": "new playback system" },
+      { "num": "Progress", "label": "tracking for every learner" },
+      { "num": "2022", "label": "on the frontend team" }
     ],
-    "note": "The implemented improvements increased engagement and reduced friction in the learning experience."
+    "note": "The improvements aimed to reduce friction in the learning experience."
   },
 
   "stack": {
@@ -668,12 +668,12 @@
     "title": "Sistask",
     "desc": "Enterprise platform for managing workflows, tasks, hours, and internal statuses for distributed teams.",
     "stack": "React · JavaScript · CSS · APIs",
-    "metricBig": "820+ users",
-    "metricSmall": "17 countries · 100+ clients · $300K+ estimated savings",
-    "detailOne": "17 countries",
-    "detailTwo": "100+ enterprise clients",
+    "metricBig": "17 countries",
+    "metricSmall": "Sistran platform rollout",
+    "detailOne": "2022–2025",
+    "detailTwo": "Jira replacement",
     "detailThree": "React · Workflows · Enterprise",
-    "impact": "I built the frontend of a workflow platform that replaced Jira, reaching 100% adoption across 820+ internal users in 17 countries, rolling out to 100+ enterprise clients in 2 months, and generating an estimated $300K+ USD in license savings."
+    "impact": "I built the frontend of the workflow platform that replaced Jira at Sistran, rolling out across 17 Latin American countries: tickets, tasks, hours and statuses for distributed teams."
   },
 
   "scalabl": {
@@ -681,12 +681,12 @@
     "title": "Scalabl",
     "desc": "Educational platform with video experience, content navigation, and progress tracking.",
     "stack": "jQuery · PHP · JavaScript · CSS · APIs",
-    "metricBig": "+35%",
-    "metricSmall": "higher course completion",
-    "detailOne": "2,500+ professionals",
-    "detailTwo": "50+ countries",
+    "metricBig": "2022",
+    "metricSmall": "on the frontend team",
+    "detailOne": "Video player",
+    "detailTwo": "Progress tracking",
     "detailThree": "Video · Tracking · UX",
-    "impact": "I redesigned the content consumption experience with a new video playback and progress tracking system, increasing course completion by 35% and improving engagement on a platform with 2,500+ professionals across 50+ countries."
+    "impact": "I redesigned the content consumption experience with a new video playback system and progress tracking for every learner."
   },
 
   "masRepuestos": {
