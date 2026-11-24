@@ -165,7 +165,7 @@
       "suffix": ", todos los días",
       "subtitle": "Plataforma educativa global enfocada en innovación y emprendimiento, con presencia en más de 50 países y miles de usuarios activos.",
       "cta": "Visitar plataforma",
-      "badge": "+2500 profesionales en la comunidad"
+      "badge": "Plataforma educativa de Scalabl"
     },
     "overview": {
       "title": "¿Qué es Scalabl?",
@@ -216,22 +216,22 @@
       ]
     },
     "impact": {
-      "title": "Impacto real",
+      "title": "Qué hice",
       "stats": [
         {
-          "num": "+35%",
-          "label": "aumento en finalización de cursos"
+          "num": "Video",
+          "label": "nuevo sistema de reproducción"
         },
         {
-          "num": "50+",
-          "label": "países con usuarios activos"
+          "num": "Progreso",
+          "label": "seguimiento por alumno"
         },
         {
-          "num": "+2500",
-          "label": "usuarios en la plataforma"
+          "num": "2022",
+          "label": "en el equipo de frontend"
         }
       ],
-      "note": "Las mejoras implementadas aumentaron el engagement y redujeron la fricción en la experiencia de aprendizaje."
+      "note": "Las mejoras buscaban reducir la fricción en la experiencia de aprendizaje."
     },
     "stack": {
       "title": "Stack",
@@ -707,24 +707,24 @@
       "title": "Sistask",
       "desc": "Plataforma enterprise de gestión de workflows, tareas, horas y estados internos para equipos distribuidos.",
       "stack": "React · JavaScript · CSS · APIs",
-      "metricBig": "820+ usuarios",
-      "metricSmall": "17 países · 100+ clientes · $300K+ ahorro estimado",
-      "detailOne": "17 países",
-      "detailTwo": "100+ clientes enterprise",
+      "metricBig": "17 países",
+      "metricSmall": "plataforma de Sistran en implementación",
+      "detailOne": "2022–2025",
+      "detailTwo": "Reemplazo de Jira",
       "detailThree": "React · Workflows · Enterprise",
-      "impact": "Construí el frontend de una plataforma de workflows que reemplazó Jira, alcanzando adopción del 100% en más de 820 usuarios internos en 17 países, con despliegue a más de 100 clientes enterprise en 2 meses y ahorro estimado de más de $300K USD en licencias."
+      "impact": "Construí el frontend de la plataforma de workflows que reemplazó a Jira en Sistran y que se implementa en 17 países de América Latina: tickets, tareas, horas y estados para equipos distribuidos."
     },
     "scalabl": {
       "label": "Plataforma EdTech",
       "title": "Scalabl",
       "desc": "Plataforma educativa con experiencia de video, navegación de contenidos y seguimiento de progreso.",
       "stack": "jQuery · PHP · JavaScript · CSS · APIs",
-      "metricBig": "+35%",
-      "metricSmall": "más finalización de cursos",
-      "detailOne": "2.500+ profesionales",
-      "detailTwo": "50+ países",
+      "metricBig": "2022",
+      "metricSmall": "en el equipo de frontend",
+      "detailOne": "Reproductor de video",
+      "detailTwo": "Seguimiento de progreso",
       "detailThree": "Video · Tracking · UX",
-      "impact": "Rediseñé la experiencia de consumo de contenido con un nuevo sistema de reproducción de video y tracking de progreso, aumentando la finalización de cursos en 35% y mejorando el engagement en una plataforma con 2.500+ profesionales en 50+ países."
+      "impact": "Rediseñé la experiencia de consumo de contenido con un nuevo sistema de reproducción de video y seguimiento del progreso de cada alumno."
     },
     "masRepuestos": {
       "label": "Marketplace mobile",
